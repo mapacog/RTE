@@ -1,8 +1,8 @@
-# Regional Traffic Explorer v2
+# RTE
 
 A fuller MAPA regional traffic dashboard for the Omaha-Council Bluffs metropolitan area.
 
-This v2 version is intentionally separate from the original dashboard folder so it can be hosted and reviewed independently. It keeps the dashboard interface, uses static report maps/charts as placeholders, and reserves map areas for future interactive ArcGIS web maps and charts.
+RTE is the shortened project name for the Regional Traffic Explorer. It keeps the dashboard interface, uses static report maps/charts as placeholders, and reserves map areas for future interactive ArcGIS web maps and charts.
 
 ## What Is Included
 

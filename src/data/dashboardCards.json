@@ -20,9 +20,9 @@
       "tone": "teal"
     },
     {
-      "label": "Data categories",
-      "value": "6",
-      "detail": "Regional patterns, intersections, interchanges, freight, transit, and other modes.",
+      "label": "Freeway VMT rebound",
+      "value": "+6.5%",
+      "detail": "Largest 2021-2022 roadway-class increase in the regional report.",
       "tone": "yellow"
     }
   ],
