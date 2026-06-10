@@ -128,7 +128,6 @@ function App() {
 
   const regionalFigures = reportFigures.filter((figure) => figure.category === "Regional Patterns");
   const intersectionFigures = reportFigures.filter((figure) => figure.category === "Intersections");
-  const interchangeFigures = reportFigures.filter((figure) => figure.category === "Interchanges");
   const modeFigures = reportFigures.filter((figure) => ["Freight", "Transit", "Multimodal"].includes(figure.category));
   const figureById = Object.fromEntries(reportFigures.map((figure) => [figure.id, figure]));
   const figureContext = {
@@ -452,12 +451,6 @@ function App() {
             />
           </div>
 
-          <FigureGallery
-            figures={interchangeFigures}
-            title="Interchange map placeholder"
-            intro="This static map marks the future interactive interchange web map view."
-            contextByFigure={figureContext}
-          />
         </section>
 
         <section className="section-wrap" id="multimodal">
