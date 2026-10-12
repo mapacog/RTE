@@ -1,0 +1,103 @@
+{
+  "source": "Regional Traffic Patterns 2025, pages 5-10; 2022-2025 estimates",
+  "metrics": [
+    {"label":"Regional VMT","value":"≈+5%","detail":{"en":"Region-wide travel, 2022-2025","es":"Viajes regionales, 2022-2025"},"tone":"blue","icon":"car"},
+    {"label":"Douglas County","value":"+6.5%","detail":{"en":"Largest county-level increase","es":"Mayor aumento a nivel de condado"},"tone":"teal","icon":"growth"},
+    {"label":"Urban core","value":"+5.7%","detail":{"en":"Overall growth in central Douglas County","es":"Crecimiento total en el centro de Douglas"},"tone":"mint","icon":"pin"},
+    {"label":"Outer Douglas","value":"+7.2%","detail":{"en":"Growth outside the urban core","es":"Crecimiento fuera del centro urbano"},"tone":"coral","icon":"activity"}
+  ],
+  "mapContexts": {
+    "845151efd8a9408289ceef59d5c76790":[
+      {"title":{"en":"Traffic intensity","es":"Intensidad del tráfico"},"text":{"en":"The heat map is weighted by 2025 intersection traffic volumes. Stronger colors highlight areas with more daily vehicle activity.","es":"El mapa de calor usa los volúmenes de tráfico de 2025. Los colores más intensos destacan áreas con mayor actividad diaria."}},
+      {"title":{"en":"Volume isn't congestion","es":"Volumen no es congestión"},"text":{"en":"Annual average daily traffic shows how many vehicles use an intersection. It does not measure delay or peak-hour queues.","es":"El tráfico diario promedio anual muestra cuántos vehículos usan una intersección. No mide demoras ni filas en horas punta."}}
+    ],
+    "e2547ddd72254f2ab44c3b4302ebe8e2":[
+      {"title":{"en":"Changing stop activity","es":"Cambios en las paradas"},"text":{"en":"A change in productivity means more or fewer passengers per scheduled bus visit, not necessarily a change in total regional ridership.","es":"Un cambio de productividad indica más o menos pasajeros por visita programada, no necesariamente un cambio del total regional."}},
+      {"title":{"en":"Routes can shift the picture","es":"Las rutas cambian el panorama"},"text":{"en":"Construction and route changes can move passenger activity between stops. A decline at one stop does not always mean fewer people are taking the bus.","es":"Las obras y los cambios de rutas pueden trasladar pasajeros entre paradas. Una disminución en una parada no siempre significa menos usuarios."}}
+    ]
+  },
+  "chartContexts": {
+    "8":[{"title":{"en":"Travel on main roads","es":"Viajes en vías principales"},"text":{"en":"Principal arterials connect neighborhoods and major destinations. Their monthly counts show how daily travel changes through the year.","es":"Las arterias principales conectan vecindarios y destinos importantes. Sus conteos mensuales muestran cómo cambian los viajes diarios."}}],
+    "9":[{"title":{"en":"Travel on city streets","es":"Viajes en calles urbanas"},"text":{"en":"These monitored streets reflect everyday urban travel. Counts at individual sites can change differently from the combined city-street total.","es":"Estas calles monitoreadas reflejan los viajes urbanos cotidianos. Cada sitio puede variar de forma distinta al total combinado."}}],
+    "10":[{"title":{"en":"A stronger seasonal cycle","es":"Un ciclo estacional más marcado"},"text":{"en":"Rural interstate traffic varies more by season than urban interstate traffic, with higher volumes generally in the warmer months.","es":"El tráfico de autopistas rurales varía más por temporada que el urbano, con mayores volúmenes durante los meses cálidos."}}],
+    "11":[{"title":{"en":"Everyday highway travel","es":"Viajes cotidianos en autopista"},"text":{"en":"Urban interstate travel is steadier through the year than rural interstate travel. Combined counts can still hide differences between corridors.","es":"Los viajes en autopistas urbanas son más constantes que en las rurales. Los totales combinados pueden ocultar diferencias entre corredores."}}],
+    "12":[{"title":{"en":"The statewide picture","es":"El panorama estatal"},"text":{"en":"Nebraska and Iowa totals provide a wider view of traffic change. Statewide patterns are not the same as trends within the Omaha-Council Bluffs metro.","es":"Los totales de Nebraska e Iowa ofrecen una vista más amplia. Las tendencias estatales no equivalen a las del área de Omaha-Council Bluffs."}}],
+    "13":[{"title":{"en":"A longer view of traffic","es":"Una vista del tráfico a largo plazo"},"text":{"en":"Continuous counters capture long-term changes, including the 2020 traffic decline and the recovery that followed. Totals describe the monitored roads, not all regional travel.","es":"Los contadores registran cambios a largo plazo, incluida la caída de 2020 y su recuperación. Los totales describen vías monitoreadas, no todos los viajes."}}],
+    "14":[{"title":{"en":"Measured and estimated years","es":"Años medidos y estimados"},"text":{"en":"Annual vehicle miles traveled combines traffic volume with road length. Future-year estimates are different from measured traffic totals.","es":"Las millas anuales combinan volumen y longitud vial. Las estimaciones futuras son distintas de los totales medidos."}}],
+    "16":[{"title":{"en":"Walking at monitored locations","es":"Caminatas en sitios monitoreados"},"text":{"en":"The five Omaha pedestrian sites averaged a combined 1,607 daily counts in 2025. These locations do not represent every walking trip in the metro.","es":"Cinco sitios peatonales de Omaha sumaron 1.607 conteos diarios en promedio en 2025. No representan todos los viajes a pie de la región."}}],
+    "17":[{"title":{"en":"Cycling has its own pattern","es":"El ciclismo tiene su propio patrón"},"text":{"en":"Bicycle counts followed a different path from pedestrian counts. The totals describe monitored trail locations rather than every cycling trip.","es":"Los conteos ciclistas siguieron una tendencia distinta a los peatonales. Describen sitios monitoreados, no todos los viajes en bicicleta."}}],
+    "19":[{"title":{"en":"More recorded activity","es":"Más actividad registrada"},"text":{"en":"Recorded walking, running, and hiking grew in 2024 and 2025. Strava totals reflect its users and can also change as more people use the app.","es":"Las caminatas, carreras y excursiones registradas aumentaron en 2024 y 2025. Los totales reflejan a usuarios de Strava y el uso de la aplicación."}}],
+    "20":[{"title":{"en":"Cycling recorded on Strava","es":"Ciclismo registrado en Strava"},"text":{"en":"These totals describe cycling logged by Strava users. Changes in participation can affect the totals independently of changes in overall bicycle travel.","es":"Los totales describen ciclismo registrado por usuarios de Strava. La participación puede afectar los totales independientemente de los viajes en general."}}],
+    "21":[{"title":{"en":"Douglas County activity","es":"Actividad en Douglas"},"text":{"en":"Activities recorded in Douglas County offer a local view of Strava use. They are a sample of recreation and travel, not a count of all residents' trips.","es":"La actividad registrada en Douglas muestra el uso local de Strava. Es una muestra de recreación y viajes, no un conteo de todos los desplazamientos."}}],
+    "22":[{"title":{"en":"Sarpy County activity","es":"Actividad en Sarpy"},"text":{"en":"Sarpy's recorded activities show patterns among Strava users. Compare these trends with trail counters for a broader picture of local walking and cycling.","es":"La actividad de Sarpy muestra patrones entre usuarios de Strava. Los contadores de senderos aportan una vista más amplia de caminatas y ciclismo."}}],
+    "23":[{"title":{"en":"Pottawattamie County activity","es":"Actividad en Pottawattamie"},"text":{"en":"Recorded activities highlight Strava use in Pottawattamie County. App participation and changes in travel both influence the totals.","es":"La actividad registrada muestra el uso de Strava en Pottawattamie. Tanto la participación como los cambios de viajes influyen en los totales."}}],
+    "26":[{"title":{"en":"Passengers across the network","es":"Pasajeros en toda la red"},"text":{"en":"Automated passenger counts track bus use over time. ORBT accounted for about one in six recorded passenger counts in April 2025.","es":"Los conteos automáticos registran el uso del autobús. ORBT representó aproximadamente uno de cada seis conteos en abril de 2025."}}],
+    "29":[{"title":{"en":"Shared bikes, connected places","es":"Bicicletas compartidas y conexiones"},"text":{"en":"Heartland Bike Share operated 80 stations in 2025. The Bob Kerrey Pedestrian Bridge had the highest station activity.","es":"Heartland Bike Share operó 80 estaciones en 2025. El puente peatonal Bob Kerrey tuvo la mayor actividad."}}],
+    "30":[{"title":{"en":"A warmer-season option","es":"Una opción para meses cálidos"},"text":{"en":"Omaha recorded 373,541 scooter trips in 2025, concentrated in warmer months. Monthly totals do not isolate trips linked to particular events.","es":"Omaha registró 373.541 viajes en scooter en 2025, concentrados en meses cálidos. Los totales no distinguen viajes por eventos específicos."}}]
+  },
+  "summaries": {
+    "districts":{"en":"A neighborhood-scale view of traffic across the metro.","es":"Una vista del tráfico metropolitano a escala de vecindario."},
+    "daily-vmt":{"en":"Where vehicles travel the most miles on an average day.","es":"Dónde los vehículos recorren más millas en un día promedio."},
+    "change-vmt":{"en":"Travel grew overall, but the change looks different from district to district.","es":"Los viajes aumentaron en general, pero el cambio varía entre distritos."},
+    "district-change":{"en":"A closer look at where travel increased or decreased from 2022 to 2025.","es":"Una vista de dónde aumentaron o disminuyeron los viajes de 2022 a 2025."},
+    "roadway-classes":{"en":"From local streets to interstates, each road has a different role.","es":"Desde las calles locales hasta las autopistas, cada vía tiene un papel distinto."},
+    "counters":{"en":"Continuous counts show how traffic changes throughout the year.","es":"Los conteos continuos muestran cómo cambia el tráfico durante el año."},
+    "seasonal":{"en":"Compare the rhythm of travel across months and years.","es":"Compare el ritmo de los viajes entre meses y años."},
+    "long-term":{"en":"A longer view of travel, including the 2020 decline and the recovery that followed.","es":"Una vista a largo plazo de los viajes, incluida la caída de 2020 y su recuperación."},
+    "regional-vmt":{"en":"The region's annual travel totals, with measured and estimated years shown separately.","es":"Totales anuales de viajes regionales, separando años medidos y estimados."},
+    "bike-ped":{"en":"Everyday walking and cycling at monitored trail locations.","es":"Caminatas y ciclismo cotidianos en los senderos monitoreados."},
+    "strava":{"en":"Walking, running, and cycling patterns recorded by Strava users.","es":"Patrones de caminata, carrera y ciclismo registrados por usuarios de Strava."},
+    "transit":{"en":"Passenger activity across the bus network.","es":"Actividad de pasajeros en la red de autobuses."},
+    "orbt":{"en":"A closer look at Omaha's rapid bus transit corridor.","es":"Una mirada al corredor de autobús rápido de Omaha."},
+    "bike-share":{"en":"Shared bike trips and the stations that connect them.","es":"Viajes en bicicleta compartida y sus estaciones."},
+    "scooters":{"en":"How scooter trips change throughout the year.","es":"Cómo cambian los viajes en scooter durante el año."}
+  },
+  "contexts": {
+    "districts":[
+      {"title":{"en":"Small areas, clearer patterns","es":"Áreas pequeñas, patrones claros"},"text":{"en":"Traffic Analysis Districts are areas bounded by major roads. They help compare traffic across urban, suburban, and outlying neighborhoods.","es":"Los distritos de análisis de tráfico son áreas delimitadas por vías principales. Permiten comparar zonas urbanas, suburbanas y periféricas."}},
+      {"title":{"en":"What VMT means","es":"Qué significa VMT"},"text":{"en":"Vehicle miles traveled combines road length and traffic volume. A longer road or more vehicles adds to the total.","es":"Las millas recorridas por vehículos combinan la longitud vial y el volumen de tráfico. Más vehículos o una vía más larga aumentan el total."}},
+      {"title":{"en":"Growth isn't uniform","es":"El crecimiento varía"},"text":{"en":"Western Douglas and southwestern Sarpy had some of the largest increases. Several districts grew by more than 10% between 2022 and 2025.","es":"El oeste de Douglas y el suroeste de Sarpy tuvieron algunos de los mayores aumentos. Varios distritos crecieron más del 10% entre 2022 y 2025."}}
+    ],
+    "daily-vmt":[
+      {"title":{"en":"Miles, not just vehicles","es":"Millas, no solo vehículos"},"text":{"en":"This view combines the number of vehicles with the distance they travel. Values are average daily vehicle miles, shown in thousands.","es":"Esta vista combina vehículos y distancia recorrida. Los valores son millas diarias promedio, expresadas en miles."}},
+      {"title":{"en":"Observed counts come first","es":"Prioridad a conteos observados"},"text":{"en":"Traffic estimates are adjusted using short-duration and continuous counts. Local observations help check the estimates along each corridor.","es":"Las estimaciones se ajustan con conteos de corta duración y continuos. Las observaciones locales ayudan a verificarlas en cada corredor."}},
+      {"title":{"en":"Broader road coverage","es":"Mayor cobertura vial"},"text":{"en":"The current estimates include local roads as well as major corridors. Older totals used a more limited road network.","es":"Las estimaciones actuales incluyen calles locales y corredores principales. Los totales anteriores usaban una red más limitada."}}
+    ],
+    "district-change":[
+      {"title":{"en":"Faster-growing districts","es":"Distritos de mayor crecimiento"},"text":{"en":"Some of the largest increases were in western Douglas and southwestern Sarpy. Several districts grew by more than 10% from 2022 to 2025.","es":"Los mayores aumentos incluyeron el oeste de Douglas y el suroeste de Sarpy. Varios distritos crecieron más del 10% de 2022 a 2025."}},
+      {"title":{"en":"Traffic can move between districts","es":"El tráfico puede cambiar de distrito"},"text":{"en":"Some central Omaha districts declined while the urban core grew overall. Temporary street restrictions may have moved trips to nearby roads.","es":"Algunos distritos centrales disminuyeron mientras el núcleo urbano creció. Las restricciones temporales pudieron desviar viajes a vías cercanas."}},
+      {"title":{"en":"Change doesn't explain the cause","es":"El cambio no explica su causa"},"text":{"en":"District totals show where travel changed. They do not separate the effects of construction, development, or changes in commuting.","es":"Los totales muestran dónde cambiaron los viajes. No separan los efectos de obras, desarrollo ni cambios de desplazamientos."}}
+    ],
+    "change-vmt":[
+      {"title":{"en":"Growth across counties","es":"Crecimiento por condado"},"text":{"en":"Travel rose 6.5% in Douglas, 6.2% in Sarpy, and 2.3% across Pottawattamie and Mills between 2022 and 2025.","es":"Entre 2022 y 2025, los viajes aumentaron 6,5% en Douglas, 6,2% en Sarpy y 2,3% en Pottawattamie y Mills."}},
+      {"title":{"en":"A mixed picture downtown","es":"Cambios distintos en el centro"},"text":{"en":"Some central Omaha districts saw declines even as the urban core grew overall. Construction may have shifted routes; its effect was not measured.","es":"Algunos distritos del centro de Omaha disminuyeron aunque el núcleo urbano creció. Las obras pudieron desviar rutas; no se midió su efecto."}},
+      {"title":{"en":"Sarpy's steady gains","es":"Aumentos continuos en Sarpy"},"text":{"en":"Sarpy was the only subregion with growth each year from 2022 through 2025. Travel there increased 2.4% in 2025.","es":"Sarpy fue la única subregión con crecimiento cada año de 2022 a 2025. Los viajes aumentaron 2,4% en 2025."}}
+    ],
+    "roadway-classes":[
+      {"title":{"en":"Moving through or arriving","es":"Circular o llegar"},"text":{"en":"Interstates and freeways move traffic over longer distances. Local streets provide more direct access to homes and businesses.","es":"Las autopistas mueven tráfico a largas distancias. Las calles locales dan acceso directo a viviendas y negocios."}},
+      {"title":{"en":"A change in the road network","es":"Un cambio en la red vial"},"text":{"en":"The 2023 method includes more local roads and counts each travel direction. Comparisons across 2022-2023 are not like-for-like.","es":"El método de 2023 incluye más calles locales y cada sentido de circulación. Las comparaciones de 2022-2023 no son equivalentes."}}
+    ],
+    "counters":[
+      {"title":{"en":"Year-round observation","es":"Observación todo el año"},"text":{"en":"Continuous traffic counters capture daily changes instead of a single short survey. The counter inventory lists 15 regional sites.","es":"Los contadores continuos captan cambios diarios, no solo una encuesta corta. El inventario incluye 15 sitios regionales."}},
+      {"title":{"en":"Location matters","es":"Importa la ubicación"},"text":{"en":"A regional total can hide differences between individual roads. Counter locations give those trends a geographic context.","es":"Un total regional puede ocultar diferencias entre vías. La ubicación de los contadores da contexto geográfico a las tendencias."}}
+    ],
+    "seasonal":[
+      {"title":{"en":"A warmer-season peak","es":"Un máximo en meses cálidos"},"text":{"en":"Traffic generally rises from late spring through early fall. Rural interstate travel varies more by season than urban interstate travel.","es":"El tráfico suele aumentar de finales de primavera a principios de otoño. Las autopistas rurales varían más por temporada que las urbanas."}},
+      {"title":{"en":"Compare the same month","es":"Compare el mismo mes"},"text":{"en":"Year-to-year lines make seasonal changes easier to separate from longer-term changes in traffic.","es":"Las líneas anuales ayudan a separar cambios estacionales de tendencias a largo plazo."}}
+    ],
+    "bike-ped":[
+      {"title":{"en":"Activity at monitored sites","es":"Actividad en sitios monitoreados"},"text":{"en":"Five Omaha pedestrian locations averaged a combined 1,607 daily counts in 2025, compared with 2,443 in 2020.","es":"Cinco sitios peatonales de Omaha sumaron un promedio de 1.607 conteos diarios en 2025, frente a 2.443 en 2020."}},
+      {"title":{"en":"A local view, not a total","es":"Una vista local, no un total"},"text":{"en":"These counters describe activity at their locations. They do not measure every walking or cycling trip in the metro.","es":"Los contadores describen actividad en sus ubicaciones, no todos los viajes a pie o en bicicleta de la región."}}
+    ],
+    "transit":[
+      {"title":{"en":"Where stops work hardest","es":"Dónde hay más actividad"},"text":{"en":"Stop productivity compares passenger activity with scheduled bus visits. The urban core and transit centers have the highest activity per visit.","es":"La productividad compara pasajeros y visitas programadas. El centro urbano y los centros de tránsito tienen más actividad por visita."}},
+      {"title":{"en":"ORBT's contribution","es":"La contribución de ORBT"},"text":{"en":"ORBT accounted for about one in six recorded passenger counts in April 2025.","es":"ORBT representó aproximadamente uno de cada seis conteos de pasajeros en abril de 2025."}}
+    ],
+    "bike-share":[
+      {"title":{"en":"80 stations","es":"80 estaciones"},"text":{"en":"Heartland Bike Share operated 80 stations in 2025. The Bob Kerrey Pedestrian Bridge had the highest station activity.","es":"Heartland Bike Share operó 80 estaciones en 2025. El puente peatonal Bob Kerrey tuvo la mayor actividad."}}
+    ],
+    "scooters":[
+      {"title":{"en":"373,541 trips","es":"373.541 viajes"},"text":{"en":"Omaha's 2025 scooter trips were concentrated in warmer months. Monthly totals do not separate travel tied to specific events.","es":"Los viajes en scooter de Omaha se concentraron en los meses cálidos de 2025. Los totales mensuales no distinguen eventos específicos."}}
+    ]
+  }
+}

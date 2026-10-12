@@ -1,0 +1,32 @@
+{
+  "year": 2025,
+  "period": "2022-2025",
+  "regional": {
+    "en": "Estimated regional travel increased about 5% from 2022 to 2025. Douglas County grew 6.5%, Sarpy County 6.2%, and Pottawattamie and Mills counties 2.3%. District maps show where that growth occurred.",
+    "es": "Los viajes regionales estimados aumentaron aproximadamente un 5% entre 2022 y 2025. El condado de Douglas creció un 6,5%, Sarpy un 6,2% y Pottawattamie y Mills un 2,3%. Los mapas de distritos muestran dónde ocurrió ese crecimiento."
+  },
+  "methodology": {
+    "en": "Vehicle miles traveled combines road length and traffic volume. A methodology change between 2022 and 2023 introduced the OSM network and broader local-road coverage. Centerline miles and directional network miles are different measures; comparisons across that break need care.",
+    "es": "Las millas recorridas por vehículos combinan la longitud de las carreteras y el volumen de tráfico. Un cambio metodológico entre 2022 y 2023 incorporó la red OSM y una mayor cobertura de calles locales. Las millas del eje vial y las millas de red direccional son medidas distintas; las comparaciones entre ambas requieren cuidado."
+  },
+  "seasonal": {
+    "en": "Traffic generally rises from late spring through early fall. Rural interstate counts vary more by season than urban interstate counts. Combined urban counts can hide differences between individual counter locations.",
+    "es": "El tráfico generalmente aumenta desde finales de primavera hasta principios de otoño. Los conteos de las autopistas rurales varían más por temporada que los urbanos. Los totales urbanos combinados pueden ocultar diferencias entre sitios de conteo."
+  },
+  "walking": {
+    "en": "The five monitored Omaha pedestrian locations recorded a combined daily average of 1,607 in 2025, down from 2,443 in 2020. Bicycle counts followed a different path. These results describe the monitored locations, not the entire trail network.",
+    "es": "Los cinco sitios peatonales monitoreados en Omaha registraron un promedio diario combinado de 1.607 en 2025, frente a 2.443 en 2020. Los conteos de bicicletas siguieron una tendencia distinta. Estos resultados describen los sitios monitoreados, no toda la red de senderos."
+  },
+  "strava": {
+    "en": "Recorded walking, running, and hiking grew in 2024 and 2025. Strava represents its users rather than all regional activity. Growth in app use can influence the totals; compare these patterns with permanent counter data.",
+    "es": "Las caminatas, carreras y excursiones registradas aumentaron en 2024 y 2025. Strava representa a sus usuarios, no toda la actividad regional. El crecimiento del uso de la aplicación puede influir en los totales; compare estos patrones con los datos de contadores permanentes."
+  },
+  "transit": {
+    "en": "Stop productivity relates passenger activity to scheduled bus visits. The urban core and transit centers have the highest productivity. ORBT accounted for approximately one in six recorded passenger counts in April 2025. Construction-related route changes affect some stop comparisons.",
+    "es": "La productividad de las paradas relaciona la actividad de pasajeros con las visitas programadas de los autobuses. El centro urbano y los centros de tránsito tienen la mayor productividad. ORBT representó aproximadamente uno de cada seis conteos de pasajeros registrados en abril de 2025. Los cambios de rutas por obras afectan algunas comparaciones."
+  },
+  "shared": {
+    "en": "Heartland Bike Share operated 80 stations in 2025. The Bob Kerrey Pedestrian Bridge had the highest station activity. Omaha recorded 373,541 scooter trips, concentrated in the warmer months; monthly totals do not isolate event-related travel.",
+    "es": "Heartland Bike Share operó 80 estaciones en 2025. El puente peatonal Bob Kerrey tuvo la mayor actividad. Omaha registró 373.541 viajes en scooter, concentrados en los meses cálidos; los totales mensuales no distinguen los viajes relacionados con eventos."
+  }
+}

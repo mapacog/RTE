@@ -12,12 +12,7 @@
       "south": 26000,
       "west": 69000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 12.5,
-      "y": 19.2
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-2",
@@ -32,12 +27,7 @@
       "south": 24000,
       "west": 50000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 23.11,
-      "y": 18.6
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-3",
@@ -52,12 +42,7 @@
       "south": 38000,
       "west": 46000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 33.71,
-      "y": 18.0
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-4",
@@ -72,12 +57,7 @@
       "south": 38000,
       "west": 34000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 46.57,
-      "y": 18.0
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-5",
@@ -92,12 +72,7 @@
       "south": 33000,
       "west": 29000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 57.18,
-      "y": 19.8
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-6",
@@ -112,12 +87,7 @@
       "south": 54000,
       "west": 7000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 67.79,
-      "y": 19.2
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-7",
@@ -132,12 +102,7 @@
       "south": 35000,
       "west": 24000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 78.39,
-      "y": 18.6
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-8",
@@ -152,12 +117,7 @@
       "south": 27000,
       "west": 30000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 89.0,
-      "y": 18.0
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-9",
@@ -172,12 +132,7 @@
       "south": 52000,
       "west": 5000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 12.75,
-      "y": 20.75
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-10",
@@ -192,12 +147,7 @@
       "south": 12000,
       "west": 45000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 23.36,
-      "y": 20.15
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-11",
@@ -212,12 +162,7 @@
       "south": 34000,
       "west": 25000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 33.96,
-      "y": 19.55
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-388",
@@ -232,12 +177,7 @@
       "south": 34000,
       "west": 25000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 45.07,
-      "y": 64.98
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-12",
@@ -252,12 +192,7 @@
       "south": 18000,
       "west": 31000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 44.57,
-      "y": 18.95
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-13",
@@ -272,12 +207,7 @@
       "south": 45000,
       "west": 8000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 57.43,
-      "y": 18.95
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-14",
@@ -292,12 +222,7 @@
       "south": 30000,
       "west": 26000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 68.04,
-      "y": 20.75
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-15",
@@ -312,12 +237,7 @@
       "south": 10000,
       "west": 46000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 78.64,
-      "y": 20.15
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-16",
@@ -332,12 +252,7 @@
       "south": 27000,
       "west": 24000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 89.25,
-      "y": 19.55
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-17",
@@ -352,12 +267,7 @@
       "south": 28000,
       "west": 36000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 13.0,
-      "y": 19.91
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-18",
@@ -372,12 +282,7 @@
       "south": 39000,
       "west": 16000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 23.61,
-      "y": 21.71
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-19",
@@ -392,12 +297,7 @@
       "south": 14000,
       "west": 35000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 34.21,
-      "y": 21.11
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-20",
@@ -412,12 +312,7 @@
       "south": 23000,
       "west": 31000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 44.82,
-      "y": 20.51
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-21",
@@ -432,12 +327,7 @@
       "south": 21000,
       "west": 25000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 55.43,
-      "y": 19.91
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-22",
@@ -452,12 +342,7 @@
       "south": 14000,
       "west": 37000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 68.29,
-      "y": 19.91
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-23",
@@ -472,12 +357,7 @@
       "south": 41000,
       "west": 9000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 78.89,
-      "y": 21.71
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-24",
@@ -492,12 +372,7 @@
       "south": 0,
       "west": 49000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 89.5,
-      "y": 21.11
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-25",
@@ -512,12 +387,7 @@
       "south": 15000,
       "west": 31000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 13.25,
-      "y": 21.46
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-26",
@@ -532,12 +402,7 @@
       "south": 33000,
       "west": 19000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 23.86,
-      "y": 20.86
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-27",
@@ -552,12 +417,7 @@
       "south": 21000,
       "west": 30000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 34.46,
-      "y": 22.66
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-28",
@@ -572,12 +432,7 @@
       "south": 43000,
       "west": 3000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 45.07,
-      "y": 22.06
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-29",
@@ -592,12 +447,7 @@
       "south": 47000,
       "west": 3000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 55.68,
-      "y": 21.46
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-30",
@@ -612,12 +462,7 @@
       "south": 19000,
       "west": 27000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 66.29,
-      "y": 20.86
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-31",
@@ -632,12 +477,7 @@
       "south": 9000,
       "west": 43000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 79.14,
-      "y": 20.86
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-32",
@@ -652,12 +492,7 @@
       "south": 10000,
       "west": 41000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 89.75,
-      "y": 22.66
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-33",
@@ -672,12 +507,7 @@
       "south": 28000,
       "west": 23000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 13.5,
-      "y": 23.02
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-34",
@@ -692,12 +522,7 @@
       "south": 47000,
       "west": 13000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 24.11,
-      "y": 22.42
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-35",
@@ -712,12 +537,7 @@
       "south": 5000,
       "west": 40000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 34.71,
-      "y": 21.82
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-36",
@@ -732,12 +552,7 @@
       "south": 25000,
       "west": 25000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 45.32,
-      "y": 23.62
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-37",
@@ -752,12 +567,7 @@
       "south": 30000,
       "west": 12000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 55.93,
-      "y": 23.02
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-38",
@@ -772,12 +582,7 @@
       "south": 25000,
       "west": 36000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 66.54,
-      "y": 22.42
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-39",
@@ -792,12 +597,7 @@
       "south": 15000,
       "west": 30000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 77.14,
-      "y": 21.82
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-40",
@@ -812,12 +612,7 @@
       "south": 23000,
       "west": 22000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 90.0,
-      "y": 21.82
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-389",
@@ -832,12 +627,7 @@
       "south": 23000,
       "west": 22000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 55.68,
-      "y": 64.38
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-41",
@@ -852,12 +642,7 @@
       "south": 29000,
       "west": 6000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 13.75,
-      "y": 24.57
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-390",
@@ -872,12 +657,7 @@
       "south": 16000,
       "west": 28000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 66.29,
-      "y": 63.78
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-42",
@@ -892,12 +672,7 @@
       "south": 19000,
       "west": 26000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 24.36,
-      "y": 23.97
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-43",
@@ -912,12 +687,7 @@
       "south": 15000,
       "west": 26000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 34.96,
-      "y": 23.37
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-44",
@@ -932,12 +702,7 @@
       "south": 8000,
       "west": 39000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 45.57,
-      "y": 22.77
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-45",
@@ -952,12 +717,7 @@
       "south": 16000,
       "west": 27000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 56.18,
-      "y": 24.57
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-46",
@@ -972,12 +732,7 @@
       "south": 20000,
       "west": 24000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 66.79,
-      "y": 23.97
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-47",
@@ -992,12 +747,7 @@
       "south": 23000,
       "west": 25000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 77.39,
-      "y": 23.37
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-391",
@@ -1012,12 +762,7 @@
       "south": 17000,
       "west": 31000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 79.14,
-      "y": 63.78
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-392",
@@ -1032,12 +777,7 @@
       "south": 8000,
       "west": 34000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 89.75,
-      "y": 65.58
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-48",
@@ -1052,12 +792,7 @@
       "south": 14000,
       "west": 31000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 88.0,
-      "y": 22.77
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-49",
@@ -1072,12 +807,7 @@
       "south": 7000,
       "west": 34000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 14.0,
-      "y": 23.72
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-393",
@@ -1092,12 +822,7 @@
       "south": 14000,
       "west": 30000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 13.5,
-      "y": 65.94
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-50",
@@ -1112,12 +837,7 @@
       "south": 15000,
       "west": 37000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 24.61,
-      "y": 25.52
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-394",
@@ -1132,12 +852,7 @@
       "south": 14000,
       "west": 33000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 24.11,
-      "y": 65.34
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-51",
@@ -1152,12 +867,7 @@
       "south": 22000,
       "west": 23000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 35.21,
-      "y": 24.92
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-52",
@@ -1172,12 +882,7 @@
       "south": 21000,
       "west": 23000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 45.82,
-      "y": 24.32
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-53",
@@ -1192,12 +897,7 @@
       "south": 40000,
       "west": 6000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 56.43,
-      "y": 23.72
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-54",
@@ -1212,12 +912,7 @@
       "south": 26000,
       "west": 20000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 67.04,
-      "y": 25.52
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-395",
@@ -1232,12 +927,7 @@
       "south": 26000,
       "west": 20000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 34.71,
-      "y": 64.74
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-55",
@@ -1252,12 +942,7 @@
       "south": 22000,
       "west": 14000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 77.64,
-      "y": 24.92
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-56",
@@ -1272,12 +957,7 @@
       "south": 35000,
       "west": 6000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 88.25,
-      "y": 24.32
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-57",
@@ -1292,12 +972,7 @@
       "south": 37000,
       "west": 5000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 12.0,
-      "y": 24.68
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-58",
@@ -1312,12 +987,7 @@
       "south": 18000,
       "west": 23000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 24.86,
-      "y": 24.68
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-59",
@@ -1332,12 +1002,7 @@
       "south": 13000,
       "west": 35000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 35.46,
-      "y": 26.48
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-60",
@@ -1352,12 +1017,7 @@
       "south": 20000,
       "west": 20000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 46.07,
-      "y": 25.88
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-61",
@@ -1372,12 +1032,7 @@
       "south": 13000,
       "west": 26000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 56.68,
-      "y": 25.28
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-62",
@@ -1392,12 +1047,7 @@
       "south": 23000,
       "west": 13000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 67.29,
-      "y": 24.68
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-396",
@@ -1412,12 +1062,7 @@
       "south": 20000,
       "west": 20000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 45.32,
-      "y": 66.54
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-63",
@@ -1432,12 +1077,7 @@
       "south": 23000,
       "west": 19000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 77.89,
-      "y": 26.48
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-64",
@@ -1452,12 +1092,7 @@
       "south": 36000,
       "west": 13000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 88.5,
-      "y": 25.88
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-65",
@@ -1472,12 +1107,7 @@
       "south": 33000,
       "west": 5000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 12.25,
-      "y": 26.23
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-66",
@@ -1492,12 +1122,7 @@
       "south": 25000,
       "west": 17000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 22.86,
-      "y": 25.63
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-67",
@@ -1512,12 +1137,7 @@
       "south": 20000,
       "west": 17000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 35.71,
-      "y": 25.63
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-68",
@@ -1532,12 +1152,7 @@
       "south": 23000,
       "west": 16000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 46.32,
-      "y": 27.43
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-69",
@@ -1552,12 +1167,7 @@
       "south": 22000,
       "west": 20000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 56.93,
-      "y": 26.83
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-70",
@@ -1572,12 +1182,7 @@
       "south": 17000,
       "west": 20000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 67.54,
-      "y": 26.23
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-71",
@@ -1592,12 +1197,7 @@
       "south": 31000,
       "west": 6000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 78.14,
-      "y": 25.63
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-72",
@@ -1612,12 +1212,7 @@
       "south": 7000,
       "west": 36000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 88.75,
-      "y": 27.43
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-73",
@@ -1632,12 +1227,7 @@
       "south": 17000,
       "west": 20000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 12.5,
-      "y": 27.78
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-74",
@@ -1652,12 +1242,7 @@
       "south": 2000,
       "west": 32000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 23.11,
-      "y": 27.18
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-75",
@@ -1672,12 +1257,7 @@
       "south": 13000,
       "west": 34000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 33.71,
-      "y": 26.58
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-76",
@@ -1692,12 +1272,7 @@
       "south": 11000,
       "west": 36000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 46.57,
-      "y": 26.58
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-77",
@@ -1712,12 +1287,7 @@
       "south": 32000,
       "west": 9000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 57.18,
-      "y": 28.38
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-78",
@@ -1732,12 +1302,7 @@
       "south": 20000,
       "west": 21000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 67.79,
-      "y": 27.78
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-79",
@@ -1752,12 +1317,7 @@
       "south": 26000,
       "west": 14000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 78.39,
-      "y": 27.18
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-80",
@@ -1772,12 +1332,7 @@
       "south": 29000,
       "west": 5000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 89.0,
-      "y": 26.58
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-81",
@@ -1792,12 +1347,7 @@
       "south": 24000,
       "west": 17000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 12.75,
-      "y": 29.34
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-82",
@@ -1812,12 +1362,7 @@
       "south": 16000,
       "west": 28000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 23.36,
-      "y": 28.74
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-83",
@@ -1832,12 +1377,7 @@
       "south": 32000,
       "west": 28000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 33.96,
-      "y": 28.14
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-84",
@@ -1852,12 +1392,7 @@
       "south": 15000,
       "west": 30000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 44.57,
-      "y": 27.54
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-397",
@@ -1872,12 +1407,7 @@
       "south": 4000,
       "west": 38000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 55.93,
-      "y": 65.94
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-398",
@@ -1892,12 +1422,7 @@
       "south": 34000,
       "west": 4000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 66.54,
-      "y": 65.34
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-85",
@@ -1912,12 +1437,7 @@
       "south": 31000,
       "west": 13000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 57.43,
-      "y": 27.54
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-86",
@@ -1932,12 +1452,7 @@
       "south": 12000,
       "west": 24000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 68.04,
-      "y": 29.34
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-87",
@@ -1952,12 +1467,7 @@
       "south": 36000,
       "west": 5000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 78.64,
-      "y": 28.74
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-88",
@@ -1972,12 +1482,7 @@
       "south": 0,
       "west": 38000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 89.25,
-      "y": 28.14
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-89",
@@ -1992,12 +1497,7 @@
       "south": 0,
       "west": 39000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 13.0,
-      "y": 28.49
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-90",
@@ -2012,12 +1512,7 @@
       "south": 15000,
       "west": 25000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 23.61,
-      "y": 30.29
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-91",
@@ -2032,12 +1527,7 @@
       "south": 30000,
       "west": 9000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 34.21,
-      "y": 29.69
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-92",
@@ -2052,12 +1542,7 @@
       "south": 7000,
       "west": 38000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 44.82,
-      "y": 29.09
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-93",
@@ -2072,12 +1557,7 @@
       "south": 21000,
       "west": 20000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 55.43,
-      "y": 28.49
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-399",
@@ -2092,12 +1572,7 @@
       "south": 18000,
       "west": 19000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 77.14,
-      "y": 64.74
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-94",
@@ -2112,12 +1587,7 @@
       "south": 32000,
       "west": 0
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 68.29,
-      "y": 28.49
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-95",
@@ -2132,12 +1602,7 @@
       "south": 20000,
       "west": 16000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 78.89,
-      "y": 30.29
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-96",
@@ -2152,12 +1617,7 @@
       "south": 11000,
       "west": 27000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 89.5,
-      "y": 29.69
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-400",
@@ -2172,12 +1632,7 @@
       "south": 8000,
       "west": 25000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 90.0,
-      "y": 64.74
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-97",
@@ -2192,12 +1647,7 @@
       "south": 28000,
       "west": 7000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 13.25,
-      "y": 30.05
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-98",
@@ -2212,12 +1662,7 @@
       "south": 29000,
       "west": 5000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 23.86,
-      "y": 29.45
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-401",
@@ -2232,12 +1677,7 @@
       "south": 31000,
       "west": 4000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 13.75,
-      "y": 67.49
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-402",
@@ -2252,12 +1692,7 @@
       "south": 0,
       "west": 33000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 24.36,
-      "y": 66.89
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-403",
@@ -2272,12 +1707,7 @@
       "south": 0,
       "west": 32000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 34.96,
-      "y": 66.29
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-99",
@@ -2292,12 +1722,7 @@
       "south": 0,
       "west": 40000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 34.46,
-      "y": 31.25
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-100",
@@ -2312,12 +1737,7 @@
       "south": 20000,
       "west": 18000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 45.07,
-      "y": 30.65
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-101",
@@ -2332,12 +1752,7 @@
       "south": 3000,
       "west": 32000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 55.68,
-      "y": 30.05
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-102",
@@ -2352,12 +1767,7 @@
       "south": 29000,
       "west": 11000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 66.29,
-      "y": 29.45
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-103",
@@ -2372,12 +1782,7 @@
       "south": 10000,
       "west": 25000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 79.14,
-      "y": 29.45
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-104",
@@ -2392,12 +1797,7 @@
       "south": 33000,
       "west": 2000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 89.75,
-      "y": 31.25
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-105",
@@ -2412,12 +1812,7 @@
       "south": 9000,
       "west": 27000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 13.5,
-      "y": 31.6
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-106",
@@ -2432,12 +1827,7 @@
       "south": 29000,
       "west": 9000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 24.11,
-      "y": 31.0
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-404",
@@ -2452,12 +1842,7 @@
       "south": 9000,
       "west": 27000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 45.57,
-      "y": 65.69
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-107",
@@ -2472,12 +1857,7 @@
       "south": 34000,
       "west": 3000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 34.71,
-      "y": 30.4
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-108",
@@ -2492,12 +1872,7 @@
       "south": 9000,
       "west": 34000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 45.32,
-      "y": 32.2
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-109",
@@ -2512,12 +1887,7 @@
       "south": 34000,
       "west": 4000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 55.93,
-      "y": 31.6
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-110",
@@ -2532,12 +1902,7 @@
       "south": 22000,
       "west": 16000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 66.54,
-      "y": 31.0
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-111",
@@ -2552,12 +1917,7 @@
       "south": 6000,
       "west": 32000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 77.14,
-      "y": 30.4
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-405",
@@ -2572,12 +1932,7 @@
       "south": 22000,
       "west": 18000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 56.18,
-      "y": 67.49
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-406",
@@ -2592,12 +1947,7 @@
       "south": 31000,
       "west": 3000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 66.79,
-      "y": 66.89
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-407",
@@ -2612,12 +1962,7 @@
       "south": 6000,
       "west": 25000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 77.39,
-      "y": 66.29
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-112",
@@ -2632,12 +1977,7 @@
       "south": 30000,
       "west": 4000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 90.0,
-      "y": 30.4
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-113",
@@ -2652,12 +1992,7 @@
       "south": 29000,
       "west": 6000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 13.75,
-      "y": 33.15
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-114",
@@ -2672,12 +2007,7 @@
       "south": 10000,
       "west": 25000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 24.36,
-      "y": 32.55
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-115",
@@ -2692,12 +2022,7 @@
       "south": 29000,
       "west": 0
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 34.96,
-      "y": 31.95
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-408",
@@ -2712,12 +2037,7 @@
       "south": 29000,
       "west": 3000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 88.0,
-      "y": 65.69
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-116",
@@ -2732,12 +2052,7 @@
       "south": 8000,
       "west": 24000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 45.57,
-      "y": 31.35
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-117",
@@ -2752,12 +2067,7 @@
       "south": 7000,
       "west": 29000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 56.18,
-      "y": 33.15
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-118",
@@ -2772,12 +2082,7 @@
       "south": 5000,
       "west": 26000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 66.79,
-      "y": 32.55
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-119",
@@ -2792,12 +2097,7 @@
       "south": 32000,
       "west": 0
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 77.39,
-      "y": 31.95
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-120",
@@ -2812,12 +2112,7 @@
       "south": 21000,
       "west": 18000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 88.0,
-      "y": 31.35
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-121",
@@ -2832,12 +2127,7 @@
       "south": 12000,
       "west": 24000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 14.0,
-      "y": 32.31
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-409",
@@ -2852,12 +2142,7 @@
       "south": 21000,
       "west": 18000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 14.0,
-      "y": 66.65
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-410",
@@ -2872,12 +2157,7 @@
       "south": 12000,
       "west": 24000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 24.61,
-      "y": 68.45
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-411",
@@ -2892,12 +2172,7 @@
       "south": 10000,
       "west": 27000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 35.21,
-      "y": 67.85
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-412",
@@ -2912,12 +2187,7 @@
       "south": 12000,
       "west": 34000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 45.82,
-      "y": 67.25
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-122",
@@ -2932,12 +2202,7 @@
       "south": 19000,
       "west": 18000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 24.61,
-      "y": 34.11
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-123",
@@ -2952,12 +2217,7 @@
       "south": 25000,
       "west": 12000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 35.21,
-      "y": 33.51
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-124",
@@ -2972,12 +2232,7 @@
       "south": 4000,
       "west": 30000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 45.82,
-      "y": 32.91
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-125",
@@ -2992,12 +2247,7 @@
       "south": 25000,
       "west": 24000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 56.43,
-      "y": 32.31
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-126",
@@ -3012,12 +2262,7 @@
       "south": 9000,
       "west": 27000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 67.04,
-      "y": 34.11
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-127",
@@ -3032,12 +2277,7 @@
       "south": 16000,
       "west": 18000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 77.64,
-      "y": 33.51
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-128",
@@ -3052,12 +2292,7 @@
       "south": 31000,
       "west": 13000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 88.25,
-      "y": 32.91
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-129",
@@ -3072,12 +2307,7 @@
       "south": 29000,
       "west": 7000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 12.0,
-      "y": 33.26
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-413",
@@ -3092,12 +2322,7 @@
       "south": 25000,
       "west": 24000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 56.43,
-      "y": 66.65
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-414",
@@ -3112,12 +2337,7 @@
       "south": 16000,
       "west": 18000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 67.04,
-      "y": 68.45
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-415",
@@ -3132,12 +2352,7 @@
       "south": 5000,
       "west": 30000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 77.64,
-      "y": 67.85
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-130",
@@ -3152,12 +2367,7 @@
       "south": 31000,
       "west": 4000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 24.86,
-      "y": 33.26
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-131",
@@ -3172,12 +2382,7 @@
       "south": 25000,
       "west": 0
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 35.46,
-      "y": 35.06
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-132",
@@ -3192,12 +2397,7 @@
       "south": 25000,
       "west": 7000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 46.07,
-      "y": 34.46
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-133",
@@ -3212,12 +2412,7 @@
       "south": 31000,
       "west": 0
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 56.68,
-      "y": 33.86
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-134",
@@ -3232,12 +2427,7 @@
       "south": 19000,
       "west": 16000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 67.29,
-      "y": 33.26
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-135",
@@ -3252,12 +2442,7 @@
       "south": 33000,
       "west": 0
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 77.89,
-      "y": 35.06
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-136",
@@ -3272,12 +2457,7 @@
       "south": 34000,
       "west": 2000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 88.5,
-      "y": 34.46
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-137",
@@ -3292,12 +2472,7 @@
       "south": 1000,
       "west": 32000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 12.25,
-      "y": 34.82
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-138",
@@ -3312,12 +2487,7 @@
       "south": 23000,
       "west": 13000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 22.86,
-      "y": 34.22
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-416",
@@ -3332,12 +2502,7 @@
       "south": 19000,
       "west": 11000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 88.25,
-      "y": 67.25
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-417",
@@ -3352,12 +2517,7 @@
       "south": 14000,
       "west": 23000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 12.0,
-      "y": 67.6
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-139",
@@ -3372,12 +2532,7 @@
       "south": 4000,
       "west": 30000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 35.71,
-      "y": 34.22
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-140",
@@ -3392,12 +2547,7 @@
       "south": 8000,
       "west": 24000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 46.32,
-      "y": 36.02
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-141",
@@ -3412,12 +2562,7 @@
       "south": 26000,
       "west": 0
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 56.93,
-      "y": 35.42
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-142",
@@ -3432,12 +2577,7 @@
       "south": 4000,
       "west": 24000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 67.54,
-      "y": 34.82
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-488",
@@ -3452,12 +2592,7 @@
       "south": 30000,
       "west": 8000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 88.25,
-      "y": 75.83
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-418",
@@ -3472,12 +2607,7 @@
       "south": 7000,
       "west": 27000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 24.86,
-      "y": 67.6
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-143",
@@ -3492,12 +2622,7 @@
       "south": 16000,
       "west": 26000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 78.14,
-      "y": 34.22
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-489",
@@ -3512,12 +2637,7 @@
       "south": 3000,
       "west": 28000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 12.0,
-      "y": 76.18
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-419",
@@ -3532,12 +2652,7 @@
       "south": 23000,
       "west": 14000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 35.46,
-      "y": 69.4
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-420",
@@ -3552,12 +2667,7 @@
       "south": 5000,
       "west": 28000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 46.07,
-      "y": 68.8
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-144",
@@ -3572,12 +2682,7 @@
       "south": 14000,
       "west": 20000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 88.75,
-      "y": 36.02
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-145",
@@ -3592,12 +2697,7 @@
       "south": 4000,
       "west": 23000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 12.5,
-      "y": 36.37
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-146",
@@ -3612,12 +2712,7 @@
       "south": 10000,
       "west": 23000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 23.11,
-      "y": 35.77
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-147",
@@ -3632,12 +2727,7 @@
       "south": 12000,
       "west": 25000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 33.71,
-      "y": 35.17
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-148",
@@ -3652,12 +2742,7 @@
       "south": 13000,
       "west": 25000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 46.57,
-      "y": 35.17
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-149",
@@ -3672,12 +2757,7 @@
       "south": 14000,
       "west": 17000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 57.18,
-      "y": 36.97
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-150",
@@ -3692,12 +2772,7 @@
       "south": 29000,
       "west": 4000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 67.79,
-      "y": 36.37
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-151",
@@ -3712,12 +2787,7 @@
       "south": 29000,
       "west": 2000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 78.39,
-      "y": 35.77
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-152",
@@ -3732,12 +2802,7 @@
       "south": 22000,
       "west": 10000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 89.0,
-      "y": 35.17
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-153",
@@ -3752,12 +2817,7 @@
       "south": 2000,
       "west": 31000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 12.75,
-      "y": 37.92
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-421",
@@ -3772,12 +2832,7 @@
       "south": 21000,
       "west": 3000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 56.68,
-      "y": 68.2
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-154",
@@ -3792,12 +2847,7 @@
       "south": 20000,
       "west": 7000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 23.36,
-      "y": 37.32
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-155",
@@ -3812,12 +2862,7 @@
       "south": 6000,
       "west": 25000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 33.96,
-      "y": 36.72
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-156",
@@ -3832,12 +2877,7 @@
       "south": 7000,
       "west": 27000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 44.57,
-      "y": 36.12
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-157",
@@ -3852,12 +2892,7 @@
       "south": 11000,
       "west": 22000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 57.43,
-      "y": 36.12
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-158",
@@ -3872,12 +2907,7 @@
       "south": 29000,
       "west": 10000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 68.04,
-      "y": 37.92
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-422",
@@ -3892,12 +2922,7 @@
       "south": 0,
       "west": 22000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 67.29,
-      "y": 67.6
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-159",
@@ -3912,12 +2937,7 @@
       "south": 6000,
       "west": 30000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 78.64,
-      "y": 37.32
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-160",
@@ -3932,12 +2952,7 @@
       "south": 11000,
       "west": 25000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 89.25,
-      "y": 36.72
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-161",
@@ -3952,12 +2967,7 @@
       "south": 20000,
       "west": 7000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 13.0,
-      "y": 37.08
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-162",
@@ -3972,12 +2982,7 @@
       "south": 28000,
       "west": 6000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 23.61,
-      "y": 38.88
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-163",
@@ -3992,12 +2997,7 @@
       "south": 9000,
       "west": 28000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 34.21,
-      "y": 38.28
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-164",
@@ -4012,12 +3012,7 @@
       "south": 5000,
       "west": 25000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 44.82,
-      "y": 37.68
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-165",
@@ -4032,12 +3027,7 @@
       "south": 0,
       "west": 10000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 55.43,
-      "y": 37.08
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-166",
@@ -4052,12 +3042,7 @@
       "south": 30000,
       "west": 3000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 68.29,
-      "y": 37.08
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-167",
@@ -4072,12 +3057,7 @@
       "south": 0,
       "west": 24000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 78.89,
-      "y": 38.88
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-168",
@@ -4092,12 +3072,7 @@
       "south": 23000,
       "west": 4000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 89.5,
-      "y": 38.28
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-169",
@@ -4112,12 +3087,7 @@
       "south": 7000,
       "west": 22000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 13.25,
-      "y": 38.63
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-170",
@@ -4132,12 +3102,7 @@
       "south": 24000,
       "west": 6000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 23.86,
-      "y": 38.03
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-171",
@@ -4152,12 +3117,7 @@
       "south": 6000,
       "west": 25000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 34.46,
-      "y": 39.83
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-172",
@@ -4172,12 +3132,7 @@
       "south": 9000,
       "west": 22000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 45.07,
-      "y": 39.23
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-173",
@@ -4192,12 +3147,7 @@
       "south": 0,
       "west": 23000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 55.68,
-      "y": 38.63
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-174",
@@ -4212,12 +3162,7 @@
       "south": 14000,
       "west": 17000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 66.29,
-      "y": 38.03
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-175",
@@ -4232,12 +3177,7 @@
       "south": 26000,
       "west": 1000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 79.14,
-      "y": 38.03
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-423",
@@ -4252,12 +3192,7 @@
       "south": 28000,
       "west": 5000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 77.89,
-      "y": 69.4
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-424",
@@ -4272,12 +3207,7 @@
       "south": 0,
       "west": 31000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 88.5,
-      "y": 68.8
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-425",
@@ -4292,12 +3222,7 @@
       "south": 26000,
       "west": 1000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 12.25,
-      "y": 69.15
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-426",
@@ -4312,12 +3237,7 @@
       "south": 2000,
       "west": 30000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 22.86,
-      "y": 68.55
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-427",
@@ -4332,12 +3252,7 @@
       "south": 4000,
       "west": 26000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 35.71,
-      "y": 68.55
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-176",
@@ -4352,12 +3267,7 @@
       "south": 28000,
       "west": 0
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 89.75,
-      "y": 39.83
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-177",
@@ -4372,12 +3282,7 @@
       "south": 0,
       "west": 28000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 13.5,
-      "y": 40.18
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-178",
@@ -4392,12 +3297,7 @@
       "south": 7000,
       "west": 24000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 24.11,
-      "y": 39.58
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-179",
@@ -4412,12 +3312,7 @@
       "south": 21000,
       "west": 10000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 34.71,
-      "y": 38.98
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-180",
@@ -4432,12 +3327,7 @@
       "south": 26000,
       "west": 2000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 45.32,
-      "y": 40.78
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-181",
@@ -4452,12 +3342,7 @@
       "south": 4000,
       "west": 25000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 55.93,
-      "y": 40.18
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-490",
@@ -4472,12 +3357,7 @@
       "south": 2000,
       "west": 28000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 24.86,
-      "y": 76.18
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-428",
@@ -4492,12 +3372,7 @@
       "south": 0,
       "west": 28000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 46.32,
-      "y": 70.35
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-182",
@@ -4512,12 +3387,7 @@
       "south": 7000,
       "west": 27000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 66.54,
-      "y": 39.58
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-183",
@@ -4532,12 +3402,7 @@
       "south": 7000,
       "west": 25000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 77.14,
-      "y": 38.98
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-184",
@@ -4552,12 +3417,7 @@
       "south": 1000,
       "west": 31000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 90.0,
-      "y": 38.98
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-185",
@@ -4572,12 +3432,7 @@
       "south": 29000,
       "west": 1000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 13.75,
-      "y": 41.74
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-491",
@@ -4592,12 +3447,7 @@
       "south": 2000,
       "west": 27000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 35.46,
-      "y": 77.98
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-186",
@@ -4612,12 +3462,7 @@
       "south": 23000,
       "west": 4000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 24.36,
-      "y": 41.14
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-187",
@@ -4632,12 +3477,7 @@
       "south": 0,
       "west": 31000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 34.96,
-      "y": 40.54
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-188",
@@ -4652,12 +3492,7 @@
       "south": 0,
       "west": 30000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 45.57,
-      "y": 39.94
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-189",
@@ -4672,12 +3507,7 @@
       "south": 24000,
       "west": 6000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 56.18,
-      "y": 41.74
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-190",
@@ -4692,12 +3522,7 @@
       "south": 16000,
       "west": 15000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 66.79,
-      "y": 41.14
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-191",
@@ -4712,12 +3537,7 @@
       "south": 7000,
       "west": 28000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 77.39,
-      "y": 40.54
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-429",
@@ -4732,12 +3552,7 @@
       "south": 11000,
       "west": 21000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 56.93,
-      "y": 69.75
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-192",
@@ -4752,12 +3567,7 @@
       "south": 25000,
       "west": 9000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 88.0,
-      "y": 39.94
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-193",
@@ -4772,12 +3582,7 @@
       "south": 0,
       "west": 27000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 14.0,
-      "y": 40.89
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-194",
@@ -4792,12 +3597,7 @@
       "south": 0,
       "west": 23000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 24.61,
-      "y": 42.69
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-195",
@@ -4812,12 +3612,7 @@
       "south": 7000,
       "west": 25000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 35.21,
-      "y": 42.09
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-196",
@@ -4832,12 +3627,7 @@
       "south": 10000,
       "west": 19000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 45.82,
-      "y": 41.49
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-492",
@@ -4852,12 +3642,7 @@
       "south": 1000,
       "west": 27000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 46.07,
-      "y": 77.38
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-493",
@@ -4872,12 +3657,7 @@
       "south": 4000,
       "west": 23000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 56.68,
-      "y": 76.78
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-430",
@@ -4892,12 +3672,7 @@
       "south": 3000,
       "west": 28000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 67.54,
-      "y": 69.15
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-197",
@@ -4912,12 +3687,7 @@
       "south": 9000,
       "west": 21000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 56.43,
-      "y": 40.89
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-198",
@@ -4932,12 +3702,7 @@
       "south": 5000,
       "west": 23000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 67.04,
-      "y": 42.69
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-199",
@@ -4952,12 +3717,7 @@
       "south": 7000,
       "west": 21000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 77.64,
-      "y": 42.09
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-200",
@@ -4972,12 +3732,7 @@
       "south": 4000,
       "west": 28000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 88.25,
-      "y": 41.49
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-201",
@@ -4992,12 +3747,7 @@
       "south": 0,
       "west": 22000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 12.0,
-      "y": 41.85
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-202",
@@ -5012,12 +3762,7 @@
       "south": 2000,
       "west": 27000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 24.86,
-      "y": 41.85
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-203",
@@ -5032,12 +3777,7 @@
       "south": 32000,
       "west": 0
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 35.46,
-      "y": 43.65
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-204",
@@ -5052,12 +3792,7 @@
       "south": 4000,
       "west": 23000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 46.07,
-      "y": 43.05
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-205",
@@ -5072,12 +3807,7 @@
       "south": 5000,
       "west": 24000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 56.68,
-      "y": 42.45
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-206",
@@ -5092,12 +3822,7 @@
       "south": 5000,
       "west": 17000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 67.29,
-      "y": 41.85
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-431",
@@ -5112,12 +3837,7 @@
       "south": 6000,
       "west": 17000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 78.14,
-      "y": 68.55
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-207",
@@ -5132,12 +3852,7 @@
       "south": 0,
       "west": 25000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 77.89,
-      "y": 43.65
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-208",
@@ -5152,12 +3867,7 @@
       "south": 6000,
       "west": 24000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 88.5,
-      "y": 43.05
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-209",
@@ -5172,12 +3882,7 @@
       "south": 5000,
       "west": 25000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 12.25,
-      "y": 43.4
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-210",
@@ -5192,12 +3897,7 @@
       "south": 4000,
       "west": 26000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 22.86,
-      "y": 42.8
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-211",
@@ -5212,12 +3912,7 @@
       "south": 2000,
       "west": 27000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 35.71,
-      "y": 42.8
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-212",
@@ -5232,12 +3927,7 @@
       "south": 22000,
       "west": 4000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 46.32,
-      "y": 44.6
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-432",
@@ -5252,12 +3942,7 @@
       "south": 21000,
       "west": 2000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 88.75,
-      "y": 70.35
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-433",
@@ -5272,12 +3957,7 @@
       "south": 10000,
       "west": 15000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 12.5,
-      "y": 70.71
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-213",
@@ -5292,12 +3972,7 @@
       "south": 27000,
       "west": 8000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 56.93,
-      "y": 44.0
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-214",
@@ -5312,12 +3987,7 @@
       "south": 7000,
       "west": 24000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 67.54,
-      "y": 43.4
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-215",
@@ -5332,12 +4002,7 @@
       "south": 0,
       "west": 25000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 78.14,
-      "y": 42.8
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-434",
@@ -5352,12 +4017,7 @@
       "south": 24000,
       "west": 6000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 23.11,
-      "y": 70.11
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-216",
@@ -5372,12 +4032,7 @@
       "south": 8000,
       "west": 19000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 88.75,
-      "y": 44.6
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-217",
@@ -5392,12 +4047,7 @@
       "south": 6000,
       "west": 21000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 12.5,
-      "y": 44.95
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-218",
@@ -5412,12 +4062,7 @@
       "south": 2000,
       "west": 24000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 23.11,
-      "y": 44.35
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-219",
@@ -5432,12 +4077,7 @@
       "south": 12000,
       "west": 19000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 33.71,
-      "y": 43.75
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-220",
@@ -5452,12 +4092,7 @@
       "south": 6000,
       "west": 20000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 46.57,
-      "y": 43.75
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-221",
@@ -5472,12 +4107,7 @@
       "south": 24000,
       "west": 6000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 57.18,
-      "y": 45.55
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-222",
@@ -5492,12 +4122,7 @@
       "south": 2000,
       "west": 23000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 67.79,
-      "y": 44.95
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-223",
@@ -5512,12 +4137,7 @@
       "south": 3000,
       "west": 24000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 78.39,
-      "y": 44.35
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-224",
@@ -5532,12 +4152,7 @@
       "south": 25000,
       "west": 0
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 89.0,
-      "y": 43.75
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-225",
@@ -5552,12 +4167,7 @@
       "south": 25000,
       "west": 2000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 12.75,
-      "y": 46.51
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-226",
@@ -5572,12 +4182,7 @@
       "south": 25000,
       "west": 0
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 23.36,
-      "y": 45.91
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-227",
@@ -5592,12 +4197,7 @@
       "south": 23000,
       "west": 1000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 33.96,
-      "y": 45.31
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-228",
@@ -5612,12 +4212,7 @@
       "south": 21000,
       "west": 0
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 44.57,
-      "y": 44.71
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-229",
@@ -5632,12 +4227,7 @@
       "south": 7000,
       "west": 23000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 57.43,
-      "y": 44.71
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-230",
@@ -5652,12 +4242,7 @@
       "south": 22000,
       "west": 4000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 68.04,
-      "y": 46.51
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-494",
@@ -5672,12 +4257,7 @@
       "south": 20000,
       "west": 6000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 67.29,
-      "y": 76.18
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-495",
@@ -5692,12 +4272,7 @@
       "south": 3000,
       "west": 27000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 77.89,
-      "y": 77.98
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-496",
@@ -5712,12 +4287,7 @@
       "south": 8000,
       "west": 28000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 88.5,
-      "y": 77.38
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-435",
@@ -5732,12 +4302,7 @@
       "south": 24000,
       "west": 6000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 33.71,
-      "y": 69.51
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-436",
@@ -5752,12 +4317,7 @@
       "south": 12000,
       "west": 14000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 46.57,
-      "y": 69.51
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-437",
@@ -5772,12 +4332,7 @@
       "south": 19000,
       "west": 0
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 57.18,
-      "y": 71.31
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-231",
@@ -5792,12 +4347,7 @@
       "south": 0,
       "west": 23000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 78.64,
-      "y": 45.91
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-232",
@@ -5812,12 +4362,7 @@
       "south": 9000,
       "west": 23000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 89.25,
-      "y": 45.31
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-233",
@@ -5832,12 +4377,7 @@
       "south": 2000,
       "west": 23000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 13.0,
-      "y": 45.66
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-497",
@@ -5852,12 +4392,7 @@
       "south": 26000,
       "west": 1000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 12.25,
-      "y": 77.74
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-438",
@@ -5872,12 +4407,7 @@
       "south": 0,
       "west": 23000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 67.79,
-      "y": 70.71
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-439",
@@ -5892,12 +4422,7 @@
       "south": 25000,
       "west": 4000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 78.39,
-      "y": 70.11
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-440",
@@ -5912,12 +4437,7 @@
       "south": 2000,
       "west": 24000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 89.0,
-      "y": 69.51
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-234",
@@ -5932,12 +4452,7 @@
       "south": 22000,
       "west": 0
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 23.61,
-      "y": 47.46
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-235",
@@ -5952,12 +4467,7 @@
       "south": 9000,
       "west": 17000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 34.21,
-      "y": 46.86
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-236",
@@ -5972,12 +4482,7 @@
       "south": 8000,
       "west": 19000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 44.82,
-      "y": 46.26
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-237",
@@ -5992,12 +4497,7 @@
       "south": 0,
       "west": 25000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 55.43,
-      "y": 45.66
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-238",
@@ -6012,12 +4512,7 @@
       "south": 2000,
       "west": 22000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 68.29,
-      "y": 45.66
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-239",
@@ -6032,12 +4527,7 @@
       "south": 3000,
       "west": 19000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 78.89,
-      "y": 47.46
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-240",
@@ -6052,12 +4542,7 @@
       "south": 7000,
       "west": 19000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 89.5,
-      "y": 46.86
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-241",
@@ -6072,12 +4557,7 @@
       "south": 19000,
       "west": 0
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 13.25,
-      "y": 47.22
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-242",
@@ -6092,12 +4572,7 @@
       "south": 14000,
       "west": 12000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 23.86,
-      "y": 46.62
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-243",
@@ -6112,12 +4587,7 @@
       "south": 1000,
       "west": 25000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 34.46,
-      "y": 48.42
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-244",
@@ -6132,12 +4602,7 @@
       "south": 16000,
       "west": 9000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 45.07,
-      "y": 47.82
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-245",
@@ -6152,12 +4617,7 @@
       "south": 16000,
       "west": 3000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 55.68,
-      "y": 47.22
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-498",
@@ -6172,12 +4632,7 @@
       "south": 4000,
       "west": 21000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 22.86,
-      "y": 77.14
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-499",
@@ -6192,12 +4647,7 @@
       "south": 5000,
       "west": 21000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 35.71,
-      "y": 77.14
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-441",
@@ -6212,12 +4662,7 @@
       "south": 4000,
       "west": 18000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 12.75,
-      "y": 72.26
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-246",
@@ -6232,12 +4677,7 @@
       "south": 20000,
       "west": 0
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 66.29,
-      "y": 46.62
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-247",
@@ -6252,12 +4692,7 @@
       "south": 2000,
       "west": 19000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 79.14,
-      "y": 46.62
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-248",
@@ -6272,12 +4707,7 @@
       "south": 20000,
       "west": 3000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 89.75,
-      "y": 48.42
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-249",
@@ -6292,12 +4722,7 @@
       "south": 18000,
       "west": 7000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 13.5,
-      "y": 48.77
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-250",
@@ -6312,12 +4737,7 @@
       "south": 6000,
       "west": 23000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 24.11,
-      "y": 48.17
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-251",
@@ -6332,12 +4752,7 @@
       "south": 17000,
       "west": 9000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 34.71,
-      "y": 47.57
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-252",
@@ -6352,12 +4767,7 @@
       "south": 24000,
       "west": 0
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 45.32,
-      "y": 49.37
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-253",
@@ -6372,12 +4782,7 @@
       "south": 23000,
       "west": 0
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 55.93,
-      "y": 48.77
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-254",
@@ -6392,12 +4797,7 @@
       "south": 8000,
       "west": 19000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 66.54,
-      "y": 48.17
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-255",
@@ -6412,12 +4812,7 @@
       "south": 14000,
       "west": 9000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 77.14,
-      "y": 47.57
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-256",
@@ -6432,12 +4827,7 @@
       "south": 23000,
       "west": 17000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 90.0,
-      "y": 47.57
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-442",
@@ -6452,12 +4842,7 @@
       "south": 0,
       "west": 19000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 23.36,
-      "y": 71.66
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-443",
@@ -6472,12 +4857,7 @@
       "south": 4000,
       "west": 24000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 33.96,
-      "y": 71.06
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-444",
@@ -6492,12 +4872,7 @@
       "south": 16000,
       "west": 11000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 44.57,
-      "y": 70.46
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-257",
@@ -6512,12 +4887,7 @@
       "south": 18000,
       "west": 6000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 13.75,
-      "y": 50.32
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-258",
@@ -6532,12 +4902,7 @@
       "south": 20000,
       "west": 6000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 24.36,
-      "y": 49.72
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-259",
@@ -6552,12 +4917,7 @@
       "south": 0,
       "west": 25000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 34.96,
-      "y": 49.12
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-500",
@@ -6572,12 +4932,7 @@
       "south": 18000,
       "west": 8000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 46.32,
-      "y": 78.94
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-501",
@@ -6592,12 +4947,7 @@
       "south": 2000,
       "west": 20000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 56.93,
-      "y": 78.34
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-445",
@@ -6612,12 +4962,7 @@
       "south": 23000,
       "west": 2000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 57.43,
-      "y": 70.46
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-446",
@@ -6632,12 +4977,7 @@
       "south": 22000,
       "west": 1000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 68.04,
-      "y": 72.26
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-447",
@@ -6652,12 +4992,7 @@
       "south": 0,
       "west": 19000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 78.64,
-      "y": 71.66
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-260",
@@ -6672,12 +5007,7 @@
       "south": 7000,
       "west": 13000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 45.57,
-      "y": 48.52
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-261",
@@ -6692,12 +5022,7 @@
       "south": 9000,
       "west": 20000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 56.18,
-      "y": 50.32
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-262",
@@ -6712,12 +5037,7 @@
       "south": 2000,
       "west": 21000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 66.79,
-      "y": 49.72
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-263",
@@ -6732,12 +5052,7 @@
       "south": 1000,
       "west": 22000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 77.39,
-      "y": 49.12
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-264",
@@ -6752,12 +5067,7 @@
       "south": 6000,
       "west": 18000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 88.0,
-      "y": 48.52
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-502",
@@ -6772,12 +5082,7 @@
       "south": 8000,
       "west": 20000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 67.54,
-      "y": 77.74
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-448",
@@ -6792,12 +5097,7 @@
       "south": 0,
       "west": 22000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 89.25,
-      "y": 71.06
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-449",
@@ -6812,12 +5112,7 @@
       "south": 2000,
       "west": 21000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 13.0,
-      "y": 71.42
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-450",
@@ -6832,12 +5127,7 @@
       "south": 22000,
       "west": 2000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 23.61,
-      "y": 73.22
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-451",
@@ -6852,12 +5142,7 @@
       "south": 19000,
       "west": 4000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 34.21,
-      "y": 72.62
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-265",
@@ -6872,12 +5157,7 @@
       "south": 6000,
       "west": 14000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 14.0,
-      "y": 49.48
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-266",
@@ -6892,12 +5172,7 @@
       "south": 9000,
       "west": 17000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 24.61,
-      "y": 51.28
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-267",
@@ -6912,12 +5187,7 @@
       "south": 20000,
       "west": 5000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 35.21,
-      "y": 50.68
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-268",
@@ -6932,12 +5202,7 @@
       "south": 11000,
       "west": 14000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 45.82,
-      "y": 50.08
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-269",
@@ -6952,12 +5217,7 @@
       "south": 1000,
       "west": 24000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 56.43,
-      "y": 49.48
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-270",
@@ -6972,12 +5232,7 @@
       "south": 22000,
       "west": 9000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 67.04,
-      "y": 51.28
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-271",
@@ -6992,12 +5247,7 @@
       "south": 11000,
       "west": 10000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 77.64,
-      "y": 50.68
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-272",
@@ -7012,12 +5262,7 @@
       "south": 0,
       "west": 19000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 88.25,
-      "y": 50.08
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-273",
@@ -7032,12 +5277,7 @@
       "south": 10000,
       "west": 11000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 12.0,
-      "y": 50.43
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-503",
@@ -7052,12 +5292,7 @@
       "south": 3000,
       "west": 21000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 78.14,
-      "y": 77.14
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-452",
@@ -7072,12 +5307,7 @@
       "south": 9000,
       "west": 17000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 44.82,
-      "y": 72.02
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-453",
@@ -7092,12 +5322,7 @@
       "south": 3000,
       "west": 21000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 55.43,
-      "y": 71.42
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-454",
@@ -7112,12 +5337,7 @@
       "south": 0,
       "west": 19000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 68.29,
-      "y": 71.42
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-274",
@@ -7132,12 +5352,7 @@
       "south": 4000,
       "west": 18000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 24.86,
-      "y": 50.43
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-275",
@@ -7152,12 +5367,7 @@
       "south": 0,
       "west": 21000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 35.46,
-      "y": 52.23
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-276",
@@ -7172,12 +5382,7 @@
       "south": 2000,
       "west": 21000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 46.07,
-      "y": 51.63
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-277",
@@ -7192,12 +5397,7 @@
       "south": 3000,
       "west": 20000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 56.68,
-      "y": 51.03
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-278",
@@ -7212,12 +5412,7 @@
       "south": 5000,
       "west": 18000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 67.29,
-      "y": 50.43
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-279",
@@ -7232,12 +5427,7 @@
       "south": 6000,
       "west": 18000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 77.89,
-      "y": 52.23
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-280",
@@ -7252,12 +5442,7 @@
       "south": 20000,
       "west": 4000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 88.5,
-      "y": 51.63
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-281",
@@ -7272,12 +5457,7 @@
       "south": 6000,
       "west": 17000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 12.25,
-      "y": 51.98
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-504",
@@ -7292,12 +5472,7 @@
       "south": 24000,
       "west": 8000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 88.75,
-      "y": 78.94
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-455",
@@ -7312,12 +5487,7 @@
       "south": 6000,
       "west": 17000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 78.89,
-      "y": 73.22
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-282",
@@ -7332,12 +5502,7 @@
       "south": 16000,
       "west": 7000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 22.86,
-      "y": 51.38
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-283",
@@ -7352,12 +5517,7 @@
       "south": 14000,
       "west": 7000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 35.71,
-      "y": 51.38
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-284",
@@ -7372,12 +5532,7 @@
       "south": 7000,
       "west": 15000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 46.32,
-      "y": 53.18
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-285",
@@ -7392,12 +5547,7 @@
       "south": 18000,
       "west": 12000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 56.93,
-      "y": 52.58
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-286",
@@ -7412,12 +5562,7 @@
       "south": 5000,
       "west": 18000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 67.54,
-      "y": 51.98
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-287",
@@ -7432,12 +5577,7 @@
       "south": 11000,
       "west": 14000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 78.14,
-      "y": 51.38
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-288",
@@ -7452,12 +5592,7 @@
       "south": 18000,
       "west": 3000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 88.75,
-      "y": 53.18
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-505",
@@ -7472,12 +5607,7 @@
       "south": 3000,
       "west": 14000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 12.5,
-      "y": 79.29
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-506",
@@ -7492,12 +5622,7 @@
       "south": 18000,
       "west": 2000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 23.11,
-      "y": 78.69
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-456",
@@ -7512,12 +5637,7 @@
       "south": 20000,
       "west": 5000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 89.5,
-      "y": 72.62
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-457",
@@ -7532,12 +5652,7 @@
       "south": 7000,
       "west": 13000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 13.25,
-      "y": 72.97
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-289",
@@ -7552,12 +5667,7 @@
       "south": 3000,
       "west": 20000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 12.5,
-      "y": 53.54
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-290",
@@ -7572,12 +5682,7 @@
       "south": 0,
       "west": 20000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 23.11,
-      "y": 52.94
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-291",
@@ -7592,12 +5697,7 @@
       "south": 13000,
       "west": 12000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 33.71,
-      "y": 52.34
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-292",
@@ -7612,12 +5712,7 @@
       "south": 21000,
       "west": 2000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 46.57,
-      "y": 52.34
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-507",
@@ -7632,12 +5727,7 @@
       "south": 11000,
       "west": 11000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 33.71,
-      "y": 78.09
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-458",
@@ -7652,12 +5742,7 @@
       "south": 16000,
       "west": 16000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 23.86,
-      "y": 72.37
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-459",
@@ -7672,12 +5757,7 @@
       "south": 19000,
       "west": 15000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 34.46,
-      "y": 74.17
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-460",
@@ -7692,12 +5772,7 @@
       "south": 0,
       "west": 20000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 45.07,
-      "y": 73.57
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-293",
@@ -7712,12 +5787,7 @@
       "south": 0,
       "west": 21000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 57.18,
-      "y": 54.14
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-294",
@@ -7732,12 +5802,7 @@
       "south": 16000,
       "west": 1000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 67.79,
-      "y": 53.54
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-295",
@@ -7752,12 +5817,7 @@
       "south": 2000,
       "west": 20000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 78.39,
-      "y": 52.94
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-296",
@@ -7772,12 +5832,7 @@
       "south": 3000,
       "west": 16000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 89.0,
-      "y": 52.34
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-508",
@@ -7792,12 +5847,7 @@
       "south": 7000,
       "west": 13000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 46.57,
-      "y": 78.09
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-297",
@@ -7812,12 +5862,7 @@
       "south": 8000,
       "west": 11000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 12.75,
-      "y": 55.09
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-298",
@@ -7832,12 +5877,7 @@
       "south": 0,
       "west": 20000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 23.36,
-      "y": 54.49
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-299",
@@ -7852,12 +5892,7 @@
       "south": 6000,
       "west": 17000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 33.96,
-      "y": 53.89
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-300",
@@ -7872,12 +5907,7 @@
       "south": 0,
       "west": 12000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 44.57,
-      "y": 53.29
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-301",
@@ -7892,12 +5922,7 @@
       "south": 12000,
       "west": 10000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 57.43,
-      "y": 53.29
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-302",
@@ -7912,12 +5937,7 @@
       "south": 16000,
       "west": 5000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 68.04,
-      "y": 55.09
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-303",
@@ -7932,12 +5952,7 @@
       "south": 21000,
       "west": 1000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 78.64,
-      "y": 54.49
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-509",
@@ -7952,12 +5967,7 @@
       "south": 3000,
       "west": 18000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 57.18,
-      "y": 79.89
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-510",
@@ -7972,12 +5982,7 @@
       "south": 7000,
       "west": 16000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 67.79,
-      "y": 79.29
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-511",
@@ -7992,12 +5997,7 @@
       "south": 3000,
       "west": 20000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 78.39,
-      "y": 78.69
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-461",
@@ -8012,12 +6012,7 @@
       "south": 6000,
       "west": 17000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 55.68,
-      "y": 72.97
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-462",
@@ -8032,12 +6027,7 @@
       "south": 18000,
       "west": 2000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 66.29,
-      "y": 72.37
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-463",
@@ -8052,12 +6042,7 @@
       "south": 12000,
       "west": 0
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 79.14,
-      "y": 72.37
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-304",
@@ -8072,12 +6057,7 @@
       "south": 0,
       "west": 17000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 89.25,
-      "y": 53.89
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-305",
@@ -8092,12 +6072,7 @@
       "south": 12000,
       "west": 0
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 13.0,
-      "y": 54.25
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-306",
@@ -8112,12 +6087,7 @@
       "south": 18000,
       "west": 0
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 23.61,
-      "y": 56.05
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-307",
@@ -8132,12 +6102,7 @@
       "south": 2000,
       "west": 21000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 34.21,
-      "y": 55.45
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-308",
@@ -8152,12 +6117,7 @@
       "south": 17000,
       "west": 5000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 44.82,
-      "y": 54.85
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-309",
@@ -8172,12 +6132,7 @@
       "south": 3000,
       "west": 15000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 55.43,
-      "y": 54.25
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-310",
@@ -8192,12 +6147,7 @@
       "south": 16000,
       "west": 0
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 68.29,
-      "y": 54.25
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-311",
@@ -8212,12 +6162,7 @@
       "south": 16000,
       "west": 8000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 78.89,
-      "y": 56.05
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-312",
@@ -8232,12 +6177,7 @@
       "south": 0,
       "west": 17000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 89.5,
-      "y": 55.45
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-464",
@@ -8252,12 +6192,7 @@
       "south": 0,
       "west": 17000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 89.75,
-      "y": 74.17
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-465",
@@ -8272,12 +6207,7 @@
       "south": 9000,
       "west": 8000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 13.5,
-      "y": 74.52
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-313",
@@ -8292,12 +6222,7 @@
       "south": 17000,
       "west": 0
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 13.25,
-      "y": 55.8
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-314",
@@ -8312,12 +6237,7 @@
       "south": 15000,
       "west": 3000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 23.86,
-      "y": 55.2
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-315",
@@ -8332,12 +6252,7 @@
       "south": 15000,
       "west": 4000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 34.46,
-      "y": 57.0
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-316",
@@ -8352,12 +6267,7 @@
       "south": 2000,
       "west": 15000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 45.07,
-      "y": 56.4
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-317",
@@ -8372,12 +6282,7 @@
       "south": 9000,
       "west": 17000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 55.68,
-      "y": 55.8
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-466",
@@ -8392,12 +6297,7 @@
       "south": 18000,
       "west": 6000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 24.11,
-      "y": 73.92
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-318",
@@ -8412,12 +6312,7 @@
       "south": 15000,
       "west": 3000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 66.29,
-      "y": 55.2
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-319",
@@ -8432,12 +6327,7 @@
       "south": 10000,
       "west": 10000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 79.14,
-      "y": 55.2
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-320",
@@ -8452,12 +6342,7 @@
       "south": 16000,
       "west": 4000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 89.75,
-      "y": 57.0
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-321",
@@ -8472,12 +6357,7 @@
       "south": 4000,
       "west": 16000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 13.5,
-      "y": 57.35
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-322",
@@ -8492,12 +6372,7 @@
       "south": 1000,
       "west": 18000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 24.11,
-      "y": 56.75
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-323",
@@ -8512,12 +6387,7 @@
       "south": 9000,
       "west": 11000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 34.71,
-      "y": 56.15
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-324",
@@ -8532,12 +6402,7 @@
       "south": 5000,
       "west": 16000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 45.32,
-      "y": 57.95
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-325",
@@ -8552,12 +6417,7 @@
       "south": 10000,
       "west": 8000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 55.93,
-      "y": 57.35
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-326",
@@ -8572,12 +6432,7 @@
       "south": 9000,
       "west": 15000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 66.54,
-      "y": 56.75
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-327",
@@ -8592,12 +6447,7 @@
       "south": 15000,
       "west": 3000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 77.14,
-      "y": 56.15
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-328",
@@ -8612,12 +6462,7 @@
       "south": 7000,
       "west": 14000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 90.0,
-      "y": 56.15
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-329",
@@ -8632,12 +6477,7 @@
       "south": 0,
       "west": 15000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 13.75,
-      "y": 58.91
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-330",
@@ -8652,12 +6492,7 @@
       "south": 11000,
       "west": 6000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 24.36,
-      "y": 58.31
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-512",
@@ -8672,12 +6507,7 @@
       "south": 2000,
       "west": 18000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 89.0,
-      "y": 78.09
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-467",
@@ -8692,12 +6522,7 @@
       "south": 2000,
       "west": 19000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 34.71,
-      "y": 73.32
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-468",
@@ -8712,12 +6537,7 @@
       "south": 3000,
       "west": 14000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 45.32,
-      "y": 75.12
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-469",
@@ -8732,12 +6552,7 @@
       "south": 3000,
       "west": 14000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 55.93,
-      "y": 74.52
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-331",
@@ -8752,12 +6567,7 @@
       "south": 7000,
       "west": 11000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 34.96,
-      "y": 57.71
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-332",
@@ -8772,12 +6582,7 @@
       "south": 18000,
       "west": 1000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 45.57,
-      "y": 57.11
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-333",
@@ -8792,12 +6597,7 @@
       "south": 20000,
       "west": 0
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 56.18,
-      "y": 58.91
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-334",
@@ -8812,12 +6612,7 @@
       "south": 11000,
       "west": 9000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 66.79,
-      "y": 58.31
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-335",
@@ -8832,12 +6627,7 @@
       "south": 18000,
       "west": 2000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 77.39,
-      "y": 57.71
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-336",
@@ -8852,12 +6642,7 @@
       "south": 8000,
       "west": 12000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 88.0,
-      "y": 57.11
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-513",
@@ -8872,12 +6657,7 @@
       "south": 1000,
       "west": 11000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 12.75,
-      "y": 80.85
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-470",
@@ -8892,12 +6672,7 @@
       "south": 17000,
       "west": 3000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 66.54,
-      "y": 73.92
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-471",
@@ -8912,12 +6687,7 @@
       "south": 13000,
       "west": 4000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 77.14,
-      "y": 73.32
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-337",
@@ -8932,12 +6702,7 @@
       "south": 5000,
       "west": 12000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 14.0,
-      "y": 58.06
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-338",
@@ -8952,12 +6717,7 @@
       "south": 12000,
       "west": 14000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 24.61,
-      "y": 59.86
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-339",
@@ -8972,12 +6732,7 @@
       "south": 0,
       "west": 17000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 35.21,
-      "y": 59.26
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-340",
@@ -8992,12 +6747,7 @@
       "south": 0,
       "west": 17000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 45.82,
-      "y": 58.66
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-341",
@@ -9012,12 +6762,7 @@
       "south": 4000,
       "west": 15000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 56.43,
-      "y": 58.06
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-342",
@@ -9032,12 +6777,7 @@
       "south": 10000,
       "west": 9000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 67.04,
-      "y": 59.86
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-343",
@@ -9052,12 +6792,7 @@
       "south": 11000,
       "west": 4000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 77.64,
-      "y": 59.26
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-514",
@@ -9072,12 +6807,7 @@
       "south": 3000,
       "west": 14000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 23.36,
-      "y": 80.25
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-472",
@@ -9092,12 +6822,7 @@
       "south": 15000,
       "west": 2000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 90.0,
-      "y": 73.32
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-473",
@@ -9112,12 +6837,7 @@
       "south": 15000,
       "west": 2000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 13.75,
-      "y": 76.08
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-474",
@@ -9132,12 +6852,7 @@
       "south": 8000,
       "west": 4000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 24.36,
-      "y": 75.48
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-475",
@@ -9152,12 +6867,7 @@
       "south": 18000,
       "west": 0
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 34.96,
-      "y": 74.88
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-344",
@@ -9172,12 +6882,7 @@
       "south": 5000,
       "west": 14000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 88.25,
-      "y": 58.66
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-345",
@@ -9192,12 +6897,7 @@
       "south": 12000,
       "west": 7000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 12.0,
-      "y": 59.02
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-346",
@@ -9212,12 +6912,7 @@
       "south": 10000,
       "west": 4000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 24.86,
-      "y": 59.02
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-347",
@@ -9232,12 +6927,7 @@
       "south": 14000,
       "west": 6000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 35.46,
-      "y": 60.82
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-348",
@@ -9252,12 +6942,7 @@
       "south": 2000,
       "west": 16000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 46.07,
-      "y": 60.22
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-349",
@@ -9272,12 +6957,7 @@
       "south": 18000,
       "west": 3000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 56.68,
-      "y": 59.62
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-515",
@@ -9292,12 +6972,7 @@
       "south": 11000,
       "west": 6000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 33.96,
-      "y": 79.65
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-516",
@@ -9312,12 +6987,7 @@
       "south": 3000,
       "west": 18000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 44.57,
-      "y": 79.05
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-476",
@@ -9332,12 +7002,7 @@
       "south": 11000,
       "west": 0
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 45.57,
-      "y": 74.28
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-477",
@@ -9352,12 +7017,7 @@
       "south": 15000,
       "west": 0
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 56.18,
-      "y": 76.08
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-478",
@@ -9372,12 +7032,7 @@
       "south": 17000,
       "west": 16000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 66.79,
-      "y": 75.48
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-479",
@@ -9392,12 +7047,7 @@
       "south": 0,
       "west": 17000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 77.39,
-      "y": 74.88
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-350",
@@ -9412,12 +7062,7 @@
       "south": 4000,
       "west": 13000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 67.29,
-      "y": 59.02
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-351",
@@ -9432,12 +7077,7 @@
       "south": 3000,
       "west": 18000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 77.89,
-      "y": 60.82
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-352",
@@ -9452,12 +7092,7 @@
       "south": 12000,
       "west": 4000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 88.5,
-      "y": 60.22
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-353",
@@ -9472,12 +7107,7 @@
       "south": 16000,
       "west": 3000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 12.25,
-      "y": 60.57
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-354",
@@ -9492,12 +7122,7 @@
       "south": 15000,
       "west": 4000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 22.86,
-      "y": 59.97
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-355",
@@ -9512,12 +7137,7 @@
       "south": 15000,
       "west": 5000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 35.71,
-      "y": 59.97
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-356",
@@ -9532,12 +7152,7 @@
       "south": 14000,
       "west": 2000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 46.32,
-      "y": 61.77
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-517",
@@ -9552,12 +7167,7 @@
       "south": 2000,
       "west": 14000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 57.43,
-      "y": 79.05
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-518",
@@ -9572,12 +7182,7 @@
       "south": 8000,
       "west": 11000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 68.04,
-      "y": 80.85
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-480",
@@ -9592,12 +7197,7 @@
       "south": 20000,
       "west": 0
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 88.0,
-      "y": 74.28
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-481",
@@ -9612,12 +7212,7 @@
       "south": 8000,
       "west": 8000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 14.0,
-      "y": 75.23
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-482",
@@ -9632,12 +7227,7 @@
       "south": 12000,
       "west": 0
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 24.61,
-      "y": 77.03
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-357",
@@ -9652,12 +7242,7 @@
       "south": 3000,
       "west": 9000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 56.93,
-      "y": 61.17
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-358",
@@ -9672,12 +7257,7 @@
       "south": 12000,
       "west": 7000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 67.54,
-      "y": 60.57
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-359",
@@ -9692,12 +7272,7 @@
       "south": 15000,
       "west": 0
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 78.14,
-      "y": 59.97
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-360",
@@ -9712,12 +7287,7 @@
       "south": 2000,
       "west": 15000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 88.75,
-      "y": 61.77
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-361",
@@ -9732,12 +7302,7 @@
       "south": 15000,
       "west": 5000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 12.5,
-      "y": 62.12
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-362",
@@ -9752,12 +7317,7 @@
       "south": 9000,
       "west": 14000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 23.11,
-      "y": 61.52
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-519",
@@ -9772,12 +7332,7 @@
       "south": 10000,
       "west": 3000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 78.64,
-      "y": 80.25
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-520",
@@ -9792,12 +7347,7 @@
       "south": 7000,
       "west": 12000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 89.25,
-      "y": 79.65
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-521",
@@ -9812,12 +7362,7 @@
       "south": 5000,
       "west": 14000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 13.0,
-      "y": 80.0
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-522",
@@ -9832,12 +7377,7 @@
       "south": 12000,
       "west": 8000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 23.61,
-      "y": 81.8
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-523",
@@ -9852,12 +7392,7 @@
       "south": 7000,
       "west": 15000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 34.21,
-      "y": 81.2
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-483",
@@ -9872,12 +7407,7 @@
       "south": 17000,
       "west": 10000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 35.21,
-      "y": 76.43
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-363",
@@ -9892,12 +7422,7 @@
       "south": 2000,
       "west": 13000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 33.71,
-      "y": 60.92
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-364",
@@ -9912,12 +7437,7 @@
       "south": 11000,
       "west": 3000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 46.57,
-      "y": 60.92
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-365",
@@ -9932,12 +7452,7 @@
       "south": 9000,
       "west": 5000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 57.18,
-      "y": 62.72
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-366",
@@ -9952,12 +7467,7 @@
       "south": 14000,
       "west": 0
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 67.79,
-      "y": 62.12
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-367",
@@ -9972,12 +7482,7 @@
       "south": 1000,
       "west": 14000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 78.39,
-      "y": 61.52
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-368",
@@ -9992,12 +7497,7 @@
       "south": 14000,
       "west": 3000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 89.0,
-      "y": 60.92
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-369",
@@ -10012,12 +7512,7 @@
       "south": 9000,
       "west": 10000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 12.75,
-      "y": 63.68
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-370",
@@ -10032,12 +7527,7 @@
       "south": 6000,
       "west": 13000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 23.36,
-      "y": 63.08
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-484",
@@ -10052,12 +7542,7 @@
       "south": 2000,
       "west": 13000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 45.82,
-      "y": 75.83
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-485",
@@ -10072,12 +7557,7 @@
       "south": 4000,
       "west": 14000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 56.43,
-      "y": 75.23
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-486",
@@ -10092,12 +7572,7 @@
       "south": 9000,
       "west": 10000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 67.04,
-      "y": 77.03
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-371",
@@ -10112,12 +7587,7 @@
       "south": 3000,
       "west": 14000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 33.96,
-      "y": 62.48
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-372",
@@ -10132,12 +7602,7 @@
       "south": 0,
       "west": 14000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 44.57,
-      "y": 61.88
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-373",
@@ -10152,12 +7617,7 @@
       "south": 0,
       "west": 12000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 57.43,
-      "y": 61.88
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-374",
@@ -10172,12 +7632,7 @@
       "south": 0,
       "west": 14000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 68.04,
-      "y": 63.68
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-375",
@@ -10192,12 +7647,7 @@
       "south": 11000,
       "west": 0
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 78.64,
-      "y": 63.08
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-376",
@@ -10212,12 +7662,7 @@
       "south": 3000,
       "west": 15000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 89.25,
-      "y": 62.48
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-377",
@@ -10232,12 +7677,7 @@
       "south": 13000,
       "west": 1000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 13.0,
-      "y": 62.83
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-378",
@@ -10252,12 +7692,7 @@
       "south": 15000,
       "west": 3000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 23.61,
-      "y": 64.63
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-379",
@@ -10272,12 +7707,7 @@
       "south": 5000,
       "west": 12000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 34.21,
-      "y": 64.03
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-380",
@@ -10292,12 +7722,7 @@
       "south": 6000,
       "west": 13000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 44.82,
-      "y": 63.43
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-524",
@@ -10312,12 +7737,7 @@
       "south": 8000,
       "west": 7000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 44.82,
-      "y": 80.6
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-525",
@@ -10332,12 +7752,7 @@
       "south": 14000,
       "west": 8000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 55.43,
-      "y": 80.0
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-381",
@@ -10352,12 +7767,7 @@
       "south": 13000,
       "west": 1000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 55.43,
-      "y": 62.83
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-382",
@@ -10372,12 +7782,7 @@
       "south": 1000,
       "west": 14000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 68.29,
-      "y": 62.83
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-383",
@@ -10392,12 +7797,7 @@
       "south": 12000,
       "west": 13000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 78.89,
-      "y": 64.63
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-384",
@@ -10412,12 +7812,7 @@
       "south": 15000,
       "west": 0
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 89.5,
-      "y": 64.03
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-385",
@@ -10432,12 +7827,7 @@
       "south": 6000,
       "west": 14000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 13.25,
-      "y": 64.38
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-386",
@@ -10452,12 +7842,7 @@
       "south": 5000,
       "west": 12000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 23.86,
-      "y": 63.78
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-387",
@@ -10472,12 +7857,7 @@
       "south": 5000,
       "west": 11000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 34.46,
-      "y": 65.58
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-526",
@@ -10492,12 +7872,7 @@
       "south": 2000,
       "west": 10000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 68.29,
-      "y": 80.0
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-527",
@@ -10512,12 +7887,7 @@
       "south": 11000,
       "west": 3000
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 78.89,
-      "y": 81.8
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   },
   {
     "id": "intersection-487",
@@ -10532,11 +7902,6 @@
       "south": 8000,
       "west": 0
     },
-    "source": "Top Traffic Intersections 2021-2022, Table 1-3",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 77.64,
-      "y": 76.43
-    }
+    "source": "Top Traffic Intersections 2021-2022, Table 1-3"
   }
 ]

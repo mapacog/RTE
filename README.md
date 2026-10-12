@@ -1,90 +1,49 @@
-# RTE
 
-A fuller MAPA regional traffic dashboard for the Omaha-Council Bluffs metropolitan area.
+# Regional Traffic Explorer (RTE) — 2025 Beta
 
-RTE is the shortened project name for the Regional Traffic Explorer. It keeps the dashboard interface, uses static report maps/charts as placeholders, and reserves map areas for future interactive ArcGIS web maps and charts.
+An interactive transportation data explorer developed by the **Metropolitan Area Planning Agency (MAPA)** to visualize and explore regional traffic patterns across the Omaha–Council Bluffs metropolitan area.
 
-## What Is Included
+The application brings together interactive maps, charts, tables, and traffic rankings to support exploration of regional transportation trends.
 
-- React/Vite public-facing dashboard prototype
-- MAPA-aligned visual system using official colors, Roboto/Oswald typography, logo assets, and restrained route/arrow linework
-- Responsive desktop and mobile layouts
-- Sticky navigation and mobile filter drawers
-- Overview, Regional Patterns, Intersections, Interchanges, and Multimodal & Freight sections
-- Static map and chart placeholders integrated into the relevant dashboard sections
-- Short report finding panels that convert report text into public-facing web copy
-- Parsed local JSON for 527 intersection rows and 90 interchange rows
-- ArcGIS-ready web map slots with layer placeholders for hosted Feature Layers
-- GitHub Pages workflow and Vite base path configuration
+## Features
 
-## Project Structure
+- **Interactive Maps:** Explore regional traffic volumes, patterns, and transportation networks using ArcGIS web maps.
+- **Traffic Rankings:** View and compare intersection and interchange traffic volumes across jurisdictions.
+- **Charts & Tables:** Explore transportation indicators through interactive visualizations and searchable data tables.
+- **Regional Trends:** Examine traffic patterns and changes across the reporting period.
+- **Accessibility:** Responsive layouts, English/Spanish content, keyboard navigation, and customizable display preferences.
 
-```text
-.
-|- public/
-|  `- assets/
-|     |- mapa-logo-tag-blue-grey.png
-|     |- mapa-logo-white-yellow.png
-|     `- report-figures/
-|- scripts/
-|  |- extractFigureAssets.py
-|  `- extractReportData.py
-|- src/
-|  |- components/
-|  |- config/
-|  |  `- arcgisLayers.js
-|  |- data/
-|  |  |- brandTokens.json
-|  |  |- dashboardCards.json
-|  |  |- reportFigures.json
-|  |  |- reportNarrative.json
-|  |  |- regionalMetrics.json
-|  |  |- topInterchanges.json
-|  |  `- topIntersections.json
-|  |- styles/
-|  |- App.jsx
-|  `- main.jsx
-|- index.html
-|- package.json
-`- vite.config.js
-```
+## Technology
 
-## Run Locally
+- React + Vite
+- ArcGIS Maps SDK for JavaScript
+- ArcGIS Online Feature Services
+- Google Charts
+- GitHub Pages
 
-```bash
-npm install
-npm run dev
-```
+## Deployment
 
-Vite will print a local URL, usually `http://localhost:5173/`.
+The application is hosted on GitHub Pages, with deployment managed through the repository's GitHub Actions workflow.
 
-## Build
+## Data Sources
 
-```bash
-npm run build
-npm run preview
-```
+Transportation data and visualizations are sourced from MAPA's published reports, ArcGIS Online services, and supporting public datasets.
 
-## ArcGIS Web Map Connection
+Data availability and updates depend on the respective source services.
 
-Hosted layer URLs should be added in:
+## Accessibility
 
-```text
-src/config/arcgisLayers.js
-```
+The Regional Traffic Explorer is designed with **Web Content Accessibility Guidelines (WCAG) 2.2 Level AA** as its accessibility target.
 
-The current map areas are designed as web map slots. Replace the placeholder stage in `src/components/ResponsiveMapPanel.jsx` with ArcGIS Maps SDK for JavaScript when authoritative hosted layers or WebMap IDs are available. The static report images are placeholders to keep the dashboard meaningful before GIS services are connected.
+Accessibility features include keyboard navigation, responsive layouts, screen-reader-friendly controls, adjustable text sizes, high-contrast display options, reduced-motion support, and English/Spanish content.
 
-Suggested future layer slots:
+Full WCAG 2.2 AA conformance has not been independently verified. Third-party components, including ArcGIS maps and embedded Google charts, may have accessibility limitations.
 
-- Traffic Analysis District layer
-- Intersection points layer
-- Interchange points layer
-- Traffic flow/AADT layer
-- Heat map layer
+## Disclaimer
 
-## Data Notes
+This application is a beta release. Data and visualizations are provided for informational purposes and may be updated as reporting and validation continue.
 
-Intersection and interchange volumes are parsed from report tables. Extracted static visuals are stored in `public/assets/report-figures`. Map positions are sample data pending a source GIS layer/table. Regional trend cards use values explicitly stated in the Regional Traffic Patterns report; small sparkline series are sample display data pending source tables.
+## Maintained By
 
-The MAPA Brand Identity Guide is used only for visual design guidance, not as a traffic data source.
+**Metropolitan Area Planning Agency (MAPA)**  
+https://mapacog.org

@@ -1,0 +1,378 @@
+[
+  {
+    "id": "ffc",
+    "title": "VMT change by roadway class",
+    "sourceSheet": "Table 1",
+    "columns": [
+      "Roadway class",
+      "Centerline miles (legacy)",
+      "2018-2019",
+      "2019-2020",
+      "2020-2021",
+      "2021-2022",
+      "2022-2023 methodology break",
+      "OSM network miles",
+      "2023-2024",
+      "2024-2025"
+    ],
+    "formats": [
+      "text",
+      "number",
+      "percent",
+      "percent",
+      "percent",
+      "percent",
+      "text",
+      "number",
+      "percent",
+      "percent"
+    ],
+    "rows": [
+      [
+        "Interstate",
+        189,
+        0.02,
+        -0.163,
+        0.149,
+        0.028,
+        "N/A",
+        265.322718,
+        -0.004104037261794646,
+        0.000598476555314198
+      ],
+      [
+        "Freeway",
+        133,
+        0.024,
+        -0.073,
+        0.114,
+        0.065,
+        "N/A",
+        196.489969,
+        0.01649526534739798,
+        0.035261217052548144
+      ],
+      [
+        "Major Arterial",
+        182,
+        0.031,
+        -0.117,
+        0.073,
+        0.023,
+        "N/A",
+        341.879496,
+        -0.008524582424301097,
+        0.019423172268181688
+      ],
+      [
+        "Minor Arterial",
+        391,
+        0.049,
+        -0.09,
+        0.068,
+        0.005,
+        "N/A",
+        489.003074,
+        -0.015376924832707584,
+        -0.014666476764170211
+      ],
+      [
+        "Major Collector",
+        375,
+        0.148,
+        -0.108,
+        0.083,
+        -0.022,
+        "N/A",
+        473.882201,
+        0.014518221738659243,
+        0.03492629271120151
+      ],
+      [
+        "Minor Collector",
+        151,
+        0.272,
+        -0.141,
+        0.084,
+        0.017,
+        "N/A",
+        196.694971,
+        0.017428840331147555,
+        0.040740695805988825
+      ],
+      [
+        "Local",
+        554,
+        -0.03,
+        -0.033,
+        0.031,
+        0.018,
+        "N/A",
+        3907.793077,
+        -0.051323475251691786,
+        0.08319752719601148
+      ]
+    ],
+    "note": "The 2022-2023 methodology break separates the legacy centerline network from the OSM network. No directly comparable change is reported for that interval."
+  },
+  {
+    "id": "atr",
+    "title": "Regional continuous traffic counters",
+    "sourceSheet": "Table 2",
+    "columns": [
+      "State",
+      "Counter ID",
+      "Route",
+      "Roadway class",
+      "Location"
+    ],
+    "formats": [
+      "text",
+      "text",
+      "text",
+      "text",
+      "text"
+    ],
+    "rows": [
+      [
+        "Iowa",
+        100,
+        "I-29",
+        "Rural Interstate",
+        "2 Mi North of South I-680 Jct"
+      ],
+      [
+        "Iowa",
+        102,
+        "I-29",
+        "Rural Interstate",
+        "7 Mi South of US-34 Jct (Pacific)"
+      ],
+      [
+        "Iowa",
+        124,
+        "I-880",
+        "Rural Interstate",
+        "6.4 Mi West of I-80 (Beebeetown)"
+      ],
+      [
+        "Iowa",
+        914,
+        "16th St",
+        "Municipal Streets",
+        "0.6 Mi West of IA-192"
+      ],
+      [
+        "Nebraska",
+        "A-5",
+        "US 6",
+        "Principal Arterial",
+        "North of Gretna"
+      ],
+      [
+        "Nebraska",
+        "A-17",
+        "I-80",
+        "Urban Interstate",
+        "Just South of Douglas-Sarpy Line"
+      ],
+      [
+        "Nebraska",
+        "A-23",
+        "US 75",
+        "Principal Arterial",
+        "30th Street South of I-680 in Omaha"
+      ],
+      [
+        "Nebraska",
+        "A-24",
+        "I-80",
+        "Urban Interstate",
+        "I-80 at 36th Street in Omaha"
+      ],
+      [
+        "Nebraska",
+        "A-25",
+        "N-64",
+        "Principal Arterial",
+        "At 160th Street"
+      ],
+      [
+        "Nebraska",
+        "A-26",
+        "US 75",
+        "Principal Arterial",
+        "Just North of Jct. N-370 in Bellevue"
+      ],
+      [
+        "Nebraska",
+        "A-32",
+        "I-680",
+        "Urban Interstate",
+        "Mormon Bridge in Omaha"
+      ],
+      [
+        "Nebraska",
+        "A-40",
+        "I-680",
+        "Urban Interstate",
+        "I-680 North of Dodge Street"
+      ],
+      [
+        "Nebraska",
+        "A-56",
+        "I-80",
+        "Rural Interstate",
+        "West of Gretna Interchange"
+      ],
+      [
+        "Nebraska",
+        "A-70",
+        "I-480",
+        "Urban Interstate",
+        "At Leavenworth St in Omaha"
+      ],
+      [
+        "Nebraska",
+        "A-78",
+        "US-6",
+        "Urban Freeway",
+        "Between 180th and 192nd St"
+      ]
+    ],
+    "note": "Automatic Traffic Recorders count vehicles throughout the year. The supplied workbook lists 11 Nebraska and 4 Iowa sites; the regional report narrative lists 10 and 5. This source discrepancy requires review."
+  },
+  {
+    "id": "vmt",
+    "title": "Regional VMT by year",
+    "sourceSheet": "Table 3",
+    "columns": [
+      "Year",
+      "100M VMT (source label)",
+      "Series"
+    ],
+    "formats": [
+      "year",
+      "number",
+      "text"
+    ],
+    "rows": [
+      [
+        2006,
+        5531,
+        "Measured"
+      ],
+      [
+        2007,
+        5557,
+        "Measured"
+      ],
+      [
+        2008,
+        5579,
+        "Measured"
+      ],
+      [
+        2009,
+        5765,
+        "Measured"
+      ],
+      [
+        2010,
+        5951,
+        "Measured"
+      ],
+      [
+        2011,
+        6110,
+        "Measured"
+      ],
+      [
+        2012,
+        6269,
+        "Measured"
+      ],
+      [
+        2013,
+        6314,
+        "Measured"
+      ],
+      [
+        2014,
+        6363,
+        "Measured"
+      ],
+      [
+        2015,
+        6376,
+        "Measured"
+      ],
+      [
+        2016,
+        6389,
+        "Measured"
+      ],
+      [
+        2017,
+        6403,
+        "Measured"
+      ],
+      [
+        2018,
+        6856,
+        "Measured"
+      ],
+      [
+        2019,
+        7014,
+        "Measured"
+      ],
+      [
+        2020,
+        6242,
+        "Measured"
+      ],
+      [
+        2021,
+        6858,
+        "Measured"
+      ],
+      [
+        2022,
+        6987,
+        "Measured"
+      ],
+      [
+        2023,
+        7052,
+        "Measured"
+      ],
+      [
+        2024,
+        7018,
+        "Measured"
+      ],
+      [
+        2025,
+        7118,
+        "Measured"
+      ],
+      [
+        2026,
+        7161,
+        "Estimated"
+      ],
+      [
+        2027,
+        7204,
+        "Estimated"
+      ],
+      [
+        2028,
+        7247,
+        "Estimated"
+      ]
+    ],
+    "note": "2026-2028 are estimates. The source column is labeled 100M VMT; that unit label needs confirmation against the annual VMT totals before release."
+  }
+]

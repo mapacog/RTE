@@ -10,12 +10,7 @@
       "south": 151000,
       "west": 0
     },
-    "source": "Top Traffic Interchanges 2021-2022, Table 1",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 13.0,
-      "y": 18.0
-    }
+    "source": "Top Traffic Interchanges 2021-2022, Table 1"
   },
   {
     "id": "interchange-2",
@@ -28,12 +23,7 @@
       "south": 100000,
       "west": 164000
     },
-    "source": "Top Traffic Interchanges 2021-2022, Table 1",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 23.61,
-      "y": 19.8
-    }
+    "source": "Top Traffic Interchanges 2021-2022, Table 1"
   },
   {
     "id": "interchange-3",
@@ -46,12 +36,7 @@
       "south": 41000,
       "west": 164000
     },
-    "source": "Top Traffic Interchanges 2021-2022, Table 1",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 34.21,
-      "y": 19.2
-    }
+    "source": "Top Traffic Interchanges 2021-2022, Table 1"
   },
   {
     "id": "interchange-4",
@@ -64,12 +49,7 @@
       "south": 45000,
       "west": 164000
     },
-    "source": "Top Traffic Interchanges 2021-2022, Table 1",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 44.82,
-      "y": 18.6
-    }
+    "source": "Top Traffic Interchanges 2021-2022, Table 1"
   },
   {
     "id": "interchange-5",
@@ -82,12 +62,7 @@
       "south": 30000,
       "west": 164000
     },
-    "source": "Top Traffic Interchanges 2021-2022, Table 1",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 55.43,
-      "y": 18.0
-    }
+    "source": "Top Traffic Interchanges 2021-2022, Table 1"
   },
   {
     "id": "interchange-6",
@@ -100,12 +75,7 @@
       "south": 29000,
       "west": 164000
     },
-    "source": "Top Traffic Interchanges 2021-2022, Table 1",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 68.29,
-      "y": 18.0
-    }
+    "source": "Top Traffic Interchanges 2021-2022, Table 1"
   },
   {
     "id": "interchange-7",
@@ -118,12 +88,7 @@
       "south": 151000,
       "west": 53000
     },
-    "source": "Top Traffic Interchanges 2021-2022, Table 1",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 78.89,
-      "y": 19.8
-    }
+    "source": "Top Traffic Interchanges 2021-2022, Table 1"
   },
   {
     "id": "interchange-8",
@@ -136,12 +101,7 @@
       "south": 147000,
       "west": 41000
     },
-    "source": "Top Traffic Interchanges 2021-2022, Table 1",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 89.5,
-      "y": 19.2
-    }
+    "source": "Top Traffic Interchanges 2021-2022, Table 1"
   },
   {
     "id": "interchange-9",
@@ -154,12 +114,7 @@
       "south": 151000,
       "west": 15000
     },
-    "source": "Top Traffic Interchanges 2021-2022, Table 1",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 13.25,
-      "y": 24.24
-    }
+    "source": "Top Traffic Interchanges 2021-2022, Table 1"
   },
   {
     "id": "interchange-10",
@@ -172,12 +127,7 @@
       "south": 147000,
       "west": 30000
     },
-    "source": "Top Traffic Interchanges 2021-2022, Table 1",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 23.86,
-      "y": 23.64
-    }
+    "source": "Top Traffic Interchanges 2021-2022, Table 1"
   },
   {
     "id": "interchange-11",
@@ -190,12 +140,7 @@
       "south": 119000,
       "west": 20000
     },
-    "source": "Top Traffic Interchanges 2021-2022, Table 1",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 34.46,
-      "y": 25.44
-    }
+    "source": "Top Traffic Interchanges 2021-2022, Table 1"
   },
   {
     "id": "interchange-12",
@@ -208,12 +153,7 @@
       "south": 116000,
       "west": 25000
     },
-    "source": "Top Traffic Interchanges 2021-2022, Table 1",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 45.07,
-      "y": 24.84
-    }
+    "source": "Top Traffic Interchanges 2021-2022, Table 1"
   },
   {
     "id": "interchange-13",
@@ -226,12 +166,7 @@
       "south": 39000,
       "west": 95000
     },
-    "source": "Top Traffic Interchanges 2021-2022, Table 1",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 55.68,
-      "y": 24.24
-    }
+    "source": "Top Traffic Interchanges 2021-2022, Table 1"
   },
   {
     "id": "interchange-14",
@@ -244,12 +179,7 @@
       "south": 25000,
       "west": 107000
     },
-    "source": "Top Traffic Interchanges 2021-2022, Table 1",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 66.29,
-      "y": 23.64
-    }
+    "source": "Top Traffic Interchanges 2021-2022, Table 1"
   },
   {
     "id": "interchange-15",
@@ -262,12 +192,7 @@
       "south": 34000,
       "west": 80000
     },
-    "source": "Top Traffic Interchanges 2021-2022, Table 1",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 79.14,
-      "y": 23.64
-    }
+    "source": "Top Traffic Interchanges 2021-2022, Table 1"
   },
   {
     "id": "interchange-16",
@@ -280,12 +205,7 @@
       "south": 19000,
       "west": 95000
     },
-    "source": "Top Traffic Interchanges 2021-2022, Table 1",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 89.75,
-      "y": 25.44
-    }
+    "source": "Top Traffic Interchanges 2021-2022, Table 1"
   },
   {
     "id": "interchange-17",
@@ -298,12 +218,7 @@
       "south": 91000,
       "west": 40000
     },
-    "source": "Top Traffic Interchanges 2021-2022, Table 1",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 13.5,
-      "y": 30.47
-    }
+    "source": "Top Traffic Interchanges 2021-2022, Table 1"
   },
   {
     "id": "interchange-18",
@@ -316,12 +231,7 @@
       "south": 30000,
       "west": 75000
     },
-    "source": "Top Traffic Interchanges 2021-2022, Table 1",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 24.11,
-      "y": 29.87
-    }
+    "source": "Top Traffic Interchanges 2021-2022, Table 1"
   },
   {
     "id": "interchange-19",
@@ -334,12 +244,7 @@
       "south": 80000,
       "west": 22000
     },
-    "source": "Top Traffic Interchanges 2021-2022, Table 1",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 34.71,
-      "y": 29.27
-    }
+    "source": "Top Traffic Interchanges 2021-2022, Table 1"
   },
   {
     "id": "interchange-20",
@@ -352,12 +257,7 @@
       "south": 104000,
       "west": 15000
     },
-    "source": "Top Traffic Interchanges 2021-2022, Table 1",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 45.32,
-      "y": 31.07
-    }
+    "source": "Top Traffic Interchanges 2021-2022, Table 1"
   },
   {
     "id": "interchange-21",
@@ -370,12 +270,7 @@
       "south": 100000,
       "west": 8000
     },
-    "source": "Top Traffic Interchanges 2021-2022, Table 1",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 55.93,
-      "y": 30.47
-    }
+    "source": "Top Traffic Interchanges 2021-2022, Table 1"
   },
   {
     "id": "interchange-22",
@@ -388,12 +283,7 @@
       "south": 1000,
       "west": 100000
     },
-    "source": "Top Traffic Interchanges 2021-2022, Table 1",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 66.54,
-      "y": 29.87
-    }
+    "source": "Top Traffic Interchanges 2021-2022, Table 1"
   },
   {
     "id": "interchange-23",
@@ -406,12 +296,7 @@
       "south": 31000,
       "west": 65000
     },
-    "source": "Top Traffic Interchanges 2021-2022, Table 1",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 77.14,
-      "y": 29.27
-    }
+    "source": "Top Traffic Interchanges 2021-2022, Table 1"
   },
   {
     "id": "interchange-24",
@@ -424,12 +309,7 @@
       "south": 5000,
       "west": 94000
     },
-    "source": "Top Traffic Interchanges 2021-2022, Table 1",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 90.0,
-      "y": 29.27
-    }
+    "source": "Top Traffic Interchanges 2021-2022, Table 1"
   },
   {
     "id": "interchange-25",
@@ -442,12 +322,7 @@
       "south": 86000,
       "west": 11000
     },
-    "source": "Top Traffic Interchanges 2021-2022, Table 1",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 13.75,
-      "y": 36.71
-    }
+    "source": "Top Traffic Interchanges 2021-2022, Table 1"
   },
   {
     "id": "interchange-26",
@@ -460,12 +335,7 @@
       "south": 12000,
       "west": 90000
     },
-    "source": "Top Traffic Interchanges 2021-2022, Table 1",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 24.36,
-      "y": 36.11
-    }
+    "source": "Top Traffic Interchanges 2021-2022, Table 1"
   },
   {
     "id": "interchange-27",
@@ -478,12 +348,7 @@
       "south": 65000,
       "west": 38000
     },
-    "source": "Top Traffic Interchanges 2021-2022, Table 1",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 34.96,
-      "y": 35.51
-    }
+    "source": "Top Traffic Interchanges 2021-2022, Table 1"
   },
   {
     "id": "interchange-28",
@@ -496,12 +361,7 @@
       "south": 16000,
       "west": 85000
     },
-    "source": "Top Traffic Interchanges 2021-2022, Table 1",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 45.57,
-      "y": 34.91
-    }
+    "source": "Top Traffic Interchanges 2021-2022, Table 1"
   },
   {
     "id": "interchange-29",
@@ -514,12 +374,7 @@
       "south": 70000,
       "west": 36000
     },
-    "source": "Top Traffic Interchanges 2021-2022, Table 1",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 56.18,
-      "y": 36.71
-    }
+    "source": "Top Traffic Interchanges 2021-2022, Table 1"
   },
   {
     "id": "interchange-30",
@@ -532,12 +387,7 @@
       "south": 25000,
       "west": 65000
     },
-    "source": "Top Traffic Interchanges 2021-2022, Table 1",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 66.79,
-      "y": 36.11
-    }
+    "source": "Top Traffic Interchanges 2021-2022, Table 1"
   },
   {
     "id": "interchange-31",
@@ -550,12 +400,7 @@
       "south": 0,
       "west": 63000
     },
-    "source": "Top Traffic Interchanges 2021-2022, Table 1",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 77.39,
-      "y": 35.51
-    }
+    "source": "Top Traffic Interchanges 2021-2022, Table 1"
   },
   {
     "id": "interchange-32",
@@ -568,12 +413,7 @@
       "south": 90000,
       "west": 5000
     },
-    "source": "Top Traffic Interchanges 2021-2022, Table 1",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 88.0,
-      "y": 34.91
-    }
+    "source": "Top Traffic Interchanges 2021-2022, Table 1"
   },
   {
     "id": "interchange-33",
@@ -586,12 +426,7 @@
       "south": 60000,
       "west": 23000
     },
-    "source": "Top Traffic Interchanges 2021-2022, Table 1",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 14.0,
-      "y": 40.55
-    }
+    "source": "Top Traffic Interchanges 2021-2022, Table 1"
   },
   {
     "id": "interchange-34",
@@ -604,12 +439,7 @@
       "south": 22000,
       "west": 56000
     },
-    "source": "Top Traffic Interchanges 2021-2022, Table 1",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 24.61,
-      "y": 42.35
-    }
+    "source": "Top Traffic Interchanges 2021-2022, Table 1"
   },
   {
     "id": "interchange-35",
@@ -622,12 +452,7 @@
       "south": 5000,
       "west": 78000
     },
-    "source": "Top Traffic Interchanges 2021-2022, Table 1",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 35.21,
-      "y": 41.75
-    }
+    "source": "Top Traffic Interchanges 2021-2022, Table 1"
   },
   {
     "id": "interchange-36",
@@ -640,12 +465,7 @@
       "south": 46000,
       "west": 25000
     },
-    "source": "Top Traffic Interchanges 2021-2022, Table 1",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 45.82,
-      "y": 41.15
-    }
+    "source": "Top Traffic Interchanges 2021-2022, Table 1"
   },
   {
     "id": "interchange-37",
@@ -658,12 +478,7 @@
       "south": 76000,
       "west": 3000
     },
-    "source": "Top Traffic Interchanges 2021-2022, Table 1",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 56.43,
-      "y": 40.55
-    }
+    "source": "Top Traffic Interchanges 2021-2022, Table 1"
   },
   {
     "id": "interchange-38",
@@ -676,12 +491,7 @@
       "south": 60000,
       "west": 14000
     },
-    "source": "Top Traffic Interchanges 2021-2022, Table 1",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 67.04,
-      "y": 42.35
-    }
+    "source": "Top Traffic Interchanges 2021-2022, Table 1"
   },
   {
     "id": "interchange-39",
@@ -694,12 +504,7 @@
       "south": 34000,
       "west": 36000
     },
-    "source": "Top Traffic Interchanges 2021-2022, Table 1",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 77.64,
-      "y": 41.75
-    }
+    "source": "Top Traffic Interchanges 2021-2022, Table 1"
   },
   {
     "id": "interchange-40",
@@ -712,12 +517,7 @@
       "south": 62000,
       "west": 13000
     },
-    "source": "Top Traffic Interchanges 2021-2022, Table 1",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 88.25,
-      "y": 41.15
-    }
+    "source": "Top Traffic Interchanges 2021-2022, Table 1"
   },
   {
     "id": "interchange-41",
@@ -730,12 +530,7 @@
       "south": 21000,
       "west": 51000
     },
-    "source": "Top Traffic Interchanges 2021-2022, Table 1",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 12.0,
-      "y": 46.18
-    }
+    "source": "Top Traffic Interchanges 2021-2022, Table 1"
   },
   {
     "id": "interchange-42",
@@ -748,12 +543,7 @@
       "south": 38000,
       "west": 33000
     },
-    "source": "Top Traffic Interchanges 2021-2022, Table 1",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 24.86,
-      "y": 46.18
-    }
+    "source": "Top Traffic Interchanges 2021-2022, Table 1"
   },
   {
     "id": "interchange-43",
@@ -766,12 +556,7 @@
       "south": 58000,
       "west": 13000
     },
-    "source": "Top Traffic Interchanges 2021-2022, Table 1",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 35.46,
-      "y": 47.98
-    }
+    "source": "Top Traffic Interchanges 2021-2022, Table 1"
   },
   {
     "id": "interchange-44",
@@ -784,12 +569,7 @@
       "south": 8000,
       "west": 51000
     },
-    "source": "Top Traffic Interchanges 2021-2022, Table 1",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 46.07,
-      "y": 47.38
-    }
+    "source": "Top Traffic Interchanges 2021-2022, Table 1"
   },
   {
     "id": "interchange-45",
@@ -802,12 +582,7 @@
       "south": 8000,
       "west": 69000
     },
-    "source": "Top Traffic Interchanges 2021-2022, Table 1",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 56.68,
-      "y": 46.78
-    }
+    "source": "Top Traffic Interchanges 2021-2022, Table 1"
   },
   {
     "id": "interchange-46",
@@ -820,12 +595,7 @@
       "south": 18000,
       "west": 64000
     },
-    "source": "Top Traffic Interchanges 2021-2022, Table 1",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 67.29,
-      "y": 46.18
-    }
+    "source": "Top Traffic Interchanges 2021-2022, Table 1"
   },
   {
     "id": "interchange-47",
@@ -838,12 +608,7 @@
       "south": 56000,
       "west": 8000
     },
-    "source": "Top Traffic Interchanges 2021-2022, Table 1",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 77.89,
-      "y": 47.98
-    }
+    "source": "Top Traffic Interchanges 2021-2022, Table 1"
   },
   {
     "id": "interchange-48",
@@ -856,12 +621,7 @@
       "south": 24000,
       "west": 23000
     },
-    "source": "Top Traffic Interchanges 2021-2022, Table 1",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 88.5,
-      "y": 47.38
-    }
+    "source": "Top Traffic Interchanges 2021-2022, Table 1"
   },
   {
     "id": "interchange-49",
@@ -874,12 +634,7 @@
       "south": 41000,
       "west": 21000
     },
-    "source": "Top Traffic Interchanges 2021-2022, Table 1",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 12.25,
-      "y": 52.42
-    }
+    "source": "Top Traffic Interchanges 2021-2022, Table 1"
   },
   {
     "id": "interchange-50",
@@ -892,12 +647,7 @@
       "south": 31000,
       "west": 22000
     },
-    "source": "Top Traffic Interchanges 2021-2022, Table 1",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 22.86,
-      "y": 51.82
-    }
+    "source": "Top Traffic Interchanges 2021-2022, Table 1"
   },
   {
     "id": "interchange-51",
@@ -910,12 +660,7 @@
       "south": 26000,
       "west": 29000
     },
-    "source": "Top Traffic Interchanges 2021-2022, Table 1",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 35.71,
-      "y": 51.82
-    }
+    "source": "Top Traffic Interchanges 2021-2022, Table 1"
   },
   {
     "id": "interchange-52",
@@ -928,12 +673,7 @@
       "south": 3000,
       "west": 46000
     },
-    "source": "Top Traffic Interchanges 2021-2022, Table 1",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 46.32,
-      "y": 53.62
-    }
+    "source": "Top Traffic Interchanges 2021-2022, Table 1"
   },
   {
     "id": "interchange-53",
@@ -946,12 +686,7 @@
       "south": 15000,
       "west": 46000
     },
-    "source": "Top Traffic Interchanges 2021-2022, Table 1",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 56.93,
-      "y": 53.02
-    }
+    "source": "Top Traffic Interchanges 2021-2022, Table 1"
   },
   {
     "id": "interchange-54",
@@ -964,12 +699,7 @@
       "south": 62000,
       "west": 28000
     },
-    "source": "Top Traffic Interchanges 2021-2022, Table 1",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 67.54,
-      "y": 52.42
-    }
+    "source": "Top Traffic Interchanges 2021-2022, Table 1"
   },
   {
     "id": "interchange-55",
@@ -982,12 +712,7 @@
       "south": 28000,
       "west": 34000
     },
-    "source": "Top Traffic Interchanges 2021-2022, Table 1",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 78.14,
-      "y": 51.82
-    }
+    "source": "Top Traffic Interchanges 2021-2022, Table 1"
   },
   {
     "id": "interchange-56",
@@ -1000,12 +725,7 @@
       "south": 33000,
       "west": 13000
     },
-    "source": "Top Traffic Interchanges 2021-2022, Table 1",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 88.75,
-      "y": 53.62
-    }
+    "source": "Top Traffic Interchanges 2021-2022, Table 1"
   },
   {
     "id": "interchange-57",
@@ -1018,12 +738,7 @@
       "south": 40000,
       "west": 1000
     },
-    "source": "Top Traffic Interchanges 2021-2022, Table 1",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 12.5,
-      "y": 58.65
-    }
+    "source": "Top Traffic Interchanges 2021-2022, Table 1"
   },
   {
     "id": "interchange-58",
@@ -1036,12 +751,7 @@
       "south": 28000,
       "west": 16000
     },
-    "source": "Top Traffic Interchanges 2021-2022, Table 1",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 23.11,
-      "y": 58.05
-    }
+    "source": "Top Traffic Interchanges 2021-2022, Table 1"
   },
   {
     "id": "interchange-59",
@@ -1054,12 +764,7 @@
       "south": 8000,
       "west": 34000
     },
-    "source": "Top Traffic Interchanges 2021-2022, Table 1",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 33.71,
-      "y": 57.45
-    }
+    "source": "Top Traffic Interchanges 2021-2022, Table 1"
   },
   {
     "id": "interchange-60",
@@ -1072,12 +777,7 @@
       "south": 24000,
       "west": 10000
     },
-    "source": "Top Traffic Interchanges 2021-2022, Table 1",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 46.57,
-      "y": 57.45
-    }
+    "source": "Top Traffic Interchanges 2021-2022, Table 1"
   },
   {
     "id": "interchange-61",
@@ -1090,12 +790,7 @@
       "south": 0,
       "west": 53700
     },
-    "source": "Top Traffic Interchanges 2021-2022, Table 1",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 57.18,
-      "y": 59.25
-    }
+    "source": "Top Traffic Interchanges 2021-2022, Table 1"
   },
   {
     "id": "interchange-62",
@@ -1108,12 +803,7 @@
       "south": 5000,
       "west": 34000
     },
-    "source": "Top Traffic Interchanges 2021-2022, Table 1",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 67.79,
-      "y": 58.65
-    }
+    "source": "Top Traffic Interchanges 2021-2022, Table 1"
   },
   {
     "id": "interchange-63",
@@ -1126,12 +816,7 @@
       "south": 18000,
       "west": 18000
     },
-    "source": "Top Traffic Interchanges 2021-2022, Table 1",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 78.39,
-      "y": 58.05
-    }
+    "source": "Top Traffic Interchanges 2021-2022, Table 1"
   },
   {
     "id": "interchange-64",
@@ -1144,12 +829,7 @@
       "south": 3000,
       "west": 50000
     },
-    "source": "Top Traffic Interchanges 2021-2022, Table 1",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 89.0,
-      "y": 57.45
-    }
+    "source": "Top Traffic Interchanges 2021-2022, Table 1"
   },
   {
     "id": "interchange-65",
@@ -1162,12 +842,7 @@
       "south": 29000,
       "west": 11000
     },
-    "source": "Top Traffic Interchanges 2021-2022, Table 1",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 12.75,
-      "y": 64.89
-    }
+    "source": "Top Traffic Interchanges 2021-2022, Table 1"
   },
   {
     "id": "interchange-66",
@@ -1180,12 +855,7 @@
       "south": 32000,
       "west": 1000
     },
-    "source": "Top Traffic Interchanges 2021-2022, Table 1",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 23.36,
-      "y": 64.29
-    }
+    "source": "Top Traffic Interchanges 2021-2022, Table 1"
   },
   {
     "id": "interchange-67",
@@ -1198,12 +868,7 @@
       "south": 15000,
       "west": 34000
     },
-    "source": "Top Traffic Interchanges 2021-2022, Table 1",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 33.96,
-      "y": 63.69
-    }
+    "source": "Top Traffic Interchanges 2021-2022, Table 1"
   },
   {
     "id": "interchange-68",
@@ -1216,12 +881,7 @@
       "south": 39000,
       "west": 4000
     },
-    "source": "Top Traffic Interchanges 2021-2022, Table 1",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 44.57,
-      "y": 63.09
-    }
+    "source": "Top Traffic Interchanges 2021-2022, Table 1"
   },
   {
     "id": "interchange-69",
@@ -1234,12 +894,7 @@
       "south": 11000,
       "west": 26000
     },
-    "source": "Top Traffic Interchanges 2021-2022, Table 1",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 57.43,
-      "y": 63.09
-    }
+    "source": "Top Traffic Interchanges 2021-2022, Table 1"
   },
   {
     "id": "interchange-70",
@@ -1252,12 +907,7 @@
       "south": 26000,
       "west": 9000
     },
-    "source": "Top Traffic Interchanges 2021-2022, Table 1",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 68.04,
-      "y": 64.89
-    }
+    "source": "Top Traffic Interchanges 2021-2022, Table 1"
   },
   {
     "id": "interchange-71",
@@ -1270,12 +920,7 @@
       "south": 2000,
       "west": 30000
     },
-    "source": "Top Traffic Interchanges 2021-2022, Table 1",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 78.64,
-      "y": 64.29
-    }
+    "source": "Top Traffic Interchanges 2021-2022, Table 1"
   },
   {
     "id": "interchange-72",
@@ -1288,12 +933,7 @@
       "south": 7000,
       "west": 2000
     },
-    "source": "Top Traffic Interchanges 2021-2022, Table 1",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 89.25,
-      "y": 63.69
-    }
+    "source": "Top Traffic Interchanges 2021-2022, Table 1"
   },
   {
     "id": "interchange-73",
@@ -1306,12 +946,7 @@
       "south": 27000,
       "west": 8000
     },
-    "source": "Top Traffic Interchanges 2021-2022, Table 1",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 13.0,
-      "y": 68.73
-    }
+    "source": "Top Traffic Interchanges 2021-2022, Table 1"
   },
   {
     "id": "interchange-74",
@@ -1324,12 +959,7 @@
       "south": 12000,
       "west": 22000
     },
-    "source": "Top Traffic Interchanges 2021-2022, Table 1",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 23.61,
-      "y": 70.53
-    }
+    "source": "Top Traffic Interchanges 2021-2022, Table 1"
   },
   {
     "id": "interchange-75",
@@ -1342,12 +972,7 @@
       "south": 32000,
       "west": 6000
     },
-    "source": "Top Traffic Interchanges 2021-2022, Table 1",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 34.21,
-      "y": 69.93
-    }
+    "source": "Top Traffic Interchanges 2021-2022, Table 1"
   },
   {
     "id": "interchange-76",
@@ -1360,12 +985,7 @@
       "south": 28000,
       "west": 1000
     },
-    "source": "Top Traffic Interchanges 2021-2022, Table 1",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 44.82,
-      "y": 69.33
-    }
+    "source": "Top Traffic Interchanges 2021-2022, Table 1"
   },
   {
     "id": "interchange-77",
@@ -1378,12 +998,7 @@
       "south": 25800,
       "west": 3000
     },
-    "source": "Top Traffic Interchanges 2021-2022, Table 1",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 55.43,
-      "y": 68.73
-    }
+    "source": "Top Traffic Interchanges 2021-2022, Table 1"
   },
   {
     "id": "interchange-78",
@@ -1396,12 +1011,7 @@
       "south": 20000,
       "west": 2000
     },
-    "source": "Top Traffic Interchanges 2021-2022, Table 1",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 68.29,
-      "y": 68.73
-    }
+    "source": "Top Traffic Interchanges 2021-2022, Table 1"
   },
   {
     "id": "interchange-79",
@@ -1414,12 +1024,7 @@
       "south": 16500,
       "west": 9000
     },
-    "source": "Top Traffic Interchanges 2021-2022, Table 1",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 78.89,
-      "y": 70.53
-    }
+    "source": "Top Traffic Interchanges 2021-2022, Table 1"
   },
   {
     "id": "interchange-80",
@@ -1432,12 +1037,7 @@
       "south": 3000,
       "west": 22000
     },
-    "source": "Top Traffic Interchanges 2021-2022, Table 1",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 89.5,
-      "y": 69.93
-    }
+    "source": "Top Traffic Interchanges 2021-2022, Table 1"
   },
   {
     "id": "interchange-81",
@@ -1450,12 +1050,7 @@
       "south": 3000,
       "west": 20000
     },
-    "source": "Top Traffic Interchanges 2021-2022, Table 1",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 13.25,
-      "y": 74.96
-    }
+    "source": "Top Traffic Interchanges 2021-2022, Table 1"
   },
   {
     "id": "interchange-82",
@@ -1468,12 +1063,7 @@
       "south": 18000,
       "west": 2000
     },
-    "source": "Top Traffic Interchanges 2021-2022, Table 1",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 23.86,
-      "y": 74.36
-    }
+    "source": "Top Traffic Interchanges 2021-2022, Table 1"
   },
   {
     "id": "interchange-83",
@@ -1486,12 +1076,7 @@
       "south": 20000,
       "west": 1000
     },
-    "source": "Top Traffic Interchanges 2021-2022, Table 1",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 34.46,
-      "y": 76.16
-    }
+    "source": "Top Traffic Interchanges 2021-2022, Table 1"
   },
   {
     "id": "interchange-84",
@@ -1504,12 +1089,7 @@
       "south": 10000,
       "west": 18000
     },
-    "source": "Top Traffic Interchanges 2021-2022, Table 1",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 45.07,
-      "y": 75.56
-    }
+    "source": "Top Traffic Interchanges 2021-2022, Table 1"
   },
   {
     "id": "interchange-85",
@@ -1522,12 +1102,7 @@
       "south": 3000,
       "west": 18000
     },
-    "source": "Top Traffic Interchanges 2021-2022, Table 1",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 55.68,
-      "y": 74.96
-    }
+    "source": "Top Traffic Interchanges 2021-2022, Table 1"
   },
   {
     "id": "interchange-86",
@@ -1540,12 +1115,7 @@
       "south": 5000,
       "west": 13000
     },
-    "source": "Top Traffic Interchanges 2021-2022, Table 1",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 66.29,
-      "y": 74.36
-    }
+    "source": "Top Traffic Interchanges 2021-2022, Table 1"
   },
   {
     "id": "interchange-87",
@@ -1558,12 +1128,7 @@
       "south": 2600,
       "west": 12000
     },
-    "source": "Top Traffic Interchanges 2021-2022, Table 1",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 79.14,
-      "y": 74.36
-    }
+    "source": "Top Traffic Interchanges 2021-2022, Table 1"
   },
   {
     "id": "interchange-88",
@@ -1576,12 +1141,7 @@
       "south": 0,
       "west": 9000
     },
-    "source": "Top Traffic Interchanges 2021-2022, Table 1",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 89.75,
-      "y": 76.16
-    }
+    "source": "Top Traffic Interchanges 2021-2022, Table 1"
   },
   {
     "id": "interchange-89",
@@ -1594,12 +1154,7 @@
       "south": 0,
       "west": 18000
     },
-    "source": "Top Traffic Interchanges 2021-2022, Table 1",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 13.5,
-      "y": 81.2
-    }
+    "source": "Top Traffic Interchanges 2021-2022, Table 1"
   },
   {
     "id": "interchange-90",
@@ -1612,11 +1167,6 @@
       "south": 3000,
       "west": 10000
     },
-    "source": "Top Traffic Interchanges 2021-2022, Table 1",
-    "geometryStatus": "sample data pending source GIS layer/table",
-    "mapPosition": {
-      "x": 24.11,
-      "y": 80.6
-    }
+    "source": "Top Traffic Interchanges 2021-2022, Table 1"
   }
 ]

@@ -1,5 +1,5 @@
-export function formatNumber(value) {
-  return new Intl.NumberFormat("en-US").format(value);
+export function formatNumber(value, locale = "en-US") {
+  return new Intl.NumberFormat(locale, { maximumFractionDigits: 0 }).format(value);
 }
 
 export function formatPercent(value, options = {}) {

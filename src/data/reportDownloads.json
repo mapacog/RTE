@@ -1,0 +1,6 @@
+{
+  "regional": {"file":"regional-traffic-patterns-2025.pdf","title":"Regional Traffic Patterns 2025","label":{"en":"Regional Traffic Patterns","es":"Patrones de tráfico regional"}},
+  "intersections": {"file":"top-traffic-intersections-2025.pdf","title":"Top Traffic Intersections 2025","label":{"en":"Top Traffic Intersections","es":"Principales intersecciones"}},
+  "interchanges": {"file":"top-traffic-interchanges-2025.pdf","title":"Top Traffic Interchanges 2025","label":{"en":"Top Traffic Interchanges","es":"Principales intercambios"}},
+  "flow": {"file":"traffic-flow-map-2025.pdf","title":"Traffic Flow Map 2025","label":{"en":"Traffic Flow Map","es":"Mapa de flujo de tráfico"}}
+}
