@@ -1,0 +1,22 @@
+{
+  "intersections": {
+    "regional": {
+      "en": "Dodge and West Dodge connect residential neighborhoods with shopping, campuses, medical services, and downtown Omaha. Traffic along this east-west corridor reflects trips between these destinations and the streets that feed into it.",
+      "es": "Dodge y West Dodge conectan vecindarios residenciales con comercios, campus, servicios médicos y el centro de Omaha. El tráfico de este corredor este-oeste refleja viajes entre esos destinos y las calles que desembocan en él."
+    },
+    "local": {
+      "en": "A city or county view brings local connections into focus: streets linking neighborhoods with jobs, shops, and services. The individual approach volumes provide context for how traffic reaches each crossing; high daily traffic alone does not describe congestion.",
+      "es": "La vista de una ciudad o condado destaca conexiones locales: calles que unen vecindarios con empleos, comercios y servicios. Los volúmenes de cada acceso muestran cómo llega el tráfico al cruce; un volumen diario alto por sí solo no describe la congestión."
+    }
+  },
+  "interchanges": {
+    "regional": {
+      "en": "I-80 and I-680 link major Omaha streets with regional and longer-distance travel. Multiple high-volume connections along these corridors reflect traffic gathering at ramps and other links across the highway network, rather than at a single street crossing.",
+      "es": "I-80 e I-680 conectan calles principales de Omaha con viajes regionales y de mayor distancia. Varias conexiones de alto volumen reflejan el tráfico que se reúne en rampas y otros enlaces de la red de carreteras, no en un solo cruce de calles."
+    },
+    "local": {
+      "en": "At the city or county scale, ramps connect surrounding roads with through routes. These connections serve nearby destinations as well as longer-distance trips. Directional leg volumes help distinguish the approaches contributing to an interchange's total daily traffic.",
+      "es": "A escala de ciudad o condado, las rampas conectan calles cercanas con rutas de paso. Atienden destinos próximos y viajes de mayor distancia. Los volúmenes direccionales ayudan a distinguir los accesos que contribuyen al tráfico diario total del intercambio."
+    }
+  }
+}

@@ -243,7 +243,7 @@ export function createPopupContent(model, doc = document, styles = "") {
   return root;
 }
 
-export async function configureMapPopups(map, getLanguage, isCancelled = () => false, styles = "") {
+export async function configureMapPopups(map, getLanguage, isCancelled = () => false, styles = "", getRankContext = () => null, preserveProfiles = []) {
   const [PopupTemplate, CustomContent] = await Promise.all([
     window.$arcgis.import("@arcgis/core/PopupTemplate.js"),
     window.$arcgis.import("@arcgis/core/popup/content/CustomContent.js"),
@@ -257,12 +257,22 @@ export async function configureMapPopups(map, getLanguage, isCancelled = () => f
     try {
       await layer.load();
       if (isCancelled()) return;
+      if (preserveProfiles.includes(popupProfile(layer))) return;
+      const model = attributes => {
+        const result = popupModel(layer, attributes, getLanguage());
+        const context = getRankContext(layer, attributes);
+        if (context) {
+          result.rank = `#${context.rank}`;
+          result.rankLabel = `${getLanguage() === "es" ? "Puesto en" : "Rank within"} ${context.locale}`;
+        }
+        return result;
+      };
       layer.popupTemplate = new PopupTemplate({
-        title: event => popupModel(layer, event.graphic.attributes, getLanguage()).title,
+        title: event => model(event.graphic.attributes).title,
         outFields: ["*"],
         content: [new CustomContent({
           outFields: ["*"],
-          creator: event => createPopupContent(popupModel(layer, event.graphic.attributes, getLanguage()), document, styles),
+          creator: event => createPopupContent(model(event.graphic.attributes), document, styles),
         })],
       });
       layer.popupEnabled = true;

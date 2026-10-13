@@ -230,7 +230,7 @@ def regional_metrics() -> dict:
         "federalFunctionalClass": [
             {"className": "Interstate", "centerlineMiles": 189, "change2018_2019": 2.0, "change2019_2020": -16.3, "change2020_2021": 14.9, "change2021_2022": 2.8},
             {"className": "Freeway", "centerlineMiles": 133, "change2018_2019": 2.4, "change2019_2020": -7.3, "change2020_2021": 11.4, "change2021_2022": 6.5},
-            {"className": "Major Arterial", "centerlineMiles": 182, "change2018_2019": 3.1, "change2019_2020": -11.7, "change2020_2021": 7.3, "change2021_2022": 2.3},
+            {"className": "Principal Arterial", "centerlineMiles": 182, "change2018_2019": 3.1, "change2019_2020": -11.7, "change2020_2021": 7.3, "change2021_2022": 2.3},
             {"className": "Minor Arterial", "centerlineMiles": 391, "change2018_2019": 4.9, "change2019_2020": -9.0, "change2020_2021": 6.8, "change2021_2022": 0.5},
             {"className": "Major Collector", "centerlineMiles": 375, "change2018_2019": 14.8, "change2019_2020": -10.8, "change2020_2021": 8.3, "change2021_2022": -2.2},
             {"className": "Minor Collector", "centerlineMiles": 151, "change2018_2019": 27.2, "change2019_2020": -14.1, "change2020_2021": 8.4, "change2021_2022": 1.7},

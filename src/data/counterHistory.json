@@ -1,0 +1,16 @@
+{
+  "source": "Regional Traffic Patterns 2025, Table 2: MAPA Regional ATR Summary",
+  "since": 1994,
+  "stations": [
+    "Iowa:914",
+    "Nebraska:A-5",
+    "Nebraska:A-17",
+    "Nebraska:A-23",
+    "Nebraska:A-24",
+    "Nebraska:A-25",
+    "Nebraska:A-26",
+    "Nebraska:A-32",
+    "Nebraska:A-40",
+    "Nebraska:A-56"
+  ]
+}

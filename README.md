@@ -31,6 +31,10 @@ Transportation data and visualizations are sourced from MAPA's published reports
 
 Data availability and updates depend on the respective source services.
 
+PDF report links open the Google Drive files configured in `src/data/reportDownloads.json`, rather than the bundled PDF copies. Upload revised PDFs as new versions of the same Drive files to retain their links; replacing them with new file IDs requires updating the configuration. Ensure approved reports are viewable by the public without signing in. The app does not change Drive sharing permissions.
+
+Location photography is configured in `src/data/metroPhotos.json` and stored as optimized WebP assets in `public/assets/metro-photos`. These images provide place and travel-mode context, not dated traffic observations. Camera metadata is removed from the published assets; original photos remain outside the public asset folder.
+
 ## Accessibility
 
 The Regional Traffic Explorer is designed with **Web Content Accessibility Guidelines (WCAG) 2.2 Level AA** as its accessibility target.

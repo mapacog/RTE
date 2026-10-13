@@ -1,5 +1,5 @@
 import { useEffect,useState } from "react";
-import { Map,ChartNoAxesCombined,Table2,Database } from "lucide-react";
+import { Map as MapIcon,ChartNoAxesCombined,Table2 } from "lucide-react";
 import { usePreferences } from "./Preferences";
 import MapExplorer from "./MapExplorer";
 import ChartExplorer from "./ChartExplorer";
@@ -10,7 +10,7 @@ import topics from "../data/reportTopics.json";
 import insights from "../data/reportInsights.json";
 import InsightCards, { RegionalHighlights } from "./InsightCards";
 import ReportDownload from "./ReportDownload";
-import MetricCard from "./MetricCard";
+import RetainedView from "./RetainedView";
 
 export function useReportTables() {
   const [tables,setTables]=useState([]);
@@ -38,8 +38,11 @@ export default function ReportWorkspace({ tables,error,retry,section = "regional
   const selectTopic=(id,options)=>{setTopicId(id);setRequestedView("");onTopicChange?.(id,options);};
   const isRegional=section==="regional";
   const sectionId=isRegional?"regional-patterns":"multimodal";
-  const icons={Maps:Map,Charts:ChartNoAxesCombined,Tables:Table2};
+  const icons={Maps:MapIcon,Charts:ChartNoAxesCombined,Tables:Table2};
   const contextCards=insights.contexts[topic.id] || insights.contexts[topic.id==="orbt"?"transit":topic.context] || [];
+  const mapGroups = [...new Map(chapters.filter(item => item.maps.length).map(item => [item.maps.join(","), item.maps]))];
+  const mapGroup = topic.maps.join(",");
+  const summaryId = `chapter-summary-${section}`;
   return <section className="section-wrap topic-section" id={sectionId}>
     <div className="section-header"><div><p className="eyebrow">2022–2025</p><h2>{t(isRegional?"Regional traffic patterns":"Multimodal transportation")}</h2></div>
       <div className="section-downloads"><ReportDownload report="regional"/>{isRegional?<ReportDownload report="flow"/>:null}</div>
@@ -56,8 +59,7 @@ export default function ReportWorkspace({ tables,error,retry,section = "regional
           {chapters.map(item=><option key={item.id} value={item.id}>{t(item.title)}</option>)}
         </select></label>
         <h3 className="chapter-heading">{t(topic.title)}</h3>
-        <p id="chapter-summary" tabIndex={-1} className="section-intro">{insights.summaries[topic.id]?.[language] || content[topic.context][language]}</p>
-        {topic.id==="counters"?<MetricCard icon={Database} className="counter-topic-card" label={t("Continuous counters")} value={tables.find(table=>table.id==="atr")?.rows.length ?? t("Loading")} detail={language==="es"?"Sitios de monitoreo continuo":"Continuous monitoring sites"} tone="yellow"/>:null}
+        <p id={summaryId} tabIndex={-1} className="section-intro">{(view==="Charts"?insights.chartSummaries?.[topic.id]?.[language]:null) || insights.summaries[topic.id]?.[language] || content[topic.context][language]}</p>
         <div className="workspace-tabs" role="tablist" aria-label={t("Explore")}>
           {availableViews.map(name=>{const Icon=icons[name];const tabId=`tab-${section}-${name}`;return <button key={name} id={tabId} type="button" role="tab" aria-selected={view===name} aria-controls={`panel-${section}`} tabIndex={view===name?0:-1}
             onClick={()=>setRequestedView(name)} onKeyDown={e=>{
@@ -67,12 +69,14 @@ export default function ReportWorkspace({ tables,error,retry,section = "regional
             }}><Icon size={19} aria-hidden="true"/>{t(name)}</button>;})}
         </div>
         <div id={`panel-${section}`} role="tabpanel" aria-labelledby={`tab-${section}-${view}`} className="report-workspace">
-          {view==="Maps"?<MapExplorer key={topic.maps.join(",")} sources={{...sources,maps:sources.maps.filter(map=>topic.maps.includes(map.id))}} initialMapId={topic.maps[0]} initialComparison={topic.comparison} contextCards={contextCards} onComparisonChange={id=>selectTopic(id,{preservePosition:true})}/>:
-            view==="Charts"?<ChartExplorer key={topic.id} charts={sources.charts.filter(chart=>topic.charts.includes(chart.id))} contextCards={contextCards}/>:
-            error?<div role="alert"><p>{error}</p><button type="button" onClick={retry}>{t("Retry")}</button></div>:
-            <InteractiveReportTable key={topic.id} tables={tables.filter(table=>topic.tables.includes(table.id))}/>}
+          {mapGroups.map(([key, ids]) => <RetainedView key={key} active={view === "Maps" && mapGroup === key}>
+            <MapExplorer sources={{...sources,maps:sources.maps.filter(map=>ids.includes(map.id))}} initialMapId={ids[0]} initialComparison={topic.comparison} contextCards={contextCards} summaryId={summaryId} onComparisonChange={id=>selectTopic(id,{preservePosition:true})}/>
+          </RetainedView>)}
+          {view==="Charts"?<ChartExplorer key={topic.id} charts={sources.charts.filter(chart=>topic.charts.includes(chart.id))} contextCards={contextCards}/>:
+            view==="Tables" ? (error?<div role="alert"><p>{error}</p><button type="button" onClick={retry}>{t("Retry")}</button></div>:
+            <InteractiveReportTable key={topic.id} tables={tables.filter(table=>topic.tables.includes(table.id))} contextCards={insights.tableContexts?.[topic.id]}/>) : null}
         </div>
-        {view==="Tables"?<InsightCards cards={contextCards}/>:null}
+        {view==="Tables" && !insights.tableContexts?.[topic.id]?<InsightCards cards={contextCards}/>:null}
       </div>
     </div>
   </section>;

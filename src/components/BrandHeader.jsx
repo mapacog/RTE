@@ -1,24 +1,25 @@
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
 import { usePreferences, PreferencesControls } from "./Preferences";
+import HomeShare from "./HomeShare";
 
 const navItems = [
-  ["Overview", "overview"],
+  ["Home", "Home"],
   ["Regional Patterns", "regional-patterns"],
   ["Multimodal", "multimodal"],
   ["Intersections", "intersections"],
   ["Interchanges", "interchanges"],
 ];
 
-export default function BrandHeader({ activePage = "overview" }) {
-  const { t } = usePreferences();
+export default function BrandHeader({ activePage = "Home" }) {
+  const { t, language } = usePreferences();
   const [open, setOpen] = useState(false);
 
   const close = () => setOpen(false);
 
   return (
     <header className="brand-header">
-      <a className="brand-lockup" href="#overview" aria-label="Regional Traffic Explorer home" onClick={close}>
+      <a className="brand-lockup" href="https://www.mapacog.org" target="_blank" rel="noopener noreferrer" aria-label={language === "es" ? "Sitio web de MAPA (se abre en una pestaña nueva)" : "MAPA website (opens in a new tab)"} onClick={close}>
         <img src="./assets/mapa-logo-tag-blue-grey.png" alt="MAPA logo" />
       </a>
 
@@ -29,7 +30,10 @@ export default function BrandHeader({ activePage = "overview" }) {
           </a>
         ))}
       </nav>
-      <PreferencesControls />
+      <div className="header-tools">
+        <PreferencesControls />
+        <HomeShare/>
+      </div>
 
       <button
         className="menu-button"

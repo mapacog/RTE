@@ -1,0 +1,16 @@
+{
+  "website": "https://www.mapacog.org",
+  "map": {
+    "id": "3305590574624a57bd8d35f4d43a37a9",
+    "title": "MAPA region",
+    "url": "https://mapa.maps.arcgis.com/apps/instant/basic/index.html?appid=5f47187275ee43c6bcc03a12ccce8d80"
+  },
+  "description": {
+    "en": "The Metropolitan Area Planning Agency (MAPA) supports local governments across Greater Omaha-Council Bluffs with regional planning and technical expertise in transportation, infrastructure, housing, and natural resources.",
+    "es": "La Agencia de Planificación del Área Metropolitana (MAPA) apoya a los gobiernos locales de Omaha-Council Bluffs con planificación regional y asistencia técnica en transporte, infraestructura, vivienda y recursos naturales."
+  },
+  "purpose": {
+    "en": "It connects local priorities with the region's long-term needs.",
+    "es": "Conecta las prioridades locales con las necesidades de largo plazo de la región."
+  }
+}

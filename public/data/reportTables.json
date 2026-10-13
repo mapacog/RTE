@@ -53,7 +53,7 @@
         0.035261217052548144
       ],
       [
-        "Major Arterial",
+        "Principal Arterial",
         182,
         0.031,
         -0.117,
@@ -240,7 +240,7 @@
         "Between 180th and 192nd St"
       ]
     ],
-    "note": "Automatic Traffic Recorders count vehicles throughout the year. The supplied workbook lists 11 Nebraska and 4 Iowa sites; the regional report narrative lists 10 and 5. This source discrepancy requires review."
+    "note": "Automatic Traffic Recorders count vehicles throughout the year."
   },
   {
     "id": "vmt",

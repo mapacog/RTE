@@ -20,7 +20,6 @@ function PublishedChart({ chart }) {
   },[]);
   const scale=fullSize?1:Math.min(1,width/nativeWidth);
   const frameWidth=nativeWidth*scale,frameHeight=nativeHeight*scale;
-  const sheet=chart.url.split("/pubchart")[0]+"/pubhtml";
   return <div className="published-chart-stage">
     <div ref={shell} className="published-chart-shell" aria-busy={!loaded} style={{height:Math.ceil(frameHeight)+2}}>
       {!loaded?<p role="status">{t("Loading")}…</p>:null}
@@ -34,7 +33,6 @@ function PublishedChart({ chart }) {
     <div className="chart-source-links">
       <button className="icon-button" type="button" title={language==="es"?"Tamaño original":"Full size"} aria-label={language==="es"?"Tamaño original":"Full size"} aria-pressed={fullSize} onClick={()=>setFullSize(value=>!value)}>{fullSize?<Minimize2 size={17}/>:<Maximize2 size={17}/>}</button>
       <a className="icon-button" aria-label={t("Open chart")} title={t("Open chart")} href={chart.url} target="_blank" rel="noreferrer"><ExternalLink size={17}/></a>
-      <a className="utility-link" href={sheet} target="_blank" rel="noreferrer">{language==="es"?"Ver datos de la hoja publicada":"View published spreadsheet data"}</a>
       {failed?<button className="icon-button" type="button" title={t("Retry")} aria-label={t("Retry")} onClick={()=>{setLoaded(false);setFailed(false);setVersion(n=>n+1);}}><RefreshCw size={17}/></button>:null}
     </div>
   </div>;
@@ -48,6 +46,7 @@ export default function ChartExplorer({ charts, initialTheme, contextCards = [] 
   const [id,setId]=useState(filtered[0].id);
   const chart=filtered.find(chart=>chart.id===id) || filtered[0];
   const activeCards=insights.chartContexts[chart.id] || contextCards;
+  const sidebarCount=chart.sidebarCardCount || 1;
   const narrative=theme==="Regional travel"?(chart.id==="5"||chart.id==="14"?content.methodology:content.seasonal):theme==="Transit"?content.transit:theme==="Bike share & scooters"?content.shared:Number(chart.id)<=17?content.walking:content.strava;
   return <div>
     <div className="workspace-toolbar">
@@ -58,9 +57,10 @@ export default function ChartExplorer({ charts, initialTheme, contextCards = [] 
         {filtered.map(item=><option key={item.id} value={item.id}>{item.title}</option>)}
       </select></label>
     </div>
-    <div className="chart-detail-layout">
+    <div className={`chart-detail-layout${chart.compactSidebar?" chart-sidebar-compact":""}`}>
       <PublishedChart chart={chart} key={chart.id}/>
-      {activeCards.length?<InsightCards cards={activeCards}/>:<div className="visual-context"><p>{narrative[language]}</p><ListenButton text={narrative[language]}/></div>}
+      {activeCards.length?<InsightCards cards={activeCards.slice(0,sidebarCount)}/>:<div className="visual-context"><p>{narrative[language]}</p><ListenButton text={narrative[language]}/></div>}
+      {activeCards.length>sidebarCount?<div className="chart-supporting-insights"><InsightCards cards={activeCards.slice(sidebarCount)}/></div>:null}
     </div>
   </div>;
 }

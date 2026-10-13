@@ -1,9 +1,29 @@
 import test from "node:test";
 import assert from "node:assert/strict";
-import { popupModel, popupProfile, createPopupContent } from "./mapPopups.js";
+import { popupModel, popupProfile, createPopupContent, configureMapPopups } from "./mapPopups.js";
 
 const base = "https://services.arcgis.com/CHjpJeHqytL8t8op/arcgis/rest/services/";
 const layer = (service, index = 0, title = "") => ({ url: `${base}${service}/FeatureServer/${index}`, title });
+
+test("intersection side panels preserve the authored popup while other profiles retain custom content", async () => {
+  const previousWindow = global.window;
+  class PopupTemplate { constructor(options) { Object.assign(this, options); } }
+  class CustomContent { constructor(options) { Object.assign(this, options); } }
+  global.window = { $arcgis: { import: async path => path.includes("PopupTemplate") ? PopupTemplate : CustomContent } };
+  try {
+    const authored = { title: "{INTERSECTI}", content: [{ type: "fields", fieldInfos: [{ fieldName: "INT_TOT_00" }] }] };
+    const intersection = { ...layer("Traffic_Flow_System__Public_view", 1), load: async () => {}, popupTemplate: authored, popupEnabled: true };
+    const interchange = { ...layer("Traffic_Flow_System__Public_view", 0), load: async () => {}, popupTemplate: authored, popupEnabled: true };
+    await configureMapPopups({ allLayers: { toArray: () => [intersection, interchange] } }, () => "en", () => false, "", () => null, ["intersection"]);
+    assert.equal(intersection.popupTemplate, authored);
+    assert.equal(intersection.popupEnabled, true);
+    assert.ok(interchange.popupTemplate instanceof PopupTemplate);
+    assert.equal(interchange.popupTemplate.content[0] instanceof CustomContent, true);
+  } finally {
+    if(previousWindow === undefined) delete global.window;
+    else global.window = previousWindow;
+  }
+});
 
 test("ranked locations show whole-number AADT, zero legs, and missing legs separately", () => {
   const attributes = { INTERSECTI: "90th Street & West Dodge Road", CITY: "Omaha", COUNTY: "Douglas", Total_25: 95430.5, Total_24: 90000, Rank_25: 1, N_LEGSUM_25: 0, E_LEGSUM_25: 70560.5 };

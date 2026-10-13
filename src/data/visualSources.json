@@ -26,6 +26,12 @@
       "title": "Metro Ridership by Stop Productivity, April 2025"
     },
     {
+      "id": "orbt",
+      "webmapId": "9cb9e8555b954ac9abee3313f8ec7d8e",
+      "title": "Omaha Rapid Bus Transit System",
+      "context": "orbt"
+    },
+    {
       "id": "d094ad8d227644eebf8915601e67f8c2",
       "title": "Regional Bicycle and Pedestrian Counts"
     },
@@ -110,6 +116,7 @@
     {
       "id": "16",
       "title": "Estimated Annual Average Daily Pedestrian Volume",
+      "sidebarCardCount": 2,
       "url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vRxRG7Qyw8Lnb36libRgyAYKmUNYzXk-a_59j9Zp46kqLTG-LFTBBejuo7RLVah0PDMOiqISxb8iXIY/pubchart?oid=821238872&format=interactive",
       "theme": "Walking & cycling",
       "width": 600,
@@ -118,6 +125,8 @@
     {
       "id": "17",
       "title": "Estimated Annual Average Daily Bicycle Volume",
+      "sidebarCardCount": 2,
+      "compactSidebar": true,
       "url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vRxRG7Qyw8Lnb36libRgyAYKmUNYzXk-a_59j9Zp46kqLTG-LFTBBejuo7RLVah0PDMOiqISxb8iXIY/pubchart?oid=638418931&format=interactive",
       "theme": "Walking & cycling",
       "width": 600,
@@ -126,6 +135,7 @@
     {
       "id": "19",
       "title": "Public Run, Walk, Hike Activities Recorded on Strava",
+      "sidebarCardCount": 2,
       "url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vRxRG7Qyw8Lnb36libRgyAYKmUNYzXk-a_59j9Zp46kqLTG-LFTBBejuo7RLVah0PDMOiqISxb8iXIY/pubchart?oid=786259358&format=interactive",
       "theme": "Walking & cycling",
       "width": 600,
@@ -166,6 +176,7 @@
     {
       "id": "26",
       "title": "Automated Passenger Counts Over Time",
+      "sidebarCardCount": 2,
       "url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vRTPVYdkQ27Dzwg-OUE0qBFMnj-D8ivYi7IFuUukxZOM2w-JjHkn0mkMjUWuC_dMo80ael2m_ixjlVN/pubchart?oid=907777163&format=interactive",
       "theme": "Transit",
       "width": 774,
@@ -182,6 +193,7 @@
     {
       "id": "30",
       "title": "Scooter Trips by Month 2020 - 2025",
+      "sidebarCardCount": 2,
       "url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vR-vNKAbwbL7ASOdURdl7fiJW7I9_5efCdyV9aKBsDzLO8YFgTptkgZkSew6i0PssPSUzZGo_3_B-6g/pubchart?oid=2114543503&format=interactive",
       "theme": "Bike share & scooters",
       "width": 849,

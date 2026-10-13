@@ -1,15 +1,20 @@
 import { useEffect, useState } from "react";
-import { ArrowUpRight, Bike, ExternalLink, ListOrdered, Map, MapPinned, Route } from "lucide-react";
+import { ArrowUpRight, Bike, ExternalLink, ListOrdered, Map, MapPinned, Route, Truck } from "lucide-react";
 import BrandHeader from "./components/BrandHeader";
 import LiveRankingsSection from "./components/LiveRankingsSection";
 import LiveOverview from "./components/LiveOverview";
 import ReportWorkspace, { useReportTables } from "./components/ReportWorkspace";
 import { usePreferences } from "./components/Preferences";
 import ReportDownload from "./components/ReportDownload";
+import photos from "./data/metroPhotos.json";
+import DestinationPhotos from "./components/DestinationPhotos";
+import AboutMapaCard from "./components/AboutMapaCard";
+import RetainedView from "./components/RetainedView";
 
 const portal = "https://experience.arcgis.com/experience/8a9b3260cb234d4aa2f121059b1d5204";
+const freightPlan = "https://engage.mapacog.org/regional-freight-plan";
 const pages = {
-  overview: "Overview",
+  Home: "Home",
   "regional-patterns": "Regional Patterns",
   multimodal: "Multimodal",
   intersections: "Intersections",
@@ -17,8 +22,9 @@ const pages = {
 };
 
 function readRoute() {
-  const [page, topic] = window.location.hash.slice(1).split("/");
-  return Object.hasOwn(pages, page) ? { page, topic } : null;
+  const [hashPage, topic] = window.location.hash.slice(1).split("/");
+  const page = hashPage === "overview" ? "Home" : hashPage;
+  return Object.hasOwn(pages, page) ? { page, topic: page==="multimodal" && topic==="orbt"?"transit":topic } : null;
 }
 
 const destinations = [
@@ -39,7 +45,8 @@ const destinations = [
 export default function App() {
   const { t, language } = usePreferences();
   const tableSource = useReportTables();
-  const [route, setRoute] = useState(() => readRoute() || { page: "overview" });
+  const [route, setRoute] = useState(() => readRoute() || { page: "Home" });
+  const isHome = route.page === "Home";
   useEffect(() => {
     const navigate = () => {
       const next = readRoute();
@@ -67,11 +74,15 @@ export default function App() {
       <a className="skip-link" href="#main-content">{t("Skip to content")}</a>
       <BrandHeader activePage={route.page} />
       <main id="main-content" tabIndex={-1}>
-        {route.page === "overview" ? <section className="section-wrap compact-overview home-overview" id="overview">
+        <RetainedView active={isHome}>
+        <section className="section-wrap compact-overview home-overview" id="Home">
+          <div className="overview-intro">
+          <div className="overview-copy">
           <div className="overview-heading">
             <div>
               <div className="overview-kicker"><p className="eyebrow">{t("Omaha-Council Bluffs metro")}</p><span>2022–2025</span></div>
-              <h1>{t("Regional Traffic Explorer")}</h1>
+              <p className="home-beta">Beta</p>
+              <h1 aria-label={t("Regional Traffic Explorer")}>{(language === "es" ? ["Explorador", "de tráfico", "regional"] : ["Regional", "Traffic", "Explorer"]).map(line => <span key={line}>{line}{" "}</span>)}</h1>
               <p>{language === "es" ? "Explore los viajes regionales, las ubicaciones más transitadas y la movilidad cotidiana." : "Explore regional travel, the busiest locations, and everyday mobility."}</p>
             </div>
           </div>
@@ -80,37 +91,59 @@ export default function App() {
               <a className="button-primary" href="#regional-patterns"><Map size={19} aria-hidden="true"/>{t("Regional Patterns")}</a>
               <a className="button-secondary" href="#intersections/rankings"><ListOrdered size={19} aria-hidden="true"/>{language === "es" ? "Ver clasificaciones" : "Explore rankings"}</a>
             </div>
-            <div className="overview-actions"><a className="portal-link" href={portal} target="_blank" rel="noreferrer">
-              <ExternalLink size={18} aria-hidden="true" />{t("Traffic data portal")}<span className="sr-only">{language === "es" ? " (se abre en una pestaña nueva)" : " (opens in a new tab)"}</span>
-            </a><ReportDownload report="flow"/></div>
+          </div>
           </div>
           <LiveOverview tables={tableSource.tables} />
-          <div className="home-section-heading">
-            <h2>{language === "es" ? "Explore el tráfico regional" : "Explore regional traffic"}</h2>
           </div>
-          <div className="home-destinations">
+          <div className="overview-resources">
+            <a className="portal-link" href={portal} target="_blank" rel="noopener noreferrer">
+              <ExternalLink size={18} aria-hidden="true" />{t("Traffic data portal")}<span className="sr-only">{language === "es" ? " (se abre en una pestaña nueva)" : " (opens in a new tab)"}</span>
+            </a>
+            <ReportDownload report="flow"/>
+          </div>
+          <section className="home-destinations" aria-label={language === "es" ? "Temas de transporte" : "Transportation topics"}>
             {destinations.map(({ page, icon: Icon, label, tone, description, links }) => <article key={page} className={`home-destination destination-${tone}`}>
               <a className="destination-heading" href={`#${page}`}>
                 <Icon size={24} aria-hidden="true" />
                 <h3>{t(label)}</h3>
                 <ArrowUpRight size={21} aria-hidden="true" />
               </a>
+              <DestinationPhotos photos={photos[page]} label={`${t(label)} ${language === "es" ? "fotos" : "photos"}`}/>
               <p>{description[language === "es" ? 1 : 0]}</p>
               <div className="destination-links">
                 {links.map(([label, topic]) => <a key={label} href={`#${page}${topic ? `/${topic}` : ""}`}>{t(label)}<ArrowUpRight size={14} aria-hidden="true" /></a>)}
               </div>
             </article>)}
-          </div>
-        </section> : <>
-          <h1 className="sr-only">{t(pages[route.page])}</h1>
-          {route.page === "regional-patterns" || route.page === "multimodal" ?
-            <ReportWorkspace key={route.page} {...tableSource} section={route.page === "multimodal" ? "multimodal" : "regional"} initialTopicId={route.topic} onTopicChange={selectTopic} /> :
-            <LiveRankingsSection key={route.page} kind={route.page} />}
-        </>}
+            <article className="home-destination destination-freight">
+              <a className="destination-heading" href={freightPlan} target="_blank" rel="noreferrer">
+                <Truck size={24} aria-hidden="true"/>
+                <h3>{language === "es" ? "Carga" : "Freight"}</h3>
+                <ExternalLink size={21} aria-hidden="true"/>
+                <span className="sr-only">{language === "es" ? "Se abre en una pestaña nueva" : "Opens in a new tab"}</span>
+              </a>
+              <DestinationPhotos photos={photos.freight} label={language === "es" ? "Fotos de carga" : "Freight photos"}/>
+              <p>{language === "es" ? "Para obtener información sobre carga, visite el Plan Regional de Carga, que establecerá una visión regional para mejorar la seguridad y confiabilidad del movimiento de carga dentro de la región." : "For information on Freight, Please Visit the Regional Freight Plan, which will establish a regional vision for freight to improve the safety and reliability of freight movement within the region."}</p>
+              <div className="destination-links">
+                <a href={freightPlan} target="_blank" rel="noreferrer">{language === "es" ? "Plan Regional de Carga" : "Regional Freight Plan"}<ExternalLink size={14} aria-hidden="true"/><span className="sr-only">{language === "es" ? " (se abre en una pestaña nueva)" : " (opens in a new tab)"}</span></a>
+              </div>
+            </article>
+            <AboutMapaCard/>
+          </section>
+        </section>
+        </RetainedView>
+        {Object.keys(pages).filter(page => page !== "Home").map(page => <RetainedView key={page} active={route.page === page}>
+          <h1 className="sr-only">{t(pages[page])}</h1>
+          {page === "regional-patterns" || page === "multimodal" ?
+            <ReportWorkspace {...tableSource} section={page === "multimodal" ? "multimodal" : "regional"} initialTopicId={route.topic} onTopicChange={selectTopic} /> :
+            <LiveRankingsSection kind={page} navigation={route} />}
+        </RetainedView>)}
       </main>
       <footer className="site-footer">
-        <img src="./assets/mapa-logo-white-yellow.png" alt="MAPA" />
-        <p>{language === "es" ? "Tráfico y movilidad regional · 2022–2025" : "Regional traffic and mobility · 2022–2025"}</p>
+        <div className="footer-content">
+          <a href="https://www.mapacog.org" target="_blank" rel="noopener noreferrer" aria-label={language === "es" ? "Sitio web de MAPA (se abre en una pestaña nueva)" : "MAPA website (opens in a new tab)"}>
+            <img src="./assets/mapa-logo-white-yellow.png" alt="MAPA" />
+          </a>
+        </div>
       </footer>
     </>
   );

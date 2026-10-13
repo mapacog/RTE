@@ -11,10 +11,13 @@ import ReportDownload from "./ReportDownload";
 import InsightCards from "./InsightCards";
 import MapExplorer from "./MapExplorer";
 import sources from "../data/visualSources.json";
+import narratives from "../data/rankingNarratives.json";
+import { interchangeMapInsights } from "../utils/interchangeMapInsights";
+import RetainedView from "./RetainedView";
 
 const pageSize = 25;
 
-export default function LiveRankingsSection({ kind }) {
+export default function LiveRankingsSection({ kind, navigation }) {
   const { t, language } = usePreferences();
   const [data, setData] = useState([]);
   const [status, setStatus] = useState("loading");
@@ -27,8 +30,12 @@ export default function LiveRankingsSection({ kind }) {
   const [selectedId, setSelectedId] = useState(null);
   const [drawerOpen, setDrawerOpen] = useState(false);
   const [view, setView] = useState(() => window.location.hash.endsWith("/rankings") ? "Rankings" : "Maps");
+  const [mapId, setMapId] = useState(kind === "intersections" ? "845151efd8a9408289ceef59d5c76790" : "f01dec2d7e4747999db5027c64d323de");
   const detailPanel = useRef(null);
   const config = trafficLayers[kind];
+  const mapSummaryId = `${kind}-map-summary`;
+  const rankingSummaryId = `${kind}-ranking-summary`;
+  useEffect(() => { if (navigation?.topic === "rankings") setView("Rankings"); }, [navigation]);
 
   useEffect(() => {
     const controller = new AbortController();
@@ -47,15 +54,22 @@ export default function LiveRankingsSection({ kind }) {
   const jurisdictions = useMemo(() => scope === "regional" ? [] :
     [...new Set(data.map(row => row[scope]).filter(Boolean))].sort((a, b) => a.localeCompare(b)), [data, scope]);
   const ranked = useMemo(() => rankLocations(data, scope, jurisdiction), [data, scope, jurisdiction]);
-  const limited = limit === "all" ? ranked : ranked.slice(0, Number(limit));
+  const limited = useMemo(() => limit === "all" ? ranked : ranked.slice(0, Number(limit)), [ranked, limit]);
   const pages = Math.max(1, Math.ceil(limited.length / pageSize));
   const currentPage = Math.min(page, pages - 1);
   const visibleRows = limited.slice(currentPage * pageSize, (currentPage + 1) * pageSize);
   const selected = limited.find(row => row.id === selectedId) ?? visibleRows[0] ?? null;
   const locale = scope === "regional" ? "Region" : jurisdiction || (scope === "city" ? "Choose a city" : "Choose a county");
   const reset = () => { setPage(0); setSelectedId(null); };
+  const rankingFilter = useMemo(() => ({kind, rows: limited, scope, jurisdiction, limit, locale}), [kind, limited, scope, jurisdiction, limit, locale]);
+  const selectLocation = objectId => {
+    const index = limited.findIndex(row => row.objectId === objectId);
+    if (index < 0) return;
+    setSelectedId(limited[index].id);
+    setPage(Math.floor(index / pageSize));
+  };
   const insightCards = useMemo(() => {
-    const rows = view === "Maps" ? rankLocations(data) : ranked;
+    const rows = ranked;
     if (!rows.length) return [];
     const first = rows[0];
     const format = number => new Intl.NumberFormat(language === "es" ? "es-US" : "en-US", { maximumFractionDigits: 0 }).format(number);
@@ -66,13 +80,15 @@ export default function LiveRankingsSection({ kind }) {
       .map(row=>({label:row.county,value:row.name}));
     return [
       { title: language === "es" ? "Ubicación más transitada" : "Busiest location", text: `${first.name} · ${format(first.aadt)} ${language === "es" ? "vehículos por día en promedio" : "vehicles per day on average"} · 2025` },
-      { title: language === "es" ? "Actividad local" : "Where traffic concentrates", text: view === "Maps" || scope === "regional"
+      { title: language === "es" ? "Actividad local" : "Where traffic concentrates", text: scope === "regional"
         ? (language === "es" ? `${omaha} de las ${top.length} ubicaciones principales están identificadas en Omaha.` : `${omaha} of the top ${top.length} locations are identified in Omaha.`)
-        : (language === "es" ? `${ranked.length} ubicaciones con volúmenes reportados en ${jurisdiction}.` : `${ranked.length} locations with reported volumes in ${jurisdiction}.`) },
+        : (language === "es" ? `${ranked.length} ubicaciones con volúmenes reportados en ${jurisdiction}.` : `${ranked.length} locations with reported volumes in ${jurisdiction}.`), context: narratives[kind][scope === "regional" ? "regional" : "local"] },
       ...(countyLeaders.length ? [{ title: language === "es" ? "Líderes por condado" : "County leaders", items: countyLeaders }] : []),
     ];
-  }, [ranked, data, view, scope, jurisdiction, language]);
-  const mapIds = kind === "intersections" ? ["9d5d2824442b453abfbfcd95f2e8421b", "845151efd8a9408289ceef59d5c76790"] : ["f01dec2d7e4747999db5027c64d323de"];
+  }, [ranked, scope, jurisdiction, language, kind]);
+  const rankingMapId = kind === "intersections" ? "9d5d2824442b453abfbfcd95f2e8421b" : "f01dec2d7e4747999db5027c64d323de";
+  const mapCards = useMemo(() => kind === "interchanges" ? interchangeMapInsights(data, language) : [], [data, language, kind]);
+  const mapIds = kind === "intersections" ? ["845151efd8a9408289ceef59d5c76790", rankingMapId] : [rankingMapId];
   const filters = [
     { id: `${kind}-scope`, label: "Rank within", value: scope, onChange: value => {
       setScope(value); setJurisdiction(""); reset();
@@ -98,16 +114,35 @@ export default function LiveRankingsSection({ kind }) {
         }}><Icon size={19} aria-hidden="true"/>{t(name)}</button>)}
       </div>
       <div role="tabpanel" id={`panel-${kind}`} aria-labelledby={`tab-${kind}-${view}`}>
-      {view === "Maps" ? <>
-        <p id="ranking-summary" className="section-intro" tabIndex={-1}>{language==="es"?"Tráfico regional en 2025. Los volúmenes representan el promedio diario anual de vehículos.":"Regional traffic in 2025. Volumes represent annual average daily vehicles."}</p>
-        <MapExplorer sources={{...sources,maps:sources.maps.filter(map=>mapIds.includes(map.id))}} initialMapId={mapIds[0]} contextCards={insightCards} summaryId="ranking-summary"/>
-      </> : <>
+      <RetainedView active={view === "Maps"}>
+        <p id={mapSummaryId} className="section-intro" tabIndex={-1}>{language==="es"?"Tráfico regional en 2025. Los volúmenes representan el promedio diario anual de vehículos.":"Regional traffic in 2025. Volumes represent annual average daily vehicles."}</p>
+        <div className={kind === "intersections" ? "ranking-maps-layout" : ""}>
+          {kind === "intersections" ? <>
+            <nav className="report-contents ranking-map-contents" aria-label={language === "es" ? "Vistas de intersecciones" : "Intersection map views"}>
+              {mapIds.map((id,index)=><button key={id} type="button" aria-current={mapId===id?"true":undefined} onClick={()=>setMapId(id)}>
+                <span className="topic-number" aria-hidden="true">{String(index+1).padStart(2,"0")}</span>
+                <span>{id===mapIds[0]?(language==="es"?"Mapa de calor de intersecciones":"Intersection Heat Map"):(language==="es"?"Clasificación regional de intersecciones":"Regional intersection ranking")}</span>
+              </button>)}
+            </nav>
+            <label className="field ranking-mobile-map-picker"><span>{t("Web map")}</span><select aria-label={t("Web map")} value={mapId} onChange={event=>setMapId(event.target.value)}>
+              {mapIds.map(id=><option key={id} value={id}>{id===mapIds[0]?(language==="es"?"Mapa de calor de intersecciones":"Intersection Heat Map"):(language==="es"?"Clasificación regional de intersecciones":"Regional intersection ranking")}</option>)}
+            </select></label>
+          </>:null}
+          <div className={kind === "intersections" ? "ranking-map-content" : ""}>
+            {mapIds.map(id => <RetainedView key={id} active={mapId === id}>
+              <MapExplorer sources={{...sources,maps:sources.maps.filter(map=>map.id===id)}} initialMapId={id} contextCards={mapCards} summaryId={mapSummaryId} popupInSidePanel={kind==="intersections" && id===rankingMapId}/>
+            </RetainedView>)}
+          </div>
+        </div>
+      </RetainedView>
+      <RetainedView active={view === "Rankings"}>
       <div className="desktop-filter-row"><FilterBar filters={filters} /></div>
       <MobileFilterDrawer open={drawerOpen} title={`${config.label} filters`} onClose={() => setDrawerOpen(false)}>
         <FilterBar filters={filters} />
       </MobileFilterDrawer>
+      {status === "ready" && insightCards.length ? <div className="ranking-insights ranking-highlights"><InsightCards cards={insightCards}/></div> : null}
       <div className="live-ranking-summary">
-        <p role="status">{status === "ready" ? `${locale} · ${ranked.length.toLocaleString()} ranked locations · ${trafficYear} AADT` : "Live MAPA traffic service"}</p>
+        <p role="status" id={rankingSummaryId} tabIndex={-1}>{status === "ready" ? `${locale} · ${ranked.length.toLocaleString()} ranked locations · ${trafficYear} AADT` : "Live MAPA traffic service"}</p>
         <button type="button" className="ranking-refresh" onClick={() => setReload(value => value + 1)}
           disabled={status === "loading"} aria-label={`Refresh ${config.label.toLowerCase()}`} title="Refresh live traffic data">
           <RefreshCw size={18} aria-hidden="true" />
@@ -127,19 +162,20 @@ export default function LiveRankingsSection({ kind }) {
           title={`${config.label}: ${locale}, ${trafficYear}`} showCounty showCity
           emptyMessage={scope !== "regional" && !jurisdiction ? `Select a ${scope} to see its rankings.` : "No locations with reported 2025 traffic volumes match this selection."} />
         {limited.length > pageSize ? <nav className="ranking-pagination" aria-label={`${config.label} table pages`}>
-          <button type="button" onClick={() => setPage(currentPage - 1)} disabled={!currentPage} aria-label="Previous page" title="Previous page"><ChevronLeft size={20} /></button>
+          <button type="button" onClick={() => {setPage(currentPage - 1);setSelectedId(null);}} disabled={!currentPage} aria-label="Previous page" title="Previous page"><ChevronLeft size={20} /></button>
           <span>Page {currentPage + 1} of {pages} · Ranks {currentPage * pageSize + 1}–{Math.min((currentPage + 1) * pageSize, limited.length)}</span>
-          <button type="button" onClick={() => setPage(currentPage + 1)} disabled={currentPage === pages - 1} aria-label="Next page" title="Next page"><ChevronRight size={20} /></button>
+          <button type="button" onClick={() => {setPage(currentPage + 1);setSelectedId(null);}} disabled={currentPage === pages - 1} aria-label="Next page" title="Next page"><ChevronRight size={20} /></button>
         </nav> : null}
         </div>
-        {selected ? <aside ref={detailPanel} className="ranking-detail-column" aria-label={language==="es"?"Detalles de la ubicación":"Location details"}>
-          <DetailCard item={selected} label={`Selected ${kind === "intersections" ? "intersection" : "interchange"} / ${locale} / ${trafficYear}`} />
-          <InsightCards cards={insightCards}/>
-        </aside> : null}
+        <aside ref={detailPanel} className="ranking-detail-column" aria-label={language==="es"?"Mapa y detalles de la ubicación":"Map and location details"}>
+          <MapExplorer sources={{...sources,maps:sources.maps.filter(map=>map.id===rankingMapId)}} initialMapId={rankingMapId}
+            rankingFilter={rankingFilter} selectedObjectId={selected?.objectId} onLocationSelect={selectLocation} summaryId={rankingSummaryId}/>
+          {selected?<DetailCard item={selected} label={`Selected ${kind === "intersections" ? "intersection" : "interchange"} / ${locale} / ${trafficYear}`} />:null}
+        </aside>
         </div>
         <p className="source-note live-ranking-source">{language === "es" ? "AADT: promedio diario anual de vehículos. Datos:" : "AADT: annual average daily vehicles. Data:"} <a href={config.url} target="_blank" rel="noreferrer">MAPA</a>.</p>
       </> : null}
-      </>}
+      </RetainedView>
       </div>
     </section>
   );

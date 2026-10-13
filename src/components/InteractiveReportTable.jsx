@@ -1,8 +1,13 @@
 import { useMemo,useState } from "react";
 import { ArrowDown,ArrowUp,Download } from "lucide-react";
 import { usePreferences } from "./Preferences";
+import { compareReportCells } from "../utils/reportTableSort";
+import InsightCards from "./InsightCards";
+import counterHistory from "../data/counterHistory.json";
 
-export default function InteractiveReportTable({ tables }) {
+const historicalCounters = new Set(counterHistory.stations);
+
+export default function InteractiveReportTable({ tables, contextCards = [] }) {
   const { t,language }=usePreferences();
   const [id,setId]=useState("ffc");
   const [query,setQuery]=useState("");
@@ -15,7 +20,7 @@ export default function InteractiveReportTable({ tables }) {
     row.some(cell=>String(cell ?? "").toLowerCase().includes(query.toLowerCase())) &&
     (!filter || row[filterColumn]===filter)).slice().sort((a,b)=>{
       const left=a[sort.column],right=b[sort.column];
-      return (typeof left==="number"&&typeof right==="number"?left-right:String(left??"").localeCompare(String(right??"")))*(sort.ascending?1:-1);
+      return compareReportCells(left,right,activeId,sort.column)*(sort.ascending?1:-1);
     }),[table,query,filter,filterColumn,sort]);
   if(!table)return <p role="status">{t("Loading")}</p>;
   const format=(value,i)=>{
@@ -37,12 +42,16 @@ export default function InteractiveReportTable({ tables }) {
       <a className="utility-link" href={`${import.meta.env.BASE_URL}data/${activeId}.csv`} download><Download size={17}/>{t("Download CSV")}</a>
     </div>
     <p className="table-methodology">{table.note}</p>
+    {contextCards.length ? <InsightCards cards={contextCards}/> : null}
     <div className="interactive-table-scroll" role="region" aria-label={t(table.title)} tabIndex={0}>
       <table className="interactive-report-table"><caption className="sr-only">{t(table.title)} / {table.sourceSheet}</caption>
         <thead><tr>{table.columns.map((column,i)=><th scope="col" key={column} aria-sort={sort.column===i?(sort.ascending?"ascending":"descending"):"none"}>
           <button type="button" onClick={()=>setSort({column:i,ascending:sort.column===i?!sort.ascending:true})}>{t(column)}{sort.column===i?(sort.ascending?<ArrowUp size={14}/>:<ArrowDown size={14}/>):null}</button>
         </th>)}</tr></thead>
-        <tbody>{rows.map((row,index)=><tr key={index}>{row.map((cell,i)=>i===0?<th scope="row" key={i}>{format(cell,i)}</th>:<td key={i}>{format(cell,i)}</td>)}</tr>)}</tbody>
+        <tbody>{rows.map((row,index)=>{
+          const historical=activeId==="atr" && historicalCounters.has(`${row[0]}:${row[1]}`);
+          return <tr key={index} className={historical?"historical-counter":undefined}>{row.map((cell,i)=>i===0?<th scope="row" key={i}>{format(cell,i)}</th>:<td key={i}>{format(cell,i)}{historical && i===1?<small className="counter-history-label">{language==="es"?"Desde 1994":"Since 1994"}</small>:null}</td>)}</tr>;
+        })}</tbody>
       </table>
     </div>
     <p role="status" className="source-note">{rows.length} / {table.rows.length} {language==="es"?"filas":"rows"}</p>

@@ -1,6 +1,7 @@
 import { Activity, Car, MapPinned, TrendingUp } from "lucide-react";
-import { usePreferences } from "./Preferences";
+import { ListenButton, usePreferences } from "./Preferences";
 import insights from "../data/reportInsights.json";
+import { insightReadingText, localizedInsightText } from "../utils/insightReading";
 
 export function RegionalHighlights() {
   const { language, t } = usePreferences();
@@ -20,8 +21,12 @@ export default function InsightCards({ cards = [] }) {
   const { language } = usePreferences();
   return <div className="insight-cards">
     {cards.map((card, index) => <article className="insight-card" key={index}>
-      <h4>{typeof card.title === "string" ? card.title : card.title[language]}</h4>
+      <div className="insight-card-heading">
+        <h4>{localizedInsightText(card.title, language)}</h4>
+        <ListenButton text={insightReadingText(card, language)} subject={localizedInsightText(card.title, language)}/>
+      </div>
       {card.text?<p>{typeof card.text === "string" ? card.text : card.text[language]}</p>:null}
+      {card.context?<p className="insight-card-context">{typeof card.context === "string" ? card.context : card.context[language]}</p>:null}
       {card.items?<ul>{card.items.map(item=><li key={item.label}><strong>{item.label}</strong><span>{item.value}</span></li>)}</ul>:null}
     </article>)}
   </div>;

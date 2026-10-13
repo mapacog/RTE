@@ -1,0 +1,35 @@
+{
+  "regional-patterns": [{
+    "src": "assets/metro-photos/us75-hamilton-sorensen.webp",
+    "alt": {"en": "Aerial view of US-75 running through neighborhoods between Hamilton and Sorensen in Omaha.", "es": "Vista aérea de US-75 atravesando vecindarios entre Hamilton y Sorensen en Omaha."},
+    "caption": {"en": "US-75 between Hamilton and Sorensen · Omaha", "es": "US-75 entre Hamilton y Sorensen · Omaha"}
+  }, {
+    "src": "assets/metro-photos/sarpy-180th-corridor.webp",
+    "alt": {"en": "Aerial view of roads, fields, and neighborhoods along the 180th Street corridor in Sarpy County.", "es": "Vista aérea de carreteras, campos y vecindarios del corredor de la calle 180 en el condado de Sarpy."},
+    "caption": {"en": "180th Street corridor · Sarpy County", "es": "Corredor de la calle 180 · Condado de Sarpy"}
+  }],
+  "intersections": [{
+    "src": "assets/metro-photos/90th-west-dodge.webp",
+    "alt": {"en": "Aerial view of the at-grade crossing at 90th Street and West Dodge Road.", "es": "Vista aérea del cruce a nivel de la calle 90 y West Dodge Road."},
+    "caption": {"en": "90th Street & West Dodge Road · Omaha", "es": "Calle 90 y West Dodge Road · Omaha"}
+  }, {
+    "src": "assets/metro-photos/west-broadway-north16th.webp",
+    "alt": {"en": "Aerial view of West Broadway, US-6, and North 16th Street in Council Bluffs.", "es": "Vista aérea de West Broadway, US-6, y North 16th Street en Council Bluffs."},
+    "caption": {"en": "West Broadway (US-6) & North 16th Street · Council Bluffs", "es": "West Broadway (US-6) y North 16th Street · Council Bluffs"}
+  }],
+  "interchanges": [{
+    "src": "assets/metro-photos/west-dodge-i680.webp",
+    "alt": {"en": "Aerial view of bridges and connecting ramps at West Dodge Road and I-680.", "es": "Vista aérea de puentes y rampas de conexión en West Dodge Road e I-680."},
+    "caption": {"en": "West Dodge Road & I-680 · Omaha", "es": "West Dodge Road e I-680 · Omaha"}
+  }],
+  "multimodal": [{
+    "src": "assets/metro-photos/pedestrian-bridge.webp",
+    "alt": {"en": "People walking and cycling on the Bob Kerrey Pedestrian Bridge.", "es": "Personas caminando y en bicicleta en el puente peatonal Bob Kerrey."},
+    "caption": {"en": "Bob Kerrey Pedestrian Bridge · Walking and cycling", "es": "Puente peatonal Bob Kerrey · Caminata y ciclismo"}
+  }],
+  "freight": [{
+    "src": "assets/metro-photos/fort-crook-cornhusker.webp",
+    "alt": {"en": "Aerial view of Fort Crook Road, railway cars, and surrounding businesses near Cornhusker Road in Bellevue.", "es": "Vista aérea de Fort Crook Road, vagones de tren y comercios próximos a Cornhusker Road en Bellevue."},
+    "caption": {"en": "Fort Crook Road · Bellevue", "es": "Fort Crook Road · Bellevue"}
+  }]
+}

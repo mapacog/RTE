@@ -1,6 +1,7 @@
 import { useEffect, useRef } from "react";
 import { SlidersHorizontal, X } from "lucide-react";
 import { usePreferences } from "./Preferences";
+import { useViewActive } from "./RetainedView";
 
 export function MobileFilterButton({ onClick, label = "Filters" }) {
   const { t } = usePreferences();
@@ -13,11 +14,12 @@ export function MobileFilterButton({ onClick, label = "Filters" }) {
 }
 
 export default function MobileFilterDrawer({ open, title, onClose, children }) {
+  const active = useViewActive();
   const dialog = useRef(null);
   const close = useRef(onClose);
   close.current = onClose;
   useEffect(() => {
-    if (!open) return undefined;
+    if (!open || !active) return undefined;
     const previousFocus = document.activeElement;
     const previousOverflow = document.body.style.overflow;
     document.body.style.overflow = "hidden";
@@ -36,7 +38,7 @@ export default function MobileFilterDrawer({ open, title, onClose, children }) {
       document.body.style.overflow = previousOverflow;
       previousFocus?.focus();
     };
-  }, [open]);
+  }, [open, active]);
   if (!open) return null;
   return (
     <div className={`drawer-shell ${open ? "is-open" : ""}`} aria-hidden={!open}>

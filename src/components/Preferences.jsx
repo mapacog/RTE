@@ -1,5 +1,6 @@
-import { createContext, useContext, useEffect, useState } from "react";
-import { Accessibility, Volume2 } from "lucide-react";
+import { createContext, useContext, useEffect, useRef, useState } from "react";
+import { Accessibility, Square, Volume2 } from "lucide-react";
+import { createSpeechReader } from "../services/speechReader";
 
 const translations = {
   "Legs total":"Total de tramos",
@@ -13,7 +14,7 @@ const translations = {
   "Strava activity":"Actividad de Strava", "Omaha Rapid Bus Transit":"Transporte rápido de Omaha", "Heartland Bike Share":"Heartland Bike Share",
   "Micromobility / scooters":"Micromovilidad / scooters", "Report topics":"Temas del informe", "Regional traffic patterns":"Patrones de tráfico regional",
   "Multimodal transportation":"Transporte multimodal", "Intersection maps":"Mapas de intersecciones", "Interchange map":"Mapa de intercambios",
-  "Overview":"Resumen", "Explore":"Explorar", "Regional Patterns":"Patrones regionales", "Intersections":"Intersecciones",
+  "Home":"Inicio", "Explore":"Explorar", "Regional Patterns":"Patrones regionales", "Intersections":"Intersecciones",
   "Interchanges":"Intercambios", "Multimodal":"Multimodal", "Regional Traffic Explorer":"Explorador de tráfico regional",
   "Omaha-Council Bluffs metro":"Área metropolitana de Omaha-Council Bluffs", "Traffic data portal":"Portal de datos de tráfico",
   "Maps":"Mapas", "Charts":"Gráficos", "Tables":"Tablas", "Web map":"Mapa web", "Chart":"Gráfico", "Topic":"Tema",
@@ -32,7 +33,7 @@ const translations = {
   "Top Interchanges":"Principales intercambios", "Traffic and travel patterns":"Tráfico y patrones de viaje",
   "Daily mobility beyond driving":"Movilidad diaria más allá del automóvil", "Accessibility":"Accesibilidad",
   "Text size":"Tamaño de texto", "High contrast":"Alto contraste", "Reduced motion":"Movimiento reducido",
-  "Listen to summary":"Escuchar resumen", "Skip to content":"Saltar al contenido", "Counter ID":"ID del contador",
+  "Listen to summary":"Escuchar resumen", "Stop reading":"Detener lectura", "Skip to content":"Saltar al contenido", "Counter ID":"ID del contador",
   "Route":"Ruta", "VMT change by roadway class":"Cambio de VMT por clase de carretera",
   "Regional continuous traffic counters":"Contadores regionales continuos",
   "Regional growth":"Crecimiento regional", "Continuous counters":"Contadores continuos", "Busiest intersection":"Intersección más transitada",
@@ -80,13 +81,24 @@ export function PreferencesControls() {
   </div>;
 }
 
-export function ListenButton({ text }) {
+let speechReader;
+export function stopReadingAloud() { speechReader?.stop(); }
+
+export function ListenButton({ text, subject }) {
   const { t,language } = usePreferences();
   const [speaking,setSpeaking]=useState(false);
-  useEffect(()=>()=>window.speechSynthesis?.cancel(),[]);
-  if (!("speechSynthesis" in window)) return null;
-  return <button className="icon-button" type="button" title={t("Listen to summary")} aria-label={t("Listen to summary")} aria-pressed={speaking}
-    onClick={()=>{ window.speechSynthesis.cancel(); if(speaking){setSpeaking(false);return;} const speech=new SpeechSynthesisUtterance(text);speech.lang=language=== "es"?"es-US":"en-US";speech.onend=()=>setSpeaking(false);speech.onerror=()=>setSpeaking(false);setSpeaking(true);window.speechSynthesis.speak(speech); }}>
-    <Volume2 size={19} aria-hidden="true"/>
+  const stopReading=useRef(null);
+  useEffect(()=>()=>stopReading.current?.(),[text,language]);
+  const supported="speechSynthesis" in window && "SpeechSynthesisUtterance" in window;
+  const action=supported?t(speaking ? "Stop reading" : "Listen to summary"):
+    language==="es"?"Audio no disponible en este navegador":"Audio unavailable in this browser";
+  const label=`${action}${subject ? `: ${subject}` : ""}`;
+  return <button className="icon-button" type="button" title={label} aria-label={label} aria-pressed={speaking} disabled={!supported}
+    onClick={()=>{
+      if(speaking){stopReading.current?.();return;}
+      speechReader ||= createSpeechReader(window.speechSynthesis, text=>new SpeechSynthesisUtterance(text));
+      stopReading.current=speechReader.speak(text,language,setSpeaking);
+    }}>
+    {speaking ? <Square size={17} aria-hidden="true"/> : <Volume2 size={19} aria-hidden="true"/>}
   </button>;
 }
