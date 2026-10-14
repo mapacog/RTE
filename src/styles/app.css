@@ -106,7 +106,10 @@
 .report-methodology p { margin-top: 1rem; color: var(--dark-neutral); }
 .published-chart-shell { position: relative; background: white; border: 1px solid var(--line); height: 440px; }
 .published-chart-shell iframe { border: 0; width: 100%; height: 100%; display: block; }
-.published-chart-viewport { width: 100%; height: 100%; overflow: auto; }
+.published-chart-viewport { width: 100%; height: 100%; overflow: hidden; }
+.published-chart-viewport.is-full-size { overflow: auto; }
+.published-chart-frame { position: relative; }
+.published-chart-frame iframe { position: absolute; inset: 0 auto auto 0; }
 .chart-detail-layout { display: grid; grid-template-columns: minmax(0,1fr) 265px; gap: 1.5rem; align-items: start; }
 .published-chart-stage { min-width: 0; }
 .chart-detail-layout .visual-context { display: block; margin-top: 0; border-left: 3px solid var(--mint); padding-left: 1rem; }
@@ -1573,7 +1576,37 @@
 .intersection-popup-heading h4 { flex: 1; min-width: 0; margin: 0; color: var(--mapa-teal); font: 700 1rem/1.4 var(--font-body); overflow-wrap: anywhere; }
 .intersection-popup-heading .icon-button { flex: 0 0 36px; width: 36px; height: 36px; min-height: 36px; }
 .intersection-popup-pagination { display: flex; justify-content: space-between; align-items: center; margin-top: 0.8rem; padding-top: 0.8rem; border-top: 1px solid var(--line); font-variant-numeric: tabular-nums; }
-.intersection-popup-panel arcgis-feature { display: block; width: 100%; min-width: 0; }
+.intersection-details { min-width: 0; font-size: 0.875rem; line-height: 1.5; }
+.intersection-detail-title { font: 700 1rem/1.4 var(--font-body); color: var(--ink); margin: 1rem 0 0.75rem; overflow-wrap: anywhere; }
+.intersection-detail-metric { padding: 0.75rem; background: var(--mapa-blue); color: white; display: grid; gap: 0.2rem; }
+.intersection-detail-metric > span { font-size: 0.75rem; }
+.intersection-detail-metric strong { font-size: 1.65rem; line-height: 1.2; font-variant-numeric: tabular-nums; }
+.intersection-detail-comparisons p { display: flex; gap: 0.35rem; align-items: center; padding: 0.45rem 0.65rem; background: #e0f2fe; font-weight: 600; margin: 0; }
+.intersection-detail-comparisons p + p { background: #f3f5f6; }
+.intersection-detail-comparisons svg { flex-shrink: 0; }
+.comparison-increase { color: #166534; }
+.comparison-decrease { color: #9f1239; }
+.comparison-neutral { color: #4b5563; }
+.intersection-details h5 { font: 700 0.875rem/1.4 var(--font-body); margin: 0 0 0.4rem; }
+.intersection-details section { margin-top: 1rem; }
+.intersection-detail-summary p { margin: 0; color: var(--dark-neutral); }
+.intersection-detail-rows { margin: 0; }
+.intersection-detail-rows > div { display: grid; grid-template-columns: minmax(0,1fr) minmax(0,1fr); gap: 0.5rem; padding: 0.4rem 0.5rem; }
+.intersection-detail-rows > div:nth-child(odd) { background: #f3f5f6; }
+.intersection-detail-rows dt { color: var(--muted); }
+.intersection-detail-rows dd { margin: 0; font-weight: 600; text-align: right; overflow-wrap: anywhere; font-variant-numeric: tabular-nums; }
+.intersection-detail-note { color: var(--muted); font-size: 0.75rem; margin-top: 0.7rem; }
+.intersection-history { margin: 1.25rem 0; }
+.intersection-history figcaption { font-weight: 700; }
+.intersection-history-tooltip { min-height: 1.5rem; font-size: 0.75rem; color: var(--mapa-teal); font-variant-numeric: tabular-nums; }
+.intersection-history-plot { display: grid; grid-template-columns: 54px minmax(0,1fr); gap: 0.4rem; }
+.intersection-history-axis { height: 150px; display: flex; flex-direction: column; justify-content: space-between; text-align: right; font-size: 0.65rem; line-height: 1; }
+.intersection-history-columns { height: 175px; display: grid; grid-template-columns: repeat(6,minmax(0,1fr)); gap: 0.4rem; background: repeating-linear-gradient(to top, transparent 0, transparent 74px, var(--line) 74px, var(--line) 75px); background-size: 100% 150px; background-repeat: no-repeat; }
+.intersection-history-column { height: 150px; display: flex; flex-direction: column; justify-content: flex-end; position: relative; }
+.intersection-history-bar { display: block; width: 100%; flex-shrink: 0; background: var(--mapa-teal); border: 0; border-radius: 0; padding: 0; min-height: 0; }
+.intersection-history-bar:hover, .intersection-history-bar:focus-visible { background: var(--mapa-blue); outline: 2px solid var(--mapa-blue); outline-offset: 2px; }
+.intersection-history-bar.is-missing { background: transparent; color: var(--muted); }
+.intersection-history-year { position: absolute; top: 154px; width: 100%; text-align: center; font-size: 0.65rem; }
 @media(max-width: 1000px) {
   .rankings-map-view .map-content-layout.popup-side-layout { grid-template-columns: minmax(0,1fr); }
   .intersection-popup-panel { height: auto; overflow: visible; border-left: 0; border-top: 1px solid var(--line); padding-left: 0; padding-top: 1rem; }

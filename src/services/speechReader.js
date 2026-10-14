@@ -14,7 +14,12 @@ export function createSpeechReader(synthesis, createUtterance) {
     speak(text, language, onChange) {
       stop();
       const speech = createUtterance(text);
-      speech.lang = language === "es" ? "es-US" : "en-US";
+      speech.lang = language === "es" ? "es-US" : language === "en" ? "en-US" : language;
+      const voices = synthesis.getVoices?.() || [];
+      const target = speech.lang.toLowerCase();
+      const voice = voices.find(item => item.lang.toLowerCase() === target) ||
+        voices.find(item => item.lang.toLowerCase().split("-")[0] === target.split("-")[0]);
+      if (voice) speech.voice = voice;
       const reading = { speech, onChange };
       current = reading;
       const finish = () => {

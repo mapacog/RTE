@@ -45,3 +45,15 @@ test("a speech error or synchronous failure resets playback state", () => {
   failed.speak("Second.", "en", value => failedState.push(value));
   assert.deepEqual(failedState, [true, false]);
 });
+
+test("translated speech selects matching non-English voices and preserves regional language tags", () => {
+  const spoken = [];
+  const voices = [{ lang: "en-US" }, { lang: "fr-FR" }, { lang: "zh-CN" }];
+  const reader = createSpeechReader({ speak: speech => spoken.push(speech), cancel() {}, getVoices: () => voices }, text => ({ text }));
+  reader.speak("Texte traduit", "fr", () => {});
+  assert.equal(spoken[0].lang, "fr");
+  assert.equal(spoken[0].voice, voices[1]);
+  reader.speak("中文", "zh-CN", () => {});
+  assert.equal(spoken[1].lang, "zh-CN");
+  assert.equal(spoken[1].voice, voices[2]);
+});

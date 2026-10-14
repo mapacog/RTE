@@ -9,7 +9,7 @@
     "preview": "vite preview",
     "deploy": "npm run build && gh-pages -d dist",
     "prepare:tables": "python scripts/prepareReportTables.py",
-    "test": "node --test src/components/RetainedView.test.js src/components/ReportWorkspace.test.js src/services/trafficRankings.test.js src/services/mapPopups.test.js src/services/intersectionSelection.test.js src/services/intersectionPopupTemplate.test.js src/services/rankingMap.test.js src/services/orbtMap.test.js src/services/speechReader.test.js src/utils/format.test.js src/utils/reportTableSort.test.js src/utils/insightReading.test.js src/utils/shareLinks.test.js src/utils/interchangeMapInsights.test.js src/data/reportDownloads.test.js src/data/metroPhotos.test.js src/data/reportInsights.test.js"
+    "test": "node --test src/components/RetainedView.test.js src/components/ReportWorkspace.test.js src/services/trafficRankings.test.js src/services/mapPopups.test.js src/services/intersectionSelection.test.js src/services/intersectionPopupTemplate.test.js src/services/rankingMap.test.js src/services/orbtMap.test.js src/services/speechReader.test.js src/utils/format.test.js src/utils/reportTableSort.test.js src/utils/insightReading.test.js src/utils/chartLayout.test.js src/utils/translatedReading.test.js src/utils/intersectionDetails.test.js src/utils/shareLinks.test.js src/utils/interchangeMapInsights.test.js src/data/reportDownloads.test.js src/data/metroPhotos.test.js src/data/reportInsights.test.js"
   },
   "dependencies": {
     "lucide-react": "^0.468.0",

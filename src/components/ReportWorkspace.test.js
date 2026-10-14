@@ -95,6 +95,17 @@ test("regional map groups render with a unique summary target", async () => {
     assert.match(panelMarkup, /Clear selection/);
     assert.match(panelMarkup, /Next intersection/);
     assert.doesNotMatch(panelMarkup, /arcgis-legend/);
+    assert.doesNotMatch(panelMarkup, /arcgis-feature|shadowroot|iframe/);
+    assert.match(panelMarkup, /intersection-details/);
+    assert.match(panelMarkup, /2025 AVERAGE ANNUAL DAILY TRAFFIC/);
+    assert.match(panelMarkup, /2025 traffic by intersection leg/);
+    assert.match(panelMarkup, /Road context/);
+    assert.match(panelMarkup, /AADT 2020 - 2025/);
+    const { default: IntersectionDetails } = await server.ssrLoadModule("/src/components/IntersectionDetails.jsx");
+    const escapedMarkup = renderToStaticMarkup(createElement(IntersectionDetails, { attributes: { INTERSECTI: "<script>unsafe</script>", Total_25: 80679, Total_24: 78406, Rank_25: 2 } }));
+    assert.match(escapedMarkup, /80,679/);
+    assert.match(escapedMarkup, /2\.9% from 2024/);
+    assert.match(escapedMarkup, /&lt;script&gt;unsafe&lt;\/script&gt;/);
     const { default: LiveRankingsSection } = await server.ssrLoadModule("/src/components/LiveRankingsSection.jsx");
     global.window = { location: { hash: "#intersections" } };
     const heatMapMarkup = renderToStaticMarkup(createElement(LiveRankingsSection, { kind: "intersections" }));

@@ -4,6 +4,7 @@ import { usePreferences,ListenButton } from "./Preferences";
 import content from "../data/reportContent.json";
 import InsightCards from "./InsightCards";
 import insights from "../data/reportInsights.json";
+import { chartLayout } from "../utils/chartLayout";
 
 function PublishedChart({ chart }) {
   const { t,language }=usePreferences();
@@ -13,19 +14,20 @@ function PublishedChart({ chart }) {
   const [fullSize,setFullSize]=useState(false);
   const [width,setWidth]=useState(chart.width || 600);
   const shell=useRef(null);
-  const nativeWidth=chart.width || 600,nativeHeight=chart.height || 400;
   useEffect(()=>{
-    const observer=new ResizeObserver(entries=>setWidth(entries[0].contentRect.width));
+    const observer=new ResizeObserver(entries=>{
+      const measured=entries[0].contentRect.width;
+      if(measured>0)setWidth(measured);
+    });
     observer.observe(shell.current);return()=>observer.disconnect();
   },[]);
-  const scale=fullSize?1:Math.min(1,width/nativeWidth);
-  const frameWidth=nativeWidth*scale,frameHeight=nativeHeight*scale;
+  const {nativeWidth,nativeHeight,scale,width:frameWidth,height:frameHeight}=chartLayout(chart,width,fullSize);
   return <div className="published-chart-stage">
     <div ref={shell} className="published-chart-shell" aria-busy={!loaded} style={{height:Math.ceil(frameHeight)+2}}>
       {!loaded?<p role="status">{t("Loading")}…</p>:null}
       {failed?<p role="alert">{t("View unavailable")} <a href={chart.url} target="_blank" rel="noreferrer">{t("Open chart")}</a></p>:null}
-      <div className="published-chart-viewport" tabIndex={fullSize?0:undefined} role="region" aria-label={chart.title}>
-        <div style={{width:frameWidth,height:frameHeight,marginInline:fullSize?0:"auto"}}>
+      <div className={`published-chart-viewport${fullSize?" is-full-size":""}`} tabIndex={fullSize?0:undefined} role="region" aria-label={chart.title}>
+        <div className="published-chart-frame" style={{width:frameWidth,height:frameHeight,marginInline:fullSize?0:"auto"}}>
           <iframe key={version} title={chart.title} src={chart.url} loading="lazy" style={{width:nativeWidth,height:nativeHeight,transform:`scale(${scale})`,transformOrigin:"top left"}} onLoad={()=>setLoaded(true)} onError={()=>{setFailed(true);setLoaded(true);}}/>
         </div>
       </div>

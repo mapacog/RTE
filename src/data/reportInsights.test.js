@@ -159,3 +159,13 @@ test("bicycle chart retains Omaha and national counts without the removed scope 
     assert.ok(card.text.es);
   }
 });
+test("average daily VMT includes the total and harmonized network comparison method", () => {
+  const cards = insights.contexts["daily-vmt"];
+  assert.match(cards[0].title.en, /25,053,219 vehicle-miles per day/);
+  assert.match(cards[0].text.en, /combines.*district values.*thousands/);
+  assert.doesNotMatch(cards[0].text.en, /Total average daily VMT in 2025/);
+  assert.match(cards[1].text.en, /Traffic Flow.*Metropolitan Area Transportation Systems \(MATS\).*OpenStreetMap \(OSM\)/);
+  assert.match(cards[2].text.en, /2022-2025.*2023.*1\.055.*5\.5%.*stable Traffic Analysis Districts/);
+  assert.match(cards[2].context.en, /network representation/);
+  for (const card of cards) assert.ok(card.title.es && card.text.es);
+});

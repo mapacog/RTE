@@ -1,6 +1,7 @@
 import { createContext, useContext, useEffect, useRef, useState } from "react";
 import { Accessibility, Square, Volume2 } from "lucide-react";
 import { createSpeechReader } from "../services/speechReader";
+import { cardReading } from "../utils/translatedReading";
 
 const translations = {
   "Legs total":"Total de tramos",
@@ -47,12 +48,12 @@ export function PreferencesProvider({ children }) {
   const [contrast, setContrast] = useState(() => localStorage.getItem("rte-contrast") === "true");
   const [motion, setMotion] = useState(() => localStorage.getItem("rte-motion") === "true");
   useEffect(() => {
-    document.documentElement.lang = language;
     document.documentElement.style.fontSize = `${size}%`;
     document.documentElement.classList.toggle("high-contrast", contrast);
     document.documentElement.classList.toggle("reduce-motion", motion);
     for (const [key,value] of Object.entries({language,size,contrast,motion})) localStorage.setItem(`rte-${key}`, String(value));
   }, [language,size,contrast,motion]);
+  useEffect(() => { document.documentElement.lang = language; }, [language]);
   const t = value => language === "es" ? translations[value] || value : value;
   return <PreferencesContext.Provider value={{ language,setLanguage,t,size,setSize,contrast,setContrast,motion,setMotion }}>{children}</PreferencesContext.Provider>;
 }
@@ -94,10 +95,11 @@ export function ListenButton({ text, subject }) {
     language==="es"?"Audio no disponible en este navegador":"Audio unavailable in this browser";
   const label=`${action}${subject ? `: ${subject}` : ""}`;
   return <button className="icon-button" type="button" title={label} aria-label={label} aria-pressed={speaking} disabled={!supported}
-    onClick={()=>{
+    onClick={event=>{
       if(speaking){stopReading.current?.();return;}
       speechReader ||= createSpeechReader(window.speechSynthesis, text=>new SpeechSynthesisUtterance(text));
-      stopReading.current=speechReader.speak(text,language,setSpeaking);
+      const reading=cardReading(event.currentTarget,text,language,document);
+      stopReading.current=speechReader.speak(reading.text,reading.language,setSpeaking);
     }}>
     {speaking ? <Square size={17} aria-hidden="true"/> : <Volume2 size={19} aria-hidden="true"/>}
   </button>;

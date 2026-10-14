@@ -7,7 +7,6 @@ import { configureMapPopups, popupProfile } from "../services/mapPopups";
 import { applyRankingFilter } from "../services/rankingMap";
 import { configureOrbtMap } from "../services/orbtMap";
 import { fetchIntersectionSelection } from "../services/intersectionSelection";
-import { applyIntersectionPopupTemplate } from "../services/intersectionPopupTemplate";
 import IntersectionPopupPanel from "./IntersectionPopupPanel";
 import popupStyles from "../styles/popups.css?inline";
 import RetainedView from "./RetainedView";
@@ -156,7 +155,12 @@ function MapView({ sources, initialComparison, initialMapId, contextCards = [], 
         },popupInSidePanel?["intersection"]:[]);
         if(cancelled)return;
         if(popupInSidePanel){
-          await applyIntersectionPopupTemplate(element.map,()=>cancelled);
+          element.map.allLayers.forEach(layer=>{
+            if(popupProfile(layer)==="intersection"){
+              layer.outFields=["*"];
+              layer.popupEnabled=true;
+            }
+          });
           if(cancelled)return;
           mapClick=element.view.on("click",async event=>{
             const request=++panelRequest.current;
