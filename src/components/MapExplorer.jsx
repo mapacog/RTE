@@ -5,7 +5,12 @@ import { usePreferences } from "./Preferences";
 import InsightCards from "./InsightCards";
 import insights from "../data/reportInsights";
 import { configureMapPopups, popupProfile } from "../services/mapPopups";
-import { applyRankingFilter } from "../services/rankingMap";
+import { applyRankingFilter, rankingProfile, rankingLabelExpression, rankedObjectIds } from "../services/rankingMap";
+import { aggregateTransitStops } from "../utils/transitGroups";
+import { configureReviewMap } from "../services/reviewMap";
+import { loadTransitStops, rankTransitStops } from "../services/transitRankings";
+import { fullMapLink } from "../utils/mapLinks";
+import { languageLocale } from "../utils/localization";
 import { configureOrbtMap } from "../services/orbtMap";
 import { fetchIntersectionSelection } from "../services/intersectionSelection";
 import IntersectionPopupPanel from "./IntersectionPopupPanel";
@@ -26,12 +31,13 @@ function loadMapSdk() {
 
 export default function MapExplorer(props) {
   const [selectedMapId, setSelectedMapId] = useState(props.initialMapId || props.sources.maps[0].id);
-  return props.sources.maps.map(map => <RetainedView key={map.id} active={map.id === selectedMapId}>
-    <MapView {...props} initialMapId={map.id} onMapChange={setSelectedMapId}/>
+  const activeMapId=props.selectedMapId ?? selectedMapId;
+  return props.sources.maps.map(map => <RetainedView key={map.id} active={map.id === activeMapId}>
+    <MapView {...props} initialMapId={map.id} onMapChange={id=>{setSelectedMapId(id);props.onMapSelectionChange?.(id);}}/>
   </RetainedView>);
 }
 
-function MapView({ sources, initialComparison, initialMapId, contextCards = [], summaryId = "chapter-summary", onComparisonChange, rankingFilter, selectedObjectId, onLocationSelect, externalUrl, fitLayerTitle, showOpenMap = true, onMapChange, popupInSidePanel = false }) {
+function MapView({ sources, initialComparison, initialMapId, contextCards = [], summaryId = "chapter-summary", onComparisonChange, rankingFilter, selectedObjectId, onLocationSelect, externalUrl, fitLayerTitle, showOpenMap = true, onMapChange, popupInSidePanel = false, fullPage = false, disablePopup = false }) {
   const { t,language }=usePreferences();
   const popupLanguage=useRef(language);
   popupLanguage.current=language;
@@ -43,6 +49,7 @@ function MapView({ sources, initialComparison, initialMapId, contextCards = [], 
   const host=useRef(null);
   const mapElement=useRef(null);
   const rankingLayers=useRef([]);
+  const transitRows=useRef([]);
   const rankingOptions=useRef(rankingFilter);
   rankingOptions.current=rankingFilter;
   const selectLocation=useRef(onLocationSelect);
@@ -59,7 +66,7 @@ function MapView({ sources, initialComparison, initialMapId, contextCards = [], 
   const map=maps.find(item=>item.id===id) || sources.maps[0];
   const webMapId=map.webmapId || id;
   const comparison=comparisonViews.find(view=>view.id===comparisonId);
-  const activeCards=rankingFilter?[]:insights.contexts[map.context] || insights.contexts[comparison?.context] || insights.mapContexts[id] || contextCards;
+  const activeCards=rankingFilter || fullPage?[]:insights.contexts[map.context] || insights.contexts[comparison?.context] || insights.mapContexts[id] || contextCards;
   const activate=()=>{setActive(true);requestAnimationFrame(()=>host.current?.focus());};
   const deactivate=()=>{setActive(false);requestAnimationFrame(()=>activation.current?.focus());};
   useEffect(()=>{
@@ -130,10 +137,13 @@ function MapView({ sources, initialComparison, initialMapId, contextCards = [], 
       element.autoDestroyDisabled=true;
       element.setAttribute("item-id",webMapId);element.setAttribute("aria-label",map.title);
       element.setAttribute("popup-component-enabled","");
-      if(popupInSidePanel)element.setAttribute("popup-disabled","");
+      if(popupInSidePanel || disablePopup)element.setAttribute("popup-disabled","");
       const popup=document.createElement("arcgis-popup");popup.setAttribute("slot","popup");element.append(popup);
       const zoom=document.createElement("arcgis-zoom");zoom.setAttribute("slot","top-left");element.append(zoom);
-      for(const name of ["layer-list","legend"]){
+      const searchExpand=document.createElement("arcgis-expand");searchExpand.setAttribute("slot","top-left");
+      searchExpand.setAttribute("expand-tooltip",t("Search address"));
+      const search=document.createElement("arcgis-search");searchExpand.append(search);element.append(searchExpand);
+      for(const name of map.context==="orbt" && !fullPage ? [] : ["layer-list","legend"]){
         const expand=document.createElement("arcgis-expand");expand.setAttribute("slot","top-right");
         const control=document.createElement(`arcgis-${name}`);expand.append(control);element.append(expand);
       }
@@ -150,12 +160,45 @@ function MapView({ sources, initialComparison, initialMapId, contextCards = [], 
         mapElement.current=element;
         await configureMapPopups(element.map,()=>popupLanguage.current,()=>cancelled,popupStyles,(layer,attributes)=>{
           const options=rankingOptions.current;
-          const profile=options?.kind==="intersections"?"intersection":"interchange";
-          if(!options || popupProfile(layer)!==profile)return null;
-          const row=options.rows.find(row=>row.objectId===attributes.OBJECTID);
-          return row?{rank:row.rank,locale:options.locale}:null;
-        },popupInSidePanel?["intersection"]:[]);
+          const profile=rankingProfile(options?.kind);
+          if(options && popupProfile(layer)===profile){
+            const row=options.rows.find(row=>rankedObjectIds(row).includes(attributes.OBJECTID));
+            return row?{rank:row.rank,locale:options.locale,group:options.kind==="transit"?row:null}:null;
+          }
+          if(popupProfile(layer)==="transit"){
+            const row=transitRows.current.find(row=>rankedObjectIds(row).includes(attributes.OBJECTID));
+            return row?{rank:row.rank,locale:map.context==="orbt"?"ORBT":id==="fixed-transit"?"Metro":"Region",group:row}:null;
+          }
+          return null;
+        },popupInSidePanel?["intersection"]:[],id==="30f8c69890f342a68bca94cdb223510c"?["recorder"]:null);
         if(cancelled)return;
+        const reviewExtent=await configureReviewMap(element.map,element.view,id,()=>cancelled,languageLocale(popupLanguage.current));
+        if(cancelled)return;
+        if(reviewExtent){
+          await element.view.goTo(reviewExtent,{animate:false});
+          resizeObserver=new ResizeObserver(entries=>{
+            if(!entries[0]?.contentRect.width || !entries[0]?.contentRect.height)return;
+            cancelAnimationFrame(resizeFrame);
+            resizeFrame=requestAnimationFrame(()=>{
+              if(!cancelled && host.current?.clientWidth && host.current?.clientHeight)element.view.goTo(reviewExtent,{animate:false}).catch(()=>{});
+            });
+          });
+          resizeObserver.observe(host.current);
+        }
+        const transitLayers=element.map.allLayers.toArray().filter(layer=>popupProfile(layer)==="transit");
+        if(transitLayers.length){
+          try{
+            const rows=await loadTransitStops();
+            if(cancelled)return;
+            transitRows.current=rankTransitStops(map.context==="orbt"?rows:aggregateTransitStops(rows),{service:map.context==="orbt"?"ORBT":id==="fixed-transit"?"Metro":"all"});
+            const stops=transitLayers.find(layer=>layer.title==="Metro Stops") || transitLayers[0];
+            if(stops.renderer?.type!=="heatmap"){
+              stops.labelingInfo=[{labelExpressionInfo:{expression:rankingLabelExpression(transitRows.current)},labelPlacement:"above-center",minScale:50000,
+                symbol:{type:"text",color:"#004b58",haloColor:"white",haloSize:1.5,font:{size:10,weight:"bold"}}}];
+              stops.labelsVisible=true;
+            }
+          }catch(cause){setFilterState({loading:false,error:cause.message});}
+        }
         if(popupInSidePanel){
           element.map.allLayers.forEach(layer=>{
             if(popupProfile(layer)==="intersection"){
@@ -176,8 +219,13 @@ function MapView({ sources, initialComparison, initialMapId, contextCards = [], 
           });
         }
         if(rankingOptions.current){
-          const profile=rankingOptions.current.kind==="intersections"?"intersection":"interchange";
+          const profile=rankingProfile(rankingOptions.current.kind);
           rankingLayers.current=element.map.allLayers.toArray().filter(layer=>popupProfile(layer)===profile);
+          if(profile==="transit"){
+            const stops=rankingLayers.current.find(layer=>layer.title==="Metro Stops") || rankingLayers.current[0];
+            rankingLayers.current.forEach(layer=>{layer.visible=layer===stops;});
+            rankingLayers.current=[stops].filter(Boolean);
+          }
           rankingLayers.current.forEach(layer=>{layer.definitionExpression="1=0";});
           element.map.allLayers.forEach(layer=>{
             if(layer.type==="feature" && popupProfile(layer)!==profile)layer.popupEnabled=false;
@@ -188,13 +236,13 @@ function MapView({ sources, initialComparison, initialMapId, contextCards = [], 
               if(cancelled)return;
               const result=response.results.find(result=>result.type==="graphic" && rankingLayers.current.includes(result.graphic.layer));
               const objectId=result?.graphic.attributes?.OBJECTID;
-              if(rankingOptions.current?.rows.some(row=>row.objectId===objectId))selectLocation.current?.(objectId);
+              if(rankingOptions.current?.rows.some(row=>rankedObjectIds(row).includes(objectId)))selectLocation.current?.(objectId);
             }catch(cause){console.warn("The ranked location could not be selected.",cause);}
           };
           if(!popupInSidePanel)mapClick=element.view.on("click",selectRankedLocation);
         }
         if(map.context==="orbt"){
-          const extent=await configureOrbtMap(element.map,element.view,()=>cancelled);
+          const extent=await configureOrbtMap(element.map,element.view,()=>cancelled,transitRows.current);
           if(cancelled)return;
           resizeObserver=new ResizeObserver(entries=>{
             if(!entries[0]?.contentRect.width || !entries[0]?.contentRect.height)return;
@@ -253,7 +301,8 @@ function MapView({ sources, initialComparison, initialMapId, contextCards = [], 
             }
           }
         }
-        clearTimeout(timer);setStatus("ready");
+        if(disablePopup)element.map.allLayers.forEach(layer=>{layer.popupEnabled=false;});
+        clearTimeout(timer);setStatus("ready");if(fullPage)setActive(true);
       }
     })().catch(cause=>{if(!cancelled){clearTimeout(timer);setError(cause.message);setStatus("error");}});
     return()=>{
@@ -265,11 +314,11 @@ function MapView({ sources, initialComparison, initialMapId, contextCards = [], 
         initialization.then(()=>element.destroy(),()=>element.destroy()).catch(()=>{});
       }
     };
-  },[id,retry,fitLayerTitle,popupInSidePanel]);
-  return <div className="map-explorer">
+  },[id,retry,fitLayerTitle,popupInSidePanel,disablePopup,fullPage]);
+  return <div className={`map-explorer${map.context==="orbt"?" map-orbt":""}`}>
     {showOpenMap || maps.length>1 || comparisonViews.length || active ? <div className="workspace-toolbar">
       {maps.length>1?<label className="field"><span>{t("Web map")}</span><select aria-label={t("Web map")} value={id} onChange={e=>onMapChange(e.target.value)}>
-        {maps.map(item=><option value={item.id} key={item.id}>{item.title}</option>)}
+        {maps.map(item=><option value={item.id} key={item.id}>{t(item.title)}</option>)}
       </select></label>:null}
       {comparisonViews.length?<label className="field"><span>{language==="es"?"Vista de comparación":translateText("Comparison view",language)}</span>
         <select aria-label={language==="es"?"Vista de comparación":translateText("Comparison view",language)} value={comparisonId} onChange={e=>{
@@ -279,11 +328,12 @@ function MapView({ sources, initialComparison, initialMapId, contextCards = [], 
           });
           const selected=comparisonViews.find(view=>view.id===e.target.value);
           if(selected?.context)onComparisonChange?.(selected.context);
-        }}>{comparisonViews.map(view=><option key={view.id} value={view.id}>{view.title==="Traffic Analysis District"?t("Traffic Analysis Districts"):view.title}</option>)}</select>
+        }}>{comparisonViews.map(view=><option key={view.id} value={view.id}>{view.title==="Traffic Analysis District"?t("Traffic Analysis Districts"):t(view.title)}</option>)}</select>
       </label>:null}
-      {showOpenMap ? <a className="icon-button" title={t("Open map")} aria-label={t("Open map")} href={externalUrl || `https://www.arcgis.com/apps/mapviewer/index.html?webmap=${webMapId}`} target="_blank" rel="noopener noreferrer"><ExternalLink size={18} aria-hidden="true"/></a> : null}
+      {showOpenMap ? <a className="icon-button" title={t("Open map")} aria-label={t("Open map")} href={externalUrl || fullMapLink(id,comparison?.title || initialComparison)} target="_blank" rel="noopener noreferrer"><ExternalLink size={18} aria-hidden="true"/></a> : null}
       {active?<button className="icon-button" type="button" title={t("Deactivate map")} aria-label={t("Deactivate map")} onClick={deactivate}><LockKeyhole size={18} aria-hidden="true"/></button>:null}
     </div> : null}
+    {map.context==="orbt"?<div className="orbt-map-key"><i className="orbt-route-key" aria-hidden="true"/><span>ORBT</span><i className="orbt-rank-key" aria-hidden="true">1</i><span>{t("Stop rank · April 2025 productivity")}</span></div>:null}
     <div className={`map-content-layout ${popupInSidePanel?"popup-side-layout":activeCards.length?"":"map-only"}`}>
     <div className="live-map-shell" aria-busy={status==="loading"} onKeyDown={event=>{
       if(active&&event.key==="Escape"&&!event.defaultPrevented){event.preventDefault();deactivate();}
@@ -293,7 +343,7 @@ function MapView({ sources, initialComparison, initialMapId, contextCards = [], 
         {status==="loading"?t("Loading"):t("View unavailable")}
         {error?<><p>{error}</p><button className="button-secondary" type="button" onClick={()=>setRetry(n=>n+1)}>{t("Retry")}</button></>:null}
       </div>:null}
-      {status==="ready" && rankingFilter && (filterState.loading || filterState.error)?<div className="ranking-map-status" role={filterState.error?"alert":"status"}>
+      {status==="ready" && (rankingFilter || filterState.error) && (filterState.loading || filterState.error)?<div className="ranking-map-status" role={filterState.error?"alert":"status"}>
         {filterState.error || t("Loading")}{filterState.error?<button className="button-secondary" type="button" onClick={()=>setRetry(n=>n+1)}>{t("Retry")}</button>:null}
       </div>:null}
       {status==="ready"&&!active?<button ref={activation} className="map-activation" type="button" aria-label={t("Activate map")}

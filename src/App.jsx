@@ -11,6 +11,8 @@ import photos from "./data/metroPhotos";
 import DestinationPhotos from "./components/DestinationPhotos";
 import AboutMapaCard from "./components/AboutMapaCard";
 import RetainedView from "./components/RetainedView";
+import FullMapView from "./components/FullMapView";
+import sources from "./data/visualSources.json";
 
 const portal = "https://experience.arcgis.com/experience/8a9b3260cb234d4aa2f121059b1d5204";
 const freightPlan = "https://engage.mapacog.org/regional-freight-plan";
@@ -20,10 +22,13 @@ const pages = {
   multimodal: "Multimodal",
   intersections: "Intersections",
   interchanges: "Interchanges",
+  map: "Map",
 };
 
 function readRoute() {
-  const [hashPage, topic] = window.location.hash.slice(1).split("/");
+  const [path, query] = window.location.hash.slice(1).split("?");
+  const [hashPage, topic] = path.split("/");
+  if(hashPage==="map") return sources.maps.some(map=>map.id===topic)?{page:"map",topic,comparison:new URLSearchParams(query).get("comparison") || ""}:null;
   const page = hashPage === "overview" ? "Home" : hashPage;
   return Object.hasOwn(pages, page) ? { page, topic: page==="multimodal" && topic==="orbt"?"transit":topic } : null;
 }
@@ -123,7 +128,7 @@ export default function App() {
                 <span className="sr-only">{language === "es" ? "Se abre en una pestaña nueva" : translateText("Opens in a new tab",language)}</span>
               </a>
               <DestinationPhotos photos={photos.freight} label={language === "es" ? "Fotos de carga" : translateText("Freight photos",language)}/>
-              <p>{language === "es" ? "Para obtener información sobre carga, visite el Plan Regional de Carga, que establecerá una visión regional para mejorar la seguridad y confiabilidad del movimiento de carga dentro de la región." : translateText("For information on Freight, Please Visit the Regional Freight Plan, which will establish a regional vision for freight to improve the safety and reliability of freight movement within the region.",language)}</p>
+              <p>{language === "es" ? "Para obtener información sobre carga, visite el Plan Regional de Carga, que establecerá una visión regional para mejorar la seguridad y confiabilidad del movimiento de carga dentro de la región." : translateText("For information on Freight, Please Visit the Regional Freight Plan, which will establish a regional vision for freight to improve the safety and reliability of freight movement within the region.",language).replace("Please Visit the Regional Freight Plan","please visit the regional freight plan")}</p>
               <div className="destination-links">
                 <a href={freightPlan} target="_blank" rel="noreferrer">{language === "es" ? "Plan Regional de Carga" : translateText("Regional Freight Plan",language)}<ExternalLink size={14} aria-hidden="true"/><span className="sr-only">{language === "es" ? " (se abre en una pestaña nueva)" : translateText(" (opens in a new tab)",language)}</span></a>
               </div>
@@ -132,7 +137,8 @@ export default function App() {
           </section>
         </section>
         </RetainedView>
-        {Object.keys(pages).filter(page => page !== "Home").map(page => <RetainedView key={page} active={route.page === page}>
+        {route.page==="map"?<FullMapView id={route.topic} comparison={route.comparison}/>:null}
+        {Object.keys(pages).filter(page => page !== "Home" && page !== "map").map(page => <RetainedView key={page} active={route.page === page}>
           <h1 className="sr-only">{t(pages[page])}</h1>
           {page === "regional-patterns" || page === "multimodal" ?
             <ReportWorkspace {...tableSource} section={page === "multimodal" ? "multimodal" : "regional"} initialTopicId={route.topic} onTopicChange={selectTopic} /> :

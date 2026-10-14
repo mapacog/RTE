@@ -67,6 +67,16 @@ test("transit change is a difference in activity points, not percentage growth",
   assert.equal(model.rows[0].value, "18");
 });
 
+test("fixed-route stop subtitles use Fixed Route Bus while preserving ORBT labels", () => {
+  const source=layer("Metro_Ridership_Productivity",11);
+  const attributes={ServiceType:"Metro",StopCode:881};
+  assert.equal(popupModel(source,attributes).subtitle,"Fixed Route Bus · Stop 881");
+  assert.equal(popupModel(source,{...attributes,_groupedStops:12}).subtitle,"12 stops · Fixed Route Bus");
+  assert.equal(popupModel(source,attributes,"es").subtitle,"Autobús de ruta fija · Parada 881");
+  assert.equal(popupModel(source,{...attributes,ServiceType:"ORBT"}).subtitle,"ORBT · Stop 881");
+  assert.equal(attributes.ServiceType,"Metro");
+});
+
 test("district popups hide coded names while retaining measurement context", () => {
   const model = popupModel(layer("Traffic_Analysis_District", 0, "Traffic Analysis District"), { TAD_12: "DOUG_ENE", TAD_Label: "Douglas", VMT22_HARM_METHOD: "2022 Traffic Report Methodology" });
   assert.equal(model.title, "Traffic Analysis District");
@@ -87,6 +97,35 @@ test("counter profiles omit absent volumes and unknown layers retain authored po
   assert.equal(popupModel(layer("MAPA_ATR"), { Status: "Old" }).rows[0].value, "Historical station");
   assert.equal(popupProfile({ url: "https://example.com/unknown" }), null);
   assert.equal(popupModel({ url: "https://example.com/unknown" }, {}), null);
+});
+
+test("road popups omit segment length but retain class and posted speed",()=>{
+    const model=popupModel(layer("Traffic_Flow_System__Public_view",2),{street_name:"Broad St",HPMS_F_SYSTEM:3,FCLASS:3,Segment_Miles:1.2,MILES:0,SPEED_LIMI:45,AADT:8630,YEAR:2020});
+    assert.ok(!model.rows.some(row=>/Segment length/.test(row.label)));
+    assert.equal(model.rows.find(row=>row.label==="Roadway class")?.value,"Principal arterial");
+    assert.equal(model.rows.find(row=>row.label==="Posted speed")?.value,"45 mph");
+});
+
+test("National Highway System popups are disabled and never receive custom content",async()=>{
+  const previousWindow=global.window;
+  class PopupTemplate { constructor(options){Object.assign(this,options);} }
+  class CustomContent { constructor(options){Object.assign(this,options);} }
+  global.window={$arcgis:{import:async path=>path.includes("PopupTemplate")?PopupTemplate:CustomContent}};
+  try{
+    const highway={...layer("NTAD_National_Highway_System"),popupEnabled:true,popupTemplate:{title:"72nd St"},load:async()=>{throw new Error("Disabled layers must not be configured");}};
+    const recorder={...layer("MAPA_ATR"),popupEnabled:false,load:async()=>{}};
+    await configureMapPopups({allLayers:{toArray:()=>[highway,recorder]}},()=>"en");
+    assert.equal(highway.popupEnabled,false);assert.equal(highway.popupTemplate,null);
+    assert.equal(popupModel(highway,{AADT:49850}),null);
+    assert.equal(recorder.popupEnabled,true);assert.ok(recorder.popupTemplate instanceof PopupTemplate);
+    const road={...layer("Traffic_Flow_System__Public_view",2),popupEnabled:true,popupTemplate:{title:"Road"}};
+    const unknown={url:"https://example.com/FeatureServer/0",popupEnabled:true,popupTemplate:{title:"Boundary"}};
+    await configureMapPopups({allLayers:{toArray:()=>[highway,recorder,road,unknown]}},()=>"en",()=>false,"",()=>null,[],["recorder"]);
+    for(const background of [highway,road,unknown]){assert.equal(background.popupEnabled,false);assert.equal(background.popupTemplate,null);}
+    assert.equal(recorder.popupEnabled,true);
+  }finally{
+    if(previousWindow===undefined)delete global.window;else global.window=previousWindow;
+  }
 });
 
 test("custom content treats service text as text, not HTML", () => {

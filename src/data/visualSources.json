@@ -23,13 +23,27 @@
     },
     {
       "id": "9cb9e8555b954ac9abee3313f8ec7d8e",
-      "title": "Metro Ridership by Stop Productivity, April 2025"
+      "title": "Metro Ridership by Stop Productivity, April 2025",
+      "tocTitle": "Metro stop productivity"
     },
     {
       "id": "orbt",
       "webmapId": "9cb9e8555b954ac9abee3313f8ec7d8e",
       "title": "Omaha Rapid Bus Transit System",
+      "tocTitle": "ORBT",
       "context": "orbt"
+    },
+    {
+      "id": "fixed-transit",
+      "webmapId": "9cb9e8555b954ac9abee3313f8ec7d8e",
+      "title": "Metro fixed-route stops (excluding ORBT)",
+      "tocTitle": "Metro fixed-route stops",
+      "context": "fixed-transit"
+    },
+    {
+      "id": "transit-rankings",
+      "webmapId": "9cb9e8555b954ac9abee3313f8ec7d8e",
+      "title": "Metro and ORBT stop rankings"
     },
     {
       "id": "d094ad8d227644eebf8915601e67f8c2",
@@ -45,7 +59,8 @@
     },
     {
       "id": "e2547ddd72254f2ab44c3b4302ebe8e2",
-      "title": "Stop Productivity Change 2022 to 2025"
+      "title": "Stop Productivity Change 2022 to 2025",
+      "tocTitle": "Stop productivity change"
     }
   ],
   "charts": [
@@ -59,6 +74,7 @@
     },
     {
       "id": "8",
+      "tocTitle": "Principal arterials",
       "title": "Monthly Average Daily Traffic (MADT) on Principal Arterials",
       "url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vQJ10nCkhcatQf94wJ_t74f3o-hmS_tudH9nh9OGFL3hnzcV4tDY8VT5VtYiL0EnDFEu_WSydcrCFJV/pubchart?oid=1583624323&format=interactive",
       "theme": "Regional travel",
@@ -67,6 +83,7 @@
     },
     {
       "id": "9",
+      "tocTitle": "Municipal streets",
       "title": "Monthly Average Daily Traffic (MADT) on Municipal Streets",
       "url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vQJ10nCkhcatQf94wJ_t74f3o-hmS_tudH9nh9OGFL3hnzcV4tDY8VT5VtYiL0EnDFEu_WSydcrCFJV/pubchart?oid=1373606572&format=interactive",
       "theme": "Regional travel",
@@ -75,6 +92,7 @@
     },
     {
       "id": "10",
+      "tocTitle": "Rural interstate",
       "title": "Monthly Average Daily Traffic (MADT) on Rural Interstate",
       "url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vQJ10nCkhcatQf94wJ_t74f3o-hmS_tudH9nh9OGFL3hnzcV4tDY8VT5VtYiL0EnDFEu_WSydcrCFJV/pubchart?oid=1430888409&format=interactive",
       "theme": "Regional travel",
@@ -83,6 +101,7 @@
     },
     {
       "id": "11",
+      "tocTitle": "Urban interstate",
       "title": "Monthly Average Daily Traffic (MADT) on Urban Interstate",
       "url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vQJ10nCkhcatQf94wJ_t74f3o-hmS_tudH9nh9OGFL3hnzcV4tDY8VT5VtYiL0EnDFEu_WSydcrCFJV/pubchart?oid=1256419174&format=interactive",
       "theme": "Regional travel",
@@ -91,6 +110,7 @@
     },
     {
       "id": "12",
+      "tocTitle": "Statewide traffic change",
       "title": "Monthly and Cumulative Percent Change in Statewide Traffic 2025-2024",
       "url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vTOZdof9IGqAMZYAWtgmqGWIvNNDhGTGOa9RN3N05ghY9h5J6Pm4SMKWynK2JSo7MP1D3igmMVACIp1/pubchart?oid=1491802204&format=interactive",
       "theme": "Regional travel",

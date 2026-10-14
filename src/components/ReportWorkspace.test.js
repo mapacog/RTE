@@ -19,6 +19,28 @@ test("regional map groups render with a unique summary target", async () => {
     const markup = renderToStaticMarkup(createElement(ReportWorkspace, { tables: [], section: "regional" }));
     assert.match(markup, /chapter-summary-regional/);
     assert.match(markup, /Traffic Analysis Districts/);
+    assert.doesNotMatch(markup,/aria-label="Seasonal charts"/);
+    const seasonalMarkup=renderToStaticMarkup(createElement(ReportWorkspace,{tables:[],section:"regional",initialTopicId:"seasonal"}));
+    assert.match(seasonalMarkup,/aria-label="Seasonal charts"/);
+    for(const name of ["Principal arterials","Municipal streets","Rural interstate","Urban interstate","Statewide traffic change"])assert.ok(seasonalMarkup.includes(name));
+    const transitWorkspace=renderToStaticMarkup(createElement(ReportWorkspace,{tables:[],section:"multimodal",initialTopicId:"transit"}));
+    assert.match(transitWorkspace,/aria-label="Transit maps"/);
+    assert.match(transitWorkspace,/report-toc-caption">Ranking measure/);
+    assert.match(transitWorkspace,/April 2025 average productivity/);
+    assert.match(transitWorkspace,/Change since April 2022/);
+    const otherMultimodal=renderToStaticMarkup(createElement(ReportWorkspace,{tables:[],section:"multimodal",initialTopicId:"bike-share"}));
+    assert.doesNotMatch(otherMultimodal,/aria-label="Transit maps"|report-toc-caption/);
+    const countersWorkspace=renderToStaticMarkup(createElement(ReportWorkspace,{tables:[],section:"regional",initialTopicId:"counters"}));
+    assert.match(countersWorkspace,/tab-regional-Charts/);
+    assert.ok(countersWorkspace.indexOf('id="tab-regional-Tables"')<countersWorkspace.indexOf('id="tab-regional-Charts"'));
+    const {default:CounterCharts}=await server.ssrLoadModule("/src/components/CounterCharts.jsx");
+    const counterChartsMarkup=renderToStaticMarkup(createElement(CounterCharts));
+    assert.match(counterChartsMarkup,/Counter location/);
+    assert.match(counterChartsMarkup,/81,322/);
+    assert.match(counterChartsMarkup,/Download chart/);
+    assert.match(counterChartsMarkup,/PNG/);
+    assert.doesNotMatch(counterChartsMarkup,/Annual values|source-note|counter-chart-readout/);
+    assert.equal((counterChartsMarkup.match(/<option value="(?:NE|IA)-/g) || []).length,17);
     const { default: InteractiveReportTable } = await server.ssrLoadModule("/src/components/InteractiveReportTable.jsx");
     const { default: insights } = await server.ssrLoadModule("/src/data/reportInsights.json");
     const { default: tables } = await server.ssrLoadModule("/public/data/reportTables.json");
@@ -45,6 +67,16 @@ test("regional map groups render with a unique summary target", async () => {
     assert.doesNotMatch(counterMarkup, /(?:100|102|124|A-70|A-78)<small class="counter-history-label">/);
     const { default: ChartExplorer } = await server.ssrLoadModule("/src/components/ChartExplorer.jsx");
     const { default: sources } = await server.ssrLoadModule("/src/data/visualSources.json");
+    const controlledChart=renderToStaticMarkup(createElement(ChartExplorer,{charts:sources.charts.filter(chart=>["8","9","10","11","12"].includes(chart.id)),selectedChartId:"12"}));
+    assert.match(controlledChart,/<option value="12" selected=""/);
+    const {default:TransitRankings}=await server.ssrLoadModule("/src/components/TransitRankings.jsx");
+    const controlledRanking=renderToStaticMarkup(createElement(TransitRankings,{selectedMeasure:"change"}));
+    assert.match(controlledRanking,/<option value="change" selected=""/);
+    assert.match(controlledRanking,/<option value="10" selected="">Top 10/);
+    assert.doesNotMatch(controlledRanking,/Service-day change/);
+    assert.match(controlledRanking,/Matched Metro and ORBT stops/);
+    assert.doesNotMatch(controlledRanking,/excluding ORBT/);
+    assert.equal(sources.maps.find(map=>map.id==="transit-rankings").webmapId,"9cb9e8555b954ac9abee3313f8ec7d8e");
     const chartMarkup = renderToStaticMarkup(createElement(ChartExplorer, {
       charts: sources.charts.filter(chart => chart.id === "8"),
     }));
@@ -81,6 +113,8 @@ test("regional map groups render with a unique summary target", async () => {
     assert.doesNotMatch(bicycleChartMarkup, /Scope of the counts/);
     assert.doesNotMatch(bicycleChartMarkup, /chart-supporting-insights/);
     const { default: MapExplorer } = await server.ssrLoadModule("/src/components/MapExplorer.jsx");
+    const controlledMap=renderToStaticMarkup(createElement(MapExplorer,{sources:{maps:sources.maps.filter(map=>["9cb9e8555b954ac9abee3313f8ec7d8e","orbt"].includes(map.id))},selectedMapId:"orbt"}));
+    assert.match(controlledMap,/map-orbt/);
     const intersectionSources = { maps: sources.maps.filter(map => map.id === "9d5d2824442b453abfbfcd95f2e8421b") };
     const sidePanelMarkup = renderToStaticMarkup(createElement(MapExplorer, { sources: intersectionSources, popupInSidePanel: true }));
     assert.match(sidePanelMarkup, /popup-side-layout/);

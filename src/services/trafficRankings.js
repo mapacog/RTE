@@ -1,3 +1,5 @@
+import { correctedIntersectionCity, fullCityName } from "../utils/locationCorrections.js";
+
 const service = "https://services.arcgis.com/CHjpJeHqytL8t8op/arcgis/rest/services/Traffic_Flow_System__Public_view/FeatureServer";
 export const trafficLayers = {
   intersections: { url: `${service}/1`, nameField: "INTERSECTI", label: "Intersections" },
@@ -15,7 +17,7 @@ export function normalizeFeature(attributes, kind) {
   return {
     id: `${kind}-${attributes.OBJECTID}`, objectId: attributes.OBJECTID,
     name: String(attributes[trafficLayers[kind].nameField] ?? "Unnamed location").trim().replace(/\s+/g, " "),
-    city: String(attributes.CITY ?? "").trim(), county: String(attributes.COUNTY ?? "").trim(),
+    city: kind === "intersections" ? correctedIntersectionCity(attributes) : fullCityName(attributes.CITY), county: String(attributes.COUNTY ?? "").trim(),
     aadt: volume(attributes.Total_25),
     legs: Object.fromEntries(["north", "east", "south", "west"].map(direction => [
       direction, volume(attributes[`${direction[0].toUpperCase()}_LEGSUM_25`]),

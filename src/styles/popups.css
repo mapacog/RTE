@@ -27,3 +27,16 @@
 .traffic-popup-history summary { color: var(--mapa-teal, #004b58); cursor: pointer; font-weight: 700; padding: 12px 0; min-height: 44px; box-sizing: border-box; }
 .traffic-popup-history-unit { color: var(--muted, #647276); font-size: 0.75rem; margin: 0; }
 .traffic-popup-note { color: var(--muted, #647276); font-size: 0.75rem; line-height: 1.5; padding-top: 12px; margin: 0; overflow-wrap: anywhere; }
+.traffic-popup-chart { margin: 14px 0; min-width: 0; position: relative; }
+.traffic-popup-chart figcaption { color: var(--mapa-teal, #004b58); font-weight: 700; font-size: 0.8rem; }
+.traffic-popup-chart svg { display: block; width: 100%; height: auto; overflow: visible; }
+.counter-chart-axis { font: 10px Arial,sans-serif; fill: var(--dark-neutral, #4c4c4e); }
+.counter-chart-grid { stroke: #dfe8e8; stroke-width: 1; }
+.counter-chart-gap { fill: #eef2f4; stroke: #7b868b; stroke-width: 1; stroke-dasharray: 3 3; }
+.counter-chart-break { fill: none; stroke: #4c4c4e; stroke-width: 1.5; }
+.counter-chart-line { fill: none; stroke: var(--mapa-teal, #004b58); stroke-width: 2; }
+.counter-chart-point { fill: var(--mapa-teal, #004b58); stroke: white; stroke-width: 1; cursor: pointer; }
+.counter-chart-point.is-latest { fill: var(--coral-dark, #b43d39); }
+.counter-chart-point:focus { outline: none; stroke: #b43d39; stroke-width: 3; }
+.counter-chart-indicator { stroke: #647276; stroke-width: 1; stroke-dasharray: 3 3; pointer-events: none; }
+.counter-chart-tooltip { position: absolute; transform: translate(-50%,-100%); padding: 0.45rem 0.6rem; border-radius: 4px; background: #004b58; color: white; font-size: 0.8rem; white-space: nowrap; font-variant-numeric: tabular-nums; pointer-events: none; }

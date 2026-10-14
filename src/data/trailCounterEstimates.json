@@ -1,0 +1,30 @@
+{
+  "sourceYear": 2025,
+  "retrieved": "2026-10-14",
+  "sources": {
+    "pedestrian": "https://docs.google.com/spreadsheets/d/e/2PACX-1vRxRG7Qyw8Lnb36libRgyAYKmUNYzXk-a_59j9Zp46kqLTG-LFTBBejuo7RLVah0PDMOiqISxb8iXIY/pubchart?oid=821238872&format=interactive",
+    "bicycle": "https://docs.google.com/spreadsheets/d/e/2PACX-1vRxRG7Qyw8Lnb36libRgyAYKmUNYzXk-a_59j9Zp46kqLTG-LFTBBejuo7RLVah0PDMOiqISxb8iXIY/pubchart?oid=638418931&format=interactive"
+  },
+  "sites": {
+    "Bob Kerrey Western Approach": {
+      "pedestrian": 978.3041095890411,
+      "bicycle": 128.62465753424658
+    },
+    "Field Club at Vinton": {
+      "pedestrian": 247.09315068493152,
+      "bicycle": 84.73107723208106
+    },
+    "Keystone Trail at Center": {
+      "pedestrian": 136.89715645079085,
+      "bicycle": 163.1365600877985
+    },
+    "West Papio at I-80": {
+      "pedestrian": 56.23907401632346,
+      "bicycle": 152.06824278462335
+    },
+    "Big Papio at Woolworth": {
+      "pedestrian": 188.87728936213622,
+      "bicycle": 75.82521121022316
+    }
+  }
+}

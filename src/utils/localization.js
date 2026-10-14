@@ -5,6 +5,7 @@ import zh from "../data/locales/zh.json" with { type: "json" };
 import ru from "../data/locales/ru.json" with { type: "json" };
 import ko from "../data/locales/ko.json" with { type: "json" };
 import supplemental from "../data/locales/supplemental.js";
+import review from "../data/locales/review.js";
 
 export const languages = [
   {code:"en",label:"English",locale:"en-US"}, {code:"es",label:"Español",locale:"es-US"},
@@ -12,7 +13,7 @@ export const languages = [
   {code:"de",label:"Deutsch",locale:"de-DE"}, {code:"zh",label:"中文",locale:"zh-CN"},
   {code:"ru",label:"Русский",locale:"ru-RU"}, {code:"ko",label:"한국어",locale:"ko-KR"},
 ];
-export const catalogs=Object.fromEntries(Object.entries({fr,ar,de,zh,ru,ko}).map(([code,messages])=>[code,{...messages,...supplemental[code]}]));
+export const catalogs=Object.fromEntries(Object.entries({fr,ar,de,zh,ru,ko}).map(([code,messages])=>[code,{...messages,...supplemental[code],...review[code]}]));
 export const languageLocale=code=>languages.find(item=>item.code===code)?.locale || code;
 export const validLanguage=code=>languages.some(item=>item.code===code)?code:"en";
 const escape=value=>value.replace(/[.*+?^${}()|[\]\\]/g,"\\$&");
@@ -27,11 +28,11 @@ const patterns=Object.fromEntries(Object.entries(catalogs).map(([language,catalo
   })]));
 
 export function translateText(value,language="en") {
-  if(typeof value!=="string" || !catalogs[language])return value;
-  const trimmed=value.trim(), catalog=catalogs[language];
+  if(typeof value!=="string" || !(catalogs[language] || review[language]))return value;
+  const trimmed=value.trim(), catalog=catalogs[language] || review[language];
   let translated=catalog[trimmed];
   if(translated===undefined){
-    for(const entry of patterns[language]){
+    for(const entry of patterns[language] || []){
       const match=entry.pattern.exec(trimmed);
       if(!match)continue;
       translated=entry.value.replace(/\{\d+\}/g,token=>match[entry.tokens.indexOf(token)+1] || token);

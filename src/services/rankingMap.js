@@ -5,17 +5,28 @@ export function rankingMapWhere(rows, scope, jurisdiction, limit) {
     return ids.length ? `OBJECTID IN (${ids.join(",")})` : "1=0";
   }
   const field = scope === "city" ? "CITY" : scope === "county" ? "COUNTY" : null;
+  if (field === "CITY" && jurisdiction === "Unincorporated Pottawattamie County") {
+    return "Total_25 >= 0 AND CITY IN ('Unincorporated Pottawattamie C', 'Unincorporated Pottawattamie County')";
+  }
+  if (field === "CITY" && jurisdiction === "Unincorporated Washington County") {
+    return "Total_25 >= 0 AND CITY IN ('Unincorporated Washington Coun', 'Unincorporated Washington County')";
+  }
   return `Total_25 >= 0${field ? ` AND ${field} = '${jurisdiction.replaceAll("'", "''")}'` : ""}`;
 }
 
+export const rankingProfile = kind => kind === "transit" ? "transit" : kind === "intersections" ? "intersection" : "interchange";
+export const rankedObjectIds = row => (row.objectIds || [row.objectId]).filter(Number.isSafeInteger);
+
 export function rankingLabelExpression(rows) {
   const labels = rows.slice(0, 500).filter(row => Number.isSafeInteger(row.objectId) && Number.isSafeInteger(row.rank));
-  return labels.length ? `Decode($feature.OBJECTID, ${labels.flatMap(row => [row.objectId, `'${row.rank}'`]).join(", ")}, '')` : "''";
+  return labels.length ? `Decode($feature.OBJECTID, ${labels.flatMap(row => rankedObjectIds(row).flatMap(id=>[id, `'${row.rank}'`])).join(", ")}, '')` : "''";
 }
 
 export async function applyRankingFilter(element, layers, filter, isCurrent, signal) {
   if (!layers.length) throw new Error("The ranking layer could not be found in this map.");
-  const where = rankingMapWhere(filter.rows, filter.scope, filter.jurisdiction, filter.limit);
+  const isTransit = filter.kind === "transit";
+  const ids = filter.rows.flatMap(rankedObjectIds);
+  const where = isTransit ? ids.length ? `OBJECTID IN (${ids.join(",")})` : "1=0" : rankingMapWhere(filter.rows, filter.scope, filter.jurisdiction, filter.limit);
   for (const layer of layers) {
     layer.definitionExpression = where;
     layer.visible = true;
@@ -25,7 +36,7 @@ export async function applyRankingFilter(element, layers, filter, isCurrent, sig
     layer.renderer = {
       type: "simple",
       symbol: { type: "simple-marker", color: "#007cab", outline: { color: "white", width: 1 }, size: 10 },
-      visualVariables: [{ type: "size", field: "Total_25", stops: [{ value: 0, size: 7 }, { value: 100000, size: 22 }] }],
+      visualVariables: [{ type: "size", field: isTransit ? "Act100Vis" : "Total_25", stops: [{ value: 0, size: 7 }, { value: isTransit ? 650 : 100000, size: 22 }] }],
     };
     layer.labelingInfo = [{
       labelExpressionInfo: { expression: rankingLabelExpression(filter.rows) },

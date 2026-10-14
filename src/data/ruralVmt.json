@@ -1,0 +1,50 @@
+{
+  "source": "https://services.arcgis.com/CHjpJeHqytL8t8op/arcgis/rest/services/Traffic_Analysis_District/FeatureServer/0",
+  "retrieved": "2026-10-14",
+  "baselineField": "SUM_VMT_2022_HARM",
+  "currentField": "SUM_VMT_25",
+  "districts": [
+    {
+      "TAD_UID": "279927",
+      "TAD_12": "DOUG_RNC",
+      "SUM_VMT_2022_HARM": 399033.18529319763,
+      "SUM_VMT_25": 451949.5518262375
+    },
+    {
+      "TAD_UID": "279940",
+      "TAD_12": "DOUG_RW",
+      "SUM_VMT_2022_HARM": 534829.7162599564,
+      "SUM_VMT_25": 603754.5898538937
+    },
+    {
+      "TAD_UID": "279941",
+      "TAD_12": "DOUG_RNE",
+      "SUM_VMT_2022_HARM": 351449.87995386124,
+      "SUM_VMT_25": 388536.7688562963
+    },
+    {
+      "TAD_UID": "279944",
+      "TAD_12": "POTT_NE",
+      "SUM_VMT_2022_HARM": 1032476.2618665695,
+      "SUM_VMT_25": 970697.0094327914
+    },
+    {
+      "TAD_UID": "279946",
+      "TAD_12": "POTT_SE",
+      "SUM_VMT_2022_HARM": 777023.5546672344,
+      "SUM_VMT_25": 828963.8889726875
+    },
+    {
+      "TAD_UID": "279948",
+      "TAD_12": "SARPY_SW",
+      "SUM_VMT_2022_HARM": 741710.1580014229,
+      "SUM_VMT_25": 904230.2144092119
+    },
+    {
+      "TAD_UID": "279949",
+      "TAD_12": "SARPY_SC",
+      "SUM_VMT_2022_HARM": 162648.98087215424,
+      "SUM_VMT_25": 160724.9131954903
+    }
+  ]
+}

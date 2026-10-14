@@ -6,6 +6,7 @@ import content from "../data/reportContent";
 import InsightCards from "./InsightCards";
 import insights from "../data/reportInsights";
 import { chartLayout } from "../utils/chartLayout";
+import stravaCaveat from "../data/stravaCaveat.json";
 
 function PublishedChart({ chart }) {
   const { t,language }=usePreferences();
@@ -41,22 +42,24 @@ function PublishedChart({ chart }) {
   </div>;
 }
 
-export default function ChartExplorer({ charts, initialTheme, contextCards = [] }) {
+export default function ChartExplorer({ charts, initialTheme, contextCards = [], selectedChartId, onChartChange }) {
   const { t,language }=usePreferences();
   const themes=[...new Set(charts.map(chart=>chart.theme))];
   const [theme,setTheme]=useState(initialTheme || themes[0]);
-  const filtered=charts.filter(chart=>chart.theme===theme);
+  const activeTheme=charts.find(chart=>chart.id===selectedChartId)?.theme || theme;
+  const filtered=charts.filter(chart=>chart.theme===activeTheme);
   const [id,setId]=useState(filtered[0].id);
-  const chart=filtered.find(chart=>chart.id===id) || filtered[0];
-  const activeCards=insights.chartContexts[chart.id] || contextCards;
+  const chart=filtered.find(chart=>chart.id===(selectedChartId ?? id)) || filtered[0];
+  const cards=insights.chartContexts[chart.id] || contextCards;
+  const activeCards=["19","20","21","22","23"].includes(chart.id)?cards.map((card,index)=>index===0?{...card,context:stravaCaveat}:card):cards;
   const sidebarCount=chart.sidebarCardCount || 1;
-  const narrative=theme==="Regional travel"?(chart.id==="5"||chart.id==="14"?content.methodology:content.seasonal):theme==="Transit"?content.transit:theme==="Bike share & scooters"?content.shared:Number(chart.id)<=17?content.walking:content.strava;
+  const narrative=activeTheme==="Regional travel"?(chart.id==="5"||chart.id==="14"?content.methodology:content.seasonal):activeTheme==="Transit"?content.transit:activeTheme==="Bike share & scooters"?content.shared:Number(chart.id)<=17?content.walking:content.strava;
   return <div>
     <div className="workspace-toolbar">
-      {themes.length>1?<label className="field"><span>{t("Topic")}</span><select aria-label={t("Topic")} value={theme} onChange={e=>{setTheme(e.target.value);setId(charts.find(chart=>chart.theme===e.target.value).id);}}>
+      {themes.length>1?<label className="field"><span>{t("Topic")}</span><select aria-label={t("Topic")} value={activeTheme} onChange={e=>{const id=charts.find(chart=>chart.theme===e.target.value).id;setTheme(e.target.value);setId(id);onChartChange?.(id);}}>
         {themes.map(value=><option key={value} value={value}>{t(value)}</option>)}
       </select></label>:null}
-      <label className="field chart-selector"><span>{t("Chart")}</span><select aria-label={t("Chart")} value={chart.id} onChange={e=>setId(e.target.value)}>
+      <label className="field chart-selector"><span>{t("Chart")}</span><select aria-label={t("Chart")} value={chart.id} onChange={e=>{setId(e.target.value);onChartChange?.(e.target.value);}}>
         {filtered.map(item=><option key={item.id} value={item.id}>{t(item.title)}</option>)}
       </select></label>
     </div>

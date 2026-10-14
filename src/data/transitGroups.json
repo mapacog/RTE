@@ -1,0 +1,127 @@
+{
+  "source": "metrp_232425_ranked.xlsx",
+  "sheet": "Ranked Stops",
+  "groupField": "RankLocation",
+  "averageField": "RankActVisit",
+  "units": "RankActVisit multiplied by 100: passenger activity per 100 scheduled visits",
+  "groups": [
+    {
+      "name": "North Omaha TC",
+      "stopCodes": [
+        "3250",
+        "3252",
+        "3253",
+        "3254",
+        "3255",
+        "3256",
+        "3257",
+        "3258",
+        "3259",
+        "3260",
+        "3261",
+        "3262"
+      ],
+      "averageActivity2025": 405.91991839214575
+    },
+    {
+      "name": "Metro College TC",
+      "stopCodes": [
+        "3276",
+        "3277",
+        "3278",
+        "3279"
+      ],
+      "averageActivity2025": 229.19679580649438
+    },
+    {
+      "name": "Westroads TC",
+      "stopCodes": [
+        "3270",
+        "3271",
+        "3272",
+        "3273"
+      ],
+      "averageActivity2025": 224.2749154328171
+    },
+    {
+      "name": "24th & Cuming NW",
+      "stopCodes": [
+        "3031",
+        "3059"
+      ],
+      "averageActivity2025": 175.68616508029967
+    },
+    {
+      "name": "60th & Maple SE",
+      "stopCodes": [
+        "3048",
+        "3238"
+      ],
+      "averageActivity2025": 110.40175909361956
+    },
+    {
+      "name": "90th & Maple SE",
+      "stopCodes": [
+        "3050",
+        "3089"
+      ],
+      "averageActivity2025": 72.4587646412601
+    },
+    {
+      "name": "60th & Maple NW",
+      "stopCodes": [
+        "3037",
+        "3055"
+      ],
+      "averageActivity2025": 68.1870479947403
+    },
+    {
+      "name": "72nd & Blondo SE",
+      "stopCodes": [
+        "3022",
+        "3657"
+      ],
+      "averageActivity2025": 54.4466196533126
+    },
+    {
+      "name": "20th & Cuming NE",
+      "stopCodes": [
+        "3061",
+        "3071"
+      ],
+      "averageActivity2025": 39.949427416982
+    },
+    {
+      "name": "30th & Cuming NW",
+      "stopCodes": [
+        "2971",
+        "3058"
+      ],
+      "averageActivity2025": 36.11732259988075
+    },
+    {
+      "name": "Maplewood Blvd & Maple NE",
+      "stopCodes": [
+        "1062",
+        "1063"
+      ],
+      "averageActivity2025": 12.209302325581401
+    },
+    {
+      "name": "42nd & Grand Ave NW",
+      "stopCodes": [
+        "3041",
+        "3124"
+      ],
+      "averageActivity2025": 9.7016765285996
+    },
+    {
+      "name": "42nd & Himebaugh Ave NW",
+      "stopCodes": [
+        "1564",
+        "1567"
+      ],
+      "averageActivity2025": 4.8878205128204995
+    }
+  ]
+}

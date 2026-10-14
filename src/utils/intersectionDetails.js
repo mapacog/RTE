@@ -1,4 +1,5 @@
 import { translateText, languageLocale } from "./localization.js";
+import { correctedIntersectionCity } from "./locationCorrections.js";
 const number = value => value == null || String(value).trim() === "" || !Number.isFinite(Number(value)) ? null : Number(value);
 const roadClasses = [null, ["Interstate", "Interestatal"], ["Other freeway / expressway", "Otra autopista / vía rápida"],
   ["Other principal arterial", "Otra arterial principal"], ["Minor arterial", "Arterial secundaria"],
@@ -41,6 +42,6 @@ export function intersectionDetails(attributes = {}, language = "en") {
     roads: [{ label: text("Functional class", "Clase funcional"), value: translateText(cls?.[es ? 1 : 0] || format(null),language) },
       { label: text("Area", "Área"), value: es && a.URBAN_RURAL === "Urban" ? "Urbana" : translateText(a.URBAN_RURAL || format(null),language) },
       { label: text("Posted speed", "Velocidad señalada"), value: speed }],
-    location: [a.CITY, a.COUNTY].filter(value => value != null && String(value).trim() !== "").join(" · "),
+    location: [correctedIntersectionCity(a), a.COUNTY].filter(value => value != null && String(value).trim() !== "").join(" · "),
   };
 }

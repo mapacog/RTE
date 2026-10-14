@@ -62,7 +62,7 @@ export function PreferencesProvider({ children }) {
     document.documentElement.dir = language === "ar" ? "rtl" : "ltr";
     stopReadingAloud();
   }, [language]);
-  const t = value => language === "es" ? translations[value] || value : translateText(value,language);
+  const t = value => language === "es" ? translations[value] || translateText(value,language) : translateText(value,language);
   return <PreferencesContext.Provider value={{ language,setLanguage,t,size,setSize,contrast,setContrast,motion,setMotion }}>{children}</PreferencesContext.Provider>;
 }
 export const usePreferences = () => useContext(PreferencesContext);

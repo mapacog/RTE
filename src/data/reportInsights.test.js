@@ -58,6 +58,16 @@ test("ORBT is a distinct map option under Transit, not a separate topic", () => 
   assert.match(insights.contexts.orbt[0].text.en, /Westroads.*downtown Omaha.*10 minutes/);
 });
 
+test("fixed-route stops have two distinct context cards without changing productivity observations", () => {
+  assert.equal(sources.maps.find(map=>map.id==="fixed-transit").context,"fixed-transit");
+  const cards=insights.contexts["fixed-transit"];
+  assert.equal(cards.length,2);
+  assert.match(cards[0].text.en,/Council Bluffs.*Bellevue.*ORBT is excluded/);
+  assert.match(cards[1].text.en,/not a passenger total.*bays.*grouped/);
+  assert.equal(insights.contexts.transit.length,3);
+  assert.ok(cards.every(card=>card.text.es && card.title.es));
+});
+
 test("roadway-class map retains its cards and the table has a separate rebound observation", () => {
   assert.equal(insights.contexts["roadway-classes"].length, 2);
   const cards = insights.tableContexts["roadway-classes"];
@@ -67,7 +77,8 @@ test("roadway-class map retains its cards and the table has a separate rebound o
 });
 
 test("continuous-counter table has historical context instead of the generic map cards", () => {
-  assert.equal(insights.contexts.counters.length, 2);
+  assert.equal(insights.contexts.counters.length, 1);
+  assert.ok(!insights.contexts.counters.some(card=>card.title.en==="Location matters"));
   assert.match(insights.contexts.counters[0].text.en, /Ten.*1994/);
   assert.equal(insights.tableContexts.counters.length, 1);
   assert.equal(insights.tableContexts.counters[0].title.en, "Counting since 1994");
@@ -138,7 +149,10 @@ test("Transit observations match the productivity, change, and passenger-count v
   assert.match(insights.contexts.transit[1].text.en, /406.*12 bays.*April 2025/);
   const changes = insights.mapContexts.e2547ddd72254f2ab44c3b4302ebe8e2;
   assert.match(changes[0].text.en, /April 2022.*April 2025/);
-  assert.match(changes[1].text.en, /35th & Broadway.*430.*345.*269.*261/);
+  assert.match(changes[1].text.en, /22nd & Cuming.*345.*269.*261/);
+  assert.doesNotMatch(changes[1].text.en, /35th.*Broadway/);
+  assert.match(insights.contexts.transit[0].text.en, /South Omaha Campus/);
+  assert.doesNotMatch(insights.contexts.transit[0].text.en,/Bay 6|266/);
   assert.match(changes[2].text.en, /all stops along Farnam.*streetcar construction/);
   assert.match(insights.chartContexts["26"][0].text.en, /2021.*October 2024.*April 2025.*April 2024/);
   assert.match(insights.chartContexts["26"][1].text.en, /one in six.*April 2025/);
@@ -159,9 +173,11 @@ test("bicycle chart retains Omaha and national counts without the removed scope 
     assert.ok(card.text.es);
   }
 });
-test("average daily VMT includes the total and harmonized network comparison method", () => {
+test("VMT total appears in the banner while the side panel explains the harmonized comparison method", () => {
   const cards = insights.contexts["daily-vmt"];
-  assert.match(cards[0].title.en, /19,502,609 vehicle-miles per day/);
+  assert.equal(cards[0].title.en, "Average daily VMT");
+  assert.ok(insights.metrics.some(item => item.measure === "total"));
+  assert.doesNotMatch(insights.metrics.map(item=>item.detail.en).join(" "), /harmonized|Seven rural TADs/);
   assert.match(cards[0].text.en, /combines.*district values.*thousands/);
   assert.doesNotMatch(cards[0].text.en, /Total average daily VMT in 2025/);
   assert.match(cards[1].text.en, /Traffic Flow.*Metropolitan Area Transportation Systems \(MATS\).*OpenStreetMap \(OSM\)/);

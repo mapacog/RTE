@@ -1,5 +1,8 @@
 import { formatNumber } from "../utils/format.js";
-import { translateText } from "../utils/localization.js";
+import { translateText, languageLocale } from "../utils/localization.js";
+import { correctedIntersectionCity, fullCityName } from "../utils/locationCorrections.js";
+import trailEstimates from "../data/trailCounterEstimates.json" with { type: "json" };
+import { counterVolumeRecord } from "../utils/counterVolumes.js";
 
 const present = value => value !== null && value !== undefined && String(value).trim() !== "";
 const numeric = value => present(value) && Number.isFinite(Number(value)) ? Number(value) : null;
@@ -29,14 +32,14 @@ export function popupProfile(layer) {
 
 export function popupModel(layer, attributes, language = "en") {
   const type = popupProfile(layer);
-  if (!type) return null;
+  if (!type || type === "highway") return null;
   const a = attributes || {};
   const es = language === "es";
   const text = (en, translated) => es ? translated : translateText(en,language);
   const missing = text("Not reported", "No reportado");
-  const number = value => numeric(value) === null ? missing : formatNumber(Number(value), es ? "es-US" : "en-US");
-  const decimal = value => numeric(value) === null ? missing : new Intl.NumberFormat(es ? "es-US" : "en-US", { maximumFractionDigits: 1 }).format(Number(value));
-  const percent = value => numeric(value) === null ? missing : new Intl.NumberFormat(es ? "es-US" : "en-US", { style: "percent", maximumFractionDigits: 1, signDisplay: "exceptZero" }).format(Number(value));
+  const number = value => numeric(value) === null ? missing : formatNumber(Number(value), languageLocale(language));
+  const decimal = value => numeric(value) === null ? missing : new Intl.NumberFormat(languageLocale(language), { maximumFractionDigits: 1 }).format(Number(value));
+  const percent = value => numeric(value) === null ? missing : new Intl.NumberFormat(languageLocale(language), { style: "percent", maximumFractionDigits: 1, signDisplay: "exceptZero" }).format(Number(value));
   const domain = (field, value) => layer.fields?.find(item => item.name === field)?.domain?.codedValues?.find(item => String(item.code) === String(value))?.name || value;
   const model = { type, rows: [], history: [], legs: [], missing, historyLabel: text("Recent years", "Años recientes"), methodLabel: text("How this is measured", "Cómo se mide"), noteLabel: text("About this measure", "Sobre esta medida") };
   const compare = (value, label) => {
@@ -52,7 +55,7 @@ export function popupModel(layer, attributes, language = "en") {
 
   if (type === "intersection" || type === "interchange") {
     model.title = String(a.INTERSECTI || a.NAME || text("Traffic location", "Ubicación de tráfico"));
-    model.subtitle = location(a.CITY, a.COUNTY);
+    model.subtitle = location(type === "intersection" ? correctedIntersectionCity(a) : fullCityName(a.CITY), a.COUNTY);
     model.category = text(type === "intersection" ? "Intersection" : "Interchange", type === "intersection" ? "Intersección" : "Intercambio");
     model.value = number(a.Total_25);
     model.label = "2025 AADT";
@@ -101,7 +104,6 @@ export function popupModel(layer, attributes, language = "en") {
     const classRow = model.rows[model.rows.length - 1];
     if (classRow && numeric(classRow.value) !== null) classRow.value = roadClasses[code] || text("Ramps / roundabouts", "Rampas / rotondas");
     row(text("Setting", "Entorno"), a.URBAN_RURAL);
-    row(text("Segment length (miles)", "Longitud del tramo (millas)"), isRoad ? a.Segment_Miles : a.MILES, "decimal");
     row(text("Posted speed", "Velocidad señalada"), present(a.maxspeed) ? `${a.maxspeed}${/mph/i.test(String(a.maxspeed)) ? "" : " mph"}` : present(a.SPEED_LIMI) ? `${number(a.SPEED_LIMI)} mph` : null);
     if (isRoad) {
       compare(change(a.ADJ_AADT2025, a.ADJ_AADT2024), text("since 2024", "desde 2024"));
@@ -123,9 +125,10 @@ export function popupModel(layer, attributes, language = "en") {
     model.historyUnit = text("Annual station checkouts", "Salidas anuales de la estación");
     model.note = text("Annual checkouts show station use. They do not indicate how many bikes are available now.", "Las salidas anuales muestran el uso de la estación, no las bicicletas disponibles ahora.");
   } else if (type === "transit") {
+    const serviceLabel = a.ServiceType === "Metro" ? text("Fixed Route Bus", "Autobús de ruta fija") : a.ServiceType;
     model.title = String(a.StopName || text("Transit stop", "Parada de transporte"));
     model.category = text("Metro transit · April 2025", "Metro · abril de 2025");
-    model.subtitle = [a.ServiceType, present(a.StopCode) ? `${text("Stop", "Parada")} ${a.StopCode}` : null].filter(present).join(" · ");
+    model.subtitle = [serviceLabel, present(a.StopCode) ? `${text("Stop", "Parada")} ${a.StopCode}` : null].filter(present).join(" · ");
     model.value = decimal(a.Act100Vis);
     model.label = text("Boardings + alightings per 100 scheduled visits", "Subidas + bajadas por 100 visitas programadas");
     const difference = numeric(a.Act100Vis) !== null && numeric(a.Act100Vis_2022) !== null ? Number(a.Act100Vis) - Number(a.Act100Vis_2022) : null;
@@ -133,26 +136,57 @@ export function popupModel(layer, attributes, language = "en") {
     row(text("Boardings", "Subidas"), a.Board_Coun, "number");
     row(text("Alightings", "Bajadas"), a.Alight_Cou, "number");
     row(text("Scheduled visits", "Visitas programadas"), a.MonVisits, "number");
-    row(text("Service days", "Días de servicio"), a.service_days, "number");
+    row(text("Service days", "Días de servicio"), a.service_days, typeof a.service_days === "string" && /^\d+-\d+$/.test(a.service_days) ? "text" : "number");
     history("2022", a.Act100Vis_2022, decimal);
     history("2025", a.Act100Vis, decimal);
     model.historyUnit = text("Activity per 100 scheduled visits · April", "Actividad por 100 visitas programadas · abril");
     model.note = text("Stop productivity compares passenger activity with scheduled service. It is not a count of unique riders or regional ridership.", "La productividad compara actividad de pasajeros y servicio programado. No cuenta personas únicas ni viajes regionales.");
+    if(a._groupedStops){
+      model.label=text("Avg activity per 100 visits","Actividad promedio por 100 visitas");
+      model.subtitle=`${a._groupedStops} ${text("stops","paradas")} · ${serviceLabel || text("Fixed Route Bus", "Autobús de ruta fija")}`;
+      model.note=text("Grouped productivity uses the calculated average across member stops. Boardings, alightings and scheduled visits are combined totals; service days show the member-stop range.","La productividad agrupada usa el promedio calculado entre las paradas del grupo. Las subidas, bajadas y visitas programadas son totales combinados; los días de servicio muestran el intervalo entre paradas.");
+    }
   } else if (type === "recorder") {
-    model.title = `${text("Traffic counter", "Contador de tráfico")} ${a.Station_Id || a.Name || ""}`.trim();
+    const record=counterVolumeRecord(a);
+    const years=record?Object.keys(record.history).map(Number).sort((a,b)=>a-b):[];
+    const latest=years.at(-1);
+    model.title = `${text("Traffic counter", "Contador de tráfico")} ${record?.station || a.Name || a.Station_Id || ""}`.trim();
     model.category = text("Continuous traffic monitoring", "Monitoreo continuo de tráfico");
     model.subtitle = a.state || "";
-    row(text("Station", "Estación"), a.Station_Id || a.Name);
+    row(text("Station", "Estación"), record?.station || a.Name || a.Station_Id);
     row(text("Status", "Estado"), a.Status === "Old" ? text("Historical station", "Estación histórica") : a.Status);
-    row(text("Roadway class", "Clase vial"), roadClasses[Number(a.F_System)]);
-    model.note = text("Continuous counters track traffic throughout the year. This layer identifies stations; annual volumes are available in the traffic-count tables.", "Los contadores continuos miden tráfico todo el año. Esta capa identifica estaciones; los volúmenes anuales están en las tablas de conteo.");
+    row(text("Roadway class", "Clase vial"), record?.roadwayClass || roadClasses[Number(a.F_System)]);
+    row(text("Route", "Ruta"),record?.route);
+    row(text("Location", "Ubicación"),record?.location);
+    if(latest){
+      model.value=number(record.history[latest]);model.label=`${latest} AADT`;
+      compare(change(record.history[latest],record.history[latest-1]),text(`since ${latest-1}`,`desde ${latest-1}`));
+      years.forEach(year=>history(year,record.history[year]));model.historyUnit="AADT";
+      model.historyLabel=text("Annual values","Valores anuales");
+      model.chartLabel=text("AADT by year","AADT por año");
+      model.missingYearsLabel=text("No data","Sin datos");
+      model.chartSeries=years.map(year=>({year,amount:record.history[year],value:number(record.history[year])}));
+      model.chartNumber=number;
+      model.note=text("Annual average daily traffic from Nebraska DOT's Continuous Traffic Count Data and Traffic Characteristics on Nebraska Streets and Highways and Iowa DOT's Automatic Traffic Recorder Reports.","Tráfico diario promedio anual de Continuous Traffic Count Data and Traffic Characteristics on Nebraska Streets and Highways del DOT de Nebraska y Automatic Traffic Recorder Reports del DOT de Iowa.");
+    }else{
+      row("2025 AADT",missing);
+      model.note=text("No annual value for this station is provided in the supplied ATR workbook.","El libro ATR proporcionado no incluye un valor anual para esta estación.");
+    }
   } else if (type === "bike-ped") {
     model.title = String(a.site_name || text("Trail counter", "Contador de sendero"));
     model.category = text("Walking & cycling", "Caminatas y ciclismo");
     model.subtitle = a.domain_name || "";
     const modes = String(a.travel_modes || "").split(",").map(mode => mode.trim()).filter(Boolean).map(mode => mode === "pedestrian" ? text("Walking", "Caminatas") : mode === "bike" ? text("Cycling", "Ciclismo") : mode);
     row(text("Activity counted", "Actividad contada"), modes.join(" · "));
-    model.note = text("This is a monitored location, not a metro-wide total. Counts vary by site and season; explore the activity charts for annual estimates.", "Esta es una ubicación monitoreada, no un total regional. Los conteos varían por sitio y temporada; vea las estimaciones anuales en los gráficos.");
+    const estimates = a.domain_name === "City of Omaha" ? trailEstimates.sites[a.site_name] : null;
+    if (estimates) {
+      row(text("Estimated average daily pedestrians · 2025", "Peatones diarios promedio estimados · 2025"), estimates.pedestrian, "number");
+      row(text("Estimated average daily bicycles · 2025", "Bicicletas diarias promedio estimadas · 2025"), estimates.bicycle, "number");
+      model.note = text("2025 annual average daily estimates from the published pedestrian and bicycle charts, adjusted for counter failures and weather. These values describe this monitored site, not the entire trail network.", "Estimaciones del promedio diario anual de 2025 de los gráficos publicados, ajustadas por fallas de los contadores y el clima. Describen este sitio, no toda la red de senderos.");
+    } else {
+      row(text("2025 annual average daily estimate", "Promedio diario anual estimado de 2025"), missing);
+      model.note = text("The published annual estimates cover the five City of Omaha sites only. No estimate from another site is assigned to this location.", "Las estimaciones anuales publicadas cubren solo los cinco sitios de la Ciudad de Omaha. No se asigna a esta ubicación una estimación de otro sitio.");
+    }
   } else {
     model.title = String(a.Route_Name || a.RouteName || a.NAME || layer.title || text("Transportation network", "Red de transporte"));
     model.category = text(type === "route" ? "Transit route" : "Walking & cycling network", type === "route" ? "Ruta de transporte" : "Red peatonal y ciclista");
@@ -244,27 +278,36 @@ export function createPopupContent(model, doc = document, styles = "") {
   return root;
 }
 
-export async function configureMapPopups(map, getLanguage, isCancelled = () => false, styles = "", getRankContext = () => null, preserveProfiles = []) {
+export async function configureMapPopups(map, getLanguage, isCancelled = () => false, styles = "", getRankContext = () => null, preserveProfiles = [], allowedProfiles = null) {
   const [PopupTemplate, CustomContent] = await Promise.all([
     window.$arcgis.import("@arcgis/core/PopupTemplate.js"),
     window.$arcgis.import("@arcgis/core/popup/content/CustomContent.js"),
   ]);
   await Promise.all(map.allLayers.toArray().map(async layer => {
+    const profile=popupProfile(layer);
+    if (profile === "highway" || allowedProfiles && !allowedProfiles.includes(profile)) {
+      layer.popupEnabled = false;
+      layer.popupTemplate = null;
+      return;
+    }
     if (/MAPA_Proposed_TMA_Boundary/i.test(layer.url || "") || /BSC Label/i.test(layer.title || "")) {
       layer.popupEnabled = false;
       return;
     }
-    if (!popupProfile(layer)) return; // Keep authored content for unrecognized layers.
+    if (!profile) return; // Keep authored content for unrecognized layers.
     try {
       await layer.load();
       if (isCancelled()) return;
       if (preserveProfiles.includes(popupProfile(layer))) return;
       const model = attributes => {
-        const result = popupModel(layer, attributes, getLanguage());
         const context = getRankContext(layer, attributes);
+        const group=context?.group;
+        const grouped=group?.members?.length>1?{...attributes,StopName:group.name,StopCode:null,Act100Vis:group.activity,Act100Vis_2022:group.baselineActivity,
+          Board_Coun:group.boardings,Alight_Cou:group.alightings,MonVisits:group.visits,service_days:group.days,_groupedStops:group.members.length}:attributes;
+        const result = popupModel(layer, grouped, getLanguage());
         if (context) {
           result.rank = `#${context.rank}`;
-          result.rankLabel = `${getLanguage() === "es" ? "Puesto en" : "Rank within"} ${context.locale}`;
+          result.rankLabel = `${getLanguage() === "es" ? "Puesto en" : translateText("Rank within",getLanguage())} ${translateText(context.locale,getLanguage())}`;
         }
         return result;
       };
