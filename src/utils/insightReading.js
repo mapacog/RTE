@@ -1,5 +1,6 @@
+import { translateText } from "./localization.js";
 export function localizedInsightText(value, language) {
-  return typeof value === "object" ? value?.[language] || "" : String(value ?? "");
+  return typeof value === "object" ? value?.[language] || translateText(value?.en || "",language) : translateText(String(value ?? ""),language);
 }
 
 export function insightReadingText(card, language) {

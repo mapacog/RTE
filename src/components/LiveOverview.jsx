@@ -1,3 +1,4 @@
+import { translateText } from "../utils/localization.js";
 import { useEffect,useState } from "react";
 import { MapPinned,Route,Car,TrendingUp } from "lucide-react";
 import { normalizeFeature,trafficLayers } from "../services/trafficRankings";
@@ -26,12 +27,12 @@ export default function LiveOverview({ tables }) {
   const column=roadway?.columns.indexOf("2024-2025");
   const localGrowth=roadway?.rows.find(row=>row[0]==="Local")?.[column];
   return <div className="metric-grid overview-metrics">
-    <MetricCard href="#regional-patterns/change-vmt" label={t("Regional growth")} value="≈5%" detail={language==="es"?"VMT estimado, 2022–2025":"Estimated VMT, 2022–2025"} tone="blue" icon={TrendingUp}/>
+    <MetricCard href="#regional-patterns/change-vmt" label={t("Regional growth")} value="≈5%" detail={language==="es"?"VMT estimado, 2022–2025":translateText("Estimated VMT, 2022–2025",language)} tone="blue" icon={TrendingUp}/>
     {[["intersections","Busiest intersection",MapPinned,"coral"],["interchanges","Busiest interchange",Route,"teal"]].map(([kind,label,icon,tone])=>
       <MetricCard key={kind} href={`#${kind}/rankings`} className="metric-traffic" label={t(label)} value={leaders[kind]?formatNumber(leaders[kind].aadt,language==="es"?"es-US":"en-US"):(error?t("Not reported"):t("Loading"))}
         valueLabel="AADT · 2025" detail={leaders[kind]?.name || "2025 · MAPA"} icon={icon} tone={tone}/>
     )}
     <MetricCard href="#regional-patterns/roadway-classes" label={t("Local street growth")} value={typeof localGrowth==="number"?`${localGrowth>0?"+":""}${new Intl.NumberFormat(language==="es"?"es-US":"en-US",{style:"percent",minimumFractionDigits:1,maximumFractionDigits:1}).format(localGrowth)}`:roadway?t("Not reported"):t("Loading")}
-      detail={language==="es"?"VMT en calles locales, 2024–2025":"Local-street VMT, 2024–2025"} tone="yellow" icon={Car}/>
+      detail={language==="es"?"VMT en calles locales, 2024–2025":translateText("Local-street VMT, 2024–2025",language)} tone="yellow" icon={Car}/>
   </div>;
 }

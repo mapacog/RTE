@@ -51,6 +51,11 @@
 .overview-metrics { grid-template-columns: repeat(4,minmax(0,1fr)); margin-top: 1.5rem; }
 .overview-metrics .metric-card { min-width: 0; }
 .reader-controls { display: flex; align-items: center; gap: 0.5rem; }
+.language-field select { width: 7rem; }
+html[dir="rtl"] .reader-settings { right: auto; inset-inline-end: 0; }
+html[dir="rtl"] .report-contents { border-right: 0; border-inline-end: 1px solid var(--line); padding-right: 0; padding-inline-end: 1rem; }
+html[dir="rtl"] .report-contents button { text-align: start; border-left: 0; border-inline-start: 3px solid transparent; }
+html[dir="rtl"] .report-contents button[aria-current="true"] { border-inline-start-color: var(--mapa-blue); }
 .reader-controls select { border: 1px solid var(--line); background: white; color: var(--ink); min-height: 44px; border-radius: 6px; padding: 0.4rem; max-width: 100%; }
 .accessibility-controls { position: relative; }
 .accessibility-controls summary { display: flex; align-items: center; gap: 0.3rem; min-height: 44px; padding: 0.4rem; cursor: pointer; color: var(--mapa-teal); }

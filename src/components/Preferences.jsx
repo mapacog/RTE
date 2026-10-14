@@ -1,7 +1,9 @@
+import { translateText, languages, validLanguage } from "../utils/localization.js";
 import { createContext, useContext, useEffect, useRef, useState } from "react";
 import { Accessibility, Square, Volume2 } from "lucide-react";
 import { createSpeechReader } from "../services/speechReader";
 import { cardReading } from "../utils/translatedReading";
+import { dismissDetails } from "../utils/dismissDetails.js";
 
 const translations = {
   "Legs total":"Total de tramos",
@@ -43,7 +45,7 @@ const translations = {
 const PreferencesContext = createContext({ language: "en", t: value => value });
 
 export function PreferencesProvider({ children }) {
-  const [language, setLanguage] = useState(() => localStorage.getItem("rte-language") || "en");
+  const [language, setLanguage] = useState(() => validLanguage(localStorage.getItem("rte-language")));
   const [size, setSize] = useState(() => localStorage.getItem("rte-size") || "100");
   const [contrast, setContrast] = useState(() => localStorage.getItem("rte-contrast") === "true");
   const [motion, setMotion] = useState(() => localStorage.getItem("rte-motion") === "true");
@@ -53,21 +55,27 @@ export function PreferencesProvider({ children }) {
     document.documentElement.classList.toggle("reduce-motion", motion);
     for (const [key,value] of Object.entries({language,size,contrast,motion})) localStorage.setItem(`rte-${key}`, String(value));
   }, [language,size,contrast,motion]);
-  useEffect(() => { document.documentElement.lang = language; }, [language]);
-  const t = value => language === "es" ? translations[value] || value : value;
+  useEffect(() => {
+    document.documentElement.lang = language === "zh" ? "zh-CN" : language;
+    document.documentElement.dir = language === "ar" ? "rtl" : "ltr";
+    stopReadingAloud();
+  }, [language]);
+  const t = value => language === "es" ? translations[value] || value : translateText(value,language);
   return <PreferencesContext.Provider value={{ language,setLanguage,t,size,setSize,contrast,setContrast,motion,setMotion }}>{children}</PreferencesContext.Provider>;
 }
 export const usePreferences = () => useContext(PreferencesContext);
 
 export function PreferencesControls() {
   const { t,language,setLanguage,size,setSize,contrast,setContrast,motion,setMotion } = usePreferences();
+  const pane=useRef(null);
+  useEffect(()=>dismissDetails(pane.current,document),[]);
   return <div className="reader-controls">
     <label className="language-field"><span className="sr-only">Language / Idioma</span>
       <select aria-label="Language / Idioma" value={language} onChange={e=>setLanguage(e.target.value)}>
-        <option value="en">English</option><option value="es">Español</option>
+        {languages.map(item=><option key={item.code} value={item.code} lang={item.code}>{item.label}</option>)}
       </select>
     </label>
-    <details className="accessibility-controls"><summary aria-label={t("Accessibility")}><Accessibility size={20} aria-hidden="true"/><span>{t("Accessibility")}</span></summary>
+    <details ref={pane} className="accessibility-controls"><summary aria-label={t("Accessibility")}><Accessibility size={20} aria-hidden="true"/><span>{t("Accessibility")}</span></summary>
       <div className="reader-settings">
         <label>{t("Text size")}<select aria-label={t("Text size")} value={size} onChange={e=>setSize(e.target.value)}>
           {[100,125,150,200].map(n=><option key={n} value={n}>{n}%</option>)}
@@ -75,7 +83,7 @@ export function PreferencesControls() {
         <label><input type="checkbox" checked={contrast} onChange={e=>setContrast(e.target.checked)}/>{t("High contrast")}</label>
         <label><input type="checkbox" checked={motion} onChange={e=>setMotion(e.target.checked)}/>{t("Reduced motion")}</label>
         <a href={/^(localhost|127\.0\.0\.1)$/.test(location.hostname)?"https://translate.google.com/?sl=auto&tl=es&op=websites":`https://translate.google.com/translate?sl=auto&tl=es&u=${encodeURIComponent(location.href)}`} target="_blank" rel="noreferrer">
-          {language==="es"?"Más idiomas / Google Translate":"More languages / Google Translate"}
+          {language==="es"?"Más idiomas / Google Translate":translateText("More languages / Google Translate",language)}
         </a>
       </div>
     </details>
@@ -88,19 +96,21 @@ export function stopReadingAloud() { speechReader?.stop(); }
 export function ListenButton({ text, subject }) {
   const { t,language } = usePreferences();
   const [speaking,setSpeaking]=useState(false);
+  const [audioError,setAudioError]=useState("");
   const stopReading=useRef(null);
   useEffect(()=>()=>stopReading.current?.(),[text,language]);
   const supported="speechSynthesis" in window && "SpeechSynthesisUtterance" in window;
   const action=supported?t(speaking ? "Stop reading" : "Listen to summary"):
-    language==="es"?"Audio no disponible en este navegador":"Audio unavailable in this browser";
-  const label=`${action}${subject ? `: ${subject}` : ""}`;
-  return <button className="icon-button" type="button" title={label} aria-label={label} aria-pressed={speaking} disabled={!supported}
+    language==="es"?"Audio no disponible en este navegador":translateText("Audio unavailable in this browser",language);
+  const label=`${audioError || action}${subject ? `: ${subject}` : ""}`;
+  return <><button className="icon-button" type="button" title={label} aria-label={label} aria-pressed={speaking} disabled={!supported}
     onClick={event=>{
       if(speaking){stopReading.current?.();return;}
+      setAudioError("");
       speechReader ||= createSpeechReader(window.speechSynthesis, text=>new SpeechSynthesisUtterance(text));
       const reading=cardReading(event.currentTarget,text,language,document);
-      stopReading.current=speechReader.speak(reading.text,reading.language,setSpeaking);
+      stopReading.current=speechReader.speak(reading.text,reading.language,setSpeaking,code=>setAudioError(t(code==="voice-unavailable"?"No voice is available for this language on this device.":"Audio playback is unavailable.")));
     }}>
     {speaking ? <Square size={17} aria-hidden="true"/> : <Volume2 size={19} aria-hidden="true"/>}
-  </button>;
+  </button>{audioError?<span className="sr-only" role="alert">{audioError}</span>:null}</>;
 }

@@ -1,4 +1,5 @@
 import { formatNumber } from "../utils/format.js";
+import { translateText } from "../utils/localization.js";
 
 const present = value => value !== null && value !== undefined && String(value).trim() !== "";
 const numeric = value => present(value) && Number.isFinite(Number(value)) ? Number(value) : null;
@@ -31,7 +32,7 @@ export function popupModel(layer, attributes, language = "en") {
   if (!type) return null;
   const a = attributes || {};
   const es = language === "es";
-  const text = (en, translated) => es ? translated : en;
+  const text = (en, translated) => es ? translated : translateText(en,language);
   const missing = text("Not reported", "No reportado");
   const number = value => numeric(value) === null ? missing : formatNumber(Number(value), es ? "es-US" : "en-US");
   const decimal = value => numeric(value) === null ? missing : new Intl.NumberFormat(es ? "es-US" : "en-US", { maximumFractionDigits: 1 }).format(Number(value));

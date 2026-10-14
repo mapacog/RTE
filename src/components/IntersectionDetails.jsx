@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { ArrowDown, ArrowUp } from "lucide-react";
 import { intersectionDetails } from "../utils/intersectionDetails";
+import { translateText } from "../utils/localization.js";
 
 function HistoryChart({ model, text }) {
   const [hovered, setHovered] = useState(null);
@@ -10,7 +11,7 @@ function HistoryChart({ model, text }) {
   return <figure className="intersection-history">
     <figcaption>{text("AADT 2020 - 2025", "AADT 2020 - 2025")}</figcaption>
     <div className="intersection-history-tooltip" role="status">{hovered ? `${hovered.year}: ${model.format(hovered.value)}` : "\u00a0"}</div>
-    <div className="intersection-history-plot">
+    <div className="intersection-history-plot" dir="ltr">
       <div className="intersection-history-axis" aria-hidden="true"><span>{model.format(ceiling)}</span><span>{model.format(ceiling / 2)}</span><span>0</span></div>
       <div className="intersection-history-columns">
         {model.history.map(item => <div className="intersection-history-column" key={item.year}>
@@ -31,7 +32,7 @@ function DetailRows({ rows }) {
 }
 
 export default function IntersectionDetails({ attributes, language = "en" }) {
-  const text=(en,es)=>language === "es" ? es : en;
+  const text=(en,es)=>language === "es" ? es : translateText(en,language);
   const model=intersectionDetails(attributes,language);
   return <article className="intersection-details">
     <h4 className="intersection-detail-title">{model.title}</h4>

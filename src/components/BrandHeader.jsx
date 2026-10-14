@@ -1,3 +1,4 @@
+import { translateText } from "../utils/localization.js";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
 import { usePreferences, PreferencesControls } from "./Preferences";
@@ -19,7 +20,7 @@ export default function BrandHeader({ activePage = "Home" }) {
 
   return (
     <header className="brand-header">
-      <a className="brand-lockup" href="https://www.mapacog.org" target="_blank" rel="noopener noreferrer" aria-label={language === "es" ? "Sitio web de MAPA (se abre en una pestaña nueva)" : "MAPA website (opens in a new tab)"} onClick={close}>
+      <a className="brand-lockup" href="https://www.mapacog.org" target="_blank" rel="noopener noreferrer" aria-label={language === "es" ? "Sitio web de MAPA (se abre en una pestaña nueva)" : translateText("MAPA website (opens in a new tab)",language)} onClick={close}>
         <img src="./assets/mapa-logo-tag-blue-grey.png" alt="MAPA logo" />
       </a>
 

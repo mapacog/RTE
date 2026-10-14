@@ -2,9 +2,9 @@ import test from "node:test";
 import assert from "node:assert/strict";
 import { cardReading, readingLanguage } from "./translatedReading.js";
 
-function document({ selected, url = "https://example.com", cookie = "", lang = "en" } = {}) {
+function document({ selected, url = "https://example.com", cookie = "", lang = "en", translated = false } = {}) {
   return { querySelector: () => selected ? { value: selected } : null,
-    location: { href: url }, cookie, documentElement: { lang } };
+    location: { href: url }, cookie, documentElement: { lang, classList: { contains: () => translated } } };
 }
 
 test("Google Translate widget and proxy target take priority over the app language", () => {
@@ -14,7 +14,8 @@ test("Google Translate widget and proxy target take priority over the app langua
 });
 
 test("translation cookie, document language and supported aliases are recognized", () => {
-  assert.equal(readingLanguage(document({ cookie: "other=1; googtrans=%2Fen%2Fzh-CN" })), "zh-CN");
+  assert.equal(readingLanguage(document({ cookie: "other=1; googtrans=%2Fen%2Fzh-CN", translated: true })), "zh-CN");
+  assert.equal(readingLanguage(document({ cookie: "googtrans=/en/fr", lang: "ar" })), "ar");
   assert.equal(readingLanguage(document({ lang: "es" })), "es");
   assert.equal(readingLanguage(document({ selected: "iw" })), "he");
   assert.equal(readingLanguage(document({ selected: "auto", cookie: "googtrans=%bad", lang: "fr" })), "fr");

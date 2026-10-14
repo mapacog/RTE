@@ -1,3 +1,4 @@
+import { translateText } from "../utils/localization.js";
 import { useMemo,useState } from "react";
 import { ArrowDown,ArrowUp,Download } from "lucide-react";
 import { usePreferences } from "./Preferences";
@@ -50,10 +51,10 @@ export default function InteractiveReportTable({ tables, contextCards = [] }) {
         </th>)}</tr></thead>
         <tbody>{rows.map((row,index)=>{
           const historical=activeId==="atr" && historicalCounters.has(`${row[0]}:${row[1]}`);
-          return <tr key={index} className={historical?"historical-counter":undefined}>{row.map((cell,i)=>i===0?<th scope="row" key={i}>{format(cell,i)}</th>:<td key={i}>{format(cell,i)}{historical && i===1?<small className="counter-history-label">{language==="es"?"Desde 1994":"Since 1994"}</small>:null}</td>)}</tr>;
+          return <tr key={index} className={historical?"historical-counter":undefined}>{row.map((cell,i)=>i===0?<th scope="row" key={i}>{format(cell,i)}</th>:<td key={i}>{format(cell,i)}{historical && i===1?<small className="counter-history-label">{language==="es"?"Desde 1994":translateText("Since 1994",language)}</small>:null}</td>)}</tr>;
         })}</tbody>
       </table>
     </div>
-    <p role="status" className="source-note">{rows.length} / {table.rows.length} {language==="es"?"filas":"rows"}</p>
+    <p role="status" className="source-note">{rows.length} / {table.rows.length} {language==="es"?"filas":translateText("rows",language)}</p>
   </div>;
 }

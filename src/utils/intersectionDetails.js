@@ -1,3 +1,4 @@
+import { translateText, languageLocale } from "./localization.js";
 const number = value => value == null || String(value).trim() === "" || !Number.isFinite(Number(value)) ? null : Number(value);
 const roadClasses = [null, ["Interstate", "Interestatal"], ["Other freeway / expressway", "Otra autopista / vía rápida"],
   ["Other principal arterial", "Otra arterial principal"], ["Minor arterial", "Arterial secundaria"],
@@ -5,16 +6,16 @@ const roadClasses = [null, ["Interstate", "Interestatal"], ["Other freeway / exp
 
 export function intersectionDetails(attributes = {}, language = "en") {
   const a = attributes, es = language === "es";
-  const text = (en, translated) => es ? translated : en;
+  const text = (en, translated) => es ? translated : translateText(en,language);
   const format = value => number(value) === null ? text("Not reported", "No reportado") :
-    new Intl.NumberFormat(es ? "es-US" : "en-US", { maximumFractionDigits: 0 }).format(number(value));
+    new Intl.NumberFormat(languageLocale(language), { maximumFractionDigits: 0 }).format(number(value));
   const current = number(a.Total_25), rank = number(a.Rank_25);
   // Match the authored Arcade popup: legacy totals are stored in hundreds.
   const legacy = year => number(a[`Leg_Tot_${year}`]) === null ? null : number(a[`Leg_Tot_${year}`]) * 100;
   const compare = (baseline, year) => {
     const percent = current === null || baseline === null || baseline === 0 ? null : (current - baseline) / baseline * 100;
     const tone = percent === null || Math.abs(percent) <= 0.05 ? "neutral" : percent > 0 ? "increase" : "decrease";
-    const amount = percent === null ? "" : new Intl.NumberFormat(es ? "es-US" : "en-US", { minimumFractionDigits: 1, maximumFractionDigits: 1 }).format(Math.abs(percent));
+    const amount = percent === null ? "" : new Intl.NumberFormat(languageLocale(language), { minimumFractionDigits: 1, maximumFractionDigits: 1 }).format(Math.abs(percent));
     const label = percent === null ? text(`${year} comparison unavailable`, `Comparación con ${year} no disponible`) :
       tone === "neutral" ? text(`No change from ${year}`, `Sin cambio desde ${year}`) :
         text(`${amount}% from ${year}`, `${amount}% desde ${year}`);
@@ -37,8 +38,8 @@ export function intersectionDetails(attributes = {}, language = "en") {
       text(`This intersection ranks #${format(rank)} by 2025 AADT.`, `Esta intersección ocupa el puesto #${format(rank)} por AADT de 2025.`)].filter(Boolean).join(" "),
     legs: [["N", "North leg", "Tramo norte"], ["E", "East leg", "Tramo este"], ["S", "South leg", "Tramo sur"], ["W", "West leg", "Tramo oeste"]]
       .map(([key, en, translated]) => ({ label: text(en, translated), value: format(a[`${key}_LEGSUM_25`]) })),
-    roads: [{ label: text("Functional class", "Clase funcional"), value: cls?.[es ? 1 : 0] || format(null) },
-      { label: text("Area", "Área"), value: es && a.URBAN_RURAL === "Urban" ? "Urbana" : a.URBAN_RURAL || format(null) },
+    roads: [{ label: text("Functional class", "Clase funcional"), value: translateText(cls?.[es ? 1 : 0] || format(null),language) },
+      { label: text("Area", "Área"), value: es && a.URBAN_RURAL === "Urban" ? "Urbana" : translateText(a.URBAN_RURAL || format(null),language) },
       { label: text("Posted speed", "Velocidad señalada"), value: speed }],
     location: [a.CITY, a.COUNTY].filter(value => value != null && String(value).trim() !== "").join(" · "),
   };

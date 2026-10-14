@@ -13,7 +13,8 @@ export function readingLanguage(document, fallback = "en") {
   let translated;
   try { translated = languageTag(decodeURIComponent(cookie?.slice(10) || "").split("/").at(-1)); }
   catch { translated = null; }
-  return selected || proxy || translated || languageTag(document.documentElement.lang) || fallback;
+  const translatedPage=document.documentElement.classList?.contains("translated-ltr") || document.documentElement.classList?.contains("translated-rtl");
+  return selected || proxy || (translatedPage?translated:null) || languageTag(document.documentElement.lang) || fallback;
 }
 
 export function cardReading(button, text, fallbackLanguage, document) {

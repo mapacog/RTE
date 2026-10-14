@@ -1,3 +1,4 @@
+import { translateText } from "./utils/localization.js";
 import { useEffect, useState } from "react";
 import { ArrowUpRight, Bike, ExternalLink, ListOrdered, Map, MapPinned, Route, Truck } from "lucide-react";
 import BrandHeader from "./components/BrandHeader";
@@ -6,7 +7,7 @@ import LiveOverview from "./components/LiveOverview";
 import ReportWorkspace, { useReportTables } from "./components/ReportWorkspace";
 import { usePreferences } from "./components/Preferences";
 import ReportDownload from "./components/ReportDownload";
-import photos from "./data/metroPhotos.json";
+import photos from "./data/metroPhotos";
 import DestinationPhotos from "./components/DestinationPhotos";
 import AboutMapaCard from "./components/AboutMapaCard";
 import RetainedView from "./components/RetainedView";
@@ -82,14 +83,14 @@ export default function App() {
             <div>
               <div className="overview-kicker"><p className="eyebrow">{t("Omaha-Council Bluffs metro")}</p><span>2022–2025</span></div>
               <p className="home-beta">Beta</p>
-              <h1 aria-label={t("Regional Traffic Explorer")}>{(language === "es" ? ["Explorador", "de tráfico", "regional"] : ["Regional", "Traffic", "Explorer"]).map(line => <span key={line}>{line}{" "}</span>)}</h1>
-              <p>{language === "es" ? "Explore los viajes regionales, las ubicaciones más transitadas y la movilidad cotidiana." : "Explore regional travel, the busiest locations, and everyday mobility."}</p>
+              <h1 aria-label={t("Regional Traffic Explorer")}>{(language === "es" ? ["Explorador", "de tráfico", "regional"] : language === "en" ? ["Regional", "Traffic", "Explorer"] : [t("Regional Traffic Explorer")]).map(line => <span key={line}>{line}{" "}</span>)}</h1>
+              <p>{language === "es" ? "Explore los viajes regionales, las ubicaciones más transitadas y la movilidad cotidiana." : translateText("Explore regional travel, the busiest locations, and everyday mobility.",language)}</p>
             </div>
           </div>
           <div className="overview-action-bar">
             <div className="overview-shortcuts">
               <a className="button-primary" href="#regional-patterns"><Map size={19} aria-hidden="true"/>{t("Regional Patterns")}</a>
-              <a className="button-secondary" href="#intersections/rankings"><ListOrdered size={19} aria-hidden="true"/>{language === "es" ? "Ver clasificaciones" : "Explore rankings"}</a>
+              <a className="button-secondary" href="#intersections/rankings"><ListOrdered size={19} aria-hidden="true"/>{language === "es" ? "Ver clasificaciones" : translateText("Explore rankings",language)}</a>
             </div>
           </div>
           </div>
@@ -97,19 +98,19 @@ export default function App() {
           </div>
           <div className="overview-resources">
             <a className="portal-link" href={portal} target="_blank" rel="noopener noreferrer">
-              <ExternalLink size={18} aria-hidden="true" />{t("Traffic data portal")}<span className="sr-only">{language === "es" ? " (se abre en una pestaña nueva)" : " (opens in a new tab)"}</span>
+              <ExternalLink size={18} aria-hidden="true" />{t("Traffic data portal")}<span className="sr-only">{language === "es" ? " (se abre en una pestaña nueva)" : translateText(" (opens in a new tab)",language)}</span>
             </a>
             <ReportDownload report="flow"/>
           </div>
-          <section className="home-destinations" aria-label={language === "es" ? "Temas de transporte" : "Transportation topics"}>
+          <section className="home-destinations" aria-label={language === "es" ? "Temas de transporte" : translateText("Transportation topics",language)}>
             {destinations.map(({ page, icon: Icon, label, tone, description, links }) => <article key={page} className={`home-destination destination-${tone}`}>
               <a className="destination-heading" href={`#${page}`}>
                 <Icon size={24} aria-hidden="true" />
                 <h3>{t(label)}</h3>
                 <ArrowUpRight size={21} aria-hidden="true" />
               </a>
-              <DestinationPhotos photos={photos[page]} label={`${t(label)} ${language === "es" ? "fotos" : "photos"}`}/>
-              <p>{description[language === "es" ? 1 : 0]}</p>
+              <DestinationPhotos photos={photos[page]} label={`${t(label)} ${language === "es" ? "fotos" : translateText("photos",language)}`}/>
+              <p>{t(description[language === "es" ? 1 : 0])}</p>
               <div className="destination-links">
                 {links.map(([label, topic]) => <a key={label} href={`#${page}${topic ? `/${topic}` : ""}`}>{t(label)}<ArrowUpRight size={14} aria-hidden="true" /></a>)}
               </div>
@@ -117,14 +118,14 @@ export default function App() {
             <article className="home-destination destination-freight">
               <a className="destination-heading" href={freightPlan} target="_blank" rel="noreferrer">
                 <Truck size={24} aria-hidden="true"/>
-                <h3>{language === "es" ? "Carga" : "Freight"}</h3>
+                <h3>{language === "es" ? "Carga" : translateText("Freight",language)}</h3>
                 <ExternalLink size={21} aria-hidden="true"/>
-                <span className="sr-only">{language === "es" ? "Se abre en una pestaña nueva" : "Opens in a new tab"}</span>
+                <span className="sr-only">{language === "es" ? "Se abre en una pestaña nueva" : translateText("Opens in a new tab",language)}</span>
               </a>
-              <DestinationPhotos photos={photos.freight} label={language === "es" ? "Fotos de carga" : "Freight photos"}/>
-              <p>{language === "es" ? "Para obtener información sobre carga, visite el Plan Regional de Carga, que establecerá una visión regional para mejorar la seguridad y confiabilidad del movimiento de carga dentro de la región." : "For information on Freight, Please Visit the Regional Freight Plan, which will establish a regional vision for freight to improve the safety and reliability of freight movement within the region."}</p>
+              <DestinationPhotos photos={photos.freight} label={language === "es" ? "Fotos de carga" : translateText("Freight photos",language)}/>
+              <p>{language === "es" ? "Para obtener información sobre carga, visite el Plan Regional de Carga, que establecerá una visión regional para mejorar la seguridad y confiabilidad del movimiento de carga dentro de la región." : translateText("For information on Freight, Please Visit the Regional Freight Plan, which will establish a regional vision for freight to improve the safety and reliability of freight movement within the region.",language)}</p>
               <div className="destination-links">
-                <a href={freightPlan} target="_blank" rel="noreferrer">{language === "es" ? "Plan Regional de Carga" : "Regional Freight Plan"}<ExternalLink size={14} aria-hidden="true"/><span className="sr-only">{language === "es" ? " (se abre en una pestaña nueva)" : " (opens in a new tab)"}</span></a>
+                <a href={freightPlan} target="_blank" rel="noreferrer">{language === "es" ? "Plan Regional de Carga" : translateText("Regional Freight Plan",language)}<ExternalLink size={14} aria-hidden="true"/><span className="sr-only">{language === "es" ? " (se abre en una pestaña nueva)" : translateText(" (opens in a new tab)",language)}</span></a>
               </div>
             </article>
             <AboutMapaCard/>
@@ -140,7 +141,7 @@ export default function App() {
       </main>
       <footer className="site-footer">
         <div className="footer-content">
-          <a href="https://www.mapacog.org" target="_blank" rel="noopener noreferrer" aria-label={language === "es" ? "Sitio web de MAPA (se abre en una pestaña nueva)" : "MAPA website (opens in a new tab)"}>
+          <a href="https://www.mapacog.org" target="_blank" rel="noopener noreferrer" aria-label={language === "es" ? "Sitio web de MAPA (se abre en una pestaña nueva)" : translateText("MAPA website (opens in a new tab)",language)}>
             <img src="./assets/mapa-logo-white-yellow.png" alt="MAPA" />
           </a>
         </div>

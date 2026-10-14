@@ -1,8 +1,9 @@
+import { translateText } from "../utils/localization.js";
 import { useEffect,useRef,useState } from "react";
 import { ExternalLink, LockKeyhole, MousePointer2 } from "lucide-react";
 import { usePreferences } from "./Preferences";
 import InsightCards from "./InsightCards";
-import insights from "../data/reportInsights.json";
+import insights from "../data/reportInsights";
 import { configureMapPopups, popupProfile } from "../services/mapPopups";
 import { applyRankingFilter } from "../services/rankingMap";
 import { configureOrbtMap } from "../services/orbtMap";
@@ -95,6 +96,7 @@ function MapView({ sources, initialComparison, initialMapId, contextCards = [], 
   useEffect(()=>{
     const popup=mapElement.current?.querySelector('arcgis-popup[slot="popup"]');
     if(popup)popup.open=false;
+    if(mapElement.current)mapElement.current.lang=language;
   },[language]);
   useEffect(()=>{
     const selected=comparisonViews.find(view=>view.title.includes(initialComparison || "Traffic Analysis District"));
@@ -269,8 +271,8 @@ function MapView({ sources, initialComparison, initialMapId, contextCards = [], 
       {maps.length>1?<label className="field"><span>{t("Web map")}</span><select aria-label={t("Web map")} value={id} onChange={e=>onMapChange(e.target.value)}>
         {maps.map(item=><option value={item.id} key={item.id}>{item.title}</option>)}
       </select></label>:null}
-      {comparisonViews.length?<label className="field"><span>{language==="es"?"Vista de comparación":"Comparison view"}</span>
-        <select aria-label={language==="es"?"Vista de comparación":"Comparison view"} value={comparisonId} onChange={e=>{
+      {comparisonViews.length?<label className="field"><span>{language==="es"?"Vista de comparación":translateText("Comparison view",language)}</span>
+        <select aria-label={language==="es"?"Vista de comparación":translateText("Comparison view",language)} value={comparisonId} onChange={e=>{
           setComparisonId(e.target.value);
           mapElement.current?.map.allLayers.forEach(layer=>{
             if(comparisonViews.some(view=>view.id===layer.id))layer.visible=layer.id===e.target.value;
@@ -297,12 +299,12 @@ function MapView({ sources, initialComparison, initialMapId, contextCards = [], 
       {status==="ready"&&!active?<button ref={activation} className="map-activation" type="button" aria-label={t("Activate map")}
         onPointerDown={event=>{pointerType.current=event.pointerType;}}
         onDoubleClick={activate} onClick={event=>{if(event.detail===0||pointerType.current==="touch")activate();}}>
-        <span className="map-activation-label"><MousePointer2 size={19} aria-hidden="true"/><span className="map-desktop-hint">{language==="es"?"Doble clic para explorar":"Double-click to explore"}</span><span className="map-touch-hint">{language==="es"?"Toque para explorar":"Tap to explore"}</span></span>
+        <span className="map-activation-label"><MousePointer2 size={19} aria-hidden="true"/><span className="map-desktop-hint">{language==="es"?"Doble clic para explorar":translateText("Double-click to explore",language)}</span><span className="map-touch-hint">{language==="es"?"Toque para explorar":translateText("Tap to explore",language)}</span></span>
       </button>:null}
     </div>
     {popupInSidePanel ? <IntersectionPopupPanel {...panelSelection} mapElement={mapElement.current} onClear={clearPanel}
       onIndexChange={index=>setPanelSelection(current=>({...current,index}))} contextCards={activeCards}/> : activeCards.length ? <InsightCards cards={activeCards}/> : null}
     </div>
-    <a className="skip-map sr-only" href={`#${summaryId}`}>{language==="es"?"Saltar el mapa e ir al resumen":"Skip map and go to summary"}</a>
+    <a className="skip-map sr-only" href={`#${summaryId}`}>{language==="es"?"Saltar el mapa e ir al resumen":translateText("Skip map and go to summary",language)}</a>
   </div>;
 }
