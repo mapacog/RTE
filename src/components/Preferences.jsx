@@ -4,6 +4,8 @@ import { Accessibility, Square, Volume2 } from "lucide-react";
 import { createSpeechReader } from "../services/speechReader";
 import { cardReading } from "../utils/translatedReading";
 import { dismissDetails } from "../utils/dismissDetails.js";
+import TranslationNotice from "./TranslationNotice";
+import translationNotices from "../data/translationNotices.json";
 
 const translations = {
   "Legs total":"Total de tramos",
@@ -69,12 +71,15 @@ export function PreferencesControls() {
   const { t,language,setLanguage,size,setSize,contrast,setContrast,motion,setMotion } = usePreferences();
   const pane=useRef(null);
   useEffect(()=>dismissDetails(pane.current,document),[]);
-  return <div className="reader-controls">
+  return <div className="reader-controls reader-controls-with-notice">
+    <div className="language-control">
     <label className="language-field"><span className="sr-only">Language / Idioma</span>
       <select aria-label="Language / Idioma" value={language} onChange={e=>setLanguage(e.target.value)}>
         {languages.map(item=><option key={item.code} value={item.code} lang={item.code}>{item.label}</option>)}
       </select>
     </label>
+    <TranslationNotice language={language}/>
+    </div>
     <details ref={pane} className="accessibility-controls"><summary aria-label={t("Accessibility")}><Accessibility size={20} aria-hidden="true"/><span>{t("Accessibility")}</span></summary>
       <div className="reader-settings">
         <label>{t("Text size")}<select aria-label={t("Text size")} value={size} onChange={e=>setSize(e.target.value)}>
@@ -82,9 +87,12 @@ export function PreferencesControls() {
         </select></label>
         <label><input type="checkbox" checked={contrast} onChange={e=>setContrast(e.target.checked)}/>{t("High contrast")}</label>
         <label><input type="checkbox" checked={motion} onChange={e=>setMotion(e.target.checked)}/>{t("Reduced motion")}</label>
-        <a href={/^(localhost|127\.0\.0\.1)$/.test(location.hostname)?"https://translate.google.com/?sl=auto&tl=es&op=websites":`https://translate.google.com/translate?sl=auto&tl=es&u=${encodeURIComponent(location.href)}`} target="_blank" rel="noreferrer">
+        <div className="google-translation-section">
+        <a aria-describedby="google-translation-notice" href={/^(localhost|127\.0\.0\.1)$/.test(location.hostname)?"https://translate.google.com/?sl=auto&tl=es&op=websites":`https://translate.google.com/translate?sl=auto&tl=es&u=${encodeURIComponent(location.href)}`} target="_blank" rel="noreferrer">
           {language==="es"?"Más idiomas / Google Translate":translateText("More languages / Google Translate",language)}
         </a>
+        <p id="google-translation-notice" className="google-translation-notice">{(translationNotices[language] || translationNotices.en).google}</p>
+        </div>
       </div>
     </details>
   </div>;
