@@ -1,6 +1,10 @@
 const codes=["es","fr","ar","de","zh","ru","ko"];
 const messages=[
-  ["Matched Metro and ORBT stops","Paradas coincidentes de Metro y ORBT","Arrêts Metro et ORBT appariés","محطات Metro وORBT المطابقة","Zugeordnete Metro- und ORBT-Haltestellen","已匹配的Metro和ORBT站点","Сопоставленные остановки Metro и ORBT","매칭된 Metro 및 ORBT 정류장"],
+  ["2022 activity per 100 scheduled visits","Actividad de 2022 por 100 visitas programadas","Activité en 2022 pour 100 passages programmés","نشاط عام 2022 لكل 100 زيارة مجدولة","Aktivität 2022 je 100 geplante Anfahrten","2022年每100次计划停靠的活动量","Активность в 2022 году на 100 запланированных остановок","2022년 예정 방문 100회당 활동"],
+  ["2025 activity per 100 scheduled visits","Actividad de 2025 por 100 visitas programadas","Activité en 2025 pour 100 passages programmés","نشاط عام 2025 لكل 100 زيارة مجدولة","Aktivität 2025 je 100 geplante Anfahrten","2025年每100次计划停靠的活动量","Активность в 2025 году на 100 запланированных остановок","2025년 예정 방문 100회당 활동"],
+  ["2022 scheduled visits","Visitas programadas de 2022","Passages programmés en 2022","الزيارات المجدولة لعام 2022","Geplante Anfahrten 2022","2022年计划停靠次数","Запланированные остановки в 2022 году","2022년 예정 방문"],
+  ["2025 scheduled visits","Visitas programadas de 2025","Passages programmés en 2025","الزيارات المجدولة لعام 2025","Geplante Anfahrten 2025","2025年计划停靠次数","Запланированные остановки в 2025 году","2025년 예정 방문"],
+  ["Metro and ORBT stops","Paradas de Metro y ORBT","Arrêts Metro et ORBT","محطات Metro وORBT","Metro- und ORBT-Haltestellen","Metro和ORBT站点","Остановки Metro и ORBT","Metro 및 ORBT 정류장"],
   ["Metro and ORBT stop rankings","Clasificación de paradas de Metro y ORBT","Classement des arrêts Metro et ORBT","ترتيب محطات Metro وORBT","Rangliste der Metro- und ORBT-Haltestellen","Metro和ORBT站点排名","Рейтинг остановок Metro и ORBT","Metro 및 ORBT 정류장 순위"],
   ["Fixed Route Bus","Autobús de ruta fija","Bus à itinéraire fixe","حافلة ذات مسار ثابت","Linienbus","固定线路公交车","Автобус регулярного маршрута","고정 노선 버스"],
   ["Network connections","Conexiones de la red","Connexions du réseau","روابط الشبكة","Netzverbindungen","交通网络连接","Связи транспортной сети","교통망 연결"],

@@ -139,11 +139,14 @@ function MapView({ sources, initialComparison, initialMapId, contextCards = [], 
       element.setAttribute("popup-component-enabled","");
       if(popupInSidePanel || disablePopup)element.setAttribute("popup-disabled","");
       const popup=document.createElement("arcgis-popup");popup.setAttribute("slot","popup");element.append(popup);
-      const zoom=document.createElement("arcgis-zoom");zoom.setAttribute("slot","top-left");element.append(zoom);
-      const searchExpand=document.createElement("arcgis-expand");searchExpand.setAttribute("slot","top-left");
-      searchExpand.setAttribute("expand-tooltip",t("Search address"));
-      const search=document.createElement("arcgis-search");searchExpand.append(search);element.append(searchExpand);
-      for(const name of map.context==="orbt" && !fullPage ? [] : ["layer-list","legend"]){
+      const transitInset=rankingFilter?.kind==="transit" && !fullPage;
+      if(!transitInset){
+        const zoom=document.createElement("arcgis-zoom");zoom.setAttribute("slot","top-left");element.append(zoom);
+        const searchExpand=document.createElement("arcgis-expand");searchExpand.setAttribute("slot","top-left");
+        searchExpand.setAttribute("expand-tooltip",t("Search address"));
+        const search=document.createElement("arcgis-search");searchExpand.append(search);element.append(searchExpand);
+      }
+      for(const name of transitInset || map.context==="orbt" && !fullPage ? [] : ["layer-list","legend"]){
         const expand=document.createElement("arcgis-expand");expand.setAttribute("slot","top-right");
         const control=document.createElement(`arcgis-${name}`);expand.append(control);element.append(expand);
       }

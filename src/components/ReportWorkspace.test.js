@@ -74,7 +74,8 @@ test("regional map groups render with a unique summary target", async () => {
     assert.match(controlledRanking,/<option value="change" selected=""/);
     assert.match(controlledRanking,/<option value="10" selected="">Top 10/);
     assert.doesNotMatch(controlledRanking,/Service-day change/);
-    assert.match(controlledRanking,/Matched Metro and ORBT stops/);
+    assert.match(controlledRanking,/Metro and ORBT stops/);
+    assert.doesNotMatch(controlledRanking,/Matched Metro and ORBT stops/);
     assert.doesNotMatch(controlledRanking,/excluding ORBT/);
     assert.equal(sources.maps.find(map=>map.id==="transit-rankings").webmapId,"9cb9e8555b954ac9abee3313f8ec7d8e");
     const chartMarkup = renderToStaticMarkup(createElement(ChartExplorer, {

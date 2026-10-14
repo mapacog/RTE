@@ -10,7 +10,8 @@ import { aggregateTransitStops } from "../utils/transitGroups";
 const pageSize = 25;
 const baseColumns = [["name","Location"],["county","County"],["boardings","Boardings"],["alightings","Alightings"],
   ["visits","Scheduled visits"],["days","Service days"]];
-const changeColumns=[["name","Location"],["county","County"],["boardingsChange","Boarding change"],["alightingsChange","Alighting change"]];
+const changeColumns=[["name","Location"],["county","County"],["boardingsChange","Boarding change"],["alightingsChange","Alighting change"],
+  ["visitsChange","Scheduled-visit change"]];
 
 export default function TransitRankings({selectedMeasure,onMeasureChange}={}) {
   const { t, language } = usePreferences();
@@ -69,13 +70,13 @@ export default function TransitRankings({selectedMeasure,onMeasureChange}={}) {
       <button className="icon-button" type="button" title={t("Download CSV")} aria-label={t("Download CSV")} disabled={status!=="ready" || !rows.length} onClick={download}><Download size={18}/></button>
       <button className="icon-button" type="button" title={t("Refresh")} aria-label={t("Refresh")} disabled={status==="loading"} onClick={()=>setReload(value=>value+1)}><RefreshCw size={18}/></button>
     </div>
-    <p className="transit-ranking-summary" id="transit-ranking-summary" tabIndex={-1}>{t("Matched Metro and ORBT stops")} · {measure==="change"?"April 2022–April 2025":t("April 2025")} · {number(rows.length)} {t("locations")}</p>
+    <p className="transit-ranking-summary" id="transit-ranking-summary" tabIndex={-1}>{t("Metro and ORBT stops")} · {measure==="change"?"April 2022–April 2025":t("April 2025")} · {number(rows.length)} {t("locations")}</p>
     {measure==="change"?<p className="source-note">{t("All changes are April 2025 minus April 2022. Only locations with valid data in both periods are compared.")}</p>:null}
     {status==="loading"?<p role="status">{t("Loading")}</p>:status==="error"?<div role="alert"><p>{error}</p><button type="button" className="button-secondary" onClick={()=>setReload(value=>value+1)}>{t("Retry")}</button></div>:
       <div className="transit-ranking-layout">
         <div>
           <div className="interactive-table-scroll"><table className="interactive-report-table transit-ranking-table">
-            <colgroup>{(measure==="change"?[6,31,17,14,14,18]:[5,26,14,10,10,11,9,15]).map((width,index)=><col key={index} style={{width:`${width}%`}}/>)}</colgroup>
+            <colgroup>{(measure==="change"?[6,27,15,12,12,12,16]:[5,26,14,10,10,11,9,15]).map((width,index)=><col key={index} style={{width:`${width}%`}}/>)}</colgroup>
             <caption className="sr-only">{t("Metro and ORBT stop rankings")}</caption>
             <thead><tr><th scope="col">{t("Rank")}</th>{columns.map(([key,label])=><th scope="col" key={key}>{t(label)}</th>)}</tr></thead>
             <tbody>{visible.map(row=><tr key={row.objectId} className={row.objectId===selected?.objectId?"selected-row":""}>
@@ -95,7 +96,7 @@ export default function TransitRankings({selectedMeasure,onMeasureChange}={}) {
           {selected?<div className="transit-stop-detail"><h4>{selected.name}</h4><p>#{selected.rank} · {selected.county} · {serviceLabel(selected)}</p>
             <strong>{measure==="change"?signed(selected.change):number(selected.activity,true)}</strong><p>{t(measure==="change"?"Change per 100 visits":"Avg activity per 100 visits")}</p>
             <dl>{(measure==="change"?changeColumns:baseColumns).slice(2).map(([key,label])=><div key={key}><dt>{t(label)}</dt><dd>{measure==="change"?signed(selected[key]):number(selected[key])}</dd></div>)}
-              {measure==="change"?<><div><dt>2022</dt><dd>{number(selected.baselineActivity,true)}</dd></div><div><dt>2025</dt><dd>{number(selected.activity,true)}</dd></div></>:null}
+              {measure==="change"?<><div><dt>{t("2022 activity per 100 scheduled visits")}</dt><dd>{number(selected.baselineActivity,true)}</dd></div><div><dt>{t("2022 scheduled visits")}</dt><dd>{number(selected.baselineVisits)}</dd></div><div><dt>{t("2025 activity per 100 scheduled visits")}</dt><dd>{number(selected.activity,true)}</dd></div><div><dt>{t("2025 scheduled visits")}</dt><dd>{number(selected.visits)}</dd></div></>:null}
             </dl>
             {selected.members.length>1?<details className="transit-group-members"><summary>{t("Member stops")} ({selected.members.length})</summary><ul>{selected.members.map(member=><li key={member.objectId}><span>{member.name}</span><strong>{measure==="change"?signed(member.activity-member.baselineActivity):number(member.activity,true)}</strong></li>)}</ul></details>:null}
           </div>:null}

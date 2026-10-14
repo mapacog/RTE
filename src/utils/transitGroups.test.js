@@ -48,6 +48,7 @@ test("grouped numeric changes use matched 2022 totals and member service-day dif
     {...base,objectId:2,code:"b",activity:200,baselineActivity:120,boardings:50,baselineBoardings:70,alightings:30,baselineAlightings:30,visits:180,baselineVisits:200,days:26,baselineDays:30}];
   const [group]=aggregateTransitStops(rows);
   assert.equal(group.boardingsChange,0);assert.equal(group.alightingsChange,-10);assert.equal(group.visitsChange,0);
+  assert.equal(group.baselineVisits,300);assert.equal(group.visits,300);
   assert.deepEqual(group.daysChange,[-4,4]);assert.equal(group.change,45);
   rows[1].baselineBoardings=null;rows[1].baselineDays=null;
   const [incomplete]=aggregateTransitStops(rows);
