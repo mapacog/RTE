@@ -108,6 +108,7 @@ export default function App() {
             <ReportDownload report="flow"/>
           </div>
           <section className="home-destinations" aria-label={language === "es" ? "Temas de transporte" : translateText("Transportation topics",language)}>
+            <div className="destination-watermark" aria-hidden="true"><img className="destination-swoop" src={`${import.meta.env.BASE_URL}assets/mapa-arrow-swoop.svg`} width="3300" height="1200" alt="" aria-hidden="true" draggable="false" /></div>
             {destinations.map(({ page, icon: Icon, label, tone, description, links }) => <article key={page} className={`home-destination destination-${tone}`}>
               <a className="destination-heading" href={`#${page}`}>
                 <Icon size={24} aria-hidden="true" />

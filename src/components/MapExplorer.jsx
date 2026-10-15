@@ -139,6 +139,7 @@ function MapView({ sources, initialComparison, initialMapId, contextCards = [], 
       element.setAttribute("popup-component-enabled","");
       if(popupInSidePanel || disablePopup)element.setAttribute("popup-disabled","");
       const popup=document.createElement("arcgis-popup");popup.setAttribute("slot","popup");element.append(popup);
+      const compass=document.createElement("arcgis-compass");compass.setAttribute("slot","top-left");element.append(compass);
       const transitInset=rankingFilter?.kind==="transit" && !fullPage;
       if(!transitInset){
         const zoom=document.createElement("arcgis-zoom");zoom.setAttribute("slot","top-left");element.append(zoom);
@@ -331,7 +332,7 @@ function MapView({ sources, initialComparison, initialMapId, contextCards = [], 
           });
           const selected=comparisonViews.find(view=>view.id===e.target.value);
           if(selected?.context)onComparisonChange?.(selected.context);
-        }}>{comparisonViews.map(view=><option key={view.id} value={view.id}>{view.title==="Traffic Analysis District"?t("Traffic Analysis Districts"):t(view.title)}</option>)}</select>
+        }}>{comparisonViews.map(view=><option key={view.id} value={view.id}>{view.title==="Traffic Analysis District"?t("TADs"):t(view.title)}</option>)}</select>
       </label>:null}
       {showOpenMap ? <a className="icon-button" title={t("Open map")} aria-label={t("Open map")} href={externalUrl || fullMapLink(id,comparison?.title || initialComparison)} target="_blank" rel="noopener noreferrer"><ExternalLink size={18} aria-hidden="true"/></a> : null}
       {active?<button className="icon-button" type="button" title={t("Deactivate map")} aria-label={t("Deactivate map")} onClick={deactivate}><LockKeyhole size={18} aria-hidden="true"/></button>:null}

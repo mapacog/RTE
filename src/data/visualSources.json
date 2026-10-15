@@ -3,7 +3,7 @@
   "maps": [
     {
       "id": "db0cf9c83aaa4a3995b98daa8f5bd798",
-      "title": "Traffic Analysis District Comparison Maps"
+      "title": "TAD comparison maps"
     },
     {
       "id": "30f8c69890f342a68bca94cdb223510c",
@@ -15,7 +15,7 @@
     },
     {
       "id": "7d6bc90ec921447a8606f5900d2a2ff6",
-      "title": "Federal Functional Classification"
+      "title": "FFC"
     },
     {
       "id": "845151efd8a9408289ceef59d5c76790",
@@ -155,6 +155,7 @@
     {
       "id": "19",
       "title": "Public Run, Walk, Hike Activities Recorded on Strava",
+      "tocTitle": "Running, walking & hiking",
       "sidebarCardCount": 2,
       "url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vRxRG7Qyw8Lnb36libRgyAYKmUNYzXk-a_59j9Zp46kqLTG-LFTBBejuo7RLVah0PDMOiqISxb8iXIY/pubchart?oid=786259358&format=interactive",
       "theme": "Walking & cycling",
@@ -164,6 +165,7 @@
     {
       "id": "20",
       "title": "Public Bicycle Activities Recorded on Strava",
+      "tocTitle": "Cycling",
       "url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vRxRG7Qyw8Lnb36libRgyAYKmUNYzXk-a_59j9Zp46kqLTG-LFTBBejuo7RLVah0PDMOiqISxb8iXIY/pubchart?oid=1007481729&format=interactive",
       "theme": "Walking & cycling",
       "width": 600,
@@ -172,6 +174,7 @@
     {
       "id": "21",
       "title": "Douglas County Recorded Activities",
+      "tocTitle": "Douglas County",
       "url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vRxRG7Qyw8Lnb36libRgyAYKmUNYzXk-a_59j9Zp46kqLTG-LFTBBejuo7RLVah0PDMOiqISxb8iXIY/pubchart?oid=622488717&format=interactive",
       "theme": "Walking & cycling",
       "width": 600,
@@ -180,6 +183,7 @@
     {
       "id": "22",
       "title": "Sarpy County Recorded Activities",
+      "tocTitle": "Sarpy County",
       "url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vRxRG7Qyw8Lnb36libRgyAYKmUNYzXk-a_59j9Zp46kqLTG-LFTBBejuo7RLVah0PDMOiqISxb8iXIY/pubchart?oid=684031556&format=interactive",
       "theme": "Walking & cycling",
       "width": 600,
@@ -188,6 +192,7 @@
     {
       "id": "23",
       "title": "Pottawattamie County Recorded Activities",
+      "tocTitle": "Pottawattamie County",
       "url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vRxRG7Qyw8Lnb36libRgyAYKmUNYzXk-a_59j9Zp46kqLTG-LFTBBejuo7RLVah0PDMOiqISxb8iXIY/pubchart?oid=766785868&format=interactive",
       "theme": "Walking & cycling",
       "width": 600,

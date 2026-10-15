@@ -28,8 +28,15 @@ test("regional map groups render with a unique summary target", async () => {
     assert.match(transitWorkspace,/report-toc-caption">Ranking measure/);
     assert.match(transitWorkspace,/April 2025 average productivity/);
     assert.match(transitWorkspace,/Change since April 2022/);
+    assert.doesNotMatch(transitWorkspace,/aria-label="Strava charts"/);
+    const stravaWorkspace=renderToStaticMarkup(createElement(ReportWorkspace,{tables:[],section:"multimodal",initialTopicId:"strava"}));
+    assert.match(stravaWorkspace,/aria-label="Strava charts"/);
+    assert.match(stravaWorkspace,/report-toc-heading">Charts/);
+    for(const name of ["Running, walking &amp; hiking","Cycling","Douglas County","Sarpy County","Pottawattamie County"])assert.ok(stravaWorkspace.includes(name));
+    assert.match(stravaWorkspace,/<option value="19" selected=""/);
+    assert.doesNotMatch(stravaWorkspace,/aria-label="Transit maps"/);
     const otherMultimodal=renderToStaticMarkup(createElement(ReportWorkspace,{tables:[],section:"multimodal",initialTopicId:"bike-share"}));
-    assert.doesNotMatch(otherMultimodal,/aria-label="Transit maps"|report-toc-caption/);
+    assert.doesNotMatch(otherMultimodal,/aria-label="Transit maps"|aria-label="Strava charts"|report-toc-caption/);
     const countersWorkspace=renderToStaticMarkup(createElement(ReportWorkspace,{tables:[],section:"regional",initialTopicId:"counters"}));
     assert.match(countersWorkspace,/tab-regional-Charts/);
     assert.ok(countersWorkspace.indexOf('id="tab-regional-Tables"')<countersWorkspace.indexOf('id="tab-regional-Charts"'));
@@ -69,6 +76,8 @@ test("regional map groups render with a unique summary target", async () => {
     const { default: sources } = await server.ssrLoadModule("/src/data/visualSources.json");
     const controlledChart=renderToStaticMarkup(createElement(ChartExplorer,{charts:sources.charts.filter(chart=>["8","9","10","11","12"].includes(chart.id)),selectedChartId:"12"}));
     assert.match(controlledChart,/<option value="12" selected=""/);
+    const controlledStrava=renderToStaticMarkup(createElement(ChartExplorer,{charts:sources.charts.filter(chart=>["19","20","21","22","23"].includes(chart.id)),selectedChartId:"23"}));
+    assert.match(controlledStrava,/<option value="23" selected=""/);
     const {default:TransitRankings}=await server.ssrLoadModule("/src/components/TransitRankings.jsx");
     const controlledRanking=renderToStaticMarkup(createElement(TransitRankings,{selectedMeasure:"change"}));
     assert.match(controlledRanking,/<option value="change" selected=""/);

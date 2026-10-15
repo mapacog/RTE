@@ -1,5 +1,9 @@
 const codes=["es","fr","ar","de","zh","ru","ko"];
 const messages=[
+  ["Strava charts","Gráficos de Strava","Graphiques Strava","رسوم Strava البيانية","Strava-Diagramme","Strava图表","Графики Strava","Strava 차트"],
+  ["Running, walking & hiking","Carreras, caminatas y senderismo","Course, marche et randonnée","الجري والمشي والمشي لمسافات طويلة","Laufen, Gehen und Wandern","跑步、步行和徒步","Бег, ходьба и пешие походы","달리기, 걷기 및 하이킹"],
+  ["Sarpy County","Condado de Sarpy","Comté de Sarpy","مقاطعة Sarpy","Sarpy County","Sarpy县","Округ Sarpy","Sarpy 카운티"],
+  ["Pottawattamie County","Condado de Pottawattamie","Comté de Pottawattamie","مقاطعة Pottawattamie","Pottawattamie County","Pottawattamie县","Округ Pottawattamie","Pottawattamie 카운티"],
   ["2022 activity per 100 scheduled visits","Actividad de 2022 por 100 visitas programadas","Activité en 2022 pour 100 passages programmés","نشاط عام 2022 لكل 100 زيارة مجدولة","Aktivität 2022 je 100 geplante Anfahrten","2022年每100次计划停靠的活动量","Активность в 2022 году на 100 запланированных остановок","2022년 예정 방문 100회당 활동"],
   ["2025 activity per 100 scheduled visits","Actividad de 2025 por 100 visitas programadas","Activité en 2025 pour 100 passages programmés","نشاط عام 2025 لكل 100 زيارة مجدولة","Aktivität 2025 je 100 geplante Anfahrten","2025年每100次计划停靠的活动量","Активность в 2025 году на 100 запланированных остановок","2025년 예정 방문 100회당 활동"],
   ["2022 scheduled visits","Visitas programadas de 2022","Passages programmés en 2022","الزيارات المجدولة لعام 2022","Geplante Anfahrten 2022","2022年计划停靠次数","Запланированные остановки в 2022 году","2022년 예정 방문"],

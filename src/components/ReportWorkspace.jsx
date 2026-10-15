@@ -33,6 +33,7 @@ export default function ReportWorkspace({ tables,error,retry,section = "regional
   const chapters=topics.filter(topic=>topic.section===section);
   const [topicId,setTopicId]=useState(initialTopicId || chapters[0].id);
   const [seasonalChartId,setSeasonalChartId]=useState("8");
+  const [stravaChartId,setStravaChartId]=useState("19");
   const [transitMapId,setTransitMapId]=useState("9cb9e8555b954ac9abee3313f8ec7d8e");
   const [transitMeasure,setTransitMeasure]=useState("activity");
   useEffect(()=>{setTopicId(initialTopicId || chapters[0].id);setRequestedView("");},[initialTopicId,section]);
@@ -49,6 +50,7 @@ export default function ReportWorkspace({ tables,error,retry,section = "regional
   const mapGroup = topic.maps.join(",");
   const summaryId = `chapter-summary-${section}`;
   const seasonalCharts=sources.charts.filter(chart=>chapters.find(item=>item.id==="seasonal")?.charts.includes(chart.id));
+  const stravaCharts=sources.charts.filter(chart=>chapters.find(item=>item.id==="strava")?.charts.includes(chart.id));
   const transitMaps=sources.maps.filter(map=>chapters.find(item=>item.id==="transit")?.maps.includes(map.id));
   const rankingMeasures=[["activity","April 2025 average productivity"],["change","Change since April 2022"]];
   return <section className="section-wrap topic-section" id={sectionId}>
@@ -59,12 +61,18 @@ export default function ReportWorkspace({ tables,error,retry,section = "regional
     <div className="topic-layout">
       <nav className="report-contents" aria-label={t("Topics")}>
         {chapters.map((item,i)=><div key={item.id} className="report-topic">
-        <button type="button" aria-current={item.id===topic.id?"true":undefined} aria-expanded={["seasonal","transit"].includes(item.id)?item.id===topic.id:undefined} onClick={()=>selectTopic(item.id)}>
+        <button type="button" aria-current={item.id===topic.id?"true":undefined} aria-expanded={["seasonal","strava","transit"].includes(item.id)?item.id===topic.id:undefined} onClick={()=>selectTopic(item.id)}>
           <span className="topic-number" aria-hidden="true">{String(i+1).padStart(2,"0")}</span><span>{t(item.title)}</span>
         </button>
         {item.id==="seasonal" && topic.id==="seasonal"?<ul className="report-chart-toc" aria-label={t("Seasonal charts")}>
           {seasonalCharts.map(chart=><li key={chart.id}><button type="button" title={t(chart.title)} aria-current={chart.id===seasonalChartId?"true":undefined} onClick={()=>{setSeasonalChartId(chart.id);setRequestedView("Charts");}}>{t(chart.tocTitle || chart.title)}</button></li>)}
         </ul>:null}
+        {item.id==="strava" && topic.id==="strava"?<div>
+          <p className="report-toc-heading">{t("Charts")}</p>
+          <ul className="report-chart-toc" aria-label={t("Strava charts")}>
+            {stravaCharts.map(chart=><li key={chart.id}><button type="button" title={t(chart.title)} aria-current={chart.id===stravaChartId?"true":undefined} onClick={()=>{setStravaChartId(chart.id);setRequestedView("Charts");}}>{t(chart.tocTitle || chart.title)}</button></li>)}
+          </ul>
+        </div>:null}
         {item.id==="transit" && topic.id==="transit"?<div className="report-transit-toc">
           <p className="report-toc-heading">{t("Maps")}</p>
           <ul className="report-chart-toc" aria-label={t("Transit maps")}>
@@ -97,7 +105,7 @@ export default function ReportWorkspace({ tables,error,retry,section = "regional
           </RetainedView>)}
           <RetainedView active={topic.id==="transit" && view==="Rankings"}><TransitRankings selectedMeasure={transitMeasure} onMeasureChange={setTransitMeasure}/></RetainedView>
           <RetainedView active={topic.id==="counters" && view==="Charts"}><CounterCharts/></RetainedView>
-          {view==="Charts" && topic.id!=="counters"?<ChartExplorer key={topic.id} charts={sources.charts.filter(chart=>topic.charts.includes(chart.id))} selectedChartId={topic.id==="seasonal"?seasonalChartId:undefined} onChartChange={topic.id==="seasonal"?setSeasonalChartId:undefined} contextCards={contextCards}/>:
+          {view==="Charts" && topic.id!=="counters"?<ChartExplorer key={topic.id} charts={sources.charts.filter(chart=>topic.charts.includes(chart.id))} selectedChartId={topic.id==="seasonal"?seasonalChartId:topic.id==="strava"?stravaChartId:undefined} onChartChange={topic.id==="seasonal"?setSeasonalChartId:topic.id==="strava"?setStravaChartId:undefined} contextCards={contextCards}/>:
             view==="Tables" ? (error?<div role="alert"><p>{error}</p><button type="button" onClick={retry}>{t("Retry")}</button></div>:
             <InteractiveReportTable key={topic.id} tables={tables.filter(table=>topic.tables.includes(table.id))} contextCards={insights.tableContexts?.[topic.id]}/>) : null}
         </div>
