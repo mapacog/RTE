@@ -21,7 +21,7 @@ const translations = {
   "Multimodal transportation":"Transporte multimodal", "Intersection maps":"Mapas de intersecciones", "Interchange map":"Mapa de intercambios",
   "Home":"Inicio", "Explore":"Explorar", "Regional Patterns":"Patrones regionales", "Intersections":"Intersecciones",
   "Interchanges":"Intercambios", "Multimodal":"Multimodal", "Regional Traffic Explorer":"Explorador de tráfico regional",
-  "Omaha-Council Bluffs metro":"Área metropolitana de Omaha-Council Bluffs", "Traffic data portal":"Portal de datos de tráfico",
+  "Omaha-Council Bluffs metro":"Área metropolitana de Omaha-Council Bluffs", "Traffic Data Portal":"Portal de datos de tráfico",
   "Maps":"Mapas", "Charts":"Gráficos", "Tables":"Tablas", "Web map":"Mapa web", "Chart":"Gráfico", "Topic":"Tema",
   "Regional travel":"Viajes regionales", "Walking & cycling":"Caminatas y ciclismo", "Transit":"Transporte público",
   "Bike share & scooters":"Bicicletas compartidas y scooters", "Open source":"Abrir fuente", "Open map":"Abrir mapa",

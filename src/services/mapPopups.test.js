@@ -79,7 +79,7 @@ test("fixed-route stop subtitles use Fixed Route Bus while preserving ORBT label
 
 test("district popups hide coded names while retaining measurement context", () => {
   const model = popupModel(layer("Traffic_Analysis_District", 0, "Traffic Analysis District"), { TAD_12: "DOUG_ENE", TAD_Label: "Douglas", VMT22_HARM_METHOD: "2022 Traffic Report Methodology" });
-  assert.equal(model.title, "Traffic Analysis District");
+  assert.equal(model.title, "TAD");
   assert.equal(model.subtitle, "Douglas");
   assert.equal(model.method, "2022 Traffic Report Methodology");
   assert.equal(model.methodLabel, "How this is measured");

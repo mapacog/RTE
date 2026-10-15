@@ -95,7 +95,7 @@ export default function App() {
           <div className="overview-action-bar">
             <div className="overview-shortcuts">
               <a className="button-primary" href="#regional-patterns"><Map size={19} aria-hidden="true"/>{t("Regional Patterns")}</a>
-              <a className="button-secondary" href="#intersections/rankings"><ListOrdered size={19} aria-hidden="true"/>{language === "es" ? "Ver clasificaciones" : translateText("Explore rankings",language)}</a>
+              <a className="button-secondary" href="#intersections/rankings"><ListOrdered size={19} aria-hidden="true"/>{language === "es" ? "Ver clasificaciones" : translateText("Explore Rankings",language)}</a>
             </div>
           </div>
           </div>
@@ -103,7 +103,7 @@ export default function App() {
           </div>
           <div className="overview-resources">
             <a className="portal-link" href={portal} target="_blank" rel="noopener noreferrer">
-              <ExternalLink size={18} aria-hidden="true" />{t("Traffic data portal")}<span className="sr-only">{language === "es" ? " (se abre en una pestaña nueva)" : translateText(" (opens in a new tab)",language)}</span>
+              <ExternalLink size={18} aria-hidden="true" />{t("Traffic Data Portal")}<span className="sr-only">{language === "es" ? " (se abre en una pestaña nueva)" : translateText(" (opens in a new tab)",language)}</span>
             </a>
             <ReportDownload report="flow"/>
           </div>

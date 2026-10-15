@@ -1,6 +1,7 @@
 import test from "node:test";
 import assert from "node:assert/strict";
 import { readFileSync } from "node:fs";
+import { expandLanguages } from "../utils/localization.js";
 
 const insights = JSON.parse(readFileSync(new URL("./reportInsights.json", import.meta.url), "utf8"));
 const sources = JSON.parse(readFileSync(new URL("./visualSources.json", import.meta.url), "utf8"));
@@ -181,7 +182,23 @@ test("VMT total appears in the banner while the side panel explains the harmoniz
   assert.match(cards[0].text.en, /combines.*district values.*thousands/);
   assert.doesNotMatch(cards[0].text.en, /Total average daily VMT in 2025/);
   assert.match(cards[1].text.en, /Traffic Flow.*Metropolitan Area Transportation Systems \(MATS\).*OpenStreetMap \(OSM\)/);
-  assert.match(cards[2].text.en, /2022-2025.*2023.*1\.055.*5\.5%.*stable Traffic Analysis Districts/);
+  assert.match(cards[2].text.en, /2022-2025.*2023.*1\.055.*5\.5%.*stable TADs/);
+  assert.doesNotMatch(cards[2].text.en, /Traffic Analysis Districts|\(TAD\)/);
   assert.match(cards[2].context.en, /network representation/);
   for (const card of cards) assert.ok(card.title.es && card.text.es);
+});
+
+test("FFC context attributes the classifications to FHWA and explains the methodology break", () => {
+  const localized=expandLanguages(insights);
+  const cards=localized.contexts["roadway-classes"];
+  assert.equal(topics.find(topic=>topic.id==="districts").title,"Traffic Analysis Districts");
+  assert.equal(topics.find(topic=>topic.id==="roadway-classes").title,"Federal Functional Classification");
+  assert.match(cards[0].text.en, /Federal Highway Administration \(FHWA\) defines these classifications/);
+  assert.equal(cards[1].title.en,"A change in methodology");
+  assert.match(cards[1].text.en,/methodology changed in 2023/);
+  assert.match(cards[1].text.en,/not be interpreted as changes in traffic alone/);
+  for(const language of ["es","fr","ar","de","zh","ru","ko"]){
+    for(const card of cards) assert.ok(card.text[language] && card.text[language]!==card.text.en,language);
+    assert.ok(localized.contexts["daily-vmt"][2].text[language]!==localized.contexts["daily-vmt"][2].text.en,language);
+  }
 });

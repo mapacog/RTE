@@ -16,6 +16,8 @@ import { fetchIntersectionSelection } from "../services/intersectionSelection";
 import IntersectionPopupPanel from "./IntersectionPopupPanel";
 import popupStyles from "../styles/popups.css?inline";
 import RetainedView from "./RetainedView";
+import { mapToolPolicy } from "../utils/mapToolPolicy.js";
+import { showRankingSelection } from "../services/rankingSelection.js";
 
 let sdkPromise;
 function loadMapSdk() {
@@ -37,8 +39,8 @@ export default function MapExplorer(props) {
   </RetainedView>);
 }
 
-function MapView({ sources, initialComparison, initialMapId, contextCards = [], summaryId = "chapter-summary", onComparisonChange, rankingFilter, selectedObjectId, onLocationSelect, externalUrl, fitLayerTitle, showOpenMap = true, onMapChange, popupInSidePanel = false, fullPage = false, disablePopup = false }) {
-  const { t,language }=usePreferences();
+function MapView({ sources, initialComparison, initialMapId, contextCards = [], summaryId = "chapter-summary", onComparisonChange, rankingFilter, selectedObjectId, selectionVersion = 0, onLocationSelect, externalUrl, fitLayerTitle, showOpenMap = true, onMapChange, popupInSidePanel = false, fullPage = false, disablePopup = false }) {
+  const { t,language,motion }=usePreferences();
   const popupLanguage=useRef(language);
   popupLanguage.current=language;
   const [maps,setMaps]=useState(sources.maps);
@@ -89,17 +91,21 @@ function MapView({ sources, initialComparison, initialMapId, contextCards = [], 
     return()=>{cancelled=true;controller.abort();};
   },[rankingFilter,status]);
   useEffect(()=>{
-    if(!rankingFilter || status!=="ready" || selectedObjectId==null || !mapElement.current)return;
-    let cancelled=false,highlight;
+    if(!rankingFilter || status!=="ready" || filterState.loading || selectionVersion<=0 || selectedObjectId==null || !mapElement.current)return;
+    let cancelled=false,selection;
+    const controller=new AbortController();
     const element=mapElement.current;
     const popup=element.querySelector('arcgis-popup[slot="popup"]');
     if(popup)popup.open=false;
-    const layer=rankingLayers.current[0];
-    if(layer)element.view.whenLayerView(layer).then(layerView=>{
-      if(!cancelled)highlight=layerView.highlight(selectedObjectId);
-    }).catch(()=>{});
-    return()=>{cancelled=true;highlight?.remove();};
-  },[selectedObjectId,status,rankingFilter]);
+    window.$arcgis.import("@arcgis/core/Graphic.js").then(Graphic=>{
+      if(cancelled)return;
+      selection=showRankingSelection(element,rankingLayers.current,selectedObjectId,{
+        Graphic,signal:controller.signal,pan:selectionVersion>0,animate:!motion,
+      });
+      return selection.ready;
+    }).catch(cause=>{if(!cancelled && cause.name!=="AbortError")console.warn("The selected ranking location could not be shown.",cause);});
+    return()=>{cancelled=true;controller.abort();selection?.remove();};
+  },[selectedObjectId,selectionVersion,status,rankingFilter,filterState.loading,motion]);
   useEffect(()=>{
     const popup=mapElement.current?.querySelector('arcgis-popup[slot="popup"]');
     if(popup)popup.open=false;
@@ -139,15 +145,17 @@ function MapView({ sources, initialComparison, initialMapId, contextCards = [], 
       element.setAttribute("popup-component-enabled","");
       if(popupInSidePanel || disablePopup)element.setAttribute("popup-disabled","");
       const popup=document.createElement("arcgis-popup");popup.setAttribute("slot","popup");element.append(popup);
-      const compass=document.createElement("arcgis-compass");compass.setAttribute("slot","top-left");element.append(compass);
-      const transitInset=rankingFilter?.kind==="transit" && !fullPage;
-      if(!transitInset){
+      const tools=mapToolPolicy({rankingKind:rankingFilter?.kind,fullPage,context:map.context});
+      if(tools.compass){
+        const compass=document.createElement("arcgis-compass");compass.setAttribute("slot","top-left");element.append(compass);
+      }
+      if(tools.navigation){
         const zoom=document.createElement("arcgis-zoom");zoom.setAttribute("slot","top-left");element.append(zoom);
         const searchExpand=document.createElement("arcgis-expand");searchExpand.setAttribute("slot","top-left");
         searchExpand.setAttribute("expand-tooltip",t("Search address"));
         const search=document.createElement("arcgis-search");searchExpand.append(search);element.append(searchExpand);
       }
-      for(const name of transitInset || map.context==="orbt" && !fullPage ? [] : ["layer-list","legend"]){
+      for(const name of tools.layersAndLegend ? ["layer-list","legend"] : []){
         const expand=document.createElement("arcgis-expand");expand.setAttribute("slot","top-right");
         const control=document.createElement(`arcgis-${name}`);expand.append(control);element.append(expand);
       }
@@ -332,7 +340,7 @@ function MapView({ sources, initialComparison, initialMapId, contextCards = [], 
           });
           const selected=comparisonViews.find(view=>view.id===e.target.value);
           if(selected?.context)onComparisonChange?.(selected.context);
-        }}>{comparisonViews.map(view=><option key={view.id} value={view.id}>{view.title==="Traffic Analysis District"?t("TADs"):t(view.title)}</option>)}</select>
+        }}>{comparisonViews.map(view=><option key={view.id} value={view.id}>{view.title==="Traffic Analysis District"?t("Traffic Analysis Districts"):t(view.title)}</option>)}</select>
       </label>:null}
       {showOpenMap ? <a className="icon-button" title={t("Open map")} aria-label={t("Open map")} href={externalUrl || fullMapLink(id,comparison?.title || initialComparison)} target="_blank" rel="noopener noreferrer"><ExternalLink size={18} aria-hidden="true"/></a> : null}
       {active?<button className="icon-button" type="button" title={t("Deactivate map")} aria-label={t("Deactivate map")} onClick={deactivate}><LockKeyhole size={18} aria-hidden="true"/></button>:null}

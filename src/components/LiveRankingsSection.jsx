@@ -14,7 +14,7 @@ import MapExplorer from "./MapExplorer";
 import sources from "../data/visualSources.json";
 import narratives from "../data/rankingNarratives";
 import { interchangeMapInsights } from "../utils/interchangeMapInsights";
-import RetainedView from "./RetainedView";
+import RetainedView, { useViewActive } from "./RetainedView";
 
 const pageSize = 25;
 
@@ -29,8 +29,13 @@ export default function LiveRankingsSection({ kind, navigation }) {
   const [limit, setLimit] = useState("10");
   const [page, setPage] = useState(0);
   const [selectedId, setSelectedId] = useState(null);
+  const [selectionVersion,setSelectionVersion]=useState(0);
   const [drawerOpen, setDrawerOpen] = useState(false);
   const [view, setView] = useState(() => window.location.hash.endsWith("/rankings") ? "Rankings" : "Maps");
+  const rankingActive=useViewActive() && view==="Rankings";
+  useEffect(()=>{
+    if(rankingActive){setLimit("10");setPage(0);setSelectedId(null);setSelectionVersion(0);}
+  },[rankingActive]);
   const [mapId, setMapId] = useState(kind === "intersections" ? "845151efd8a9408289ceef59d5c76790" : "f01dec2d7e4747999db5027c64d323de");
   const detailPanel = useRef(null);
   const config = trafficLayers[kind];
@@ -43,7 +48,7 @@ export default function LiveRankingsSection({ kind, navigation }) {
     setStatus("loading"); setError("");
     loadTrafficLocations(kind, { signal: controller.signal }).then(rows => {
       if (controller.signal.aborted) return;
-      setData(rows); setPage(0); setStatus("ready");
+      setData(rows); setPage(0); setSelectedId(null); setSelectionVersion(0); setStatus("ready");
     }).catch(cause => {
       if (controller.signal.aborted) return;
       setError(cause.name === "AbortError" ? "The traffic service took too long to respond." : cause.message);
@@ -61,12 +66,13 @@ export default function LiveRankingsSection({ kind, navigation }) {
   const visibleRows = limited.slice(currentPage * pageSize, (currentPage + 1) * pageSize);
   const selected = limited.find(row => row.id === selectedId) ?? visibleRows[0] ?? null;
   const locale = scope === "regional" ? "Region" : jurisdiction || (scope === "city" ? "Choose a city" : "Choose a county");
-  const reset = () => { setPage(0); setSelectedId(null); };
+  const reset = () => { setPage(0); setSelectedId(null); setSelectionVersion(0); };
   const rankingFilter = useMemo(() => ({kind, rows: limited, scope, jurisdiction, limit, locale}), [kind, limited, scope, jurisdiction, limit, locale]);
   const selectLocation = objectId => {
     const index = limited.findIndex(row => row.objectId === objectId);
     if (index < 0) return;
     setSelectedId(limited[index].id);
+    setSelectionVersion(0);
     setPage(Math.floor(index / pageSize));
   };
   const insightCards = useMemo(() => {
@@ -158,19 +164,19 @@ export default function LiveRankingsSection({ kind, navigation }) {
         <div className="ranking-two-column">
         <div className="ranking-table-column">
         <RankingTable rows={visibleRows} selectedId={selected?.id} onSelect={row => {
-          setSelectedId(row.id);detailPanel.current?.scrollTo({top:0,behavior:"auto"});
+          setSelectedId(row.id);setSelectionVersion(value=>value+1);detailPanel.current?.scrollTo({top:0,behavior:"auto"});
         }}
           title={`${config.label}: ${locale}, ${trafficYear}`} showCounty showCity
           emptyMessage={scope !== "regional" && !jurisdiction ? `Select a ${scope} to see its rankings.` : "No locations with reported 2025 traffic volumes match this selection."} />
         {limited.length > pageSize ? <nav className="ranking-pagination" aria-label={`${config.label} table pages`}>
-          <button type="button" onClick={() => {setPage(currentPage - 1);setSelectedId(null);}} disabled={!currentPage} aria-label="Previous page" title="Previous page"><ChevronLeft size={20} /></button>
+          <button type="button" onClick={() => {setPage(currentPage - 1);setSelectedId(null);setSelectionVersion(0);}} disabled={!currentPage} aria-label="Previous page" title="Previous page"><ChevronLeft size={20} /></button>
           <span>Page {currentPage + 1} of {pages} · Ranks {currentPage * pageSize + 1}–{Math.min((currentPage + 1) * pageSize, limited.length)}</span>
-          <button type="button" onClick={() => {setPage(currentPage + 1);setSelectedId(null);}} disabled={currentPage === pages - 1} aria-label="Next page" title="Next page"><ChevronRight size={20} /></button>
+          <button type="button" onClick={() => {setPage(currentPage + 1);setSelectedId(null);setSelectionVersion(0);}} disabled={currentPage === pages - 1} aria-label="Next page" title="Next page"><ChevronRight size={20} /></button>
         </nav> : null}
         </div>
         <aside ref={detailPanel} className="ranking-detail-column" aria-label={language==="es"?"Mapa y detalles de la ubicación":translateText("Map and location details",language)}>
           <MapExplorer sources={{...sources,maps:sources.maps.filter(map=>map.id===rankingMapId)}} initialMapId={rankingMapId}
-            rankingFilter={rankingFilter} selectedObjectId={selected?.objectId} onLocationSelect={selectLocation} summaryId={rankingSummaryId}/>
+            rankingFilter={rankingFilter} selectedObjectId={selected?.objectId} selectionVersion={selectionVersion} onLocationSelect={selectLocation} summaryId={rankingSummaryId}/>
           {selected?<DetailCard item={selected} label={`Selected ${kind === "intersections" ? "intersection" : "interchange"} / ${locale} / ${trafficYear}`} />:null}
         </aside>
         </div>

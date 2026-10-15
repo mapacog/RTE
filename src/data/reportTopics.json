@@ -1,9 +1,9 @@
 [
-  {"id":"districts","section":"regional","title":"TADs","context":"regional","maps":["db0cf9c83aaa4a3995b98daa8f5bd798"],"charts":["5"],"tables":[]},
+  {"id":"districts","section":"regional","title":"Traffic Analysis Districts","context":"regional","maps":["db0cf9c83aaa4a3995b98daa8f5bd798"],"charts":["5"],"tables":[]},
   {"id":"daily-vmt","section":"regional","title":"Average daily VMT","context":"methodology","maps":["db0cf9c83aaa4a3995b98daa8f5bd798"],"comparison":"Average Daily","charts":["5"],"tables":[]},
   {"id":"district-change","section":"regional","title":"District VMT change","context":"regional","maps":["db0cf9c83aaa4a3995b98daa8f5bd798"],"comparison":"Estimated Percent Change","charts":["5"],"tables":[]},
   {"id":"change-vmt","section":"regional","title":"Regional VMT change","context":"regional","maps":["db0cf9c83aaa4a3995b98daa8f5bd798"],"comparison":"Regional Percent","charts":["5"],"tables":[]},
-  {"id":"roadway-classes","section":"regional","title":"Roadway classification","context":"methodology","maps":["7d6bc90ec921447a8606f5900d2a2ff6"],"charts":[],"tables":["ffc"]},
+  {"id":"roadway-classes","section":"regional","title":"Federal Functional Classification","context":"methodology","maps":["7d6bc90ec921447a8606f5900d2a2ff6"],"charts":[],"tables":["ffc"]},
   {"id":"counters","section":"regional","title":"Continuous traffic counts","context":"seasonal","maps":["30f8c69890f342a68bca94cdb223510c"],"charts":[],"tables":["atr"]},
   {"id":"seasonal","section":"regional","title":"Seasonal variation","context":"seasonal","maps":[],"charts":["8","9","10","11","12"],"tables":[]},
   {"id":"long-term","section":"regional","title":"Long-term trends","context":"seasonal","maps":[],"charts":["13"],"tables":[]},
