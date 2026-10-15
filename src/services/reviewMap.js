@@ -50,8 +50,8 @@ export async function configureReviewMap(map, view, id, isCancelled, locale) {
       await routes.load();
       if (isCancelled()) return;
       if (id === "fixed-transit") {
-        routes.renderer = { type: "simple", symbol: { type: "simple-line", color: "#b04435", width: 1, style: "solid" } };
-        routes.opacity = 1;
+        routes.renderer = { type: "simple", symbol: { type: "simple-line", color: "#888c86", width: 0.7, style: "solid" } };
+        routes.opacity = 0.7;
       }
       const { extent } = await routes.queryExtent();
       if (!isCancelled() && extent) return extent.expand(1.08);
