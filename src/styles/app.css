@@ -1719,6 +1719,14 @@ html[dir="rtl"] .report-contents button[aria-current="true"] { border-inline-sta
 .transit-group-members summary { cursor: pointer; color: var(--mapa-teal); font-weight: 600; padding-block: 0.4rem; }
 .transit-group-members ul { padding: 0; margin-top: 0.5rem; list-style: none; }
 .transit-group-members li { display: flex; justify-content: space-between; gap: 0.75rem; padding-block: 0.4rem; border-bottom: 1px solid var(--line); }
+.transit-member-button { display: flex; align-items: center; justify-content: space-between; gap: 0.75rem; width: 100%; min-height: 44px; padding: 0.35rem; border: 0; background: transparent; color: var(--mapa-teal); text-align: start; font: inherit; }
+.transit-member-button[aria-pressed="true"] { background: var(--paper); box-shadow: inset 3px 0 var(--mapa-blue); }
+.transit-member-button > span { min-width: 0; overflow-wrap: anywhere; }
+.transit-member-button small { display: block; color: var(--muted); }
+.transit-member-button strong { flex-shrink: 0; }
+.transit-member-detail { margin-top: 0.5rem; padding-top: 0.65rem; border-top: 2px solid var(--mapa-blue); }
+.transit-member-detail h5 { margin: 0; color: var(--mapa-teal); font: 600 0.95rem/1.4 var(--font-body); }
+.transit-member-detail > strong { font-size: 1.35rem; color: var(--mapa-teal); }
 @media(min-width: 1001px) {
   .transit-ranking-layout { grid-template-columns: minmax(0,1fr) 290px; gap: 1rem; }
   .transit-rankings .interactive-table-scroll { max-height: none; height: auto; overflow: visible; }

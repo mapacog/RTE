@@ -28,6 +28,17 @@ test("duplicate-name grouping never crosses counties or services",()=>{
   assert.equal(aggregateTransitStops(rows).length,3);
 });
 
+test("Westroads ORBT Station is not merged with the nearby fixed-route transit-center bays",()=>{
+  const definition=definitions.groups.find(group=>group.name==="Westroads TC");
+  const bays=definition.stopCodes.map((code,index)=>({objectId:index+1,code,name:`Westroads TC Bay ${index+1}`,
+    county:"Douglas",service:"Metro",activity:100,visits:100,days:30,baselineMatched:false}));
+  const orbt={objectId:6000,code:"6000",name:"Westroads ORBT Station",county:"Douglas",service:"ORBT",activity:269,visits:100,days:30};
+  const groups=aggregateTransitStops([...bays,orbt]);
+  assert.equal(groups.length,2);
+  assert.deepEqual(groups.find(group=>group.name==="Westroads TC").objectIds,[1,2,3,4]);
+  assert.deepEqual(groups.find(group=>group.name==="Westroads ORBT Station").objectIds,[6000]);
+});
+
 test("combined rankings retain comparable ORBT stops without applying Metro workbook groups",()=>{
   const base={county:"Douglas",service:"ORBT",visits:100,baselineVisits:100,baselineMatched:true,days:30};
   const code=definitions.groups[0].stopCodes[0];

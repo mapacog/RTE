@@ -124,7 +124,7 @@
     "regional-vmt":{"en":"The region's annual travel totals, with measured and estimated years shown separately.","es":"Totales anuales de viajes regionales, separando años medidos y estimados."},
     "bike-ped":{"en":"Everyday walking and cycling at monitored trail locations.","es":"Caminatas y ciclismo cotidianos en los senderos monitoreados."},
     "strava":{"en":"Walking, running, and cycling patterns recorded by Strava users.","es":"Patrones de caminata, carrera y ciclismo registrados por usuarios de Strava."},
-    "transit":{"en":"April 2025 stop activity, changes since 2022, and Metro's passenger-count trends.","es":"Actividad en las paradas en abril de 2025, cambios desde 2022 y tendencias de los conteos de pasajeros de Metro."},
+    "transit":{"en":"April 2025 stop activity, changes since April 2022, and Metro's passenger count trends.","es":"Actividad en las paradas en abril de 2025, cambios desde abril de 2022 y tendencias de los conteos de pasajeros de Metro."},
     "orbt":{"en":"A closer look at Omaha's rapid bus transit corridor.","es":"Una mirada al corredor de autobús rápido de Omaha."},
     "bike-share":{"en":"Shared bike trips and the stations that connect them.","es":"Viajes en bicicleta compartida y sus estaciones."},
     "scooters":{"en":"How scooter trips change throughout the year.","es":"Cómo cambian los viajes en scooter durante el año."}

@@ -5,7 +5,7 @@ import { usePreferences } from "./Preferences";
 import InsightCards from "./InsightCards";
 import insights from "../data/reportInsights";
 import { configureMapPopups, popupProfile } from "../services/mapPopups";
-import { applyRankingFilter, rankingProfile, rankingLabelExpression, rankedObjectIds } from "../services/rankingMap";
+import { applyRankingFilter, rankingProfile, rankingLabelClasses, rankedObjectIds } from "../services/rankingMap";
 import { aggregateTransitStops } from "../utils/transitGroups";
 import { configureReviewMap } from "../services/reviewMap";
 import { loadTransitStops, rankTransitStops } from "../services/transitRankings";
@@ -39,7 +39,7 @@ export default function MapExplorer(props) {
   </RetainedView>);
 }
 
-function MapView({ sources, initialComparison, initialMapId, contextCards = [], summaryId = "chapter-summary", onComparisonChange, rankingFilter, selectedObjectId, selectionVersion = 0, onLocationSelect, externalUrl, fitLayerTitle, showOpenMap = true, onMapChange, popupInSidePanel = false, fullPage = false, disablePopup = false }) {
+function MapView({ sources, initialComparison, initialMapId, contextCards = [], summaryId = "chapter-summary", onComparisonChange, rankingFilter, selectedObjectId, selectedLabelGroupId = null, selectionVersion = 0, onLocationSelect, externalUrl, fitLayerTitle, showOpenMap = true, onMapChange, popupInSidePanel = false, fullPage = false, disablePopup = false }) {
   const { t,language,motion }=usePreferences();
   const popupLanguage=useRef(language);
   popupLanguage.current=language;
@@ -90,6 +90,13 @@ function MapView({ sources, initialComparison, initialMapId, contextCards = [], 
       .catch(cause=>{if(!cancelled)setFilterState({loading:false,error:cause.message});});
     return()=>{cancelled=true;controller.abort();};
   },[rankingFilter,status]);
+  useEffect(()=>{
+    if(rankingFilter?.kind!=="transit" || status!=="ready")return;
+    rankingLayers.current.forEach(layer=>{
+      layer.labelingInfo=rankingLabelClasses(rankingFilter.rows,{disaggregateGroups:true,measure:rankingFilter.measure,
+        selectedGroupId:selectedLabelGroupId,minScale:rankingFilter.rows.length>50?100000:0});
+    });
+  },[rankingFilter,status,selectedLabelGroupId]);
   useEffect(()=>{
     if(!rankingFilter || status!=="ready" || filterState.loading || selectionVersion<=0 || selectedObjectId==null || !mapElement.current)return;
     let cancelled=false,selection;
@@ -205,8 +212,7 @@ function MapView({ sources, initialComparison, initialMapId, contextCards = [], 
             transitRows.current=rankTransitStops(map.context==="orbt"?rows:aggregateTransitStops(rows),{service:map.context==="orbt"?"ORBT":id==="fixed-transit"?"Metro":"all"});
             const stops=transitLayers.find(layer=>layer.title==="Metro Stops") || transitLayers[0];
             if(stops.renderer?.type!=="heatmap"){
-              stops.labelingInfo=[{labelExpressionInfo:{expression:rankingLabelExpression(transitRows.current)},labelPlacement:"above-center",minScale:50000,
-                symbol:{type:"text",color:"#004b58",haloColor:"white",haloSize:1.5,font:{size:10,weight:"bold"}}}];
+              stops.labelingInfo=rankingLabelClasses(transitRows.current,{disaggregateGroups:true,minScale:50000,fontSize:10});
               stops.labelsVisible=true;
             }
           }catch(cause){setFilterState({loading:false,error:cause.message});}

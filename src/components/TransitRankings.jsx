@@ -7,6 +7,7 @@ import MapExplorer from "./MapExplorer";
 import sources from "../data/visualSources.json";
 import { aggregateTransitStops } from "../utils/transitGroups";
 import { useViewActive } from "./RetainedView";
+import TransitMemberStops from "./TransitMemberStops";
 
 const pageSize = 25;
 const baseColumns = [["name","Location"],["county","County"],["boardings","Boardings"],["alightings","Alightings"],
@@ -20,9 +21,10 @@ export default function TransitRankings({selectedMeasure,onMeasureChange}={}) {
   const [reload,setReload] = useState(0), [county,setCounty] = useState(""), [limit,setLimit] = useState("10"), [query,setQuery] = useState("");
   const [page,setPage] = useState(0), [selectedId,setSelectedId] = useState(null);
   const [selectionVersion,setSelectionVersion]=useState(0);
+  const [memberSelection,setMemberSelection]=useState(null);
   const active=useViewActive();
   useEffect(()=>{
-    if(active){setLimit("10");setPage(0);setSelectedId(null);setSelectionVersion(0);}
+    if(active){setLimit("10");setPage(0);setSelectedId(null);setSelectionVersion(0);setMemberSelection(null);}
   },[active]);
   const [localMeasure,setMeasure]=useState("activity");
   const measure=selectedMeasure ?? localMeasure;
@@ -34,7 +36,7 @@ export default function TransitRankings({selectedMeasure,onMeasureChange}={}) {
       .catch(cause=>{if(!cancelled){setError(cause.message);setStatus("error");}});
     return()=>{cancelled=true;};
   },[reload]);
-  useEffect(()=>{setPage(0);setSelectedId(null);setSelectionVersion(0);},[county,limit,query,measure,reload]);
+  useEffect(()=>{setPage(0);setSelectedId(null);setSelectionVersion(0);setMemberSelection(null);},[county,limit,query,measure,reload]);
   const counties=useMemo(()=>[...new Set(data.map(row=>row.county).filter(Boolean))].sort(),[data]);
   const grouped=useMemo(()=>aggregateTransitStops(data),[data]);
   const ranked=useMemo(()=>rankTransitStops(grouped,{county,measure}),[grouped,county,measure]);
@@ -50,9 +52,14 @@ export default function TransitRankings({selectedMeasure,onMeasureChange}={}) {
   const signed=value=>value==null?t("Not reported"):Array.isArray(value)?t("{0} to {1}").replace("{0}",signed(value[0])).replace("{1}",signed(value[1])):new Intl.NumberFormat(languageLocale(language),{maximumFractionDigits:1,signDisplay:"exceptZero"}).format(value);
   const serviceLabel=row=>row.service==="Metro"?t("Fixed Route Bus"):row.service || t("Not reported");
   const rankingFilter=useMemo(()=>({kind:"transit",rows,scope:county?"county":"regional",jurisdiction:county,locale:county || "Region",limit,measure}),[rows,county,limit,measure]);
-  const select=(objectId,fromTable=false)=>{
+  const select=(objectId,source="map")=>{
     const index=rows.findIndex(row=>row.objectIds.includes(objectId));
-    if(index>=0){setSelectedId(objectId);setSelectionVersion(value=>fromTable?value+1:0);setPage(Math.floor(index/pageSize));}
+    if(index>=0){
+      setSelectedId(objectId);
+      setMemberSelection(source!=="table" && rows[index].members.length>1?{objectId}:null);
+      setSelectionVersion(value=>source==="table" || source==="member"?value+1:0);
+      setPage(Math.floor(index/pageSize));
+    }
   };
   const download=()=>{
     const escape=value=>{
@@ -86,25 +93,29 @@ export default function TransitRankings({selectedMeasure,onMeasureChange}={}) {
             <caption className="sr-only">{t("Metro and ORBT stop rankings")}</caption>
             <thead><tr><th scope="col">{t("Rank")}</th>{columns.map(([key,label])=><th scope="col" key={key}>{t(label)}</th>)}</tr></thead>
             <tbody>{visible.map(row=><tr key={row.objectId} className={row.objectId===selected?.objectId?"selected-row":""}>
-              <td>#{row.rank}</td>{columns.map(([key])=><td key={key}>{key==="name"?<button type="button" className="transit-stop-button" onClick={()=>select(row.objectId,true)} aria-pressed={row.objectId===selected?.objectId}>{row.name}<small>{row.members.length>1?`${row.members.length} ${t("stops")}`:`${t("Stop")} ${row.code}`} · {serviceLabel(row)}</small></button>:
+              <td>#{row.rank}</td>{columns.map(([key])=><td key={key}>{key==="name"?<button type="button" className="transit-stop-button" onClick={()=>select(row.objectId,"table")} aria-pressed={row.objectId===selected?.objectId}>{row.name}<small>{row.members.length>1?`${row.members.length} ${t("stops")}`:`${t("Stop")} ${row.code}`} · {serviceLabel(row)}</small></button>:
                 key==="county"?row.county || t("Not reported"):measure==="change"?signed(row[key]):number(row[key],key==="activity")}</td>)}
             </tr>)}</tbody>
           </table></div>
           {!rows.length?<p role="status">{t("No ranked locations")}</p>:null}
           {pages>1?<nav className="ranking-pagination" aria-label={t("Table pages")}>
-            <button type="button" title={t("Previous page")} aria-label={t("Previous page")} disabled={!currentPage} onClick={()=>{setPage(currentPage-1);setSelectedId(null);setSelectionVersion(0);}}><ChevronLeft size={20}/></button>
+            <button type="button" title={t("Previous page")} aria-label={t("Previous page")} disabled={!currentPage} onClick={()=>{setPage(currentPage-1);setSelectedId(null);setSelectionVersion(0);setMemberSelection(null);}}><ChevronLeft size={20}/></button>
             <span>{currentPage+1} / {pages}</span>
-            <button type="button" title={t("Next page")} aria-label={t("Next page")} disabled={currentPage===pages-1} onClick={()=>{setPage(currentPage+1);setSelectedId(null);setSelectionVersion(0);}}><ChevronRight size={20}/></button>
+            <button type="button" title={t("Next page")} aria-label={t("Next page")} disabled={currentPage===pages-1} onClick={()=>{setPage(currentPage+1);setSelectedId(null);setSelectionVersion(0);setMemberSelection(null);}}><ChevronRight size={20}/></button>
           </nav>:null}
         </div>
         <aside className="transit-ranking-detail" aria-label={t("Selected stop")}>
-          <MapExplorer sources={{maps:sources.maps.filter(map=>map.id==="transit-rankings")}} rankingFilter={rankingFilter} selectedObjectId={selected?.objectIds} selectionVersion={selectionVersion} onLocationSelect={select} summaryId="transit-ranking-summary" disablePopup/>
+          <MapExplorer sources={{maps:sources.maps.filter(map=>map.id==="transit-rankings")}} rankingFilter={rankingFilter}
+            selectedObjectId={memberSelection && selected?.objectIds.includes(memberSelection.objectId)?[memberSelection.objectId]:selected?.objectIds}
+            selectedLabelGroupId={selectedId!==null && selected?.members.length>1?selected.objectId:null}
+            selectionVersion={selectionVersion} onLocationSelect={select} summaryId="transit-ranking-summary" disablePopup/>
           {selected?<div className="transit-stop-detail"><h4>{selected.name}</h4><p>#{selected.rank} · {selected.county} · {serviceLabel(selected)}</p>
             <strong>{measure==="change"?signed(selected.change):number(selected.activity,true)}</strong><p>{t(measure==="change"?"Change per 100 visits":"Avg activity per 100 visits")}</p>
             <dl>{(measure==="change"?changeColumns:baseColumns).slice(2).map(([key,label])=><div key={key}><dt>{t(label)}</dt><dd>{measure==="change"?signed(selected[key]):number(selected[key])}</dd></div>)}
               {measure==="change"?<><div><dt>{t("2022 activity per 100 scheduled visits")}</dt><dd>{number(selected.baselineActivity,true)}</dd></div><div><dt>{t("2022 scheduled visits")}</dt><dd>{number(selected.baselineVisits)}</dd></div><div><dt>{t("2025 activity per 100 scheduled visits")}</dt><dd>{number(selected.activity,true)}</dd></div><div><dt>{t("2025 scheduled visits")}</dt><dd>{number(selected.visits)}</dd></div></>:null}
             </dl>
-            {selected.members.length>1?<details className="transit-group-members"><summary>{t("Member stops")} ({selected.members.length})</summary><ul>{selected.members.map(member=><li key={member.objectId}><span>{member.name}</span><strong>{measure==="change"?signed(member.activity-member.baselineActivity):number(member.activity,true)}</strong></li>)}</ul></details>:null}
+            {selected.members.length>1?<TransitMemberStops group={selected} measure={measure} selection={memberSelection}
+              onSelect={id=>select(id,"member")} columns={(measure==="change"?changeColumns:baseColumns).slice(2)} number={number} signed={signed}/>:null}
           </div>:null}
         </aside>
       </div>}
