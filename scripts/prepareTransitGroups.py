@@ -1,11 +1,15 @@
+import argparse
 import json
-import sys
 from collections import defaultdict
 from pathlib import Path
 
 import openpyxl
 
-source = Path(sys.argv[1])
+parser = argparse.ArgumentParser(description="Prepare grouped transit locations from the Ranked Stops worksheet.")
+parser.add_argument("workbook", type=Path, help="Path to the source .xlsx workbook")
+source = parser.parse_args().workbook
+if not source.is_file():
+    parser.error(f"Workbook not found: {source}")
 workbook = openpyxl.load_workbook(source, read_only=True, data_only=True)
 sheet = workbook["Ranked Stops"]
 rows = sheet.iter_rows(values_only=True)

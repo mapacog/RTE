@@ -10,7 +10,7 @@ const stops=[...Array.from({length:4},(_,index)=>({objectId:1001+index,code:Stri
   {objectId:2000,code:"6000",name:"Westroads ORBT Station",service:"ORBT",county:"Douglas",activity:269,visits:100,boardings:20,alightings:249,days:30,
     baselineMatched:true,baselineActivity:100,baselineVisits:80,baselineBoardings:10,baselineAlightings:70}];
 const server=await createServer({configFile:false,esbuild:{jsx:"automatic"},optimizeDeps:{noDiscovery:true,include:[]},
-  server:{middlewareMode:true,hmr:false},appType:"custom",plugins:[{
+  server:{middlewareMode:true,hmr:false,ws:false},appType:"custom",plugins:[{
     name:"transit-selection-fixtures",enforce:"pre",
     resolveId(source,importer){
       if(!/[\\/]TransitRankings\.jsx$/.test(importer || ""))return;

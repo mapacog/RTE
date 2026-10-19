@@ -19,7 +19,7 @@ test("separate general and Google notices exist in all eight languages",()=>{
 });
 
 test("notice opens only on request and dismisses with focus restored",async()=>{
-  const server=await createServer({configFile:false,esbuild:{jsx:"automatic"},optimizeDeps:{noDiscovery:true,include:[]},server:{middlewareMode:true,hmr:false},appType:"custom"});
+  const server=await createServer({configFile:false,esbuild:{jsx:"automatic"},optimizeDeps:{noDiscovery:true,include:[]},server:{middlewareMode:true,hmr:false,ws:false},appType:"custom"});
   let view;
   try{
     const {default:TranslationNotice}=await server.ssrLoadModule("/src/components/TranslationNotice.jsx");

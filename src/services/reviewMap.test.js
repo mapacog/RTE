@@ -20,7 +20,7 @@ test("fixed transit shows Metro routes at all scales and excludes ORBT; extent f
   const view={constraints:{}};const result=await configureReviewMap({allLayers:{toArray:()=>[routes,stops,orbt]}},view,"fixed-transit",()=>false);
   assert.equal(routes.minScale,0);assert.equal(routes.visible,true);assert.equal(routes.definitionExpression,"route_short_name <> '00'");
   assert.equal(orbt.visible,false);assert.match(stops.definitionExpression,/ServiceType = 'Metro'/);assert.equal(result.scale,1.08);
-  assert.equal(routes.renderer.symbol.color,"#b04435");assert.equal(routes.renderer.symbol.width,1);assert.equal(routes.opacity,1);
+  assert.equal(routes.renderer.symbol.color,"#888c86");assert.equal(routes.renderer.symbol.width,0.7);assert.equal(routes.opacity,0.7);
   assert.equal(stops.renderer,undefined);assert.equal(orbt.renderer,undefined);
 });
 test("individual Metro Stops are hidden in the productivity heat-map view",async()=>{

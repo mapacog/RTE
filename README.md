@@ -11,7 +11,7 @@ The application brings together interactive maps, charts, tables, and traffic ra
 - **Traffic Rankings:** View and compare intersection and interchange traffic volumes across jurisdictions.
 - **Charts & Tables:** Explore transportation indicators through interactive visualizations and searchable data tables.
 - **Regional Trends:** Examine traffic patterns and changes across the reporting period.
-- **Accessibility:** Responsive layouts, English/Spanish content, keyboard navigation, and customizable display preferences.
+- **Accessibility:** Responsive layouts, eight language options, keyboard navigation, and customizable display preferences.
 
 ## Technology
 
@@ -20,10 +20,6 @@ The application brings together interactive maps, charts, tables, and traffic ra
 - ArcGIS Online Feature Services
 - Google Charts
 - GitHub Pages
-
-## Deployment
-
-The application is hosted on GitHub Pages, with deployment managed through the repository's GitHub Actions workflow.
 
 ## Data Sources
 
@@ -38,7 +34,7 @@ Location photography is configured in `src/data/metroPhotos.json` and stored as 
 
 The Regional Traffic Explorer is designed with **Web Content Accessibility Guidelines (WCAG) 2.2 Level AA** as its accessibility target.
 
-Accessibility features include keyboard navigation, responsive layouts, screen-reader-friendly controls, adjustable text sizes, high-contrast display options, reduced-motion support, and English/Spanish content.
+Accessibility features include keyboard navigation, responsive layouts, screen-reader-friendly controls, adjustable text sizes, high-contrast display options, reduced-motion support, and English, Spanish, French, Arabic, German, Chinese, Russian, and Korean content.
 
 Full WCAG 2.2 AA conformance has not been independently verified. Third-party components, including ArcGIS maps and embedded Google charts, may have accessibility limitations.
 

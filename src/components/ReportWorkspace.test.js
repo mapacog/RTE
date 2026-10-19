@@ -9,7 +9,7 @@ test("regional map groups render with a unique summary target", async () => {
     configFile: false,
     esbuild: { jsx: "automatic" },
     optimizeDeps: { noDiscovery: true, include: [] },
-    server: { middlewareMode: true, hmr: false },
+    server: { middlewareMode: true, hmr: false, ws: false },
     appType: "custom",
   });
   const previousWindow = global.window;

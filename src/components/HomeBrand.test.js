@@ -14,7 +14,7 @@ test("the faint background retains all seven original vector paths without exter
 });
 
 test("the swoop is decorative inside the home topic section, with the heading and footer unchanged",async()=>{
-  const server=await createServer({configFile:false,esbuild:{jsx:"automatic"},optimizeDeps:{noDiscovery:true,include:[]},server:{middlewareMode:true,hmr:false},appType:"custom"});
+  const server=await createServer({configFile:false,esbuild:{jsx:"automatic"},optimizeDeps:{noDiscovery:true,include:[]},server:{middlewareMode:true,hmr:false,ws:false},appType:"custom"});
   const previousWindow=global.window,previousLocation=global.location;
   try {
     global.location=new URL("http://localhost/#Home");

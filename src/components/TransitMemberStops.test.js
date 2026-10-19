@@ -5,7 +5,7 @@ import TestRenderer, { act } from "react-test-renderer";
 import { createServer } from "vite";
 
 const server=await createServer({configFile:false,esbuild:{jsx:"automatic"},optimizeDeps:{noDiscovery:true,include:[]},
-  server:{middlewareMode:true,hmr:false},appType:"custom"});
+  server:{middlewareMode:true,hmr:false,ws:false},appType:"custom"});
 const {default:TransitMemberStops}=await server.ssrLoadModule("/src/components/TransitMemberStops.jsx");
 after(()=>server.close());
 const members=[

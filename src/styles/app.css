@@ -606,38 +606,6 @@ html[dir="rtl"] .report-contents button[aria-current="true"] { border-inline-sta
   grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
-.story-panel {
-  background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.96), rgba(255, 255, 255, 0.99)),
-    var(--white);
-  border: 1px solid rgba(0, 75, 88, 0.12);
-  border-radius: var(--radius);
-  box-shadow: var(--shadow-soft);
-  padding: 1.1rem;
-}
-
-.story-list {
-  display: grid;
-  gap: 0.85rem;
-  margin-top: 1rem;
-}
-
-.story-list section {
-  border-left: 4px solid var(--mint);
-  padding-left: 0.85rem;
-}
-
-.story-list strong {
-  color: var(--mapa-teal);
-  display: block;
-  font-size: 0.98rem;
-}
-
-.story-list p {
-  color: var(--dark-neutral);
-  margin-top: 0.2rem;
-}
-
 .mini-table-wrap {
   margin-top: 1rem;
   overflow: visible;

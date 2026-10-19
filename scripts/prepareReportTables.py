@@ -1,11 +1,18 @@
-import csv, json, sys
+import argparse
+import csv
+import json
+import sys
 from pathlib import Path
 from openpyxl import load_workbook
 sys.stdout.reconfigure(encoding='utf-8')
 root = Path(__file__).resolve().parents[1]
 out = root / 'public' / 'data'
+parser = argparse.ArgumentParser(description="Prepare interactive report tables from the Tables1_2_3 workbook.")
+parser.add_argument("workbook", type=Path, help="Path to the source .xlsx workbook")
+book_path = parser.parse_args().workbook
+if not book_path.is_file():
+    parser.error(f"Workbook not found: {book_path}")
 out.mkdir(parents=True, exist_ok=True)
-book_path = Path(sys.argv[1]) if len(sys.argv) > 1 else Path(r'C:/Users/Ayodele/Downloads/Tables1_2_3.xlsx')
 book = load_workbook(book_path, data_only=True)
 tables = []
 rows = list(book['Table 1'].iter_rows(values_only=True))

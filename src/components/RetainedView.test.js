@@ -8,7 +8,7 @@ const server = await createServer({
   configFile: false,
   esbuild: { jsx: "automatic" },
   optimizeDeps: { noDiscovery: true, include: [] },
-  server: { middlewareMode: true, hmr: false },
+  server: { middlewareMode: true, hmr: false, ws: false },
   appType: "custom",
 });
 const { default: RetainedView, useViewActive } = await server.ssrLoadModule("/src/components/RetainedView.jsx");
