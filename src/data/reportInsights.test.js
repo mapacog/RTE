@@ -150,7 +150,7 @@ test("Transit observations match the productivity, change, and passenger-count v
   assert.match(insights.contexts.transit[1].text.en, /406.*12 bays.*April 2025/);
   const changes = insights.mapContexts.e2547ddd72254f2ab44c3b4302ebe8e2;
   assert.match(changes[0].text.en, /April 2022.*April 2025/);
-  assert.match(changes[1].text.en, /22nd & Cuming.*345.*269.*261/);
+  assert.match(changes[1].text.en, /Crown Point & Wenninghoff Rd SW.*199.*Crown Point & NW High E Entrance NW.*192.*North Omaha TC.*161/);
   assert.doesNotMatch(changes[1].text.en, /35th.*Broadway/);
   assert.match(insights.contexts.transit[0].text.en, /South Omaha Campus/);
   assert.doesNotMatch(insights.contexts.transit[0].text.en,/Bay 6|266/);
