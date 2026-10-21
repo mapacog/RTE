@@ -24,3 +24,26 @@ test("bilingual data expands natively without changing reviewed English and Span
   assert.deepEqual(Object.keys(input.title),["en","es"]);
   assert.equal(translateText("Some unknown place","fr"),"Some unknown place");
 });
+
+test("updated transit gains translate in all six native catalogs without changing authored English or Spanish",()=>{
+  const report=JSON.parse(readFileSync(new URL("../data/reportInsights.json",import.meta.url)));
+  const input=report.mapContexts.e2547ddd72254f2ab44c3b4302ebe8e2[1].text;
+  const result=expandLanguages(input);
+  assert.equal(result.en,input.en);
+  assert.equal(result.es,input.es);
+  assert.deepEqual(Object.keys(input),["en","es"]);
+  for(const code of Object.keys(catalogs)){
+    assert.ok(Object.hasOwn(catalogs[code],input.en),`${code}: missing updated lookup key`);
+    assert.notEqual(result[code],input.en,code);
+    for(const name of ["Crown Point & Wenninghoff Rd SW","Crown Point & NW High E Entrance NW","North Omaha TC"]){
+      assert.ok(result[code].includes(name),`${code}: ${name}`);
+    }
+    for(const value of ["2022","100","+199","+192","+161"]){
+      assert.ok(result[code].includes(value),`${code}: ${value}`);
+    }
+    assert.doesNotMatch(result[code],/22nd & Cuming|Westroads ORBT|153rd & Weir/,code);
+  }
+  for(const [code,month] of Object.entries({fr:"avril",ar:"أبريل",de:"April",zh:"4月",ru:"апрелем",ko:"4월"})){
+    assert.ok(result[code].includes(month),`${code}: April comparison`);
+  }
+});
