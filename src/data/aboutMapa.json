@@ -6,11 +6,30 @@
     "url": "https://mapa.maps.arcgis.com/apps/instant/basic/index.html?appid=5f47187275ee43c6bcc03a12ccce8d80"
   },
   "description": {
-    "en": "The Metropolitan Area Planning Agency (MAPA) supports local governments across Greater Omaha-Council Bluffs with regional planning and technical expertise in transportation, infrastructure, housing, and natural resources.",
-    "es": "La Agencia de Planificación del Área Metropolitana (MAPA) apoya a los gobiernos locales de Omaha-Council Bluffs con planificación regional y asistencia técnica en transporte, infraestructura, vivienda y recursos naturales."
+    "en": "The Metropolitan Area Planning Agency (MAPA) provides local governments with planning and technical support, thinking regionally and long-term about core issues that impact the vibrancy of the Greater Omaha - Council Bluffs region such as transportation, infrastructure, housing and natural resources.",
+    "es": "La Agencia de Planificación del Área Metropolitana (MAPA) brinda apoyo técnico y de planificación a los gobiernos locales, con una visión regional y de largo plazo sobre cuestiones fundamentales que influyen en la vitalidad de la región del Gran Omaha - Council Bluffs, como el transporte, la infraestructura, la vivienda y los recursos naturales."
+  },
+  "dataCollaboration": {
+    "en": "MAPA works with local governments and transportation partners across the region to collect, compile and share data. This regional collaboration helps communities understand trends, identify shared needs and make informed, coordinated planning decisions.",
+    "es": "MAPA trabaja con los gobiernos locales y los socios de transporte de toda la región para recopilar, integrar y compartir datos. Esta colaboración regional ayuda a las comunidades a comprender tendencias, identificar necesidades comunes y tomar decisiones de planificación informadas y coordinadas."
   },
   "purpose": {
-    "en": "It connects local priorities with the region's long-term needs.",
-    "es": "Conecta las prioridades locales con las necesidades de largo plazo de la región."
+    "en": "MAPA's purpose is to promote and preserve the quality of life for a more happy, healthy and vibrant region.",
+    "es": "El propósito de MAPA es promover y preservar la calidad de vida para lograr una región más feliz, saludable y dinámica."
+  },
+  "contact": {
+    "email": "gis@mapacog.org",
+    "intro": {
+      "en": "Have questions or want to learn more about",
+      "es": "¿Tiene preguntas o quiere saber más sobre"
+    },
+    "subject": {
+      "en": "Geographic Information System (GIS) at MAPA?",
+      "es": "el Sistema de Información Geográfica (SIG) de MAPA?"
+    },
+    "prompt": {
+      "en": "Contact us at",
+      "es": "Contáctenos en"
+    }
   }
 }

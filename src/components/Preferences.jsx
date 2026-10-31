@@ -10,7 +10,7 @@ import translationNotices from "../data/translationNotices.json";
 const translations = {
   "Legs total":"Total de tramos",
   "District VMT change":"Cambio de VMT por distrito", "Regional VMT change":"Cambio de VMT regional",
-  "Local street growth":"Crecimiento de calles locales", "Topics":"Temas", "Activate map":"Activar mapa", "Deactivate map":"Desactivar mapa",
+  "Local Streets Trends":"Tendencias de las calles locales", "Topics":"Temas", "Activate map":"Activar mapa", "Deactivate map":"Desactivar mapa",
   "Rankings":"Clasificaciones",
   "Regional VMT":"VMT regional", "Douglas County":"Condado de Douglas", "Urban core":"Centro urbano", "Outer Douglas":"Douglas periférico",
   "Traffic Analysis Districts":"Distritos de análisis de tráfico", "Average daily VMT":"VMT diario promedio", "Change in VMT":"Cambio de VMT",

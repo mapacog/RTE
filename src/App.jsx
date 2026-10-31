@@ -13,9 +13,10 @@ import AboutMapaCard from "./components/AboutMapaCard";
 import RetainedView from "./components/RetainedView";
 import FullMapView from "./components/FullMapView";
 import sources from "./data/visualSources.json";
+import about from "./data/aboutMapa";
 
 const portal = "https://experience.arcgis.com/experience/8a9b3260cb234d4aa2f121059b1d5204";
-const freightPlan = "https://engage.mapacog.org/regional-freight-plan";
+const freightPlan = "https://mapacog.org/projects/regional-freight-plan";
 const pages = {
   Home: "Home",
   "regional-patterns": "Regional Patterns",
@@ -87,7 +88,6 @@ export default function App() {
           <div className="overview-heading">
             <div>
               <div className="overview-kicker"><p className="eyebrow">{t("Omaha-Council Bluffs metro")}</p><span>2022–2025</span></div>
-              <p className="home-beta">Beta</p>
               <h1 aria-label={t("Regional Traffic Explorer")}>{(language === "es" ? ["Explorador", "de tráfico", "regional"] : language === "en" ? ["Regional", "Traffic", "Explorer"] : [t("Regional Traffic Explorer")]).map(line => <span key={line}>{line}{" "}</span>)}</h1>
               <p>{language === "es" ? "Explore los viajes regionales, las ubicaciones más transitadas y la movilidad cotidiana." : translateText("Explore regional travel, the busiest locations, and everyday mobility.",language)}</p>
             </div>
@@ -148,7 +148,12 @@ export default function App() {
       </main>
       <footer className="site-footer">
         <div className="footer-content">
-          <a href="https://www.mapacog.org" target="_blank" rel="noopener noreferrer" aria-label={language === "es" ? "Sitio web de MAPA (se abre en una pestaña nueva)" : translateText("MAPA website (opens in a new tab)",language)}>
+          <div className="footer-contact">
+            <p>{about.contact.intro[language]}</p>
+            <p>{about.contact.subject[language]}</p>
+            <p><span>{about.contact.prompt[language]}</span>{" "}<a className="footer-email" href={`mailto:${about.contact.email}`} dir="ltr">{about.contact.email}</a></p>
+          </div>
+          <a className="footer-logo" href={about.website} target="_blank" rel="noopener noreferrer" aria-label={language === "es" ? "Sitio web de MAPA (se abre en una pestaña nueva)" : translateText("MAPA website (opens in a new tab)",language)}>
             <img src="./assets/mapa-logo-white-yellow.png" alt="MAPA" />
           </a>
         </div>

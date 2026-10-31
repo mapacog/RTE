@@ -32,7 +32,7 @@ export default function LiveOverview({ tables }) {
       <MetricCard key={kind} href={`#${kind}/rankings`} className="metric-traffic" label={t(label)} value={leaders[kind]?.name || (error?t("Not reported"):t("Loading"))}
         detail={leaders[kind]?<><b>{formatNumber(leaders[kind].aadt,language==="es"?"es-US":"en-US")}</b><small>AADT · 2025</small></>:"2025 · MAPA"} icon={icon} tone={tone}/>
     )}
-    <MetricCard href="#regional-patterns/roadway-classes" label={t("Local street growth")} value={typeof localGrowth==="number"?`${localGrowth>0?"+":""}${new Intl.NumberFormat(language==="es"?"es-US":"en-US",{style:"percent",minimumFractionDigits:1,maximumFractionDigits:1}).format(localGrowth)}`:roadway?t("Not reported"):t("Loading")}
-      detail={language==="es"?"VMT en calles locales, 2024–2025":translateText("Local-street VMT, 2024–2025",language)} tone="yellow" icon={Car}/>
+    <MetricCard href="#regional-patterns/roadway-classes" label={t("Local Streets Trends")} value={typeof localGrowth==="number"?`${localGrowth>0?"+":""}${new Intl.NumberFormat(language==="es"?"es-US":"en-US",{style:"percent",minimumFractionDigits:1,maximumFractionDigits:1}).format(localGrowth)}`:roadway?t("Not reported"):t("Loading")}
+      detail={language==="es"?"VMT en calles locales, 2024–2025":translateText("Local street VMT, 2024–2025",language)} tone="yellow" icon={Car}/>
   </div>;
 }

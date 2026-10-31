@@ -1,5 +1,5 @@
 
-# Regional Traffic Explorer (RTE) — 2025 Beta
+# Regional Traffic Explorer (RTE) — 2025
 
 An interactive transportation data explorer developed by the **Metropolitan Area Planning Agency (MAPA)** to visualize and explore regional traffic patterns across the Omaha–Council Bluffs metropolitan area.
 
@@ -40,7 +40,10 @@ Full WCAG 2.2 AA conformance has not been independently verified. Third-party co
 
 ## Disclaimer
 
-This application is a beta release. Data and visualizations are provided for informational purposes and may be updated as reporting and validation continue.
+Data and visualizations are provided for informational purposes and may be updated as reporting and validation continue. Artificial Intelligence (AI) and Google Translate were used for translation services, and no guarantees are made as to their accuracy. Refer to the English version to verify technical terms, explanations, and meaning.
+
+## AI-use acknowledgment
+This application was designed and developed by the GIS & Data Team, with Codex and Antigravity used selectively to assist with recursive coding and development tasks. The team directed the work, reviewed the code, and validated the results.
 
 ## Maintained By
 

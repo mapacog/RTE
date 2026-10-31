@@ -5,7 +5,7 @@ import MapExplorer from "./MapExplorer";
 import { usePreferences } from "./Preferences";
 import about from "../data/aboutMapa";
 
-const mapSource = { maps: [{ id: about.map.id, title: about.map.title }] };
+const mapSource = { maps: [{ id: about.map.id, title: about.map.title, context: "about-mapa" }] };
 
 export default function AboutMapaCard() {
   const { language, t } = usePreferences();
@@ -35,6 +35,7 @@ export default function AboutMapaCard() {
         : <div className="about-map-placeholder" role="status">{t("Loading")}</div>}
     </div>
     <p id="about-mapa-summary" tabIndex={-1}>{about.description[language]}</p>
+    <p>{about.dataCollaboration[language]}</p>
     <p>{about.purpose[language]}</p>
     <div className="destination-links">
       <a href={about.website} target="_blank" rel="noopener noreferrer">{language === "es" ? "Sitio web de MAPA" : translateText("MAPA website",language)}<ExternalLink size={14} aria-hidden="true"/><span className="sr-only">{language === "es" ? " (se abre en una pestaña nueva)" : translateText(" (opens in a new tab)",language)}</span></a>

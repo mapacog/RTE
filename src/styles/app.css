@@ -991,9 +991,15 @@ html[dir="rtl"] .report-contents button[aria-current="true"] { border-inline-sta
   padding: 1.4rem 0;
 }
 
-.footer-content { display: flex; justify-content: flex-end; align-items: center; width: 100%; padding-inline: var(--page-gutter); }
+.footer-content { display: flex; flex-wrap: wrap; justify-content: flex-end; align-items: center; gap: 0.75rem 1.5rem; width: 100%; padding-inline: var(--page-gutter); }
 .footer-content a { display: inline-flex; align-items: center; min-height: 44px; }
+.footer-contact { flex: 0 1 auto; min-width: 0; max-width: min(30rem,100%); font-size: 0.875rem; line-height: 1.4; overflow-wrap: anywhere; }
+.footer-contact a { display: inline-block; min-height: 24px; color: var(--white); text-underline-offset: 3px; }
+.footer-logo { flex-shrink: 0; max-width: 100%; }
 .site-footer img {
+  display: block;
+  width: 210px;
+  height: auto;
   max-width: 210px;
 }
 
@@ -1267,7 +1273,6 @@ html[dir="rtl"] .report-contents button[aria-current="true"] { border-inline-sta
 .home-overview h1 { font-size: 6rem; line-height: 1.04; overflow-wrap: anywhere; max-width: 100%; }
 .home-overview h1 > span { display: block; }
 .home-overview .overview-heading p:not(.eyebrow) { font-size: 1.1rem; line-height: 1.55; margin-top: 1.15rem; max-width: 490px; }
-.home-overview .overview-heading p.home-beta { color: var(--mapa-blue); font-size: 0.85rem; font-weight: 700; margin: 0 0 0.45rem; }
 .overview-kicker { display: flex; flex-wrap: wrap; align-items: center; gap: 0.8rem; margin-bottom: 0.85rem; }
 .overview-kicker .eyebrow { margin: 0; }
 .overview-kicker > span { border-left: 1px solid #b5c9ce; padding-left: 0.8rem; color: var(--muted); font-size: 0.85rem; font-weight: 700; }

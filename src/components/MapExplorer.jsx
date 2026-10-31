@@ -162,8 +162,8 @@ function MapView({ sources, initialComparison, initialMapId, contextCards = [], 
         searchExpand.setAttribute("expand-tooltip",t("Search address"));
         const search=document.createElement("arcgis-search");searchExpand.append(search);element.append(searchExpand);
       }
-      for(const name of tools.layersAndLegend ? ["layer-list","legend"] : []){
-        const expand=document.createElement("arcgis-expand");expand.setAttribute("slot","top-right");
+      for(const {name,position} of tools.layerControls){
+        const expand=document.createElement("arcgis-expand");expand.setAttribute("slot",position);
         const control=document.createElement(`arcgis-${name}`);expand.append(control);element.append(expand);
       }
       host.current.append(element);

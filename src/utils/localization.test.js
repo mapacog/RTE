@@ -47,3 +47,25 @@ test("updated transit gains translate in all six native catalogs without changin
     assert.ok(result[code].includes(month),`${code}: April comparison`);
   }
 });
+
+test("MAPA description and GIS contact have native translations without changing the email",()=>{
+  const input=JSON.parse(readFileSync(new URL("../data/aboutMapa.json",import.meta.url)));
+  const result=expandLanguages(input);
+  const fields=["description","dataCollaboration","purpose"];
+  const contacts=["intro","subject","prompt"];
+  assert.match(result.dataCollaboration.en,/collect, compile and share data/);
+  assert.match(result.purpose.en,/more happy, healthy and vibrant region/);
+  assert.equal(result.contact.email,"gis@mapacog.org");
+  assert.equal(Object.hasOwn(result.contact,"emailPrefix"),false);
+  assert.equal(`${result.contact.intro.en} ${result.contact.subject.en} ${result.contact.prompt.en} ${result.contact.email}`,"Have questions or want to learn more about Geographic Information System (GIS) at MAPA? Contact us at gis@mapacog.org");
+  assert.equal(Object.hasOwn(result.contact,"department"),false);
+  for(const field of [...fields.map(key=>[input[key],result[key]]),...contacts.map(key=>[input.contact[key],result.contact[key]])]){
+    const [authored,expanded]=field;
+    assert.equal(expanded.en,authored.en);
+    assert.equal(expanded.es,authored.es);
+    for(const code of Object.keys(catalogs)){
+      assert.ok(Object.hasOwn(catalogs[code],authored.en),`${code}: ${authored.en}`);
+      assert.notEqual(expanded[code],authored.en,code);
+    }
+  }
+});
