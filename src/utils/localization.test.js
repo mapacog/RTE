@@ -48,6 +48,25 @@ test("updated transit gains translate in all six native catalogs without changin
   }
 });
 
+test("traffic calibration methodology includes partner counts and seasonal adjustments in every language",()=>{
+  const report=JSON.parse(readFileSync(new URL("../data/reportInsights.json",import.meta.url)));
+  const input=report.contexts.districts.find(item=>item.title.en==="Adjusted with traffic counts").text;
+  const result=expandLanguages(input);
+  assert.match(result.en,/City of Omaha and Douglas, Sarpy, and Pottawattamie counties/);
+  assert.match(result.en,/seasonal factors provided by the state DOTs/);
+  assert.match(result.en,/fill data gaps and were calibrated against available traffic counts/);
+  assert.equal(result.es,input.es);
+  for(const code of ["en","es",...Object.keys(catalogs)]){
+    for(const term of ["MAPA","2022","StreetLight","FFC","TAD","DOT"]){
+      assert.ok(result[code].includes(term),`${code}: ${term}`);
+    }
+    if(catalogs[code]){
+      assert.ok(Object.hasOwn(catalogs[code],input.en),`${code}: missing methodology translation`);
+      assert.notEqual(result[code],input.en,code);
+    }
+  }
+});
+
 test("MAPA description and GIS contact have native translations without changing the email",()=>{
   const input=JSON.parse(readFileSync(new URL("../data/aboutMapa.json",import.meta.url)));
   const result=expandLanguages(input);

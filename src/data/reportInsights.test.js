@@ -109,7 +109,9 @@ test("TAD context explains all-road coverage, calibration, and consistency check
     "Adjusted with traffic counts", "Checked along each corridor",
   ]);
   assert.match(cards[1].text.en, /For the first time.*all roads.*StreetLight Insight/);
-  assert.match(cards[2].text.en, /short-duration and continuous/);
+  assert.match(cards[2].text.en, /Short-duration counts from jurisdictional partners/);
+  assert.match(cards[2].text.en, /seasonal factors provided by the state DOTs/);
+  assert.match(cards[2].text.en, /2022 Traffic Flow report/);
   assert.match(cards[2].text.en, /Federal Functional Classification \(FFC\) within a TAD/);
   assert.match(cards[2].text.en, /Regional factors/);
   assert.match(cards[3].text.en, /across years.*travel direction.*divided roadways.*intersections/);
