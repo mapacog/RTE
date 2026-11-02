@@ -1417,6 +1417,9 @@ html[dir="rtl"] .report-contents button[aria-current="true"] { border-inline-sta
 .report-highlight > span { color: var(--muted); font-size: 0.85rem; }
 .map-content-layout { display: grid; grid-template-columns: minmax(0,2.2fr) minmax(220px,1fr); align-items: start; gap: 1.15rem; }
 .topic-section .map-content-layout .live-map-shell,.live-rankings .map-content-layout .live-map-shell { aspect-ratio: 1; height: auto; min-width: 0; }
+@media(min-width: 1101px) {
+  .topic-section .map-explorer:not(.map-orbt) .map-content-layout:not(.map-only):not(.popup-side-layout) > .live-map-shell { align-self: stretch; }
+}
 .map-content-layout.map-only { grid-template-columns: minmax(0,1fr); max-width: 740px; }
 .insight-cards { display: grid; gap: 0.85rem; min-width: 0; }
 .insight-card { padding: 0.95rem 1rem; background: #edf6f8; border-left: 3px solid var(--mapa-blue); border-radius: 6px; }
